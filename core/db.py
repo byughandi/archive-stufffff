@@ -159,6 +159,12 @@ class TursoDatabase(Database):
             url = "http://" + url[len("ws://"):]
         self.url = url + "/v2/pipeline"
         headers = {"content-type": "application/json"}
+        # Forgive the usual paste slips in a secret: surrounding spaces, quotes, a "Bearer " prefix, a trailing dot.
+        token = (token or "").strip().strip("\"'").strip()
+        if token.lower().startswith("bearer "):
+            token = token[7:].strip()
+        token = token.rstrip(".")
+        self.token_shape = f"length {len(token)}, {token.count('.') + 1 if token else 0} parts, starts with eyJ: {token.startswith('eyJ')}"
         if token:
             headers["authorization"] = f"Bearer {token}"
         self.http = httpx.Client(headers=headers, timeout=timeout)
@@ -177,7 +183,8 @@ class TursoDatabase(Database):
         else:
             raise DatabaseError(f"turso unreachable: {last}")
         if resp.status_code >= 400:
-            raise DatabaseError(f"turso http {resp.status_code}: {resp.text[:300]}")
+            hint = f" (token as received: {self.token_shape}; a valid one has 3 parts and starts with eyJ)" if resp.status_code in (400, 401) else ""
+            raise DatabaseError(f"turso http {resp.status_code}: {resp.text[:300]}{hint}")
         results = resp.json().get("results", [])
         for r in results:
             if r.get("type") == "error":
