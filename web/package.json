@@ -1,0 +1,24 @@
+{
+  "name": "grail-radar-web",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^4.0.1",
+    "@sveltejs/kit": "^3.4.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.2",
+    "svelte": "^5.59.1",
+    "svelte-check": "^4.7.8",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8"
+  },
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && touch ../worker/public/.gitkeep",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "art": "node scripts/build-art.mjs"
+  }
+}

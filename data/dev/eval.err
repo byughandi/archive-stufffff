@@ -1,0 +1,13 @@
+## junk_not_rejected (1)
+    {"id": "mercari_jp:m82745567908", "title": "メゾンマルジェラ 11AW レプリカ 1955 エルボーパッチスウェット", "tier": "B", "score": 63.1}
+## era_wrong (1)
+    {"id": "en:055", "title": "Saint Laurent Paris D02 skinny jeans 30", "want": "unresolved", "got": "saint_laurent__hedi", "conf": 0.632, "cues": ["d02 (model)", "skinny jeans (keyword)", "saint laurent paris (rules out Tom Ford)", "saint laurent paris (rules out Stefano Pilati)"]}
+## tier_bounds_violated (4)
+    {"id": "mercari_jp:m24301672492", "title": "HELMUT LANG ヘルムートラング 本人期 ハンドバッグ リュック", "tier": "C", "want": "A..B", "reason": "womens piece", "score": 70.1}
+    {"id": "mercari_jp:m82745567908", "title": "メゾンマルジェラ 11AW レプリカ 1955 エルボーパッチスウェット", "tier": "B", "want": "C..X", "reason": "secondary era (margiela__renzo)", "score": 63.1}
+    {"id": "mercari_jp:m79321946222", "title": "マルタンマルジラ 足袋ブーツ ブラック", "tier": "X", "want": "B..C", "reason": "no_brand", "score": null}
+    {"id": "en:055", "title": "Saint Laurent Paris D02 skinny jeans 30", "tier": "A", "want": "B..C", "reason": null, "score": 76.5}
+## brand_wrong (1)
+    {"id": "mercari_jp:m79321946222", "title": "マルタンマルジラ 足袋ブーツ ブラック", "want": "margiela", "got": null}
+## relevant_rejected (1)
+    {"id": "mercari_jp:m79321946222", "title": "マルタンマルジラ 足袋ブーツ ブラック", "reason": "no_brand"}

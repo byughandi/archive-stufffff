@@ -1,0 +1,717 @@
+# R2 brands.yaml - written 2026-11-24. See research/R2_taxonomy.md for method and caveats.
+# price_floor_usd is a conservative "below this is suspicious" tripwire, NOT a market price.
+# Short/collision-prone strings live in ambiguous_aliases: match only with supporting context.
+brands:
+  # ---------------- 1A core ----------------
+  - id: dior_homme
+    name: Dior Homme
+    group: core
+    base_weight: 10
+    aliases: ["dior homme", "dior hommes", "diorhomme", "dior homm", "hedi dior", "hedi slimane dior", "dior hedi", "slimane dior", "dior homme hedi", "dior homme kva", "kris van assche dior", "dior men", "dior mens", "dior by kim jones", "kim jones dior"]
+    ambiguous_aliases: ["dh", "dior", "christian dior", "dior jeans", "dior jacket"]
+    negative_context: ["sauvage", "perfume", "eau de toilette", "edt", "edp", "cologne", "fragrance", "miss dior", "j'adore", "lipstick", "mascara", "palette", "makeup", "nail polish", "lady dior", "saddle bag", "book tote", "monsieur dior", "dior monsieur", "christian dior monsieur", "dior addict", "diorshow", "dior forever", "sample vial", "atomizer"]
+    lines:
+      - {id: dior_homme__mainline, name: "Dior Homme", aliases: []}
+      - {id: dior_homme__men_kim_jones, name: "Dior Men", aliases: ["dior men", "dior mens"]}
+    price_floor_usd: {leather_jacket: 300, denim: 90, blazer: 120, pants: 70, knit: 50, shirt: 50, sneakers: 90, boots: 120, belt: 40, coat: 150}
+    sources: ["https://en.wikipedia.org/wiki/Dior_Homme", "https://www.grailed.com/browse/hedi-slimane-dior-homme-denim", "https://auctions.yahoo.co.jp/jp/auction/v1236799178"]
+    confidence: high
+  - id: saint_laurent
+    name: Saint Laurent
+    group: core
+    base_weight: 9
+    aliases: ["saint laurent", "saint laurent paris", "slp", "yves saint laurent", "ysl", "saint laurent hedi", "hedi saint laurent", "hedi slp", "saint laurant", "st laurent", "sl paris", "yves st laurent"]
+    ambiguous_aliases: ["sl", "ysl beauty", "st", "laurent"]
+    negative_context: ["perfume", "eau de parfum", "libre", "black opium", "mon paris", "rouge pur couture", "lipstick", "touche eclat", "foundation", "makeup", "cosmetics", "fragrance", "monogram clutch", "loulou", "sunglasses case only"]
+    lines:
+      - {id: saint_laurent__mainline, name: "Saint Laurent", aliases: []}
+    price_floor_usd: {leather_jacket: 350, biker_jacket: 350, varsity_jacket: 250, denim: 80, boots: 120, blazer: 150, shirt: 60, knit: 70, coat: 200, bag: 250}
+    sources: ["https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent", "https://www.wallpaper.com/fashion/saint-laurent-by-hedi-slimane-wins-wallpapers-best-rebranding-award", "https://hypebeast.com/2015/1/saint-laurent-2015-fall-winter-collection"]
+    confidence: high
+  - id: celine
+    name: Celine
+    group: core
+    base_weight: 8
+    aliases: ["celine", "celine paris", "celine hedi", "hedi celine", "celine homme", "celine by hedi slimane", "celine slimane", "celine phoebe", "phoebe philo celine", "old celine", "vintage celine", "celine homme hedi", "céline"]
+    ambiguous_aliases: ["celine", "céline", "cel"]
+    negative_context: ["celine dion", "dion tour", "celine dion merch", "celine d", "first name", "my name is celine", "personalized", "necklace name", "celine sciamma", "portrait of a lady", "baby celine", "kids celine"]
+    lines:
+      - {id: celine__homme, name: "Celine Homme", aliases: ["celine homme"]}
+      - {id: celine__womens, name: "Celine womenswear", aliases: ["celine women"]}
+    price_floor_usd: {leather_jacket: 400, denim: 90, blazer: 200, knit: 80, shirt: 80, boots: 150, bag: 300, coat: 250, sneakers: 100}
+    sources: ["https://hypebeast.com/2024/10/hedi-slime-exit-celine-michael-rider-appointed-creative-director", "https://www.dazeddigital.com/fashion/article/64793/1/celine-who-is-michael-rider-celine-new-creative-director-hedi-slimane-exit"]
+    confidence: high
+  - id: balmain
+    name: Balmain
+    group: core
+    base_weight: 8
+    aliases: ["balmain", "balmain paris", "balmain homme", "balmain decarnin", "decarnin balmain", "balmain biker", "balmain biker jeans", "balmain jeans", "pierre balmain", "balmain destroyed", "balmain shoulder pad"]
+    ambiguous_aliases: ["bal"]
+    negative_context: ["perfume", "eau de parfum", "hair", "hair extensions", "hair clip", "balmain hair", "balmain paris hair couture", "cosmetics", "makeup", "palette", "shampoo", "bed linen"]
+    lines:
+      - {id: balmain__mainline, name: "Balmain", aliases: []}
+      - {id: balmain__homme, name: "Balmain Homme", aliases: ["balmain homme"]}
+      - {id: balmain__pierre, name: "Pierre Balmain (diffusion)", aliases: ["pierre balmain"]}
+    price_floor_usd: {denim: 120, biker_jacket: 300, leather_jacket: 300, blazer: 200, graphic_tee: 40, pants: 100, knit: 80}
+    sources: ["https://en.wikipedia.org/wiki/Christophe_Decarnin", "https://www.interviewmagazine.com/fashion/balmain-men-paris-fall-2010-paris", "https://www.complex.com/style/a/mike-destefano/a-look-back-at-olivier-rousteings-biggest-moments-at-balmain"]
+    confidence: high
+  - id: rick_owens
+    name: Rick Owens
+    group: core
+    base_weight: 9
+    aliases: ["rick owens", "rickowens", "rick owen", "rick owens drkshdw", "drkshdw", "drk shdw", "dark shadow", "rick owens dark shadow", "rick owens ro", "ro geobasket", "geobasket", "geo basket", "rick owens ramones", "ramones rick", "rick owens stooges", "stooges leather", "rick owens intarsia", "rick owens dunks", "rick owens leather", "rick owens biker", "rick owens bauhaus"]
+    ambiguous_aliases: ["rick", "ro", "owens", "dark shdw", "rick o"]
+    negative_context: ["rick and morty", "rick ross", "rick astley", "rick james", "rick flair", "ric flair", "rick steves", "rick springfield", "rick grimes", "walking dead", "rick roll", "owens corning", "jesse owens", "terrell owens", "owens valley", "rick bayless"]
+    lines:
+      - {id: rick_owens__mainline, name: "Rick Owens", aliases: []}
+      - {id: rick_owens__drkshdw, name: "DRKSHDW", aliases: ["drkshdw", "drk shdw", "dark shadow", "rick owens dark shadow"]}
+      - {id: rick_owens__lilies, name: "Rick Owens Lilies", aliases: ["rick owens lilies", "lilies"]}
+      - {id: rick_owens__hun, name: "Hun (Rick Owens diffusion)", aliases: ["hun rick owens"]}
+    price_floor_usd: {leather_jacket: 250, biker_jacket: 250, denim: 70, boots: 120, sneakers: 80, hoodie: 50, knit: 60, pants: 50, coat: 120, graphic_tee: 25}
+    sources: ["https://hypebeast.com/2022/1/rick-owens-fall-2022-menswear-strobe-runway-show-collection-paris-fashion-week", "https://theshelteronline.com/inspiration/presenting-rick-owens-drkshdw", "https://sites.fitnyc.edu/depts/museum/Gothic/Owens.html"]
+    confidence: med
+  - id: undercover
+    name: Undercover
+    group: core
+    base_weight: 9
+    aliases: ["undercover", "under cover", "undercoverism", "undercover jun takahashi", "jun takahashi", "undercover jun", "undercover japan", "undercover scab", "undercover 85", "85 undercover", "undercover but beautiful", "we make noise not clothes", "wmnc", "undercover noise", "undercover arts and crafts", "undercover arts & crafts", "undercover cosmos bear", "uc jun takahashi", "undercover lab", "undercover x nike gyakusou", "gyakusou"]
+    ambiguous_aliases: ["uc", "under", "undercover brand", "undercover tee"]
+    negative_context: ["undercover police", "undercover boss", "undercover cop", "undercover agent", "undercover brother", "undercover toy", "mini figure", "lego", "undercover bra", "undercover mission", "spy", "tv show", "dvd", "sunscreen", "cat undercover", "mission undercover", "undercover under armour"]
+    lines:
+      - {id: undercover__mainline, name: "Undercover", aliases: []}
+      - {id: undercover__undercoverism, name: "Undercoverism", aliases: ["undercoverism"]}
+      - {id: undercover__gyakusou, name: "Gyakusou", aliases: ["gyakusou", "undercover gyakusou"]}
+      - {id: undercover__uc, name: "UC (diffusion)", aliases: ["uc undercover"]}
+    price_floor_usd: {graphic_tee: 40, hoodie: 80, leather_jacket: 250, denim: 80, knit: 70, coat: 120, pants: 60, bag: 80}
+    sources: ["https://www.grailed.com/drycleanonly/master-class-undercover", "https://www.lepetitarchive.com/collections-undercover-ss03-scab-history/", "https://highsnobiety.com/p/jun-takahashi-history"]
+    confidence: med
+  - id: beauty_beast
+    name: "Beauty:Beast"
+    group: core
+    base_weight: 8
+    aliases: ["beauty beast", "beauty:beast", "beauty : beast", "beauty&beast", "beauty & beast clothing", "beauty beast japan", "beautybeast", "takao yamashita", "yamashita beauty beast", "beauty beast safety pin", "beauty beast dark knight", "beauty beast rabbit", "beauty beast bunny", "beauty beast tokyo"]
+    ambiguous_aliases: ["b:b", "bb", "beauty and beast"]
+    negative_context: ["disney", "beauty and the beast", "belle", "musical", "broadway", "funko", "pop vinyl", "cogsworth", "mrs potts", "enchanted rose", "lumiere", "dvd", "blu-ray", "emma watson", "costume", "halloween", "kids", "toddler", "plush"]
+    lines:
+      - {id: beauty_beast__mainline, name: "Beauty:Beast", aliases: []}
+    price_floor_usd: {hoodie: 80, graphic_tee: 50, knit: 80, leather_jacket: 250, bag: 80, coat: 120, pants: 70}
+    sources: ["https://sabukaru.online/articles/beautybeast-a-fairytale-spoken-in-attire", "https://www.archivepdf.net/articles/takao-yamashita-entering-the-belly-of-the-beauty-beast", "https://www.fashionsnap.com/article/yamashita-takao/"]
+    confidence: med
+  - id: "20471120"
+    name: "20471120"
+    group: core
+    base_weight: 7
+    aliases: ["20471120", "2047 1120", "20471120 japan", "20471120 tokyo", "20471120 jacket", "20471120 tee", "20471120 bag"]
+    ambiguous_aliases: ["2047"]
+    negative_context: ["phone number", "zip code", "serial number", "sku", "invoice", "lot number", "ebay item", "model number"]
+    lines:
+      - {id: 20471120__mainline, name: "20471120", aliases: []}
+    price_floor_usd: {graphic_tee: 40, hoodie: 70, leather_jacket: 200, bag: 70, pants: 60, coat: 100}
+    sources: ["https://www.lepetitarchive.com/brands-the-japanese-cult-brand-beauty-beast/"]
+    confidence: low
+    verify: true
+  - id: chanel
+    name: Chanel
+    group: core
+    base_weight: 8
+    aliases: ["chanel", "chanel vintage", "vintage chanel", "chanel cc", "chanel cc logo", "chanel 95p", "chanel 96a", "chanel tweed", "chanel boucle", "chanel belt", "chanel chain belt", "chanel brooch", "chanel earrings", "chanel necklace", "chanel pearl", "chanel logo tee", "chanel sport", "chanel cambon", "coco chanel", "chanel made in france", "chanel 2000s", "chanel y2k"]
+    ambiguous_aliases: ["cc", "coco"]
+    negative_context: ["no 5", "no5", "n5", "coco mademoiselle", "bleu de chanel", "chanel chance", "allure", "gabrielle", "perfume", "parfum", "eau de toilette", "edp", "edt", "lipstick", "rouge coco", "rouge allure", "foundation", "nail polish", "vernis", "mascara", "blush", "les beiges", "sample vial", "sublimage", "shopping bag only", "gift box only", "empty box", "camellia tin", "chanel nails"]
+    lines:
+      - {id: chanel__rtw, name: "Chanel ready-to-wear", aliases: []}
+      - {id: chanel__jewelry, name: "Chanel costume jewelry", aliases: ["chanel costume jewelry"]}
+      - {id: chanel__sport, name: "Chanel Sport", aliases: ["chanel sport"]}
+    price_floor_usd: {jewelry: 150, belt: 200, bag: 600, coat: 300, knit: 150, graphic_tee: 80, blazer: 250, accessory: 100}
+    sources: ["https://www.instagram.com/glam_archive/"]
+    confidence: low
+    verify: true
+  - id: erd
+    name: Enfants Riches Déprimés
+    group: core
+    base_weight: 8
+    aliases: ["erd", "enfants riches deprimes", "enfants riches déprimés", "enfants riche deprime", "enfant riches deprimes", "enfants riches depremes", "enfants riches", "erd la", "erd paris", "erd tee", "erd hoodie", "erd flannel", "erd jeans", "erd denim", "erd leather", "erd safety pin", "enfants riches deprimes los angeles"]
+    ambiguous_aliases: ["erd", "enfants"]
+    negative_context: ["emergency room", "er dept", "erd diagram", "entity relationship", "erd database", "erd usb", "erd controller", "erd cable", "erd lane", "erd ring", "kids", "enfants nike", "enfants sneaker kids"]
+    lines:
+      - {id: erd__mainline, name: "Enfants Riches Déprimés", aliases: []}
+    price_floor_usd: {graphic_tee: 60, hoodie: 120, denim: 200, leather_jacket: 400, knit: 150, coat: 250, accessory: 50, jewelry: 60}
+    sources: ["https://www.mrporter.com/en-au/journal/fashion/enfants-riches-deprimes-erd-25368192", "https://www.grailed.com/designers/enfants-riches-deprimes", "https://www.complex.com/style/2016/03/enfants-riches-deprimes-profile"]
+    confidence: med
+  # ---------------- 1B Japanese archive ----------------
+  - id: number_nine
+    name: Number (N)ine
+    group: jp_archive
+    base_weight: 10
+    aliases: ["number nine", "number (n)ine", "number (n) ine", "number n ine", "(n)ine", "n(n)", "numbernine", "number9", "number 9 miyashita", "no. 9 miyashita", "number nine miyashita", "takahiro miyashita number nine", "number nine japan", "number (n)ine japan", "numbr nine", "number nine soloist", "number nine skull", "number nine kurt", "number nine cashmere", "number nine hoodie", "number nine tribal camo", "number nine high streets", "number nine noir", "number nine touch me im sick", "number nine a closed feeling", "number nine my own private portland", "number nine give peace a chance", "ナンバーナイン"]
+    ambiguous_aliases: ["nn", "n9", "no9", "number 9", "(n)", "9"]
+    negative_context: ["jersey", "nfl", "nba", "nhl", "mlb", "football", "soccer", "basketball", "baseball", "hockey", "kit", "fc ", "shirt number", "player number", "lakers", "chelsea fc", "number nine pizza", "number 9 large", "no. 9 combo", "beatles", "revolution 9", "number nine dream", "boot cut jeans number", "cloud nine", "dress number nine", "kids number"]
+    lines:
+      - {id: number_nine__mainline, name: "Number (N)ine", aliases: []}
+      - {id: number_nine__the_soloist, name: "The Soloist (post-2009 Miyashita)", aliases: ["the soloist", "takahiromiyashita the soloist"]}
+      - {id: number_nine__relaunch, name: "Number (N)ine by Takahiro Miyashita (2025+)", aliases: ["number nine by takahiro miyashita", "new arrivals number nine"]}
+    price_floor_usd: {hoodie: 150, graphic_tee: 70, leather_jacket: 400, knit: 150, denim: 120, pants: 100, coat: 200, boots: 150, jewelry: 80, bag: 100, shirt: 90}
+    sources: ["https://hypebeast.com/2009/02/number-nine-to-shut-down/", "https://hypebeast.com/ph/2025/9/takahiro-miyashita-announces-numbernine-news-return", "https://trussarchive.com/editorials/the-most-iconic-number-nine-tees-where-to-find-them", "https://www.fashionsnap.com/article/2023-03-08/archivestore-numbernine/"]
+    confidence: high
+  - id: soloist
+    name: The Soloist (Takahiro Miyashita)
+    group: jp_archive
+    base_weight: 7
+    aliases: ["the soloist", "soloist", "takahiro miyashita the soloist", "takahiromiyashita the soloist", "takahiro miyashita", "miyashita soloist", "thesoloist"]
+    ambiguous_aliases: ["soloist", "the solo"]
+    negative_context: ["guitar", "violin", "pianist", "orchestra", "concerto", "music", "singer", "solo cup", "soloist sports", "soloist pen"]
+    lines: []
+    price_floor_usd: {leather_jacket: 300, hoodie: 100, knit: 100, coat: 150, pants: 80, boots: 120, jewelry: 60}
+    sources: ["https://hypebeast.com/2017/2/takahiro-miyashita-thesoloist-number-nine-interview"]
+    confidence: med
+  - id: hysteric_glamour
+    name: Hysteric Glamour
+    group: jp_archive
+    base_weight: 8
+    aliases: ["hysteric glamour", "hysteric glamor", "hysteric glamour japan", "hysteric", "hystericglamour", "hg japan", "hysteric glamour girl tee", "hysteric glamour skull", "hysteric glamour hoodie", "hysteric glamour denim", "hysteric glamour 90s", "hysteric glamour y2k", "hysteric glamour nude girl", "hysteric glamour sex", "hysteric mini", "hysteric glamour jeans"]
+    ambiguous_aliases: ["hg", "hys"]
+    negative_context: ["hysterical", "glamour magazine", "glamour shots", "glamor shots", "baby hysteric", "hysteric kids"]
+    lines:
+      - {id: hysteric_glamour__mainline, name: "Hysteric Glamour", aliases: []}
+      - {id: hysteric_glamour__mini, name: "Hysteric Mini (kids)", aliases: ["hysteric mini"]}
+    price_floor_usd: {graphic_tee: 40, hoodie: 70, denim: 60, leather_jacket: 200, knit: 60, shirt: 40, bag: 50, pants: 40}
+    sources: ["https://www.grailed.com/designers/hysteric-glamour"]
+    confidence: low
+    verify: true
+  - id: 14th_addiction
+    name: 14th Addiction
+    group: jp_archive
+    base_weight: 7
+    aliases: ["14th addiction", "14thaddiction", "14th addition", "fourteenth addiction", "14th addiction japan", "14th addiction leather", "14th addiction jacket", "14th addiction jeans", "14th addiction gloves", "14ta"]
+    ambiguous_aliases: ["14th", "14a"]
+    negative_context: ["amendment", "14th street", "14th century", "14th birthday", "14th and", "addiction fashion nova"]
+    lines: []
+    price_floor_usd: {leather_jacket: 250, denim: 80, pants: 70, knit: 60, boots: 100, accessory: 30}
+    sources: ["https://www.grailed.com/designers/14th-addiction"]
+    confidence: low
+    verify: true
+  - id: lgb
+    name: L.G.B. (Le Grand Bleu)
+    group: jp_archive
+    base_weight: 8
+    aliases: ["lgb", "l.g.b.", "l.g.b", "l g b", "le grand bleu", "lgb japan", "lgb jewelry", "lgb ring", "lgb leather", "lgb jacket", "lgb denim", "lgb necklace", "lgb pendant", "lgb bracelet", "lgb gloves"]
+    ambiguous_aliases: ["lgb", "l.g.b."]
+    negative_context: ["lgbt", "lgbtq", "pride", "rainbow flag", "gay pride", "lgbtq+", "le grand bleu film", "luc besson", "dvd", "diving", "free diving", "bluray", "perfume le grand bleu"]
+    lines: []
+    price_floor_usd: {jewelry: 80, leather_jacket: 300, denim: 100, pants: 80, knit: 70, bag: 80, boots: 150}
+    sources: ["https://www.grailed.com/designers/lgb"]
+    confidence: low
+    verify: true
+  - id: ifsixwasnine
+    name: Ifsixwasnine
+    group: jp_archive
+    base_weight: 7
+    aliases: ["ifsixwasnine", "if six was nine", "ifsixwasnine japan", "if6was9", "if 6 was 9", "isn", "ifsixwasnine bondage", "ifsixwasnine leather", "ifsixwasnine boots", "ifsixwasnine jacket", "ifsixwasnine pants", "if six was nine japan"]
+    ambiguous_aliases: ["if6was9", "isn"]
+    negative_context: ["jimi hendrix", "hendrix", "song", "vinyl", "lp", "album", "if 6 was 9 cd"]
+    lines: []
+    price_floor_usd: {leather_jacket: 250, pants: 70, boots: 120, knit: 60, coat: 120}
+    sources: ["https://www.grailed.com/designers/ifsixwasnine"]
+    confidence: low
+    verify: true
+  - id: kmrii
+    name: Kmrii
+    group: jp_archive
+    base_weight: 6
+    aliases: ["kmrii", "kmrii japan", "kmrii tokyo", "kmrii jeans", "kmrii denim", "kmrii jacket", "kmrii hoodie", "kmrii tee", "kmrii leather", "kmrii tops"]
+    ambiguous_aliases: ["km"]
+    negative_context: ["km/h", "kmart", "kilometers", "cable km"]
+    lines: []
+    price_floor_usd: {denim: 70, leather_jacket: 200, hoodie: 70, knit: 60, pants: 60}
+    sources: ["https://www.grailed.com/designers/kmrii"]
+    confidence: low
+    verify: true
+  - id: tornado_mart
+    name: Tornado Mart
+    group: jp_archive
+    base_weight: 6
+    aliases: ["tornado mart", "tornadomart", "tornado mart japan", "tornado mart jacket", "tornado mart tee", "tornado mart denim", "tornado mart flame", "tornado mart skull", "tornado mart hoodie"]
+    ambiguous_aliases: ["tm", "tornado"]
+    negative_context: ["weather", "storm", "shelter", "warning", "alley", "survivor", "tornado kids"]
+    lines: []
+    price_floor_usd: {denim: 70, graphic_tee: 30, hoodie: 60, leather_jacket: 180, pants: 50}
+    sources: ["https://www.grailed.com/designers/tornado-mart"]
+    confidence: low
+    verify: true
+  - id: goa
+    name: Goa
+    group: jp_archive
+    base_weight: 6
+    aliases: ["goa japan", "goa archive", "goa tokyo", "goa jacket", "goa tee", "goa hoodie", "goa denim", "goa flame", "goa leather", "goa japan 90s", "goa japan y2k", "goa clothing japan"]
+    ambiguous_aliases: ["goa"]
+    negative_context: ["goa india", "goa trip", "goa beach", "goa resort", "goa trance", "goa travel", "goa hotel", "goa party", "goa wedding", "goa music", "goa fish", "bar goa", "goa lamp", "goa book"]
+    lines: []
+    price_floor_usd: {graphic_tee: 30, hoodie: 60, leather_jacket: 180, denim: 60, pants: 50}
+    sources: ["https://www.grailed.com/designers/goa"]
+    confidence: low
+    verify: true
+  - id: share_spirit
+    name: Share Spirit
+    group: jp_archive
+    base_weight: 5
+    aliases: ["share spirit", "sharespirit", "share spirit japan", "share spirit jacket", "share spirit tee", "share spirit flame", "share spirit leather", "share spirit tokyo", "share spirit hoodie"]
+    ambiguous_aliases: ["ss", "spirit"]
+    negative_context: ["share spirit church", "spirit airlines", "gospel", "holy spirit", "share the spirit", "xmas", "christmas", "tumbler"]
+    lines: []
+    price_floor_usd: {graphic_tee: 30, hoodie: 60, leather_jacket: 180, denim: 60, pants: 50}
+    sources: ["https://www.grailed.com/designers/share-spirit"]
+    confidence: low
+    verify: true
+  - id: semantic_design
+    name: Semantic Design
+    group: jp_archive
+    base_weight: 5
+    aliases: ["semantic design", "semanticdesign", "semantic design japan", "semantic design leather", "semantic design jacket", "semantic design tee", "semantic design hoodie", "semantic design bondage"]
+    ambiguous_aliases: ["sd"]
+    negative_context: ["web design", "seo", "semantic html", "semantic ui", "software", "api", "ontology", "linguistics", "template"]
+    lines: []
+    price_floor_usd: {leather_jacket: 200, graphic_tee: 30, hoodie: 60, pants: 50, denim: 60}
+    sources: ["https://www.grailed.com/designers/semantic-design"]
+    confidence: low
+    verify: true
+  - id: buffalo_bobs
+    name: Buffalo Bobs
+    group: jp_archive
+    base_weight: 6
+    aliases: ["buffalo bobs", "buffalobobs", "buffalo bob's", "buffalo bobs japan", "buffalo bobs jacket", "buffalo bobs tee", "buffalo bobs denim", "buffalo bobs hoodie", "buffalo bobs leather", "buffalo bobs studded", "buffalo bobs flame"]
+    ambiguous_aliases: ["bb japan"]
+    negative_context: ["buffalo bills", "buffalo sabres", "buffalo wings", "buffalo chicken", "buffalo plaid", "buffalo check", "bob's burgers", "buffalo bill", "buffalo bills jersey", "buffalo bob howdy doody", "howdy doody", "puppet"]
+    lines: []
+    price_floor_usd: {leather_jacket: 200, graphic_tee: 35, hoodie: 60, denim: 60, pants: 50}
+    sources: ["https://www.grailed.com/designers/buffalo-bobs"]
+    confidence: low
+    verify: true
+  - id: civarize
+    name: Civarize
+    group: jp_archive
+    base_weight: 5
+    aliases: ["civarize", "civarise", "civarize japan", "civarize jacket", "civarize tee", "civarize hoodie", "civarize denim", "civarize leather", "civarize bondage", "civarize tokyo"]
+    ambiguous_aliases: []
+    negative_context: ["civilize", "civilization", "civilize game"]
+    lines: []
+    price_floor_usd: {leather_jacket: 200, graphic_tee: 30, hoodie: 60, denim: 60, pants: 50}
+    sources: ["https://www.grailed.com/designers/civarize"]
+    confidence: low
+    verify: true
+  - id: roen
+    name: Roen
+    group: jp_archive
+    base_weight: 6
+    aliases: ["roen", "roen japan", "roen jeans", "roen denim", "roen skull", "roen jacket", "roen tee", "roen hoodie", "roen leather", "roen studded", "roen rhinestone", "roen embroidered", "roen jp", "roen skull jeans"]
+    ambiguous_aliases: ["roen"]
+    negative_context: ["roen first name", "roen tech", "roen cosmetics", "roen drive", "roen beauty", "roen game", "roen mazda"]
+    lines: []
+    price_floor_usd: {denim: 80, graphic_tee: 40, hoodie: 70, leather_jacket: 200, pants: 60, shirt: 50}
+    sources: ["https://www.grailed.com/designers/roen"]
+    confidence: low
+    verify: true
+  - id: yohji_yamamoto
+    name: Yohji Yamamoto
+    group: jp_archive
+    base_weight: 7
+    aliases: ["yohji yamamoto", "yohji yamamoto pour homme", "yohji yamamoto pour homme", "y's for men", "ys for men", "y-3", "y3", "y's", "ys yohji", "yohji", "yohji yamamoto y's", "yohji yamamoto noir", "regulation yohji yamamoto", "yohji yamamoto +noir", "yohji yamamoto s'yte", "yohji yamamoto discord", "discord yohji", "yohji yamamoto ground y", "yohji yamamoto coat", "yohji yamamoto wool"]
+    ambiguous_aliases: ["y3", "ys", "y-3"]
+    negative_context: ["adidas y-3 kids", "samsung", "perfume", "yoga", "yamamoto sushi", "yamamoto seeds", "yamamoto tea"]
+    lines:
+      - {id: yohji_yamamoto__pour_homme, name: "Yohji Yamamoto Pour Homme", aliases: []}
+      - {id: yohji_yamamoto__ys, name: "Y's", aliases: ["y's", "ys"]}
+      - {id: yohji_yamamoto__y3, name: "Y-3", aliases: ["y-3", "y3"]}
+      - {id: yohji_yamamoto__discord, name: "Discord Yohji Yamamoto", aliases: ["discord"]}
+    price_floor_usd: {coat: 200, blazer: 150, pants: 90, shirt: 70, knit: 90, leather_jacket: 350, boots: 130}
+    sources: ["https://www.grailed.com/designers/yohji-yamamoto"]
+    confidence: med
+  - id: comme_des_garcons
+    name: Comme des Garçons
+    group: jp_archive
+    base_weight: 7
+    aliases: ["comme des garcons", "comme des garçons", "cdg", "cdg homme plus", "comme des garcons homme plus", "cdg homme", "comme des garcons homme", "cdg shirt", "cdg play", "cdg junya", "comme des fuckdown", "comme des garcons tricot", "cdg tricot", "cdg black", "comme des garcons black", "cdg h plus", "homme plus"]
+    ambiguous_aliases: ["cdg", "play", "cdg play", "cdg wallet"]
+    negative_context: ["cdg airport", "paris cdg", "charles de gaulle", "cdg flight", "cdg parfums", "cdg perfume", "eau de parfum", "cdg wallet kids", "cdg play kids", "cdg incense"]
+    lines:
+      - {id: comme_des_garcons__homme_plus, name: "CDG Homme Plus", aliases: ["homme plus", "cdg homme plus"]}
+      - {id: comme_des_garcons__shirt, name: "CDG Shirt", aliases: ["cdg shirt"]}
+      - {id: comme_des_garcons__play, name: "CDG Play", aliases: ["cdg play"]}
+      - {id: comme_des_garcons__tricot, name: "Tricot", aliases: ["tricot"]}
+    price_floor_usd: {blazer: 150, coat: 200, knit: 90, pants: 80, shirt: 60, leather_jacket: 300}
+    sources: ["https://www.grailed.com/designers/comme-des-garcons"]
+    confidence: med
+  - id: junya_watanabe
+    name: Junya Watanabe
+    group: jp_archive
+    base_weight: 7
+    aliases: ["junya watanabe", "junya watanabe man", "junya watanabe cdg", "jw man", "junya", "junya watanabe comme des garcons", "cdg junya watanabe", "junya watanabe eye", "junya watanabe levi's", "junya watanabe patchwork", "junya watanabe carhartt", "junya watanabe north face", "junya watanabe tricot"]
+    ambiguous_aliases: ["jw", "junya"]
+    negative_context: ["jw anderson", "j.w. anderson", "perfume", "junya sushi", "junya first name", "junya kids"]
+    lines: []
+    price_floor_usd: {blazer: 150, coat: 200, denim: 80, pants: 80, shirt: 60, leather_jacket: 300, knit: 80}
+    sources: ["https://www.grailed.com/designers/junya-watanabe"]
+    confidence: med
+  - id: issey_miyake
+    name: Issey Miyake
+    group: jp_archive
+    base_weight: 5
+    aliases: ["issey miyake", "issey miyake men", "homme plisse", "homme plissé", "homme plisse issey miyake", "pleats please", "pleats please issey miyake", "bao bao", "bao bao issey miyake", "me issey miyake", "issey miyake permanente", "permanente issey", "a-poc", "a poc issey miyake", "issey sport"]
+    ambiguous_aliases: ["im", "pleats"]
+    negative_context: ["l'eau d'issey", "leau dissey", "perfume", "eau de toilette", "edt", "edp", "cologne", "fragrance", "fragrance set", "body lotion"]
+    lines:
+      - {id: issey_miyake__homme_plisse, name: "Homme Plissé", aliases: ["homme plisse"]}
+      - {id: issey_miyake__pleats_please, name: "Pleats Please", aliases: ["pleats please"]}
+    price_floor_usd: {pants: 50, shirt: 40, coat: 100, knit: 60, blazer: 80, bag: 70}
+    sources: ["https://www.grailed.com/designers/issey-miyake"]
+    confidence: low
+    verify: true
+  - id: kapital
+    name: Kapital
+    group: jp_archive
+    base_weight: 5
+    aliases: ["kapital", "kapital japan", "kapital kountry", "kapital century denim", "kapital bone", "kapital smiley", "kapital boro", "kapital kountry boro", "kapital hirata hiroshi", "hirata hiroshi", "kapital sashiko", "kapital skeleton", "kapital ring coat", "kapital 5x", "kapital japan denim", "kapital rainbow", "kapital smile"]
+    ambiguous_aliases: ["kountry"]
+    negative_context: ["venture capital", "capital one", "capital city", "capital letters", "capital gains", "capital goods", "capital hill", "capital crown", "capital h", "capitals jersey", "washington capitals", "capital fm", "capital punishment", "capital cost"]
+    lines: []
+    price_floor_usd: {denim: 100, knit: 80, shirt: 60, pants: 70, coat: 140, hoodie: 70}
+    sources: ["https://www.grailed.com/designers/kapital"]
+    confidence: low
+    verify: true
+  # ---------------- 1B European archive ----------------
+  - id: raf_simons
+    name: Raf Simons
+    group: eu_archive
+    base_weight: 9
+    aliases: ["raf simons", "rafsimons", "raf simon", "raf simmons", "raf simons archive", "raf simons riot", "riot riot riot", "raf simons virginia creeper", "raf simons closer", "raf simons consumed", "raf simons parka", "raf simons bomber", "raf simons peter saville", "raf simons new order", "raf simons joy division", "raf simons sterling ruby", "raf simons kraftwerk", "raf simons fred perry", "raf simons x fred perry", "raf simons ozweego", "raf simons adidas", "raf simons runner", "raf simons antei", "raf simons cylon", "raf simons woe onto those who spit on youth", "raf simons cop", "raf simons sweater", "raf simons knit", "raf simons cardigan", "raf simons leather", "raf simons denim"]
+    ambiguous_aliases: ["raf", "rs", "rafs"]
+    negative_context: ["rafael", "raf airforce", "royal air force", "raf pilot", "raf jacket military", "raf vintage ww2", "raf wings", "raf officer", "raf rugby", "raf pins", "raf bomber ww2", "polo ralph lauren raf", "raf sport", "raf 2 liter", "raf tanks", "raf bike", "raf pack", "simons cat", "simons mfg", "simon says"]
+    lines:
+      - {id: raf_simons__mainline, name: "Raf Simons", aliases: []}
+      - {id: raf_simons__r, name: "R / RAF by Raf Simons (diffusion)", aliases: ["r by raf simons", "raf simons r", "raf by raf simons"]}
+      - {id: raf_simons__adidas, name: "Raf Simons x adidas", aliases: ["raf simons adidas", "raf simons ozweego"]}
+    price_floor_usd: {coat: 250, denim: 120, knit: 120, shirt: 80, pants: 100, leather_jacket: 400, hoodie: 120, boots: 150, sneakers: 80, graphic_tee: 70, blazer: 150}
+    sources: ["https://www.dazeddigital.com/fashion/article/29467/1/tracing-raf-simons-love-for-teenage-riot-and-rock-and-roll", "https://www.highsnobiety.com/p/raf-simons-most-iconic-pieces", "https://magazine.032c.com/magazine/raf-simons-retrospective-1995-2015"]
+    confidence: high
+  - id: helmut_lang
+    name: Helmut Lang
+    group: eu_archive
+    base_weight: 9
+    aliases: ["helmut lang", "helmutlang", "helmut lang archive", "helmut lang vintage", "helmut lang jeans", "helmut lang denim", "helmut lang painter", "helmut lang painter jeans", "helmut lang astro biker", "astro biker", "helmut lang bondage", "helmut lang flight jacket", "helmut lang bondage strap", "helmut lang italy", "helmut lang made in italy", "helmut lang austria", "helmut lang leather", "helmut lang 90s", "helmut lang 1998", "helmut lang parka", "helmut lang cloak", "helmut lang bulletproof vest", "helmut lang vest", "helmut lang denim jacket"]
+    ambiguous_aliases: ["hl", "lang"]
+    negative_context: ["perfume", "eau de parfum", "fragrance", "helmut lang beauty", "helmut lang cologne", "helmut lang renaissance", "k-pop", "kids", "helmut lang bag fast retailing"]
+    lines:
+      - {id: helmut_lang__mainline, name: "Helmut Lang", aliases: []}
+      - {id: helmut_lang__jeans, name: "Helmut Lang Jeans", aliases: ["helmut lang jeans"]}
+      - {id: helmut_lang__post, name: "Helmut Lang (post-2005 brand)", aliases: []}
+    price_floor_usd: {denim: 100, leather_jacket: 350, coat: 200, pants: 80, shirt: 60, knit: 80, blazer: 120, boots: 120}
+    sources: ["https://en.wikipedia.org/wiki/Helmut_Lang_(fashion_brand)", "https://www.ssense.com/en-sg/editorial/fashion/helmut-lang-guide"]
+    confidence: high
+  - id: margiela
+    name: Maison Margiela
+    group: eu_archive
+    base_weight: 9
+    aliases: ["margiela", "martin margiela", "maison martin margiela", "mmm", "maison margiela", "margiela archive", "mm6", "mm6 maison margiela", "maison martin margiela paris", "margiela 6", "margiela 10", "margiela 14", "margiela 0", "margiela 4 stitch", "margiela four stitch", "margiela tabi", "margiela tabi boots", "margiela replica", "margiela gat", "margiela german army trainer", "margiela artisanal", "margiela line 10", "margiela line 14", "margiela line 4", "margiela leather", "margiela hoodie", "margiela sweater", "margiela deconstructed", "margiela bag", "margiela fruit", "margiela blazer", "margiela jeans"]
+    ambiguous_aliases: ["mm", "mm6", "mmm", "replica", "tabi"]
+    negative_context: ["replica perfume", "by the fireplace", "lazy sunday morning", "jazz club", "candle", "fragrance", "eau de toilette", "edt", "perfume", "replica watch", "tabi socks", "tabi sandals", "tabi nike", "tabi split toe sock", "reps", "rep", "mm6 kids", "margiela kids"]
+    lines:
+      - {id: margiela__artisanal, name: "Artisanal", aliases: ["artisanal"]}
+      - {id: margiela__line_10, name: "Line 10 (menswear)", aliases: ["line 10", "10"]}
+      - {id: margiela__line_14, name: "Line 14 (menswear)", aliases: ["line 14", "14"]}
+      - {id: margiela__mm6, name: "MM6", aliases: ["mm6"]}
+    price_floor_usd: {coat: 250, blazer: 150, knit: 100, denim: 100, boots: 150, leather_jacket: 400, shirt: 70, hoodie: 100, sneakers: 80, bag: 150}
+    sources: ["https://www.ssense.com/en-ee/editorial/fashion/maison-margiela-guide"]
+    confidence: high
+  - id: ann_demeulemeester
+    name: Ann Demeulemeester
+    group: eu_archive
+    base_weight: 8
+    aliases: ["ann demeulemeester", "ann d", "ann demeulemeester archive", "ann demeulemeester boots", "ann demeulemeester leather", "ann demeulemeester blazer", "ann demeulemeester vest", "ann demeulemeester coat", "ann demeulemeester pants", "ann demeulemeester wool", "ann demeulemeester men", "ann demeulemeester homme", "ann demeulemeester pour homme", "demeulemeester", "ann demeulemeester feathers", "ann demeulemeester shearling", "ann demeulemeester sweater", "ann demeulemeester shirt"]
+    ambiguous_aliases: ["ad", "ann"]
+    negative_context: ["perfume", "ann taylor", "ann summers", "ann arbor", "ann klein", "ann kids"]
+    lines: []
+    price_floor_usd: {leather_jacket: 300, boots: 150, coat: 200, blazer: 120, pants: 70, knit: 70, shirt: 50}
+    sources: ["https://www.grailed.com/designers/ann-demeulemeester"]
+    confidence: med
+  - id: carol_christian_poell
+    name: Carol Christian Poell
+    group: eu_archive
+    base_weight: 8
+    aliases: ["carol christian poell", "ccp", "carol christian poell leather", "carol christian poell boots", "carol christian poell jacket", "ccp jacket", "ccp boots", "ccp drip dyed", "ccp object dyed", "carol christian poell object dyed", "carol christian poell drip", "carol christian poell coat", "carol christian poell derby", "carol poell", "poell"]
+    ambiguous_aliases: ["ccp", "poell"]
+    negative_context: ["soviet", "ussr", "communist party", "ccp china", "chinese communist", "ccp virus", "ccp card", "ccp games", "eve online", "ccp sheet", "ccp pad", "cc pillow", "ccp hockey", "ccm"]
+    lines: []
+    price_floor_usd: {leather_jacket: 400, boots: 200, coat: 250, pants: 120, knit: 100}
+    sources: ["https://www.grailed.com/designers/carol-christian-poell"]
+    confidence: low
+    verify: true
+  - id: julius
+    name: Julius
+    group: eu_archive
+    base_weight: 7
+    aliases: ["julius", "julius_7", "julius 7", "julius japan", "julius tokyo", "julius gas mask", "julius archive", "julius leather", "julius cargo", "julius hoodie", "julius coat", "julius vest", "julius moto", "julius gasmask", "julius gas mask cargo", "julius cargo pants", "julius jacket", "julius pants", "julius_7 jacket"]
+    ambiguous_aliases: ["julius"]
+    negative_context: ["julius caesar", "caesar", "julius cesar", "julius rosenwald", "julius peppers", "julius randle", "julius erving", "dr j", "julius paul frank", "paul frank julius", "julius the monkey", "monkey", "paul frank", "julius jersey", "julius kids", "julius hair", "juul", "julius baer", "julius meinl", "julius meinl coffee", "julius sports", "julius sleeping bag", "julius cook", "julius ceasar", "julius cap", "paul frank hat"]
+    lines: []
+    price_floor_usd: {pants: 90, coat: 150, hoodie: 90, leather_jacket: 300, knit: 80, boots: 120, bag: 90}
+    sources: ["https://www.grailed.com/designers/julius"]
+    confidence: low
+    verify: true
+  - id: boris_bidjan_saberi
+    name: Boris Bidjan Saberi
+    group: eu_archive
+    base_weight: 7
+    aliases: ["boris bidjan saberi", "bbs", "bbs 11", "boris bidjan saberi 11", "boris bidjan saberi leather", "boris bidjan saberi boots", "bbs boots", "bbs leather", "bbs jacket", "bbs 11 boots", "boris bidjan saberi 11 pants", "boris bidjan saberi 11 jacket", "boris bidjan", "saberi", "boris bidjan saberi coat", "boris bidjan saberi hoodie", "boris bidjan saberi culture", "bbs object dyed"]
+    ambiguous_aliases: ["bbs", "bbs 11", "boris"]
+    negative_context: ["british boxing", "bbs wheels", "bbs rims", "bbs alloy", "bbs rs", "bbs bulletin", "bbs bbq", "bbs forum", "bbs bakery", "bbs car"]
+    lines: []
+    price_floor_usd: {leather_jacket: 300, boots: 180, pants: 90, hoodie: 90, knit: 80, coat: 180}
+    sources: ["https://www.grailed.com/designers/boris-bidjan-saberi"]
+    confidence: low
+    verify: true
+  - id: jean_paul_gaultier
+    name: Jean Paul Gaultier
+    group: eu_archive
+    base_weight: 7
+    aliases: ["jean paul gaultier", "jpg", "gaultier", "jean paul gaultier classique", "jean paul gaultier homme", "jean paul gaultier mesh", "jean paul gaultier mesh top", "jean paul gaultier tattoo", "jean paul gaultier tattoo top", "jean paul gaultier fuzzi", "jean paul gaultier maille", "jean paul gaultier femme", "jean paul gaultier junior", "jean paul gaultier sailor", "jean paul gaultier corset", "jean paul gaultier jeans", "jean paul gaultier cone bra", "jean paul gaultier vintage", "jean paul gaultier archive", "jpg homme", "jpg mesh", "jpg tattoo", "jpg fuzzi", "gaultier jeans"]
+    ambiguous_aliases: ["jpg", "jpg homme"]
+    negative_context: ["jpg image", "jpeg", ".jpg", "photo file", "jpg export", "le male", "classique perfume", "eau de toilette", "edt", "edp", "fragrance", "ultra male", "scandal", "la belle", "gaultier2", "jpg kids", "perfume bottle torso"]
+    lines: []
+    price_floor_usd: {graphic_tee: 50, knit: 70, coat: 150, denim: 70, pants: 60, blazer: 100, shirt: 50, leather_jacket: 250}
+    sources: ["https://www.grailed.com/designers/jean-paul-gaultier"]
+    confidence: low
+    verify: true
+  - id: vivienne_westwood
+    name: Vivienne Westwood
+    group: eu_archive
+    base_weight: 7
+    aliases: ["vivienne westwood", "vivienne westwood man", "westwood", "vivienne westwood anglomania", "vivienne westwood gold label", "vivienne westwood red label", "vivienne westwood orb", "vivienne westwood orb necklace", "vivienne westwood armor ring", "vivienne westwood armour ring", "vivienne westwood necklace", "vivienne westwood choker", "vivienne westwood pearl", "vivienne westwood bracelet", "vivienne westwood earrings", "vivienne westwood belt", "vivienne westwood tee", "vivienne westwood sweater", "vivienne westwood sex", "vivienne westwood punk", "vivienne westwood bondage", "vivienne westwood cardigan", "vivienne westwood vintage", "vivienne westwood hoodie", "vivienne westwood jeans", "vivienne westwood coat", "vivienne westwood jacket", "viv westwood", "vw orb"]
+    ambiguous_aliases: ["vw", "viv", "westwood"]
+    negative_context: ["volkswagen", "westwood mall", "westwood village", "westwood ca", "ucla westwood", "westwood nj", "westwood boulevard", "westwood high school", "westwood ma", "westwood college", "westwood lakes", "westwood one", "westwood radio", "westwood glasses", "westwood perfume", "boudoir perfume", "naughty alice", "vivienne westwood kids", "melissa shoes", "vivienne westwood melissa", "melissa vivienne", "vw golf"]
+    lines:
+      - {id: vivienne_westwood__man, name: "Vivienne Westwood Man", aliases: ["vivienne westwood man"]}
+      - {id: vivienne_westwood__anglomania, name: "Anglomania", aliases: ["anglomania"]}
+      - {id: vivienne_westwood__gold, name: "Gold Label", aliases: ["gold label"]}
+      - {id: vivienne_westwood__red, name: "Red Label", aliases: ["red label"]}
+    price_floor_usd: {jewelry: 60, knit: 70, graphic_tee: 40, coat: 150, belt: 50, bag: 80, shirt: 60, pants: 70}
+    sources: ["https://www.grailed.com/designers/vivienne-westwood"]
+    confidence: low
+    verify: true
+  - id: alexander_mcqueen
+    name: Alexander McQueen
+    group: eu_archive
+    base_weight: 8
+    aliases: ["alexander mcqueen", "mcqueen", "lee mcqueen", "alexander mcqueen vintage", "alexander mcqueen archive", "alexander mcqueen lee", "alexander mcqueen skull scarf", "mcqueen skull scarf", "alexander mcqueen skull", "alexander mcqueen bumster", "alexander mcqueen bumster jeans", "alexander mcqueen blazer", "alexander mcqueen leather", "alexander mcqueen jacket", "alexander mcqueen denim", "alexander mcqueen bag", "alexander mcqueen knit", "alexander mcqueen coat", "alexander mcqueen oversized sneaker", "alexander mcqueen shirt", "mcqueen homme", "alexander mcqueen homme", "alexander mcqueen made in italy", "alexander mcqueen tailoring"]
+    ambiguous_aliases: ["mcq", "mc queen", "mcqueen"]
+    negative_context: ["lightning mcqueen", "cars movie", "disney cars", "steve mcqueen", "steve mcqueen film", "steve mcqueen watch", "mcqueen movie poster", "hot wheels", "diecast", "toy", "pixar", "kachow", "lightning mcqueen pajamas", "cars 3", "mcqueen kids", "toddler", "kids", "perfume", "mcqueen perfume", "mcqueen fragrance", "steve mcqueen 1/6 figure"]
+    lines:
+      - {id: alexander_mcqueen__mainline, name: "Alexander McQueen", aliases: []}
+      - {id: alexander_mcqueen__mcq, name: "McQ", aliases: ["mcq", "mcq alexander mcqueen"]}
+    price_floor_usd: {blazer: 150, leather_jacket: 350, denim: 90, knit: 80, coat: 200, shirt: 60, jewelry: 80, belt: 60, accessory: 60, sneakers: 80}
+    sources: ["https://www.grailed.com/designers/alexander-mcqueen"]
+    confidence: med
+  - id: gucci
+    name: Gucci
+    group: eu_archive
+    base_weight: 7
+    aliases: ["gucci", "gucci tom ford", "tom ford gucci", "vintage gucci", "gucci archive", "gucci 90s", "gucci 2000s", "gucci y2k", "gucci leather", "gucci leather jacket", "gucci horsebit", "gucci horsebit loafer", "gucci g logo", "gucci belt", "gucci aviator", "gucci aviators", "gucci sunglasses tom ford", "gucci velvet", "gucci jeans", "gucci denim", "gucci jacket", "gucci sweater", "gucci pants", "gucci blazer", "gucci italy", "gucci made in italy"]
+    ambiguous_aliases: ["gg", "gucci gang"]
+    negative_context: ["gucci mane", "gucci gang", "lil pump", "gucci flip flops kids", "gucci perfume", "gucci guilty", "gucci bloom", "gucci rush", "eau de toilette", "edt", "edp", "fragrance", "gucci baby", "gucci for kids", "gucci kids", "gucci mane cd", "gucci mane vinyl", "gucci glasses cleaning", "gucci replica", "gucci inspired", "gucci style", "gucci bamboo candle", "gucci pen", "gucci kicks", "gucci foam"]
+    lines:
+      - {id: gucci__tom_ford, name: "Gucci (Tom Ford era)", aliases: []}
+    price_floor_usd: {leather_jacket: 300, blazer: 150, pants: 80, knit: 70, boots: 150, bag: 250, belt: 70, jewelry: 80, accessory: 60, denim: 80, coat: 200}
+    sources: ["https://www.grailed.com/designers/gucci"]
+    confidence: low
+    verify: true
+  - id: versace
+    name: Versace
+    group: eu_archive
+    base_weight: 6
+    aliases: ["versace", "gianni versace", "versace vintage", "versace archive", "versace 90s", "versace medusa", "versace silk shirt", "versace baroque", "versace barocco", "versace couture", "versace jeans couture", "vjc", "versace jeans", "versace classic v2", "versace collection", "versace medusa belt", "versace belt", "versace tie", "versace leather", "versace jacket", "versace shirt", "versace pants", "versace scarf", "versace sunglasses", "versace gianni vintage", "versace home", "versace made in italy"]
+    ambiguous_aliases: ["vjc", "v2"]
+    negative_context: ["perfume", "eroos", "dylan blue", "pour homme", "eau de toilette", "edt", "edp", "versace home plate", "versace dinnerware", "rosenthal", "versace mug", "versace cup", "versace candle", "versace porcelain", "versace bedding", "versace kids", "young versace", "versace baby", "versace blanket", "versace watch box", "versace shopping bag only", "versace eyeglass case", "versace cologne", "versace body spray"]
+    lines:
+      - {id: versace__gianni, name: "Gianni Versace", aliases: ["gianni versace"]}
+      - {id: versace__jeans_couture, name: "Versace Jeans Couture", aliases: ["versace jeans couture", "vjc"]}
+    price_floor_usd: {knit: 60, shirt: 60, blazer: 100, leather_jacket: 250, denim: 60, pants: 60, belt: 60, accessory: 50, jewelry: 80, coat: 150}
+    sources: ["https://www.grailed.com/designers/versace"]
+    confidence: low
+    verify: true
+  - id: dolce_gabbana
+    name: Dolce & Gabbana
+    group: eu_archive
+    base_weight: 5
+    aliases: ["dolce and gabbana", "dolce & gabbana", "dolce gabbana", "d&g", "d and g", "dg", "dolce gabbana vintage", "dolce gabbana y2k", "dolce gabbana 2000s", "d&g y2k", "d&g jeans", "d&g denim", "d&g belt", "d&g 2000s", "d&g sunglasses", "d&g leather jacket", "dolce gabbana jeans", "dolce gabbana denim", "dolce gabbana leather", "dolce gabbana italy", "dolce gabbana made in italy", "dolce gabbana archive", "dolce gabbana 2001", "dolce gabbana 2002", "dolce gabbana 2003", "dolce gabbana belt", "dolce gabbana shirt", "dolce gabbana sweater", "dolce gabbana coat", "dolce gabbana jacket", "dolce gabbana blazer"]
+    ambiguous_aliases: ["dg", "d&g", "d and g"]
+    negative_context: ["light blue", "the one", "perfume", "eau de toilette", "edt", "edp", "fragrance", "cologne", "pour homme", "dolce gabbana for kids", "kids", "baby", "dolce gabbana iphone case", "phone case", "dolce gabbana lipstick", "dolce gabbana makeup", "dolce gabbana beauty", "dolce gabbana watch", "dolce gabbana smeg", "smeg", "d&g watch", "d&g clock", "d&g perfume", "dolce gabbana handbag fake", "d&g inspired", "dolce gabbana sicily bag"]
+    lines:
+      - {id: dolce_gabbana__dg, name: "D&G (diffusion, 2000s)", aliases: ["d&g"]}
+    price_floor_usd: {denim: 50, leather_jacket: 200, belt: 40, knit: 50, shirt: 40, blazer: 80, coat: 120, pants: 50}
+    sources: ["https://www.grailed.com/designers/dolce-gabbana"]
+    confidence: low
+    verify: true
+  - id: roberto_cavalli
+    name: Roberto Cavalli
+    group: eu_archive
+    base_weight: 5
+    aliases: ["roberto cavalli", "cavalli", "just cavalli", "cavalli class", "roberto cavalli y2k", "roberto cavalli vintage", "roberto cavalli 2000s", "roberto cavalli snake", "roberto cavalli snakeskin", "roberto cavalli python", "roberto cavalli leopard", "roberto cavalli animal print", "roberto cavalli jeans", "roberto cavalli denim", "roberto cavalli leather jacket", "roberto cavalli tee", "roberto cavalli shirt", "roberto cavalli silk shirt", "roberto cavalli fur", "roberto cavalli coat", "roberto cavalli italy", "roberto cavalli made in italy", "roberto cavalli sunglasses", "roberto cavalli dress"]
+    ambiguous_aliases: ["rc", "cavalli"]
+    negative_context: ["perfume", "eau de parfum", "eau de toilette", "edt", "edp", "fragrance", "cologne", "paradiso", "cavalli club", "cavalli club miami", "cavalli cafe", "cavalli vodka", "cavalli cognac", "cavalli yacht", "cavalli kids", "baby cavalli", "junior cavalli", "cavalli casa", "cavalli home", "cavalli bedding", "just cavalli perfume"]
+    lines:
+      - {id: roberto_cavalli__just, name: "Just Cavalli", aliases: ["just cavalli"]}
+      - {id: roberto_cavalli__class, name: "Cavalli Class", aliases: ["cavalli class"]}
+    price_floor_usd: {denim: 60, leather_jacket: 200, shirt: 50, graphic_tee: 30, coat: 100, pants: 50, knit: 50}
+    sources: ["https://www.grailed.com/designers/roberto-cavalli"]
+    confidence: low
+    verify: true
+  - id: givenchy
+    name: Givenchy
+    group: eu_archive
+    base_weight: 7
+    aliases: ["givenchy", "givenchy tisci", "riccardo tisci givenchy", "givenchy rottweiler", "rottweiler tee", "givenchy rottweiler tee", "givenchy rottweiler hoodie", "givenchy rottweiler sweatshirt", "givenchy star", "givenchy stars", "givenchy stars tee", "givenchy 17", "givenchy 17 tee", "givenchy cuban fit", "givenchy cuban fit tee", "givenchy columbian fit", "givenchy columbian", "givenchy madonna tee", "givenchy madonna", "givenchy bambi", "givenchy bambi tee", "givenchy shark", "givenchy shark tee", "givenchy shark hoodie", "givenchy leather", "givenchy leather jacket", "givenchy biker", "givenchy sneakers", "givenchy tyson", "givenchy tyson sneaker", "givenchy rico", "givenchy jeans", "givenchy denim", "givenchy hoodie", "givenchy tee", "givenchy made in italy", "givenchy paris"]
+    ambiguous_aliases: ["gvc", "gvnch", "gv"]
+    negative_context: ["perfume", "le male", "play", "play for her", "amarige", "organza", "ysatis", "eau de toilette", "edt", "edp", "fragrance", "cologne", "givenchy beauty", "le rouge", "le rouge lipstick", "lipstick", "foundation", "blush", "prisme libre", "prisme", "givenchy makeup", "mascara", "givenchy sunglasses case", "givenchy kids", "baby givenchy", "givenchy dust bag", "perfume gift set", "givenchy skincare", "ange ou demon", "dahlia divin", "gentleman", "gentleman givenchy"]
+    lines:
+      - {id: givenchy__mainline, name: "Givenchy", aliases: []}
+    price_floor_usd: {graphic_tee: 60, hoodie: 110, leather_jacket: 300, denim: 90, sneakers: 100, knit: 70, shirt: 60, coat: 200, boots: 120, pants: 70}
+    sources: ["https://www.grailed.com/designers/givenchy"]
+    confidence: med
+  - id: balenciaga
+    name: Balenciaga
+    group: eu_archive
+    base_weight: 7
+    aliases: ["balenciaga", "balenciaga ghesquiere", "ghesquiere balenciaga", "nicolas ghesquiere balenciaga", "balenciaga demna", "demna balenciaga", "balenciaga motorcycle", "balenciaga motocross", "balenciaga moto jacket", "balenciaga moto", "balenciaga city bag", "balenciaga lariat", "balenciaga work bag", "balenciaga first bag", "balenciaga bag", "balenciaga arena leather", "balenciaga triple s", "balenciaga track", "balenciaga speed trainer", "balenciaga speed", "balenciaga race runner", "balenciaga defender", "balenciaga 3xl", "balenciaga hoodie", "balenciaga tee", "balenciaga logo tee", "balenciaga jacket", "balenciaga leather jacket", "balenciaga jeans", "balenciaga denim", "balenciaga cargo", "balenciaga pants", "balenciaga coat", "balenciaga trench", "balenciaga shirt", "balenciaga knit", "balenciaga sweater", "balenciaga sunglasses", "balenciaga hat", "balenciaga boots", "balenciaga paris", "balenciaga made in italy"]
+    ambiguous_aliases: ["bal", "balenci", "bcg"]
+    negative_context: ["perfume", "rosabotanica", "florabotanica", "paris balenciaga perfume", "eau de parfum", "eau de toilette", "edt", "edp", "fragrance", "cologne", "balenciaga kids", "baby balenciaga", "toddler balenciaga", "balenciaga dust bag", "empty box", "box only", "balenciaga sunglasses case", "balenciaga shopping bag", "balenciaga iphone case", "phone case", "balenciaga adidas", "balenciaga crocs", "balenciaga crocs", "hourglass bag fake", "balenciaga rep", "balenciaga inspired", "balenciaga style", "hotel", "balenciaga hotel", "balenciaga museum"]
+    lines:
+      - {id: balenciaga__mainline, name: "Balenciaga", aliases: []}
+    price_floor_usd: {leather_jacket: 350, denim: 100, sneakers: 120, hoodie: 110, graphic_tee: 60, bag: 350, coat: 250, boots: 150, pants: 90, knit: 90, shirt: 70, blazer: 150}
+    sources: ["https://www.grailed.com/designers/balenciaga"]
+    confidence: low
+    verify: true
+  - id: vetements
+    name: Vetements
+    group: eu_archive
+    base_weight: 6
+    aliases: ["vetements", "vetements demna", "demna vetements", "vetements hoodie", "vetements dhl", "vetements dhl tee", "vetements titanic", "vetements titanic hoodie", "vetements metal", "vetements metal hoodie", "vetements metal logo", "vetements tee", "vetements logo tee", "vetements jeans", "vetements denim", "vetements reebok", "vetements x reebok", "vetements levis", "vetements x levi's", "vetements champion", "vetements x champion", "vetements polizei", "vetements polizei tee", "vetements ripped jeans", "vetements bomber", "vetements jacket", "vetements leather jacket", "vetements coat", "vetements trench", "vetements biker", "vetements knit", "vetements sweater", "vetements sweatshirt", "vetements pants", "vetements trousers", "vetements belt", "vetements bag", "vetements sneakers", "vetements boots", "vetements aw16", "vetements ss17", "vetements ss16"]
+    ambiguous_aliases: ["vtmnts", "vtmts", "vetements"]
+    negative_context: ["vêtements", "french for clothes", "vetements vintage workwear", "vetements de travail", "vetement femme", "vetement enfant", "vetement homme", "vetement pas cher", "vetement bébé", "vetements occasion", "vetements lot"]
+    lines:
+      - {id: vetements__mainline, name: "Vetements", aliases: []}
+    price_floor_usd: {hoodie: 100, graphic_tee: 60, denim: 100, leather_jacket: 300, coat: 200, sneakers: 100, knit: 80, pants: 70, shirt: 60, blazer: 120, boots: 120}
+    sources: ["https://www.grailed.com/designers/vetements"]
+    confidence: low
+    verify: true
+  - id: mugler
+    name: Mugler (Thierry Mugler)
+    group: eu_archive
+    base_weight: 5
+    aliases: ["mugler", "thierry mugler", "mugler vintage", "thierry mugler vintage", "mugler archive", "thierry mugler archive", "mugler 90s", "thierry mugler 90s", "mugler y2k", "mugler couture", "thierry mugler couture", "mugler leather", "thierry mugler leather", "mugler corset", "thierry mugler corset", "mugler blazer", "thierry mugler blazer", "mugler jacket", "thierry mugler jacket", "mugler coat", "thierry mugler coat", "mugler dress", "thierry mugler dress", "mugler pants", "thierry mugler pants", "mugler paris", "thierry mugler paris", "mugler made in france", "thierry mugler made in france", "mugler homme", "thierry mugler homme", "mugler men"]
+    ambiguous_aliases: ["mugler", "thierry"]
+    negative_context: ["angel", "alien", "a*men", "amen", "perfume", "eau de parfum", "eau de toilette", "edt", "edp", "fragrance", "cologne", "refill", "angel muse", "alien goddess", "mugler beauty", "lipstick", "mugler makeup", "mugler skincare", "mugler hair", "mugler kids", "mugler baby", "mugler sample", "mugler gift set", "thierry mugler perfume", "thierry mugler cologne", "thierry mugler angel", "thierry mugler alien", "mugler h&m", "h&m mugler"]
+    lines:
+      - {id: mugler__thierry, name: "Thierry Mugler", aliases: ["thierry mugler"]}
+      - {id: mugler__couture, name: "Mugler Couture", aliases: ["mugler couture"]}
+    price_floor_usd: {blazer: 120, coat: 200, leather_jacket: 300, pants: 80, shirt: 60, knit: 70}
+    sources: ["https://www.grailed.com/designers/mugler"]
+    confidence: low
+    verify: true
+  # ---------------- rapper-uniform staples ----------------
+  - id: chrome_hearts
+    name: Chrome Hearts
+    group: rapper_staple
+    base_weight: 7
+    aliases: ["chrome hearts", "chromehearts", "chrome heart", "chrome hearts cross", "chrome hearts dagger", "chrome hearts cemetery", "chrome hearts cemetery cross", "chrome hearts ring", "chrome hearts rings", "chrome hearts silver", "chrome hearts 925", "chrome hearts pendant", "chrome hearts necklace", "chrome hearts bracelet", "chrome hearts chain", "chrome hearts earring", "chrome hearts wallet", "chrome hearts belt", "chrome hearts leather", "chrome hearts jacket", "chrome hearts hoodie", "chrome hearts tee", "chrome hearts t shirt", "chrome hearts denim", "chrome hearts jeans", "chrome hearts hat", "chrome hearts cap", "chrome hearts trucker", "chrome hearts beanie", "chrome hearts scroll", "chrome hearts floral", "chrome hearts fuck you", "chrome hearts fy", "chrome hearts horseshoe", "chrome hearts fleur", "chrome hearts bs fleur", "chrome hearts bs fleur ring", "chrome hearts sbt", "chrome hearts keeper ring", "chrome hearts spacer ring", "chrome hearts baby fat", "chrome hearts tiny e", "chrome hearts paper chain", "chrome hearts tear drop", "chrome hearts cross patch", "chrome hearts cross patch jacket", "chrome hearts sweatpants", "chrome hearts pants", "chrome hearts shorts", "chrome hearts sunglasses", "chrome hearts glasses", "chrome hearts eyewear", "chrome hearts eyeglasses", "chrome hearts matty boy", "chrome hearts matty boy tee", "chrome hearts matty boy hoodie", "chrome hearts plus", "chrome hearts x", "chrome hearts shop", "chrome hearts la", "chrome hearts malibu", "chrome hearts hollywood", "chrome hearts made in usa", "chrome hearts made in la", "chrome hearts lace", "chrome hearts trucker hat", "chrome hearts denim jacket", "chrome hearts leather jacket", "chrome hearts leather pants"]
+    ambiguous_aliases: ["ch", "c.h.", "chrome", "hearts", "ch cross"]
+    negative_context: ["chrome browser", "google chrome", "chromebook", "chrome extension", "chrome wheels", "chrome rims", "chrome bumper", "chrome trim", "chrome faucet", "chrome pipe", "chrome exhaust", "chrome plated", "chromecast", "chrome wheel", "purple hearts", "heart shaped", "cardboard heart", "valentine", "hallmark", "kids", "heart pendant 14k", "heart locket", "chrome hearts inspired", "chrome hearts style", "chrome hearts rep", "chrome hearts replica", "chrome hearts custom", "chrome hearts dupe", "chrome hearts alternative", "chrome hearts x lookalike"]
+    lines:
+      - {id: chrome_hearts__mainline, name: "Chrome Hearts", aliases: []}
+      - {id: chrome_hearts__plus, name: "Chrome Hearts Plus", aliases: ["chrome hearts plus"]}
+      - {id: chrome_hearts__eyewear, name: "Chrome Hearts Eyewear", aliases: ["chrome hearts eyewear"]}
+      - {id: chrome_hearts__matty_boy, name: "Matty Boy", aliases: ["matty boy"]}
+    price_floor_usd: {jewelry: 150, belt: 250, leather_jacket: 1200, hoodie: 250, graphic_tee: 100, denim: 400, accessory: 100, bag: 400}
+    sources: ["https://www.grailed.com/designers/chrome-hearts"]
+    confidence: med
+  - id: true_religion
+    name: True Religion
+    group: rapper_staple
+    base_weight: 4
+    aliases: ["true religion", "truereligion", "true religion jeans", "true religion denim", "true religion brand jeans", "true religion billy", "true religion ricky", "true religion super t", "true religion joey", "true religion bobby", "true religion hoodie", "true religion jacket", "true religion leather jacket", "true religion denim jacket", "true religion trucker jacket", "true religion horseshoe", "true religion buddha", "true religion stitching", "true religion 2000s", "true religion y2k", "true religion vintage", "true religion 90s", "true religion rainbow", "true religion flap", "true religion flap pocket", "true religion big t", "true religion japan", "true religion made in usa", "true religion shorts", "true religion tee", "true religion t shirt", "true religion hat", "true religion belt", "true religion sunglasses"]
+    ambiguous_aliases: ["tr", "tr jeans", "true r"]
+    negative_context: ["true religion book", "true religion tv", "comparative religion", "true religion church", "bible", "true religion essay", "religion studies", "ministry", "true religion kids", "true religion toddler", "true religion baby", "true religion rep", "true religion style", "true religion inspired", "true religion fake", "true religion custom"]
+    lines:
+      - {id: true_religion__mainline, name: "True Religion", aliases: []}
+    price_floor_usd: {denim: 60, hoodie: 40, leather_jacket: 120, graphic_tee: 20, pants: 40}
+    sources: ["https://www.grailed.com/designers/true-religion"]
+    confidence: low
+    verify: true
+  - id: supreme
+    name: Supreme
+    group: rapper_staple
+    base_weight: 5
+    aliases: ["supreme", "supreme new york", "supreme ny", "supreme box logo", "supreme bogo", "supreme shibuya", "supreme shibuya box logo", "supreme shibuya bogo", "supreme shibuya tee", "supreme tokyo", "supreme japan", "supreme box logo tee", "supreme box logo hoodie", "supreme box logo crewneck", "supreme hoodie", "supreme tee", "supreme t shirt", "supreme jacket", "supreme leather jacket", "supreme denim", "supreme jeans", "supreme crewneck", "supreme sweatshirt", "supreme camp cap", "supreme cap", "supreme hat", "supreme beanie", "supreme sticker", "supreme backpack", "supreme bag", "supreme duffle", "supreme x", "supreme collab", "supreme comme des garcons", "supreme cdg", "supreme undercover", "supreme north face", "supreme tnf", "supreme nike", "supreme vans", "supreme nike dunk", "supreme air force", "supreme air force 1", "supreme x louis vuitton", "supreme lv", "supreme louis vuitton", "supreme the north face", "supreme levi's", "supreme x levi's", "supreme dickies", "supreme x dickies", "supreme carhartt", "supreme timberland", "supreme x timberland", "supreme x champion", "supreme champion", "supreme x thrasher", "supreme thrasher", "supreme x playboy", "supreme playboy", "supreme x blade", "supreme blade", "supreme x scarface", "supreme scarface", "supreme x tupac", "supreme tupac", "supreme x mike kelley", "supreme mike kelley", "supreme x kaws", "supreme kaws", "supreme skate deck", "supreme deck", "supreme skateboard", "supreme x damien hirst", "supreme x larry clark", "supreme kids", "supreme t", "supreme logo", "supreme red", "supreme classic", "supreme og", "supreme 2000s", "supreme 90s", "supreme 2010s", "supreme vintage", "supreme archive", "supreme made in usa", "supreme made in canada"]
+    ambiguous_aliases: ["sup", "supreme court", "supreme leader", "supreme being"]
+    negative_context: ["supreme court", "supreme leader", "supreme being", "supreme pizza", "pizza supreme", "taco supreme", "nachos supreme", "supreme mayo", "supreme sauce", "supreme tire", "supreme court justice", "ruth bader ginsburg", "supreme court tee", "supreme court hoodie", "supremes", "diana ross", "the supremes", "supreme honey", "supreme sub", "supreme pet", "supreme dog", "supreme auto", "supreme fuel", "supreme beauty", "supreme rep", "supreme replica", "supreme fake", "supreme inspired", "supreme style", "supreme bootleg", "supreme dupe", "supreme custom", "supreme inspired tee", "supreme pizza tee"]
+    lines:
+      - {id: supreme__mainline, name: "Supreme", aliases: []}
+    price_floor_usd: {graphic_tee: 60, hoodie: 100, leather_jacket: 300, denim: 70, accessory: 20, sneakers: 80, bag: 50}
+    sources: ["https://www.grailed.com/designers/supreme"]
+    confidence: low
+    verify: true
+  - id: off_white
+    name: Off-White
+    group: rapper_staple
+    base_weight: 5
+    aliases: ["off white", "off-white", "offwhite", "off white c/o virgil abloh", "off-white c/o virgil abloh", "virgil abloh off white", "off white virgil", "off-white virgil", "off white diagonals", "off-white diagonals", "off white diag", "off white arrows", "off-white arrows", "off white stripes", "off white caravaggio", "off white industrial belt", "off-white industrial belt", "off white yellow belt", "off white hoodie", "off-white hoodie", "off white tee", "off-white tee", "off white t shirt", "off white jacket", "off white denim", "off-white denim", "off white jeans", "off-white jeans", "off white sweatshirt", "off white leather", "off white quote", "off white quotes", "off white pyrex", "off white pyrex vision", "pyrex vision", "pyrex", "pyrex vision virgil", "pyrex 23", "off white 2013", "off white 2014", "off white 2015", "off white 2016", "off white fw14", "off white ss14", "off white fw15", "off white ss15", "off white fw16", "off white ss16", "off white fw17", "off white ss17", "off white marker arrows", "off white marker", "off white woodland", "off white out of office", "off white nike", "off white the ten", "off white x nike", "off white jordan", "off white air jordan 1", "off white aj1", "off white presto", "off white vapormax", "off white blazer", "off white dunk", "off white air force", "off white af1", "off white converse", "off white chuck 70", "off white chuck taylor", "off white vulc", "off white vulcanized", "off white sneakers", "off white sneaker", "off white shoes", "off white boots", "off white belt"]
+    ambiguous_aliases: ["ow", "off white color", "offwhite color", "pyrex"]
+    negative_context: ["off white paint", "off-white paint", "off white wall", "off white color", "off-white color", "off white couch", "off white sofa", "off white dress", "off white wedding", "off white lace", "off white blouse", "off white sweater women", "off white cardigan", "off white shirt vintage", "off white ivory", "ivory off white", "cream off white", "pyrex dish", "pyrex bowl", "pyrex glass", "pyrex measuring", "pyrex casserole", "pyrex baking", "pyrex vintage kitchen", "pyrex lid", "pyrex storage", "pyrex corning", "pyrex butterprint", "pyrex fiesta", "pyrex cups", "pyrex mug", "pyrex sparkly", "off-white rep", "off white replica", "off white fake", "off white inspired", "off white style", "off white custom", "off white dupe"]
+    lines:
+      - {id: off_white__virgil, name: "Off-White (Virgil Abloh era)", aliases: []}
+      - {id: off_white__pyrex, name: "Pyrex Vision", aliases: ["pyrex vision"]}
+    price_floor_usd: {hoodie: 100, graphic_tee: 70, denim: 100, leather_jacket: 350, sneakers: 150, knit: 80, accessory: 50, pants: 80}
+    sources: ["https://www.grailed.com/designers/off-white"]
+    confidence: low
+    verify: true
+  - id: bape
+    name: BAPE (A Bathing Ape)
+    group: rapper_staple
+    base_weight: 5
+    aliases: ["bape", "a bathing ape", "bathing ape", "abathingape", "bape japan", "bape shark", "bape shark hoodie", "bape full zip", "bape camo", "bape camo hoodie", "bape ape head", "bape ape", "bape baby milo", "bape milo", "bape college", "bape tee", "bape t shirt", "bape hoodie", "bape jacket", "bape denim", "bape jeans", "bape sta", "bape bapesta", "bapesta", "bape sneakers", "bape sk8 sta", "bape road sta", "bape shorts", "bape pants", "bape sweatpants", "bape cap", "bape hat", "bape beanie", "bape bag", "bape backpack", "bape 1st camo", "bape 1st camo hoodie", "bape tiger", "bape tiger hoodie", "bape pharrell", "bape x", "bape collab", "bape x undefeated", "bape undefeated", "bape x supreme", "bape x kanye", "bape x kaws", "bape x kid cudi", "bape x neighborhood", "bape neighborhood", "bape x stussy", "bape x fragment", "bape x coach", "bape x adidas", "bape x nike", "bape x converse", "bape x new era", "bape x mastermind", "bape x timberland", "bape nigo", "nigo bape", "bape osaka", "bape tokyo", "bape harajuku", "bape aoyama", "bape ura harajuku", "bape osaka"]
+    ambiguous_aliases: ["ba", "bathing ape", "ape"]
+    negative_context: ["ape costume", "gorilla", "monkey", "planet of the apes", "apes", "ape suit", "ape toy", "ape plush", "ape figure", "ape tape", "ape bracelet", "bored ape", "bored ape yacht club", "bayc", "nft", "bored ape nft", "ape coin", "apecoin", "bape rep", "bape fake", "bape replica", "bape inspired", "bape style", "bape bootleg", "bape dupe", "bape custom", "bape kids", "bape baby", "bape toddler", "bape women", "baby milo kids", "bape store bag only"]
+    lines:
+      - {id: bape__mainline, name: "BAPE", aliases: []}
+      - {id: bape__bapy, name: "BAPY (women's)", aliases: ["bapy"]}
+      - {id: bape__kids, name: "BAPE Kids", aliases: ["bape kids"]}
+    price_floor_usd: {hoodie: 90, graphic_tee: 30, denim: 70, leather_jacket: 200, sneakers: 80, pants: 50, bag: 50}
+    sources: ["https://www.grailed.com/designers/bape"]
+    confidence: low
+    verify: true
+  - id: jeremy_scott
+    name: Jeremy Scott / Moschino
+    group: rapper_staple
+    base_weight: 5
+    aliases: ["jeremy scott", "jeremy scott adidas", "jeremy scott wings", "jeremy scott wings sneakers", "adidas jeremy scott", "adidas by jeremy scott", "js wings", "js wings 2.0", "js wings 1.0", "js bear", "js bear sneakers", "js teddy bear", "js panda", "js panda sneakers", "js roundhouse", "js roundhouse mid", "js roundhouse sneakers", "js teddy", "js teddy sneakers", "js mickey", "js mickey roundhouse", "js mickey sneakers", "js mickey ears", "jeremy scott bear", "jeremy scott panda", "jeremy scott roundhouse", "jeremy scott teddy", "jeremy scott mickey", "jeremy scott mickey mouse", "jeremy scott sweatshirt", "jeremy scott hoodie", "jeremy scott tee", "jeremy scott t shirt", "jeremy scott jacket", "jeremy scott bomber", "jeremy scott leopard", "jeremy scott leopard jacket", "jeremy scott bear hoodie", "jeremy scott lab coat", "jeremy scott dollar sign", "jeremy scott dollar bill", "jeremy scott cheeseburger", "jeremy scott fast food", "jeremy scott mcdonalds", "jeremy scott burger", "moschino", "moschino jeremy scott", "moschino couture", "moschino couture jeremy scott", "moschino mcdonalds", "moschino cheap and chic", "moschino cheap & chic", "moschino cheap chic", "moschino love", "moschino redwall", "moschino teddy", "moschino teddy bear", "moschino bear", "moschino hoodie", "moschino tee", "moschino t shirt", "moschino jacket", "moschino bomber", "moschino leather jacket", "moschino biker", "moschino belt", "moschino bag", "moschino iphone case", "moschino phone case", "moschino sweater", "moschino sweatshirt"]
+    ambiguous_aliases: ["js", "jeremy", "moschino"]
+    negative_context: ["jeremy scott jordan", "jeremy scott jeans kids", "jeremy scott paint", "jeremy scott author", "jeremy scott voice actor", "jeremy scott photographer", "jeremy scott dentist", "jeremy scott lawyer", "jeremy scott realtor", "jeremy scott real estate", "jeremy scott funeral", "obituary", "moschino perfume", "toy 2 perfume", "toy boy", "toy boy moschino", "toy 2 bubble gum", "eau de toilette", "edt", "edp", "fragrance", "cologne", "moschino kids", "moschino baby", "moschino toddler", "moschino rep", "moschino fake", "moschino inspired", "moschino style", "moschino dupe", "moschino custom", "moschino iphone 11"]
+    lines:
+      - {id: jeremy_scott__adidas, name: "Jeremy Scott x adidas", aliases: ["adidas jeremy scott"]}
+      - {id: jeremy_scott__moschino, name: "Moschino (Jeremy Scott era)", aliases: ["moschino couture"]}
+      - {id: jeremy_scott__mainline, name: "Jeremy Scott", aliases: []}
+    price_floor_usd: {hoodie: 70, graphic_tee: 40, leather_jacket: 200, sneakers: 80, knit: 60, belt: 40, coat: 100}
+    sources: ["https://www.grailed.com/designers/jeremy-scott"]
+    confidence: low
+    verify: true
+  - id: yeezy
+    name: Yeezy
+    group: rapper_staple
+    base_weight: 3
+    aliases: ["yeezy", "yeezy season", "yeezy season 1", "yeezy season 2", "yeezy season 3", "yeezy season 4", "yeezy season 5", "yeezy season 6", "yeezy season 7", "yeezy season 8", "yeezy gap", "yeezy gap hoodie", "yeezy gap jacket", "yeezy gap tee", "yeezy gap round jacket", "yeezy gap engineered by balenciaga", "yeezy gap balenciaga", "yeezy balenciaga", "yeezy x balenciaga", "yeezy 350", "yeezy 700", "yeezy 500", "yeezy 450", "yeezy 750", "yeezy 950", "yeezy 380", "yeezy 750 boost", "yeezy 950 boot", "yeezy slides", "yeezy slide", "yeezy foam runner", "yeezy foam", "yeezy boost", "yeezy boost 350", "yeezy boost 700", "yeezy boost 750", "yeezy boost 950", "yeezy hoodie", "yeezy tee", "yeezy t shirt", "yeezy jacket", "yeezy denim", "yeezy jeans", "yeezy pants", "yeezy shorts", "yeezy sweatshirt", "yeezy crewneck", "yeezy sweater", "yeezy knit", "yeezy beanie", "yeezy hat", "yeezy cap", "yeezy shirt", "yeezy long sleeve", "yeezy flannel", "yeezy bomber", "yeezy coat", "yeezy parka", "yeezy military", "yeezy military jacket", "yeezy military parka", "yeezy flight jacket", "yeezy flight", "yeezy military flight jacket", "yeezy season 3 military", "yeezy season 3 flight jacket", "yeezy season 3 tee", "yeezy season 3 hoodie", "yeezy season 4 hoodie", "yeezy season 5 tee", "yeezy season 5 hoodie", "yeezy season 5 calabasas", "yeezy calabasas", "yeezy calabasas tee", "yeezy calabasas hoodie", "yeezy calabasas track", "yeezy calabasas track pants", "yeezy calabasas sweatpants", "yeezy calabasas jacket", "yeezy calabasas crewneck", "yeezy calabasas shorts", "pablo", "pablo tee", "pablo hoodie", "life of pablo", "life of pablo tee", "life of pablo hoodie", "tlop", "tlop tee", "tlop hoodie", "pablo merch", "pablo merch tee", "pablo merch hoodie", "pablo merch long sleeve", "pablo pop up", "pablo popup", "pablo pop up tee", "pablo popup hoodie", "pablo 2016", "pablo 2016 tee", "pablo 2016 hoodie", "kanye west", "kanye", "kanye tee", "kanye hoodie", "kanye merch", "kanye west merch", "kanye west tee", "kanye west hoodie", "kanye west tour", "kanye west tour tee", "kanye west tour merch", "kanye west tour hoodie", "kanye west yeezus", "kanye west yeezus tour", "yeezus", "yeezus tee", "yeezus hoodie", "yeezus tour", "yeezus tour tee", "yeezus tour hoodie", "yeezus tour merch", "yeezus tour long sleeve", "yeezus merch", "yeezus merch tee", "yeezus merch hoodie", "yeezus merch long sleeve", "yeezus 2013", "yeezus 2013 tee", "yeezus 2013 hoodie"]
+    ambiguous_aliases: ["yzy", "ye", "pablo"]
+    negative_context: ["yeezy rep", "yeezy replica", "yeezy fake", "yeezy inspired", "yeezy style", "yeezy bootleg", "yeezy dupe", "yeezy custom", "yeezy kids", "yeezy toddler", "yeezy infant", "yeezy baby", "yeezy sample", "yeezy box only", "yeezy empty box", "yeezy dustbag", "yeezy laces only", "yeezy insoles", "yeezy insole", "yeezy replacement", "yeezy tag only", "yeezy sticker", "yeezy poster", "yeezy phone case", "yeezy iphone case", "yeezy vinyl", "yeezy cd", "yeezy album", "yeezy lp", "pablo escobar", "narcos", "picasso", "pablo picasso", "pablo neruda", "pablo sandoval", "pablo alboran", "pablo honey", "radiohead", "pablo honey vinyl", "pablo honey cd", "pablo honey tee", "pablo honey hoodie"]
+    lines:
+      - {id: yeezy__season, name: "Yeezy Season", aliases: ["yeezy season"]}
+      - {id: yeezy__gap, name: "Yeezy Gap", aliases: ["yeezy gap"]}
+      - {id: yeezy__merch, name: "Kanye / Pablo merch", aliases: ["pablo merch"]}
+    price_floor_usd: {hoodie: 80, graphic_tee: 50, leather_jacket: 300, sneakers: 80, pants: 60, coat: 150, knit: 60}
+    sources: ["https://www.grailed.com/designers/yeezy"]
+    confidence: low
+    verify: true

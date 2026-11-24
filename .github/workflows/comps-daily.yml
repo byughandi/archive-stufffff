@@ -1,0 +1,43 @@
+name: Comps daily (sold prices, rescore, prune)
+on:
+  schedule:
+    - cron: "41 9 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: comps-daily
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+      GRAILED_ALGOLIA_APP_ID: ${{ secrets.GRAILED_ALGOLIA_APP_ID }}
+      GRAILED_ALGOLIA_KEY: ${{ secrets.GRAILED_ALGOLIA_KEY }}
+      SITE_URL: ${{ vars.SITE_URL }}
+      GR_MODEL_DIR: models
+      MAX_LLM_ITEMS_PER_DAY: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - name: Pull sold listings
+        run: python -m scrapers.run comps
+      - name: Classify comps and rebuild fair values
+        run: python -m pipeline.run comps
+      - name: Rescore active listings
+        run: python -m pipeline.run rescore
+      - name: Apply retention
+        run: python -m pipeline.run prune
+      - name: Keep raw responses for 7 days
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ github.run_id }}
+          path: raw/
+          retention-days: 7
+          if-no-files-found: ignore

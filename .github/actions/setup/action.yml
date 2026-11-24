@@ -1,0 +1,23 @@
+name: Set up Grail Radar
+description: Python, dependencies and the cached embedding model
+inputs:
+  extras:
+    description: pip extras to install
+    default: "embed"
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+        cache-dependency-path: pyproject.toml
+    - name: Install
+      shell: bash
+      run: pip install -q -e ".[${{ inputs.extras }}]"
+    - name: Restore embedding model
+      uses: actions/cache@v4
+      with:
+        path: models
+        key: models-${{ hashFiles('pipeline/embed.py') }}
+        restore-keys: models-

@@ -1,0 +1,649 @@
+# R2 exemplars.yaml. Texts are SYNTHETIC examples written in the register of real Grailed/Mercari listings
+# (they are not scraped listings). The last 1-2 texts in some short groups are generic templated filler.
+# Season/piece mappings marked low confidence in seasons.yaml apply here too. image_urls left empty (no image hunting per brief).
+grail:
+- id: dior_hedi_strip_denim
+  brand: dior_homme
+  era: dior_homme__hedi
+  season: dior_homme__ss04
+  archetype: denim
+  tier: S
+  texts: [Dior Homme SS04 Strip Hedi Slimane jeans size 29 made in Italy, Hedi Slimane Dior Homme Strip collection raw denim 19cm, DIOR HOMME SS04 STRIP DENIM JACKET size 48 slim, Dior Homme Hedi era 2004
+      spring indigo selvedge skinny jeans W28, 'Authentic Dior Homme by Hedi Slimane SS2004 Strip jeans, no flaws, tag intact, ref code 4...', ディオールオム エディ期 04SS ストリップ デニム 29 イタリア製]
+  image_urls: []
+  sources: ['https://www.1stdibs.com/fashion/clothing/jackets/dior-homme-ss04-strip-collection-denim-jacket-men-jacket-size-54-slim-large/id-v_24452762']
+- id: dior_hedi_luster_clawmark_denim
+  brand: dior_homme
+  era: dior_homme__hedi
+  season: dior_homme__aw03
+  archetype: denim
+  tier: S
+  texts: [Dior Homme Hedi Slimane Luster clawmark denim jeans size 30, Dior Homme AW05 Luster Waxed Denim, Hedi Dior Homme clawmark waxed jeans black coated 29x32, DIOR HOMME LUSTER COATED DENIM SKINNY
+      MADE IN JAPAN, Dior Homme 03AW Luster Hedi slimane jeans claw mark, ディオールオム ルスター クロウマーク ワックスデニム エディ期]
+  image_urls: []
+  sources: ['https://www.grailed.com/listings/98844772-dior-dior-homme-aw05-luster-waxed-denim', 'https://www.grailed.com/browse/dior-clawmark-luster-denim']
+- id: dior_hedi_19cm_21cm_denim
+  brand: dior_homme
+  era: dior_homme__hedi
+  season: UNKNOWN
+  archetype: denim
+  tier: S
+  texts: [Dior Homme 19cm jeans Hedi Slimane MIJ size 28, Dior Homme 21cm indigo denim made in Japan hedi era, Hedi Slimane Dior Homme raw denim 19cm taper leg size 29, 'Dior Homme dark indigo jeans, 21cm
+      leg opening, Japan made, great fade', ディオールオム 19cm エディ期 日本製 デニム 28, Dior homme hedi skinny jeans 27 excellent condition authentic]
+  image_urls: []
+  sources: ['https://www.heddels.com/?p=5020']
+- id: dior_hedi_ss07_super_slender
+  brand: dior_homme
+  era: dior_homme__hedi
+  season: dior_homme__ss07
+  archetype: denim
+  tier: A
+  texts: [Dior Homme SS07 Hedi Slimane Super Slender Black Denim, Dior Homme SS07 Hedi Slimane indigo denim jeans size 27, Hedi Slimane Dior Homme spring 2007 skinny jeans 28 We Look Good Together season,
+    'SS07 Dior Homme jeans, last Hedi spring, size 29, made in Italy', ディオールオム 07SS エディ期 スーパースレンダー デニム]
+  image_urls: []
+  sources: ['https://www.grailed.com/listings/104354751-dior-dior-homme-ss07-hedi-slimane-super-slender-black-denim', 'https://www.grailed.com/listings/102513127-dior-dior-homme-ss07-hedi-slimane-indigo-denim-jeans-size-27']
+- id: dior_hedi_ss05_glitter_jeans
+  brand: dior_homme
+  era: dior_homme__hedi
+  season: dior_homme__ss05
+  archetype: denim
+  tier: A
+  texts: [Dior Homme SS05 Hedi Slimane blue glitter jeans size 30, Dior Homme 2005 spring glitter denim skinny hedi, 'Hedi Dior Homme SS05 sparkle jeans rare, tag code 5E...', ディオールオム 05SS グリッター デニム エディ期,
+    dior homme glitter denim slimane 28 waist]
+  image_urls: []
+  sources: ['https://suigenerisconsignment.com/pages/dior-homme-reference-codes']
+- id: dior_hedi_leather_jacket
+  brand: dior_homme
+  era: dior_homme__hedi
+  season: UNKNOWN
+  archetype: leather_jacket
+  tier: S
+  texts: [Dior Homme Hedi Slimane leather biker jacket size 48 black lambskin, Dior Homme 2004 leather jacket slim fit zip hedi era, DIOR HOMME HEDI SLIMANE LEATHER BLOUSON size 46 made in italy, 'Hedi
+      Dior Homme leather jacket AW04 rare, great patina', ディオールオム エディ期 レザージャケット ライダース 46, Dior Homme zip leather jacket 07AW エディ期 48]
+  image_urls: []
+  sources: ['https://jp.mercari.com/s/391732']
+- id: dior_hedi_tailoring
+  brand: dior_homme
+  era: dior_homme__hedi
+  season: UNKNOWN
+  archetype: blazer
+  tier: A
+  texts: [Dior Homme Hedi Slimane tuxedo jacket size 48 slim, Dior Homme 06AW tailored jacket Hedi era black wool 46, Hedi Slimane Dior Homme 2 button blazer skinny lapel size 50, ディオールオム エディ期 テーラードジャケット
+      06AW 46, Dior homme hedi era black suit jacket slim 2005]
+  image_urls: []
+  sources: ['https://jp.mercari.com/s/391732']
+- id: dior_hedi_strip_sneakers
+  brand: dior_homme
+  era: dior_homme__hedi
+  season: dior_homme__ss04
+  archetype: sneakers
+  tier: A
+  texts: [Dior Homme Strip sneakers Hedi Slimane size 42, Dior Homme SS04 Strip low top sneakers black leather, Dior Homme Hedi era Strip trainers 43 made in italy, ディオールオム ストリップ スニーカー エディ期 43, 'Dior Homme
+      sneakers authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://trussarchive.com/guides/your-guide-to-dior-homme-sneakers']
+- id: dior_kva_early_denim
+  brand: dior_homme
+  era: dior_homme__kva
+  season: UNKNOWN
+  archetype: denim
+  tier: A
+  texts: [Dior Homme 09AW Kris Van Assche straight denim jeans size 32, Dior Homme KVA era slim black jeans size 30 made in Italy, Kris Van Assche Dior Homme indigo jeans 2009, ディオールオム 09AW クリス期 ストレートデニム
+      32, 'Dior Homme denim authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://auctions.yahoo.co.jp/jp/auction/v1236799178']
+- id: slp_l01_biker
+  brand: saint_laurent
+  era: saint_laurent__hedi
+  season: UNKNOWN
+  archetype: biker_jacket
+  tier: S
+  texts: [Saint Laurent Paris L01 classic motorcycle jacket black leather size 48, SLP Hedi Slimane L01 biker jacket 2013 size 50 excellent condition, Saint Laurent Paris classic leather biker jacket L01
+      size 46 made in Italy, 'Saint Laurent hedi era L01 moto jacket lambskin, no stains, size S', SAINT LAURENT PARIS L17 leather biker jacket black size 52, サンローランパリ エディ期 L01 ダブルライダース レザー 48]
+  image_urls: []
+  sources: ['https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent']
+- id: slp_teddy_varsity
+  brand: saint_laurent
+  era: saint_laurent__hedi
+  season: UNKNOWN
+  archetype: varsity_jacket
+  tier: S
+  texts: [Saint Laurent Paris Hedi Slimane teddy varsity jacket leather sleeves size 48, SLP varsity baseball jacket black wool leather sleeves size 50 AW13, Saint Laurent hedi era teddy jacket wool leather
+      size L, Saint Laurent Paris leather varsity jacket AW16 size 46, サンローランパリ スタジャン バーシティ レザー切替 エディ期 48]
+  image_urls: []
+  sources: ['https://thefashionisto.com/saint-laurent-menswear-2016-fall-winter-lookbook-barneys/']
+- id: slp_black_knight_varsity
+  brand: saint_laurent
+  era: saint_laurent__hedi
+  season: UNKNOWN
+  archetype: varsity_jacket
+  tier: A
+  texts: [Saint Laurent Paris Black Knight varsity jacket size 48, SLP black knight leather paneled varsity hedi slimane size 50, Saint Laurent hedi black knight bomber leather panel size M, 'Saint Laurent
+      varsity jacket authentic, good condition, ships from Japan', 'Saint Laurent varsity jacket vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent']
+- id: slp_hedi_distressed_denim
+  brand: saint_laurent
+  era: saint_laurent__hedi
+  season: UNKNOWN
+  archetype: denim
+  tier: A
+  texts: [Saint Laurent Paris D02 skinny jeans distressed black size 30, SLP Hedi Slimane palm patch jeans size 29, Saint Laurent Paris D01 low rise skinny jeans indigo size 28 made in Italy, Saint Laurent
+      distressed biker jeans hedi era size 31, サンローランパリ スキニー ダメージデニム D02 30 エディ期]
+  image_urls: []
+  sources: ['https://thefashionisto.com/saint-laurent-menswear-2016-fall-winter-lookbook-barneys/']
+- id: slp_wyatt_boots
+  brand: saint_laurent
+  era: saint_laurent__hedi
+  season: UNKNOWN
+  archetype: boots
+  tier: A
+  texts: [Saint Laurent Paris Wyatt 40 harness boots black leather size 43, SLP Wyatt boots hedi slimane 44 italy, Saint Laurent Jodhpur boots black size 42 hedi era, Saint Laurent Dylan studded bluchers
+      size 43, サンローランパリ ワイアット ハーネスブーツ 43 エディ期]
+  image_urls: []
+  sources: ['https://thefashionisto.com/saint-laurent-menswear-2016-fall-winter-lookbook-barneys/']
+- id: slp_aw16_velvet
+  brand: saint_laurent
+  era: saint_laurent__hedi
+  season: saint_laurent__aw16
+  archetype: blazer
+  tier: A
+  texts: [Saint Laurent Paris AW16 velvet blazer rhinestone hedi slimane size 48, SLP FW16 last hedi collection velvet jacket size 50, Saint Laurent Paris Hedi final season sequin blazer size 46, 'Saint
+      Laurent blazer authentic, good condition, ships from Japan', 'Saint Laurent blazer vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://www.businessoffashion.com/reviews/fashion-week/saint-laurents-modernist-showman/']
+- id: celine_hedi_leather_jacket
+  brand: celine
+  era: celine__hedi
+  season: UNKNOWN
+  archetype: leather_jacket
+  tier: A
+  texts: [Celine Homme Hedi Slimane leather biker jacket black size 50, Celine by Hedi Slimane lambskin jacket size 48 2019, CELINE HOMME hedi era classic leather jacket size 52, セリーヌ エディ期 レザージャケット ライダース
+      50, 'Celine leather jacket authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://hypebeast.com/2024/10/hedi-slime-exit-celine-michael-rider-appointed-creative-director']
+- id: celine_hedi_slim_denim
+  brand: celine
+  era: celine__hedi
+  season: UNKNOWN
+  archetype: denim
+  tier: A
+  texts: [Celine Homme Hedi slim jeans size 30 black, Celine by Hedi Slimane skinny denim 31 made in Italy, Celine hedi era jeans stone wash size 29, セリーヌ オム エディ期 スキニー デニム 30, 'Celine denim authentic, good
+      condition, ships from Japan']
+  image_urls: []
+  sources: ['https://hypebeast.com/2024/10/hedi-slime-exit-celine-michael-rider-appointed-creative-director']
+- id: balmain_decarnin_biker_jeans
+  brand: balmain
+  era: balmain__decarnin
+  season: balmain__aw10
+  archetype: denim
+  tier: S
+  texts: [Balmain Decarnin biker jeans AW10 size 30 made in France, Balmain Homme Fall 2010 biker denim ribbed knee size 32, BALMAIN biker jeans washed black 2010 decarnin era 31, Balmain destroyed biker
+      jeans decarnin ss09 size 29, バルマン デカルナン期 バイカーデニム 30]
+  image_urls: []
+  sources: ['https://www.interviewmagazine.com/fashion/balmain-men-paris-fall-2010-paris']
+- id: balmain_decarnin_military_jacket
+  brand: balmain
+  era: balmain__decarnin
+  season: balmain__ss09
+  archetype: coat
+  tier: A
+  texts: [Balmain Decarnin embellished military jacket shoulder pads size 38, Balmain 2009 military jacket gold buttons shoulder pad size 40 France, Balmain Paris shoulder pad blazer decarnin era black
+      size 46, 'Balmain coat authentic, good condition, ships from Japan', 'Balmain coat vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://en.wikipedia.org/wiki/Christophe_Decarnin']
+- id: balmain_decarnin_destroyed_tee
+  brand: balmain
+  era: balmain__decarnin
+  season: balmain__ss09
+  archetype: graphic_tee
+  tier: A
+  texts: [Balmain destroyed distressed tee decarnin SS09 size M, Balmain Paris ripped t-shirt 2009 white size S, Balmain Decarnin era destroyed tee made in France, 'Balmain graphic tee authentic, good condition,
+      ships from Japan', 'Balmain graphic tee vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://en.wikipedia.org/wiki/Christophe_Decarnin']
+- id: rick_geobasket
+  brand: rick_owens
+  era: rick_owens__early
+  season: UNKNOWN
+  archetype: sneakers
+  tier: A
+  texts: [Rick Owens Geobasket black leather size 43, Rick Owens Geobasket high top sneakers milk white 44 made in Italy, Rick Owens Ramones low sneakers black white size 42, Rick Owens geo basket leather
+      sneaker 45 great condition, リックオウエンス ジオバスケット 43]
+  image_urls: []
+  sources: ['https://www.dazeddigital.com/fashion/article/38420/1/ten-of-rick-owens-most-memorable-shows']
+- id: rick_stooges_leather
+  brand: rick_owens
+  era: rick_owens__early
+  season: UNKNOWN
+  archetype: leather_jacket
+  tier: S
+  texts: [Rick Owens Stooges leather jacket black size 50 Italy, Rick Owens Intarsia leather biker jacket size M early, RICK OWENS Bauhaus leather jacket lambskin size 48, Rick Owens old season leather
+      biker 2008 Stooges, リックオウエンス ストゥージズ レザーライダース 50]
+  image_urls: []
+  sources: ['https://sites.fitnyc.edu/depts/museum/Gothic/Owens.html']
+- id: rick_drkshdw_early
+  brand: rick_owens
+  era: rick_owens__early
+  season: UNKNOWN
+  archetype: hoodie
+  tier: A
+  texts: [Rick Owens DRKSHDW 2009 hoodie washed black size M, Rick Owens Dark Shadow early drkshdw denim jeans size 32, DRKSHDW by Rick Owens FW09 jacket size L, ダークシャドウ リックオウエンス DRKSHDW 初期 パーカー M, 'Rick
+      Owens hoodie authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://hypebeast.com/2009/10/rick-owens-drkshdw-2009-fallwinter-collection']
+- id: rick_intarsia_knit
+  brand: rick_owens
+  era: rick_owens__early
+  season: UNKNOWN
+  archetype: knit
+  tier: A
+  texts: [Rick Owens intarsia mohair knit sweater size M, Rick Owens dustulator wool knit cardigan size L, Rick Owens old season knit asymmetric sweater Italy 2008, 'Rick Owens knit authentic, good condition,
+      ships from Japan', 'Rick Owens knit vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://hypebeast.com/2009/10/rick-owens-drkshdw-2009-fallwinter-collection']
+- id: undercover_scab
+  brand: undercover
+  era: undercover__early
+  season: undercover__ss03
+  archetype: knit
+  tier: S
+  texts: [Undercover SS03 Scab knit sweater Jun Takahashi size 2, Undercover Scab spring 2003 jacket size M made in Japan, 'UNDERCOVERISM Scab collection runway piece, rare, Jun Takahashi', アンダーカバー 03SS
+      スキャブ ニット ジュンタカハシ 2, Undercover Scab cardigan chiffon gothic 2003 archive]
+  image_urls: []
+  sources: ['https://www.lepetitarchive.com/collections-undercover-ss03-scab-history/', 'https://www.archivepdf.net/undercover-ss2003-scab-light-and-magic-id-magazine']
+- id: undercover_but_beautiful
+  brand: undercover
+  era: undercover__early
+  season: undercover__aw04
+  archetype: coat
+  tier: A
+  texts: [Undercover AW04 But Beautiful jacket size 3, Undercover But Beautiful fall 2004 Jun Takahashi coat M, アンダーカバー 04AW バットビューティフル ジャケット, UNDERCOVER but beautiful archive piece made in Japan size 2,
+    'Undercover coat authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://highsnobiety.com/p/jun-takahashi-history']
+- id: undercover_wmnc_tee
+  brand: undercover
+  era: undercover__early
+  season: UNKNOWN
+  archetype: graphic_tee
+  tier: S
+  texts: [Undercover We Make Noise Not Clothes tee size M, Undercover WMNC tee early 2000s black size L made in Japan, UNDERCOVERISM We Make Noise Not Clothes t-shirt vintage, アンダーカバー ウィーメイクノイズノットクローズ Tシャツ
+      M, Undercover 85 tee Jun Takahashi vintage size 3]
+  image_urls: []
+  sources: ['https://www.grailed.com/drycleanonly/master-class-undercover']
+- id: undercover_ss06_t_cosmos
+  brand: undercover
+  era: undercover__early
+  season: undercover__ss06
+  archetype: graphic_tee
+  tier: A
+  texts: [Undercover SS06 T cosmos bear tee size 2, Undercover Cosmos bear sweatshirt Jun Takahashi M, アンダーカバー 06SS コスモスベア Tシャツ, Undercover bear graphic hoodie 2006 made in Japan size 3, 'Undercover graphic
+      tee authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://highsnobiety.com/p/jun-takahashi-history']
+- id: beauty_beast_safety_pin
+  brand: beauty_beast
+  era: beauty_beast__original
+  season: beauty_beast__aw98
+  archetype: knit
+  tier: S
+  texts: ['Beauty:Beast giant safety pin sweater AW98 Japan', Beauty Beast Takao Yamashita giant safety pin jacket 90s size M, ビューティービースト 98AW 巨大安全ピン ニット, 'beauty:beast archive safety pin knit rare made
+      in Japan', Beauty beast 1998 COSPA collab hoodie]
+  image_urls: []
+  sources: ['https://www.fashionsnap.com/article/yamashita-takao/', 'https://www.archivepdf.net/articles/takao-yamashita-entering-the-belly-of-the-beauty-beast']
+- id: beauty_beast_rabbit_backpack
+  brand: beauty_beast
+  era: beauty_beast__original
+  season: UNKNOWN
+  archetype: bag
+  tier: A
+  texts: ['Beauty:Beast rabbit backpack black Japan', Beauty Beast bunny backpack archive 90s, ビューティービースト ラビット バックパック, 'Beauty:Beast Dark Knight bunny hoodie size L', 'Beauty:Beast bag authentic, good condition,
+      ships from Japan']
+  image_urls: []
+  sources: ['https://sabukaru.online/articles/beautybeast-a-fairytale-spoken-in-attire']
+- id: number_nine_skull_cashmere
+  brand: number_nine
+  era: number_nine__miyashita
+  season: number_nine__aw05
+  archetype: knit
+  tier: S
+  texts: [Number (N)ine skull cashmere sweater size 2, Number Nine The High Streets AW05 skull cashmere knit, NUMBER (N)INE cashmere skull cardigan Miyashita 3, ナンバーナイン スカル カシミヤ ニット 05AW ハイストリート 2, Number
+      nine skull knit grey made in Japan size M]
+  image_urls: []
+  sources: ['https://nssmag.com/en/fashion/31966/number-n-ine-takahiro-miyashita']
+- id: number_nine_high_streets
+  brand: number_nine
+  era: number_nine__miyashita
+  season: number_nine__aw05
+  archetype: shirt
+  tier: S
+  texts: [Number (N)ine AW05 The High Streets flannel shirt size 3, Number Nine High Streets cardigan 2005 Miyashita M, NUMBER (N)INE The High Streets jacket archive size 2, ナンバーナイン ハイストリーツ 05AW シャツ 3,
+    Number nine high streets fw05 japan]
+  image_urls: []
+  sources: ['https://hypebeast.com/2005/9/number-nine-aw-catalog']
+- id: number_nine_noir
+  brand: number_nine
+  era: number_nine__miyashita
+  season: number_nine__aw06
+  archetype: leather_jacket
+  tier: A
+  texts: [Number (N)ine AW06 Noir leather jacket size 2, Number Nine Noir all black knit Miyashita 2006, ナンバーナイン 06AW ノワール レザージャケット, Number (N)ine Noir season black cardigan M, 'Number (N)ine leather jacket
+      authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://hypebeast.com/2006/3/number-nine-aw-06-07']
+- id: number_nine_tmis_leather
+  brand: number_nine
+  era: number_nine__miyashita
+  season: number_nine__ss03
+  archetype: leather_jacket
+  tier: S
+  texts: [Number (N)ine Touch Me I'm Sick leather jacket size 3, Number Nine TMIS rider jacket 2003 Miyashita, ナンバーナイン タッチミーアイムシック レザー ライダース, NUMBER (N)INE touch me im sick hoodie size 2, Number nine touch
+      me i'm sick tee Sonic Youth graphic]
+  image_urls: []
+  sources: ['https://www.grailed.com/browse/number-n-ine-touch-me-im-sick']
+- id: number_nine_closed_feeling
+  brand: number_nine
+  era: number_nine__miyashita
+  season: number_nine__aw09
+  archetype: coat
+  tier: A
+  texts: [Number (N)ine A Closed Feeling AW09 jacket size 3, Number Nine last collection 2009 Last Songs coat M, ナンバーナイン 09AW ア クローズドフィーリング ジャケット, Number (N)ine fw09 final season knit size 2, 'Number (N)ine
+      coat authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://hypebeast.com/2009/7/number-nine-2009-fall-winter-last-songs-collection']
+- id: number_nine_portland
+  brand: number_nine
+  era: number_nine__miyashita
+  season: number_nine__aw08
+  archetype: coat
+  tier: A
+  texts: [Number (N)ine My Own Private Portland AW08 jacket size 2, Number Nine Portland cardigan fall 2008 Miyashita, ナンバーナイン 08AW マイオウンプライベートポートランド, Number nine private portland coat 3, 'Number (N)ine
+      coat authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.thefashionisto.com/number-nine-fall-winter-2008/']
+- id: number_nine_anti_war_tee
+  brand: number_nine
+  era: number_nine__miyashita
+  season: number_nine__aw04
+  archetype: graphic_tee
+  tier: A
+  texts: [Number (N)ine Give Peace a Chance anti-war tee size 2, Number Nine AW04 anti war t-shirt distressed white M, ナンバーナイン ギブピースアチャンス Tシャツ 04AW, Number nine anti-war tee Miyashita made in Japan, 'Number
+      (N)ine graphic tee authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://trussarchive.com/editorials/the-most-iconic-number-nine-tees-where-to-find-them']
+- id: number_nine_tribal_camo_hoodie
+  brand: number_nine
+  era: number_nine__miyashita
+  season: UNKNOWN
+  archetype: hoodie
+  tier: A
+  texts: [Number (N)ine tribal camo hoodie size 2, Number Nine camo zip hoodie skull Miyashita archive, ナンバーナイン トライバルカモ パーカー 2, NUMBER (N)INE camo parka M made in Japan, 'Number (N)ine hoodie authentic,
+      good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/number-n-ine/accessories-miscellaneous']
+- id: raf_riot_bomber
+  brand: raf_simons
+  era: raf_simons__early
+  season: raf_simons__aw01
+  archetype: coat
+  tier: S
+  texts: [Raf Simons AW01 Riot Riot Riot bomber size 48, Raf Simons Riot Riot Riot parka fall 2001 size 50, RAF SIMONS archive Riot jacket 2001 made in Italy, ラフシモンズ 01AW ライオット ボンバー 48, Raf Simons riot
+      riot riot bomber 2001 rare M]
+  image_urls: []
+  sources: ['https://www.1stdibs.com/buy/raf-simons-riot-riot-riot', 'https://www.dazeddigital.com/fashion/article/29467/1/tracing-raf-simons-love-for-teenage-riot-and-rock-and-roll']
+- id: raf_virginia_creeper
+  brand: raf_simons
+  era: raf_simons__early
+  season: raf_simons__aw02
+  archetype: knit
+  tier: A
+  texts: [Raf Simons AW02 Virginia Creeper sweater size 48, Raf Simons Virginia Creeper jacket fall 2002 size 50, ラフシモンズ 02AW ヴァージニアクリーパー ニット 48, Raf simons virginia creeper archive M, 'Raf Simons knit
+      authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.highsnobiety.com/p/raf-simons-most-iconic-pieces']
+- id: raf_closer_saville
+  brand: raf_simons
+  era: raf_simons__early
+  season: raf_simons__aw03
+  archetype: knit
+  tier: A
+  texts: [Raf Simons AW03 Closer Peter Saville New Order sweater size 48, Raf Simons Power Corruption and Lies shirt 2003 size 50, ラフシモンズ 03AW クローサー ピーターサヴィル ニット 48, Raf Simons Joy Division Closer archive
+      tee M, 'Raf Simons knit authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.highsnobiety.com/p/raf-simons-most-iconic-pieces']
+- id: helmut_astro_biker
+  brand: helmut_lang
+  era: helmut_lang__helmut
+  season: UNKNOWN
+  archetype: leather_jacket
+  tier: S
+  texts: [Helmut Lang astro biker leather jacket vintage size 48, Helmut Lang 1990s bondage leather jacket made in Italy, HELMUT LANG archive flight jacket black size 50, ヘルムートラング 本人期 アストロバイカー レザージャケット
+      48, Helmut Lang vintage leather moto jacket made in Austria M]
+  image_urls: []
+  sources: ['https://www.ssense.com/en-sg/editorial/fashion/helmut-lang-guide']
+- id: helmut_painter_jeans
+  brand: helmut_lang
+  era: helmut_lang__helmut
+  season: UNKNOWN
+  archetype: denim
+  tier: A
+  texts: [Helmut Lang painter jeans vintage 1998 size 32 made in Italy, Helmut Lang raw denim jeans 90s size 30, HELMUT LANG archive paint splatter jeans 31, ヘルムートラング 本人期 ペインターデニム 32, 'Helmut Lang denim
+      authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://en.wikipedia.org/wiki/Helmut_Lang_(fashion_brand)']
+- id: helmut_bondage_strap
+  brand: helmut_lang
+  era: helmut_lang__helmut
+  season: UNKNOWN
+  archetype: coat
+  tier: A
+  texts: [Helmut Lang bondage strap jacket vintage size 48, Helmut Lang 1999 strap coat black made in Italy, HELMUT LANG vintage bondage top M, 'Helmut Lang coat authentic, good condition, ships from Japan',
+    'Helmut Lang coat vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://www.ssense.com/en-sg/editorial/fashion/helmut-lang-guide']
+- id: margiela_tabi_boots
+  brand: margiela
+  era: margiela__martin
+  season: UNKNOWN
+  archetype: boots
+  tier: A
+  texts: [Maison Martin Margiela tabi boots black leather size 42, Martin Margiela Tabi ankle boots 43 Italy 4 stitch, MMM tabi split toe boots size 41 vintage, マルタンマルジェラ 足袋ブーツ 42, 'Maison Margiela boots
+      authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.ssense.com/en-ee/editorial/fashion/maison-margiela-guide']
+- id: margiela_line10_knit
+  brand: margiela
+  era: margiela__martin
+  season: UNKNOWN
+  archetype: knit
+  tier: A
+  texts: [Maison Martin Margiela line 10 deconstructed sweater size 48, Martin Margiela 10 wool knit four white stitches size 50, MMM Margiela 2005 knit cardigan artisanal M, メゾンマルタンマルジェラ 10 ニット 48, 'Maison
+      Margiela knit authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.ssense.com/en-ee/editorial/fashion/maison-margiela-guide']
+- id: mcqueen_lee_tailoring
+  brand: alexander_mcqueen
+  era: mcqueen__lee
+  season: UNKNOWN
+  archetype: blazer
+  tier: A
+  texts: [Alexander McQueen Lee era blazer size 48 made in Italy, Alexander McQueen 2006 tailored jacket black wool size 50, McQueen vintage bumster trousers size 48, アレキサンダーマックイーン リー期 テーラードジャケット 48, 'Alexander
+      McQueen blazer authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/alexander-mcqueen']
+- id: ann_demeulemeester_boots
+  brand: ann_demeulemeester
+  era: ann_demeulemeester__ann
+  season: UNKNOWN
+  archetype: boots
+  tier: A
+  texts: [Ann Demeulemeester tall leather boots size 43, Ann Demeulemeester lace up boots black made in Italy 42, Ann Demeulemeester leather jacket men size 48, アンドゥムルメステール レザーブーツ 43, 'Ann Demeulemeester
+      boots authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/ann-demeulemeester']
+- id: givenchy_tisci_rottweiler
+  brand: givenchy
+  era: givenchy__tisci
+  season: UNKNOWN
+  archetype: graphic_tee
+  tier: A
+  texts: [Givenchy Rottweiler tee Riccardo Tisci size M, Givenchy Tisci cuban fit star tee size L, Givenchy Bambi tee 2012 Tisci size S, ジバンシィ ティッシ期 ロットワイラー Tシャツ M, 'Givenchy graphic tee authentic, good
+      condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/givenchy']
+- id: gucci_tom_ford_leather
+  brand: gucci
+  era: gucci__tom_ford
+  season: UNKNOWN
+  archetype: leather_jacket
+  tier: A
+  texts: [Gucci Tom Ford era leather jacket size 50 made in Italy, Gucci by Tom Ford 1999 suede jacket size 48, vintage Gucci Tom Ford velvet blazer size 52, グッチ トムフォード期 レザージャケット 50, 'Gucci leather jacket
+      authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/gucci']
+- id: chanel_cc_logo_belt
+  brand: chanel
+  era: chanel__vintage
+  season: UNKNOWN
+  archetype: belt
+  tier: A
+  texts: [Vintage Chanel CC logo chain belt gold tone made in France, Chanel 95P CC turnlock belt leather gold hardware, Chanel Medallion chain belt 90s authentic, シャネル ヴィンテージ ココマーク チェーンベルト, 'Chanel belt
+      authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.instagram.com/glam_archive/']
+- id: chanel_tweed_jacket
+  brand: chanel
+  era: chanel__vintage
+  season: UNKNOWN
+  archetype: blazer
+  tier: A
+  texts: [Vintage Chanel boucle tweed jacket 96A size 38 made in France, Chanel 90s tweed jacket CC buttons, シャネル ヴィンテージ ツイードジャケット 38, 'Chanel blazer authentic, good condition, ships from Japan', 'Chanel
+      blazer vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://www.instagram.com/glam_archive/']
+- id: chanel_cc_jewelry
+  brand: chanel
+  era: chanel__vintage
+  season: UNKNOWN
+  archetype: jewelry
+  tier: A
+  texts: [Vintage Chanel CC logo earrings clip on gold 90s, Chanel pearl necklace CC pendant vintage 1990s made in France, Chanel camellia brooch vintage gripoix, シャネル ヴィンテージ ココマーク ピアス, 'Chanel jewelry
+      authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.instagram.com/glam_archive/']
+- id: erd_early_safety_pin_tee
+  brand: erd
+  era: erd__early
+  season: UNKNOWN
+  archetype: graphic_tee
+  tier: A
+  texts: [Enfants Riches Deprimes safety pin tee Los Angeles size M, ERD early graphic tee 2014 distressed size L, Enfants Riches Deprimes old ERD tee size S, 'Enfants Riches Déprimés graphic tee authentic,
+      good condition, ships from Japan', 'Enfants Riches Déprimés graphic tee vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/enfants-riches-deprimes']
+- id: erd_early_leather
+  brand: erd
+  era: erd__early
+  season: UNKNOWN
+  archetype: leather_jacket
+  tier: A
+  texts: [Enfants Riches Deprimes distressed leather jacket size M, ERD leather biker jacket early collection size L, Enfants Riches Deprimes mercer leather jacket, 'Enfants Riches Déprimés leather jacket
+      authentic, good condition, ships from Japan', 'Enfants Riches Déprimés leather jacket vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://www.mrporter.com/en-au/journal/fashion/enfants-riches-deprimes-erd-25368192']
+- id: chrome_hearts_cross_ring
+  brand: chrome_hearts
+  era: UNKNOWN
+  season: UNKNOWN
+  archetype: jewelry
+  tier: A
+  texts: [Chrome Hearts silver cross ring size 10 925, Chrome Hearts dagger pendant sterling silver, Chrome Hearts BS Fleur ring 925 size 9, クロムハーツ シルバー クロスリング 925, 'Chrome Hearts jewelry authentic, good
+      condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/chrome-hearts']
+- id: hysteric_glamour_girl_tee
+  brand: hysteric_glamour
+  era: hysteric_glamour__classic
+  season: UNKNOWN
+  archetype: graphic_tee
+  tier: A
+  texts: [Hysteric Glamour girl graphic tee vintage 90s made in Japan size M, Hysteric Glamour skull hoodie y2k size L, ヒステリックグラマー ガールプリント Tシャツ 90s M, Hysteric glamour nude girl tee Japan, 'Hysteric Glamour
+      graphic tee authentic, good condition, ships from Japan']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/hysteric-glamour']
+- id: ccp_boots
+  brand: carol_christian_poell
+  era: UNKNOWN
+  season: UNKNOWN
+  archetype: boots
+  tier: A
+  texts: [Carol Christian Poell drip dyed boots size 43, CCP object dyed leather boots Italy 42, カロルクリスチャンポエル ブーツ 43, 'Carol Christian Poell boots authentic, good condition, ships from Japan', 'Carol Christian
+      Poell boots vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/carol-christian-poell']
+- id: jpg_mesh_top
+  brand: jean_paul_gaultier
+  era: UNKNOWN
+  season: UNKNOWN
+  archetype: shirt
+  tier: A
+  texts: [Jean Paul Gaultier Maille mesh long sleeve top vintage size M, JPG tattoo mesh top Gaultier size L, ジャンポールゴルチエ メッシュ タトゥー ロンT, 'Jean Paul Gaultier shirt authentic, good condition, ships from Japan',
+    'Jean Paul Gaultier shirt vintage archive piece, tag attached, see photos for measurements']
+  image_urls: []
+  sources: ['https://www.grailed.com/designers/jean-paul-gaultier']
+junk:
+- id: fast_fashion_grunge_denim
+  category: fast_fashion_lookalike
+  texts: [grunge distressed skinny jeans ripped y2k, Y2K rhinestone tee baby tee women, archive style hoodie vintage wash oversized, Zara ripped biker jeans slim fit, Hedi style skinny black jeans distressed
+      stretch, boho grunge rocker leather look jacket faux leather, emo punk studded belt hot topic, dark academia goth cargo pants]
+- id: brand_misuse_inspired
+  category: brand_misuse
+  texts: [Dior-style skinny jeans, CC inspired pearl necklace, Chanel inspired tweed jacket, Rick Owens style drop crotch pants, Number Nine inspired grunge hoodie, Saint Laurent look biker jacket faux
+      leather, Balmain style biker jeans, similar to Raf Simons oversized sweater]
+- id: perfume_cosmetics_collision
+  category: word_collision
+  texts: [Dior Homme Intense eau de parfum 100ml, Chanel No 5 parfum spray vintage bottle, Balmain Paris hair extensions clip in, Celine Dion tour tee 2008 Las Vegas, Dior Sauvage fragrance sample vial,
+    YSL Libre eau de parfum 90ml, Chanel Rouge Coco lipstick, Givenchy Le Rouge lipstick]
+- id: undercover_word_collision
+  category: word_collision
+  texts: [Undercover Boss season 1 DVD, Undercover police badge costume, Undercover Brother movie poster, undercover agent spy costume kids, Undercover bra seamless strapless, Mini figure undercover cop
+      lego compatible]
+- id: rick_celine_first_names
+  category: word_collision
+  texts: [Rick Ross Port of Miami tee, Rick and Morty hoodie adult swim, Rick James vintage concert shirt, Celine Dion Courage World Tour merch, Rick Astley never gonna give you up tee, Terrell Owens Eagles
+      jersey, Personalized Celine name necklace gold]
+- id: number_nine_sports
+  category: word_collision
+  texts: [Number 9 jersey Chelsea home shirt, Number nine NFL football jersey youth, Number 9 Lakers basketball jersey, No. 9 combo pizza coupon, Revolution 9 Beatles vinyl, Cloud nine hoodie women]
+- id: disney_beauty_and_beast
+  category: word_collision
+  texts: [Disney Beauty and the Beast Belle dress costume kids, Beauty and the Beast enchanted rose lamp, Beauty and the Beast Broadway musical tee, Funko Pop Beauty and the Beast Lumiere, Beauty & Beast
+      Disney sweatshirt]
+- id: raf_julius_supreme_collisions
+  category: word_collision
+  texts: [RAF Royal Air Force pilot jacket ww2 reproduction, RAF bomber jacket vintage wartime, Julius Caesar toga costume, Julius Paul Frank monkey tee, Supreme Court Notorious RBG tee, Pizza Supreme shirt
+      funny, Rafael Nadal Nike tennis tee]
+- id: word_collisions_misc
+  category: word_collision
+  texts: [Lightning McQueen Cars pajamas toddler, Steve McQueen Le Mans poster, Gucci Mane Trap God tee, Bored Ape costume gorilla suit, Pyrex glass bowl set vintage kitchen, Off white paint wall color
+      sample, Capital One tee]
+- id: mall_brands
+  category: mall_brand
+  texts: [Hollister distressed skinny jeans, H&M leather look biker jacket, Forever 21 graphic tee grunge, Shein rhinestone hoodie, Zara faux leather jacket, Abercrombie ripped jeans, Pacsun skull hoodie,
+    Uniqlo U crewneck]
+- id: fake_language
+  category: fake_language
+  texts: ['Rep Chrome Hearts hoodie 1:1', UA Rick Owens Geobasket batch, Dior Homme mirror quality jeans, Dupe Saint Laurent L01 jacket, Replica Chanel belt high quality, Unbranded Number Nine style sweater
+      no tag, Custom Raf Simons Riot jacket handmade, Not authentic Balmain biker jeans tribute]
+- id: bootleg_modern_merch
+  category: brand_misuse
+  texts: [bootleg Supreme box logo hoodie custom, Bape shark hoodie fake replica, 'Off-White arrows tee rep 1:1', Yeezy season 3 inspired tee, Custom Undercover bear hoodie handmade, Chrome Hearts inspired
+      cross hoodie dupe]
+- id: kids_and_homeware
+  category: word_collision
+  texts: [Baby Dior onesie size 12 months, Versace Home dinner plate Medusa, Kids Balenciaga sneakers toddler, Chanel gift box empty ribbon, Dior shopping bag only, Celine sunglasses case empty, Saint Laurent
+      dust bag]
+- id: lgbt_and_misc_acronyms
+  category: word_collision
+  texts: [LGBT pride flag tee rainbow, LGBTQ pride hoodie, UC Berkeley hoodie, CCP propaganda poster vintage, BBS wheels 18 inch, CDG airport tee souvenir]

@@ -1,0 +1,25 @@
+# Runtime settings. Secrets never live here; they come from environment variables.
+llm:
+  max_items_per_day: 0          # MAX_LLM_ITEMS_PER_DAY. 0 = the optional Haiku fallback is off.
+  monthly_usd_ceiling: 1.0
+apify:
+  monthly_credit_usd: 5.0
+  stop_at_fraction: 0.9         # refuse new actor runs once the month reaches 90% of the credit
+alerts:
+  max_per_run: 8                # ntfy allows ~250 messages/day per sending IP
+  ntfy_server: "https://ntfy.sh"
+fx:
+  api_url: "https://api.frankfurter.dev/v1/latest?base=USD"
+  refresh_hours: 20
+  # Used only when the API is unreachable and no cached rate exists. Rows scored with these
+  # are flagged `fx_fallback`. Units of currency per 1 USD.
+  fallback_per_usd: {USD: 1.0, JPY: 150.0, EUR: 0.92, GBP: 0.79, CAD: 1.38, AUD: 1.52}
+retention:
+  rejected_days: 7
+  ended_days: 30
+  raw_json_days: 7
+size_profile:                    # the user's saved sizes; editable from the site (stored in kv)
+  tops: []
+  bottoms: []
+  shoes: []
+  tailoring: []

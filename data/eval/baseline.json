@@ -1,0 +1,7 @@
+{
+  "precision_at_50": 1.0,
+  "junk_rejection": 0.9908,
+  "era_ok": 0.9944,
+  "era_strict": 0.9157,
+  "rows": 287
+}

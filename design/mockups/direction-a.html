@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grail Radar — Direction A, Selvedge</title>
+<link rel="stylesheet" href="../../web/src/styles/tokens.css">
+<style>
+@font-face { font-family: "Archivo Variable"; src: url("../../web/node_modules/@fontsource-variable/archivo/files/archivo-latin-standard-normal.woff2") format("woff2-variations"); font-weight: 100 900; font-stretch: 62% 125%; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 var(--t-body)/var(--lh-read) var(--font); -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.top { position: sticky; top: 0; background: var(--paper); z-index: 2; border-bottom: var(--rule-w) solid var(--ink); }
+.bar { display: flex; align-items: center; justify-content: space-between; padding: var(--s-2) var(--gutter); }
+.bar img { height: 26px; display: block; }
+.bar .acts { display: flex; gap: var(--s-4); font-stretch: var(--w-condensed); font-weight: 700; font-size: var(--t-lead); }
+.tabs { display: flex; gap: var(--s-4); padding: 0 var(--gutter); overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+.tabs a { color: var(--thread); text-decoration: none; font-stretch: var(--w-condensed); font-weight: 700; font-size: 1.25rem; padding: var(--s-1) 0 var(--s-2); border-bottom: 3px solid transparent; }
+.tabs a[aria-current] { color: var(--ink); border-color: var(--ink); }
+.tabs sup { font-size: var(--t-micro); color: var(--selvedge); margin-left: 2px; }
+.status { padding: var(--s-2) var(--gutter); font-size: var(--t-small); color: var(--thread); border-bottom: var(--rule-w) solid var(--rule); }
+.card { display: grid; grid-template-columns: 42% 1fr; border-bottom: var(--rule-w) solid var(--ink); position: relative; }
+.card.steal { border-left: var(--selvedge-w) solid var(--selvedge); }
+.photo { position: relative; aspect-ratio: var(--photo-ratio); background: var(--label) url("../../web/public/art/halftone.svg"); overflow: hidden; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.jp { position: absolute; top: 0; right: 0; writing-mode: vertical-rl; background: var(--ink); color: var(--paper); font-size: var(--t-small); font-weight: 700; padding: var(--s-2) 5px; letter-spacing: .12em; line-height: 1; }
+.cap { padding: var(--s-2) var(--gutter) var(--s-2); display: flex; flex-direction: column; min-width: 0; }
+.marks { display: flex; align-items: center; gap: var(--s-2); margin-bottom: var(--s-2); }
+.marks .tier { width: 30px; height: 30px; }
+.marks .stamp { height: 24px; transform: rotate(-3deg); }
+.brand { font-size: var(--t-lead); font-weight: 700; line-height: var(--lh-snug); }
+.era { font-size: var(--t-meta); color: var(--thread); line-height: var(--lh-snug); margin-top: 2px; }
+.flag { display: flex; gap: var(--s-2); align-items: center; font-size: var(--t-small); line-height: var(--lh-snug); margin-top: var(--s-1); }
+.flag::before { content: ""; flex: none; width: 14px; height: 14px; background: repeating-linear-gradient(-45deg, var(--ink) 0 2px, var(--paper) 2px 5px); border: 1px solid var(--ink); }
+.disc { display: flex; align-items: baseline; gap: var(--s-2); margin-top: auto; padding-top: var(--s-2); }
+.disc b { font-size: var(--t-figure); }
+.card.steal .disc b, .card.great .disc b { color: var(--selvedge); }
+.disc span { font-size: var(--t-small); color: var(--thread); line-height: 1.15; }
+.price { font-size: var(--t-body); font-weight: 700; margin-top: var(--s-1); font-variant-numeric: tabular-nums; }
+.price s { font-weight: 400; color: var(--thread); margin-left: var(--s-2); }
+.fair { font-size: var(--t-small); color: var(--thread); }
+.title { grid-column: 1 / -1; font-size: var(--t-small); padding: var(--s-2) var(--gutter); border-top: var(--rule-w) solid var(--rule); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.title small { color: var(--thread); font-size: inherit; }
+.fb { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(6, 1fr); border-top: var(--rule-w) solid var(--rule); }
+.fb button { min-height: var(--tap); font-stretch: var(--w-narrow); font-size: var(--t-small); font-weight: 600; border-right: var(--rule-w) solid var(--rule); line-height: 1.1; padding: 0 2px; }
+.fb button:last-child { border-right: 0; }
+.fb button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="bar"><img src="../../web/public/art/logo-wordmark.svg" alt="Grail Radar"><div class="acts"><button>Search</button><button>Filter</button></div></div>
+  <nav class="tabs"><a href="#" aria-current="page">Best</a><a href="#">Steals<sup>9</sup></a><a href="#">Grails</a><a href="#">Heat</a><a href="#">New</a><a href="#">Japan</a><a href="#">Ending soon</a><a href="#">Watchlist</a><a href="#">Rejected</a></nav>
+</header>
+<p class="status" style="margin:0">214 live listings. Last scan 4 minutes ago.</p>
+
+<article class="card steal">
+  <div class="photo"><img src="https://static.mercdn.net/thumb/item/webp/m40133443364_1.jpg?1794464942" alt=""><span class="jp">日本</span></div>
+  <div class="cap">
+    <div class="marks"><img class="tier" src="../../web/public/art/tier-s.svg" alt="S tier"><img class="stamp" src="../../web/public/art/stamp-steal.svg" alt="Steal"></div>
+    <div class="brand">Rick Owens</div>
+    <div class="era">Early mainline, leather jacket</div>
+    <div class="disc"><b class="figure">−41%</b><span>under<br>fair value</span></div>
+    <div class="price">$1,612 landed<s>$1,790</s></div>
+    <div class="fair">Fair $2,740 from 11 sold. Size 42.</div>
+  </div>
+  <div class="title"><small>Mercari Japan, 12 min ago.</small> 極美品 リックオウエンス ハイカラーバイカーレザージャケット42 オルマ期正規品</div>
+  <div class="fb"><button aria-pressed="true">Yes</button><button>No</button><button>Would cop</button><button>Fake</button><button>Wrong era</button><button>Wrong brand</button></div>
+</article>
+
+<article class="card great">
+  <div class="photo"><img src="https://static.mercdn.net/thumb/item/webp/m52488090272_1.jpg?1777829338" alt=""><span class="jp">日本</span></div>
+  <div class="cap">
+    <div class="marks"><img class="tier" src="../../web/public/art/tier-s.svg" alt="S tier"><img class="stamp" src="../../web/public/art/stamp-great.svg" alt="Great"></div>
+    <div class="brand">Saint Laurent</div>
+    <div class="era">Hedi Slimane, AW13, L01 biker</div>
+    <div class="disc"><b class="figure">−27%</b><span>under<br>fair value</span></div>
+    <div class="price">$3,980 landed</div>
+    <div class="fair">Fair $5,450 from 6 sold. Size 46.</div>
+  </div>
+  <div class="title"><small>Mercari Japan, 1 h ago.</small> 新品SAINT LAURENTサンローラン13AWOG L01 レザージャケット</div>
+  <div class="fb"><button>Yes</button><button>No</button><button>Would cop</button><button>Fake</button><button>Wrong era</button><button>Wrong brand</button></div>
+</article>
+
+<article class="card">
+  <div class="photo"><img src="https://static.mercdn.net/thumb/item/webp/m53806586176_1.jpg?1704330991" alt=""><span class="jp">日本</span></div>
+  <div class="cap">
+    <div class="marks"><img class="tier" src="../../web/public/art/tier-b.svg" alt="B tier"><img class="stamp" src="../../web/public/art/stamp-unknown.svg" alt="No comps"></div>
+    <div class="brand">Beauty:Beast</div>
+    <div class="era">Era unconfirmed, brooch</div>
+    <div class="flag">Ask for tag photos</div>
+    <div class="disc"><b class="figure">$284</b><span>landed,<br>no fair value yet</span></div>
+    <div class="fair">0 sold comps for brooches.</div>
+  </div>
+  <div class="title"><small>Mercari Japan, 3 h ago.</small> ビューティービースト ブローチ</div>
+  <div class="fb"><button>Yes</button><button>No</button><button>Would cop</button><button>Fake</button><button>Wrong era</button><button>Wrong brand</button></div>
+</article>
+<p class="status" style="margin:0">Scores in this mockup are illustrative. Photos and titles are real listings.</p>
+</body>
+</html>

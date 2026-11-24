@@ -1,0 +1,365 @@
+# config/sources.yaml  (R4, 2026-11-24)
+# Provenance legend: "reported" = seen in Apify/GitHub/blog text this session (not independently verified);
+# "memory" = from model memory, NOT seen this session -> confidence low + verify true.
+# Depop and Vinted are intentionally absent.
+sources:
+  - id: grailed
+    priority: core
+    interval_minutes: 10
+    method: algolia_api
+    endpoint: "POST https://<app-id-lowercase>-dsn.algolia.net/1/indexes/*/queries (multi-query). App id: memory says MNRWEFSS2Q (UNVERIFIED, re-discover at runtime from the x-algolia-application-id query param seen in the browser network tab)."
+    auth: "Public search-only Algolia key embedded in the Grailed page (window config / JS bundle). Reported by aurenic actor: key is fetched fresh from the homepage on every run; another actor reports the key rotates. So: never hardcode; scrape key + app id from homepage HTML/JS at start of each run, cache for the run only."
+    pagination: "Algolia page/hitsPerPage. Actors report 48 hits per page (aurenic/other) while another says up to 1000 hits/page x 500 pages; BlackFalconData actor says max 1,000 listings per search term. Plan for a 1,000-hit cap per query and split queries by designer + price band + category."
+    sort_newest: "Use the date-sorted replica index (name reported/remembered as Listing_by_date_production; re-discover). Fallback: query primary index with numericFilters on created_at_i / bumped_at_i and sort client-side."
+    anti_bot: "Algolia endpoint itself is not Cloudflare-gated (it is a third-party API). Homepage fetch for the key may meet Cloudflare/bot checks; use a normal browser UA, low rate. Grailed ToS/robots should be reviewed (flagged by multiple sources)."
+    sold_data: "YES. Reported by several actors: active listings from index Listing_production and sold from Listing_sold_production (reported by Apify actors, re-discover at runtime, not certain). Hit fields sold_price and sold_at_i; sold_price is null on unsold listings. Grailed also has a 'sold' filter in the web UI."
+    fields: [id, title, designers, price, price_drops, size, category_path, condition, cover_photo, created_at, bumped_at, sold, sold_price, sold_at_i, heat, position, strata, seller (user id, username, seller score/reviews)]
+    index_names_reported: {live: "Listing_production (reported by Apify actors)", sold: "Listing_sold_production (reported by Apify actor)", date_sorted_replica: "memory only: Listing_by_date_production", heat_replica: "memory only: Listing_by_heat_production"}
+    query_params_notes: "hitsPerPage, page, query, facetFilters (e.g. designers.name, category_path, department, strata), numericFilters (price, created_at_i, sold_at_i). Exact attribute names are memory/low: dump one raw hit and one facets response at runtime and cache the schema."
+    polite_rate: "1 request/second max; 10-min cadence needs only ~5-20 queries per cycle (watchlist designers x newest page 0). Backoff on 403/429."
+    libraries:
+      - {name: "wavehs/grailed-scraper (pushed 2026-11-02, 1 star, README has no mechanics, treat as unvetted)", url: "https://github.com/wavehs/grailed-scraper"}
+      - {name: "BlackFalconData-org/grailed-com-scraper (Apify actor source, pushed 2026-10-19)", url: "https://github.com/BlackFalconData-org/grailed-com-scraper"}
+    apify_actors:
+      - {id: "123webdata/grailed-scraper", price_per_1k_usd: 0.9}
+      - {id: "aurenic/grailed-scraper", price_per_1k_usd: 1.2}
+      - {id: "bovi/grailed-listings", price_per_1k_usd: 1.5}
+      - {id: "unfenced-group/grailed-scraper (has sold-archive mode)", price_per_1k_usd: 1.49}
+      - {id: "weltverbenzer/grailed-sold-listings-scraper", price_per_1k_usd: UNKNOWN}
+    recommendation: direct
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://apify.com/aurenic/grailed-scraper", "https://apify.com/bovi/grailed-listings", "https://apify.com/unfenced-group/grailed-scraper", "https://github.com/BlackFalconData-org/grailed-com-scraper", "https://www.scrapingbee.com/blog/how-to-scrape-algolia-search/"]
+    confidence: med
+    verify: true
+
+  - id: mercari_us
+    priority: core
+    interval_minutes: 20
+    method: graphql
+    endpoint: "POST https://www.mercari.com/v1/api (GraphQL; memory). Search operation name reported by an Apify actor as searchFacetQuery (singular); not confirmed. Some actors describe persisted queries (sha256 hash in extensions) - re-capture hash from the browser network tab."
+    auth: "Anonymous guest token minted automatically by the web app (reported by Apify actor); requests are DPoP-signed with an ES256 (P-256) JWT proof generated client-side (reported by several actors; RFC 9449). Mechanism details not documented in any source seen; capture from a headless-browser session."
+    pagination: "Cursor/offset in GraphQL variables (memory, unverified)."
+    sort_newest: "GraphQL sortBy enum (memory: SORT_CREATED_TIME / sort by newest); verify by capturing a UI request after choosing 'Newest'."
+    anti_bot: "Cloudflare + session checks. Reported: plain HTTP clients get 403 instead of HTML. Hardest source (per taste profile). Likely needs a real browser (Playwright) to obtain cookies/token, or a managed actor."
+    sold_data: "YES via status filter 'sold' in search (reported by getascraper and devilscrapes actors). Gives sold price; sold date reliability unverified."
+    fields: [id, name, price, status, condition, brand, size, photos, seller, createdAt, updatedAt, likes]
+    polite_rate: "1 request per 3-5 seconds; keep to ~10-20 queries per 20-min cycle."
+    libraries:
+      - {name: "roshtarg-cpu/mercari-scraper ('Mercari USA ... Cloudflare bypass', pushed 2026-09-18, 0 stars, unvetted)", url: "https://github.com/roshtarg-cpu/mercari-scraper"}
+      - {name: "kevinxo328/mercari-scraper (pushed 2026-10-29, 5 stars; US vs JP unknown)", url: "https://github.com/kevinxo328/mercari-scraper"}
+    apify_actors:
+      - {id: "devilscrapes/mercari-sold-listings", price_per_1k_usd: 2.51}
+      - {id: "getascraper/mercari-us-scraper", price_per_1k_usd: 2.05}
+      - {id: "h4sh/mercari-scraper", price_per_1k_usd: 2.0}
+      - {id: "automation-lab/mercari-us-listings-scraper", price_per_1k_usd: UNKNOWN}
+    recommendation: apify
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://apify.com/devilscrapes/mercari-sold-listings", "https://apify.com/getascraper/mercari-us-scraper", "https://apify.com/h4sh/mercari-scraper", "https://apify.com/automation-lab/mercari-us-listings-scraper"]
+    confidence: low
+    verify: true
+
+  - id: mercari_jp
+    priority: high
+    interval_minutes: 60
+    method: library
+    endpoint: "POST https://api.mercari.jp/v2/entities:search (memory; mercapi hides it). Use the mercapi library rather than raw calls."
+    auth: "No account. mercapi 'implements security mechanisms of the native web app' (README); Apify actors state each request carries a fresh ES256 DPoP JWT. mercapi generates this for you."
+    pagination: "pageSize 120 (mercapi source), page_token cursor returned in each response."
+    sort_newest: "SortBy.SORT_CREATED_TIME + SortOrder.ORDER_DESC (the pair is on mercapi's allowed list). Source comment warns correct ordering is not guaranteed, so also dedupe by item id and re-check page 2."
+    anti_bot: "DPoP + signed request shape; no Cloudflare challenge reported for the API. Breakage risk when Mercari changes signing; library is community-maintained."
+    sold_data: "YES: status filter STATUS_SOLD_OUT (mercapi appends STATUS_TRADING automatically). Use for JP sold comps (price in JPY)."
+    fields: [id, name, price, status, created, updated, thumbnails, seller_id, item_condition_id, brand, category (search); full_item() adds description, photos, shipping, seller details]
+    search_params: {query: "str", categories: "[int]", brands: "[int]", sizes: "[int]", item_conditions: "[int]", colors: "[int]", price_min: int, price_max: int, shipping_methods: "[anonymous|japan_post|no_option]", status: "[on_sale|sold_out]", sort_by: "score|created_time|price|num_likes", sort_order: "desc|asc", exclude: "str"}
+    polite_rate: "1 request per 2-3 seconds; hourly watchlist of ~30-60 JP keyword queries."
+    libraries:
+      - {name: "mercapi (take-kun), MIT, 170 commits, PyPI versions 0.3.0/0.4.0 seen; docs take-kun.github.io/mercapi; exact last-release date not visible this session", url: "https://github.com/take-kun/mercapi"}
+      - {name: "mercari (marvinody) on PyPI, v1.0.3 seen; repo URL from memory", url: "https://pypi.org/project/mercari/"}
+      - {name: "SteveShin323/carimer-api (unofficial sync+async client, pushed 2026-10-06)", url: "https://github.com/SteveShin323/carimer-api"}
+    apify_actors:
+      - {id: "logiover/mercari-japan-scraper", price_per_1k_usd: UNKNOWN}
+      - {id: "japandatalab/mercari-japan-sold-listings-scraper", price_per_1k_usd: UNKNOWN}
+      - {id: "superslowsloth/mercari-japan", price_per_1k_usd: UNKNOWN}
+    recommendation: library
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://github.com/take-kun/mercapi", "https://raw.githubusercontent.com/take-kun/mercapi/main/mercapi/requests/search.py", "https://pypi.org/project/mercapi/0.4.0", "https://apify.com/logiover/mercari-japan-scraper"]
+    confidence: high
+
+  - id: yahoo_auctions_jp
+    priority: high
+    interval_minutes: 60
+    method: html
+    endpoint: "GET https://auctions.yahoo.co.jp/search/search?p=<keyword>&b=1&n=100&s1=new&o1=d  (URL shape confirmed by a public Huginn config gist; s1=new&o1=d = newest first, n=100 per page, b = 1-based start offset). Category filter: auccat=<id> (memory)."
+    auth: "None for public search pages."
+    pagination: "b=<start index> (1, 101, 201...) with n=100 (memory for b semantics; verify)."
+    sort_newest: "s1=new&o1=d. Also s1=end&o1=a for ending soonest (needed to track auction end times)."
+    anti_bot: "Light for low volume: static server-rendered HTML. Aggressive request rates or datacenter IPs may get blocked; GitHub Actions IP ranges untested."
+    sold_data: "YES. Closed-auction search at https://auctions.yahoo.co.jp/closedsearch/closedsearch?p=<keyword>&b=1&n=100 (path from memory; several actors scrape 'closedsearch', e.g. datalab-jp, jpmarketdata). Gives final price for ended auctions; unsold ended auctions also appear, check for bid count > 0."
+    fields: "Card CSS (from gist): a.Product__titleLink (url, title), .Product__imageData (img), .Product__priceInfo .Product__price (current price; second price = buy-now when present), data-cl-params contains ';st:' start and ';end:' end timestamps. Bid count, seller rating, condition are on cards/detail (class names memory, verify)."
+    proxy_deep_links:
+      buyee_mercari: "https://buyee.jp/mercari/item/<mercari_item_id> (memory, verify)"
+      buyee_yahoo: "https://buyee.jp/item/yahoo/auction/<auction_id> (memory, verify)"
+      zenmarket_mercari: "https://zenmarket.jp/en/mercari.aspx?itemCode=<mercari_item_id> (memory, verify)"
+      zenmarket_yahoo: "https://zenmarket.jp/en/auction.aspx?itemCode=<auction_id> (memory, verify)"
+    polite_rate: "1 request per 2-3 seconds; hourly."
+    libraries:
+      - {name: "gingerbeardman Huginn scenario gist (selectors reference only)", url: "https://gist.github.com/gingerbeardman/e4b07db8d59dec441bc9ada1972789c4"}
+    apify_actors:
+      - {id: "logiover/yahoo-auctions-scraper", price_per_1k_usd: UNKNOWN}
+      - {id: "sigma-dev/yahoo-auctions-scraper", price_per_1k_usd: UNKNOWN}
+      - {id: "datalab-jp/yahoo-auctions-sold-scraper", price_per_1k_usd: UNKNOWN}
+      - {id: "jungle_synthesizer/yahoo-auctions-japan-marketplace-scraper", price_per_1k_usd: UNKNOWN}
+    recommendation: direct
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://gist.github.com/gingerbeardman/e4b07db8d59dec441bc9ada1972789c4", "https://apify.com/datalab-jp/yahoo-auctions-sold-scraper.md", "https://apify.com/logiover/yahoo-auctions-scraper.md"]
+    confidence: med
+    verify: true
+
+  - id: rakuma
+    priority: medium
+    interval_minutes: 240
+    method: html
+    endpoint: "https://fril.jp/s?query=<keyword>&sort=created_at&order=desc (memory, verify)"
+    auth: "None."
+    pagination: "page=<n> (memory)."
+    sort_newest: "sort=created_at&order=desc (memory)."
+    anti_bot: "Unknown; Rakuten-run site, likely moderate. Not researched this session."
+    sold_data: "Sold items remain visible with a SOLD badge; no dedicated sold search known (memory)."
+    fields: [title, price, url, thumbnail, sold_flag]
+    polite_rate: "1 request per 3 seconds."
+    libraries: []
+    apify_actors: []
+    recommendation: direct_if_needed
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://fril.jp/"]
+    confidence: low
+    verify: true
+
+  - id: second_street
+    priority: medium
+    interval_minutes: 240
+    method: html
+    endpoint: "https://www.2ndstreet.jp/search?keyword=<keyword>&sortBy=arrival (memory, verify)"
+    auth: "None."
+    pagination: "page=<n> (memory)."
+    sort_newest: "sortBy=arrival (memory)."
+    anti_bot: "Unknown; ordinary retailer site. Not researched this session."
+    sold_data: "No (retail stock only; items vanish when sold)."
+    fields: [title, brand, price, condition_rank, store, url, image]
+    polite_rate: "1 request per 3-5 seconds; every 4 h."
+    libraries: []
+    apify_actors: []
+    recommendation: direct_if_needed
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://www.2ndstreet.jp/"]
+    confidence: low
+    verify: true
+
+  - id: ragtag
+    priority: medium
+    interval_minutes: 240
+    method: html
+    endpoint: "https://www.ragtag.jp/ search page with keyword and new-arrival sort (exact path unknown; capture from browser)"
+    auth: "None."
+    pagination: "UNKNOWN"
+    sort_newest: "UNKNOWN (site has a 'new arrivals' listing)."
+    anti_bot: "Unknown. Not researched this session."
+    sold_data: "No."
+    fields: [title, brand, price, url, image]
+    polite_rate: "1 request per 3-5 seconds; every 4 h."
+    libraries: []
+    apify_actors: []
+    recommendation: direct_if_needed
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://www.ragtag.jp/"]
+    confidence: low
+    verify: true
+
+  - id: kindal
+    priority: medium
+    interval_minutes: 360
+    method: html
+    endpoint: "https://www.kindal.co.jp/ (search path unknown; capture from browser)"
+    auth: "None."
+    pagination: "UNKNOWN"
+    sort_newest: "UNKNOWN"
+    anti_bot: "Unknown. Not researched this session."
+    sold_data: "No."
+    fields: [title, brand, price, url, image]
+    polite_rate: "1 request per 5 seconds; every 6 h."
+    libraries: []
+    apify_actors: []
+    recommendation: direct_if_needed
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://www.kindal.co.jp/"]
+    confidence: low
+    verify: true
+
+  - id: treasure_factory
+    priority: medium
+    interval_minutes: 360
+    method: html
+    endpoint: "https://www.treasure-f.com/ (Trefac; search path unknown; capture from browser)"
+    auth: "None."
+    pagination: "UNKNOWN"
+    sort_newest: "UNKNOWN"
+    anti_bot: "Unknown. Not researched this session."
+    sold_data: "No."
+    fields: [title, brand, price, url, image]
+    polite_rate: "1 request per 5 seconds; every 6 h."
+    libraries: []
+    apify_actors: []
+    recommendation: direct_if_needed
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://www.treasure-f.com/"]
+    confidence: low
+    verify: true
+
+  - id: shopify_webshops
+    priority: medium
+    interval_minutes: 60
+    method: json_endpoint
+    endpoint: "GET https://<shop>/products.json?limit=250&page=<n> (public, no auth, when the store has not disabled it). Single product: /products/<handle>.json. Per-collection: /collections/<handle>/products.json. (All memory; standard Shopify behaviour.)"
+    auth: "None."
+    pagination: "limit max 250; page=1,2,... until empty array."
+    sort_newest: "products.json has no sort parameter; default order is not guaranteed newest. Fetch all pages (small shops) and diff by id + updated_at, or use /collections/all?sort_by=created-descending HTML. Use created_at / published_at to detect new drops and updated_at for changes."
+    anti_bot: "Usually none; Shopify applies per-IP throttling (HTTP 429) and some stores sit behind Cloudflare or password pages."
+    sold_data: "No sold history. Variants carry available true/false; a product going unavailable or vanishing = sold signal."
+    fields: [id, title, handle, vendor, product_type, tags, created_at, updated_at, published_at, variants (id title sku price compare_at_price available), images (src), body_html]
+    polite_rate: "1 request per 2 seconds per shop; hourly."
+    libraries: []
+    apify_actors: []
+    recommendation: direct
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://shopify.dev/docs/api/ajax/reference/product"]
+    confidence: low
+    verify: true
+
+  - id: bigcartel_webshops
+    priority: medium
+    interval_minutes: 60
+    method: json_endpoint
+    endpoint: "GET https://<shop>.bigcartel.com/products.json (memory) or the public API https://api.bigcartel.com/<shop>/products.json (memory). Custom-domain shops may expose the same path."
+    auth: "None."
+    pagination: "UNKNOWN (small catalogues; try page param)."
+    sort_newest: "Default order is store-configured; diff by id."
+    anti_bot: "Usually none (memory)."
+    sold_data: "No; track status (sold-out / removed)."
+    fields: [id, name, permalink, price, status, images, options, description, created_at]
+    polite_rate: "1 request per 2 seconds; hourly."
+    libraries: []
+    apify_actors: []
+    recommendation: direct
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://developers.bigcartel.com/"]
+    confidence: low
+    verify: true
+
+  - id: ebay
+    priority: low
+    interval_minutes: 720
+    method: official_api
+    endpoint: "Browse API item_summary/search (https://api.ebay.com/buy/browse/v1/item_summary/search), OAuth client-credentials app token. Free developer account; default ~5,000 calls/day (memory, verify)."
+    auth: "App token from developer.ebay.com keys."
+    pagination: "limit up to 200, offset."
+    sort_newest: "sort=newlyListed"
+    anti_bot: "None; official API. Rate limit by quota."
+    sold_data: "NO on Browse API. Sold data needs Marketplace Insights API (restricted, approval required). Alternative: Apify actors scraping sold listings (not researched)."
+    fields: [itemId, title, price, condition, image, itemWebUrl, seller, itemCreationDate, buyingOptions]
+    polite_rate: "Well below quota; 2-4 calls per 12 h cycle."
+    libraries: []
+    apify_actors: [{id: "scrapemint/ebay-sold-listings-scraper", price_per_1k_usd: UNKNOWN}]
+    recommendation: direct_optional
+    optional: true
+    cheap_and_stable: "yes for active listings (official, free); no for sold comps"
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://developer.ebay.com/api-docs/buy/browse/overview.html"]
+    confidence: low
+    verify: true
+
+  - id: vestiaire
+    priority: low
+    interval_minutes: 720
+    method: skip
+    endpoint: "https://www.vestiairecollective.com/ (public listing pages are indexed by search engines; internal API not researched)"
+    auth: "UNKNOWN"
+    pagination: "UNKNOWN"
+    sort_newest: "UNKNOWN"
+    anti_bot: "Reported by general knowledge as DataDome-class protection (memory)."
+    sold_data: "Sold items sometimes visible; not researched."
+    fields: [title, brand, price, condition, url]
+    polite_rate: "n/a"
+    libraries: []
+    apify_actors: []
+    recommendation: skip
+    optional: true
+    cheap_and_stable: "no (bot protection, low relevance)"
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://us.vestiairecollective.com/"]
+    confidence: low
+    verify: true
+
+  - id: therealreal
+    priority: low
+    interval_minutes: 720
+    method: skip
+    endpoint: "https://www.therealreal.com/ (not researched)"
+    auth: "UNKNOWN"
+    pagination: "UNKNOWN"
+    sort_newest: "UNKNOWN"
+    anti_bot: "Believed strong (memory)."
+    sold_data: "Not researched."
+    fields: [title, brand, price, url]
+    polite_rate: "n/a"
+    libraries: []
+    apify_actors: []
+    recommendation: skip
+    optional: true
+    cheap_and_stable: "no"
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://www.therealreal.com/"]
+    confidence: low
+    verify: true
+
+  - id: 1stdibs
+    priority: low
+    interval_minutes: 720
+    method: html
+    endpoint: "https://www.1stdibs.com/creators/<brand>/ and /buy/<keyword> pages are public (seen in search results this session)."
+    auth: "None for browse pages."
+    pagination: "?page=<n>"
+    sort_newest: "UNKNOWN"
+    anti_bot: "Unknown."
+    sold_data: "No sold data; asking prices only, often dealer-inflated."
+    fields: [title, price, dealer, url, image]
+    polite_rate: "1 request per 5 seconds; twice daily."
+    libraries: []
+    apify_actors: []
+    recommendation: skip_unless_needed
+    optional: true
+    cheap_and_stable: "maybe; asking prices only, low value for deals"
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://www.1stdibs.com/creators/dior-homme/"]
+    confidence: low
+    verify: true
+
+  - id: fashionphile
+    priority: low
+    interval_minutes: 720
+    method: skip
+    endpoint: "https://www.fashionphile.com/ (Chanel bags/jewelry; not researched)"
+    auth: "UNKNOWN"
+    pagination: "UNKNOWN"
+    sort_newest: "UNKNOWN"
+    anti_bot: "Unknown."
+    sold_data: "Not researched."
+    fields: [title, brand, price, condition, url]
+    polite_rate: "n/a"
+    libraries: []
+    apify_actors: []
+    recommendation: skip
+    optional: true
+    cheap_and_stable: "unknown; Chanel only"
+    live_test: {status: not_tested, detail: "build container firewall blocks marketplace hosts; Orchestrator runs live tests after allowlist approval", date: "2026-11-24"}
+    sources: ["https://www.fashionphile.com/"]
+    confidence: low
+    verify: true

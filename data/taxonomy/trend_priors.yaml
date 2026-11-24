@@ -1,0 +1,175 @@
+# R3 trend priors. Generated 2026-11-24. Evidence base is thin: WebFetch was blocked (hosts unresolvable),
+# so everything below comes from search-result snippets, not full-page reads. See research/R3_trends.md.
+# Dates: "2026-01~" = inferred from Grailed report metadata ("published ~315 days ago"), not a stated date.
+heat_list:
+  - {rank: 1, brand: dior_homme, era: dior_homme__hedi, season: UNKNOWN, piece: "Hedi-era Dior Homme (brand/era level)", archetype: UNKNOWN, trend_prior: 0.85, direction: rising, evidence: [{text: "Grailed 2026 report: searches for Hedi Slimane archival eras (Dior Homme + Saint Laurent) +38%; Dior +2 ranks; Hedi Dior in 'Top Grails for 2026'", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}, {text: "Stacker summary of the same report, corroborates archive/Hedi nostalgia theme", url: "https://stacker.com/stories/shopping/how-world-dressed-2025-and-what-might-be-horizon-2026", date: "2026~"}], confidence: med}
+  - {rank: 2, brand: chrome_hearts, era: UNKNOWN, season: UNKNOWN, piece: "Chrome Hearts (brand level)", archetype: UNKNOWN, trend_prior: 0.85, direction: steady, evidence: [{text: "Grailed 2026 report: Chrome Hearts retained #1 designer; also #1 in US, UAE, South Korea", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}, {text: "WWD: Grailed top sellers of 2025 - Chrome Hearts, Balenciaga, Rick Owens, Nike", url: "https://wwd.com/footwear-news/sneaker-news/grailed-marketplace-report-top-sellers-1238452322/", date: "2026-01~"}], confidence: med}
+  - {rank: 3, brand: number_nine, era: UNKNOWN, season: UNKNOWN, piece: "Number (N)ine (brand level)", archetype: UNKNOWN, trend_prior: 0.8, direction: rising, evidence: [{text: "Dazed: ballhog signature outfit is a Number (N)ine hoodie with Undercover 85s", url: "https://www.dazeddigital.com/fashion/article/71240/1/wtf-ballhog-fashion-most-unserious-aesthetic-archive-algorithm", date: "2026-10-27"}, {text: "NSS: ballhog combines old pieces from ERD, Number (N)ine, Undercover, Hysteric Glamour", url: "https://www.nssmag.com/en/fashion/47540/the-ball-hog-aesthetic-is-gen-z-s-quiet-luxury", date: "UNKNOWN"}, {text: "Grailed 2026 report Top Grails includes Supreme x Number (N)ine", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: med}
+  - {rank: 4, brand: undercover, era: undercover__early, season: UNKNOWN, piece: "Undercover (brand level, old Jun Takahashi)", archetype: UNKNOWN, trend_prior: 0.8, direction: rising, evidence: [{text: "Grailed 2026 report: Undercover up 12 spots (biggest mover cited)", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}, {text: "Grailed Cyber 2026 menswear: Undercover 513 listings, top-ten brand by listing count", url: "https://www.grailed.com/collections/cyber-2026-menswear", date: "2026-11~"}, {text: "HUMAN MADE (Nigo) to acquire Undercover; non-binding deal 15 Jun 2026, news-flow tailwind", url: "https://hypebeast.com/2026/6/nigo-human-made-to-acquire-undercover-jun-takahashi", date: "2026-06"}], confidence: med}
+  - {rank: 5, brand: saint_laurent, era: saint_laurent__hedi, season: UNKNOWN, piece: "Hedi-era Saint Laurent (brand/era level)", archetype: UNKNOWN, trend_prior: 0.8, direction: rising, evidence: [{text: "Grailed 2026 report: Saint Laurent Paris +5 ranks on Hedi nostalgia", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}, {text: "Wikipedia/BoF snippets: Saint Laurent announced 9 Oct 2026 that Vaccarello is leaving; successor not seen (thin sourcing, may add nostalgia/speculation)", url: "https://en.wikipedia.org/wiki/Yves_Saint_Laurent_(fashion_house)", date: "2026-10-09"}], confidence: med, verify: true}
+  - {rank: 6, brand: rick_owens, era: rick_owens__early, season: UNKNOWN, piece: "Rick Owens (brand level)", archetype: UNKNOWN, trend_prior: 0.8, direction: steady, evidence: [{text: "Grailed 2026 report: Rick Owens #3 designer (2025 data); Grailed expects shift away from dark aesthetics in 2026 (possible softening)", url: "https://wwd.com/footwear-news/sneaker-news/grailed-marketplace-report-top-sellers-1238452322/", date: "2026-01~"}, {text: "Complex: Rick Owens is the label Ken Carson name-checks most in lyrics; Opium look built on Rick", url: "https://www.complex.com/style/a/mike-destefano/ken-carson-favorite-clothing-brands-according-to-his-lyrics", date: "UNKNOWN"}], confidence: med}
+  - {rank: 7, brand: chrome_hearts, era: UNKNOWN, season: UNKNOWN, piece: "Cross patch / Chrome Hearts denim", archetype: denim, trend_prior: 0.8, direction: steady, evidence: [{text: "Grailed 2026 report: Chrome Hearts denim in Top Grails; a $17,750 cross patch denim sold to a UAE buyer was among top international purchases of 2025", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: med}
+  - {rank: 8, brand: number_nine, era: UNKNOWN, season: UNKNOWN, piece: "Number (N)ine hoodie", archetype: hoodie, trend_prior: 0.78, direction: rising, evidence: [{text: "Dazed names a Number (N)ine hoodie as the ballhog signature top", url: "https://www.dazeddigital.com/fashion/article/71240/1/wtf-ballhog-fashion-most-unserious-aesthetic-archive-algorithm", date: "2026-10-27"}, {text: "YPulse: ballhog described as the latest viral fashion aesthetic", url: "https://www.ypulse.com/newsfeed/2026/10/13/introducing-the-latest-viral-fashion-aesthetic-ball-hog/", date: "2026-10-13"}], confidence: med}
+  - {rank: 9, brand: undercover, era: undercover__early, season: UNKNOWN, piece: "Undercover 85 pieces", archetype: UNKNOWN, trend_prior: 0.72, direction: rising, evidence: [{text: "Dazed: ballhog outfit pairs Number (N)ine hoodie with Undercover 85s", url: "https://www.dazeddigital.com/fashion/article/71240/1/wtf-ballhog-fashion-most-unserious-aesthetic-archive-algorithm", date: "2026-10-27"}], confidence: med}
+  - {rank: 10, brand: number_nine, era: UNKNOWN, season: UNKNOWN, piece: "Supreme x Number (N)ine collab", archetype: UNKNOWN, trend_prior: 0.72, direction: steady, evidence: [{text: "Grailed 2026 report lists Supreme x Number (N)ine in Top Grails", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: low, verify: true}
+  - {rank: 11, brand: balenciaga, era: UNKNOWN, season: UNKNOWN, piece: "Balenciaga (brand level)", archetype: UNKNOWN, trend_prior: 0.65, direction: steady, evidence: [{text: "Grailed 2026 report: Balenciaga #2 designer (2025 data); era (Ghesquiere vs Demna) not specified", url: "https://wwd.com/footwear-news/sneaker-news/grailed-marketplace-report-top-sellers-1238452322/", date: "2026-01~"}], confidence: med}
+  - {rank: 12, brand: hysteric_glamour, era: UNKNOWN, season: UNKNOWN, piece: "Hysteric Glamour (brand level)", archetype: UNKNOWN, trend_prior: 0.68, direction: rising, evidence: [{text: "Grailed 2026 report: Hysteric Glamour +7 ranks", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}, {text: "Dazed: Hysteric Glamour tee is a ballhog staple", url: "https://www.dazeddigital.com/fashion/article/71240/1/wtf-ballhog-fashion-most-unserious-aesthetic-archive-algorithm", date: "2026-10-27"}], confidence: med}
+  - {rank: 13, brand: hysteric_glamour, era: UNKNOWN, season: UNKNOWN, piece: "Hysteric Glamour graphic tee", archetype: graphic_tee, trend_prior: 0.65, direction: rising, evidence: [{text: "Dazed: Hysteric Glamour tee with pink plaid shirt as ballhog outfit", url: "https://www.dazeddigital.com/fashion/article/71240/1/wtf-ballhog-fashion-most-unserious-aesthetic-archive-algorithm", date: "2026-10-27"}], confidence: med}
+  - {rank: 14, brand: supreme, era: UNKNOWN, season: UNKNOWN, piece: "Supreme (brand level)", archetype: UNKNOWN, trend_prior: 0.7, direction: rising, evidence: [{text: "Grailed 2026 report: Supreme rose to #4", url: "https://wwd.com/footwear-news/sneaker-news/grailed-marketplace-report-top-sellers-1238452322/", date: "2026-01~"}, {text: "Hypebeast: fakemink fronted Supreme x True Religion campaign (Nov 2025)", url: "https://hypebeast.com/2025/11/fakemink-supreme-true-religion-lookbook-2025-breakout-year-timeline", date: "2025-11"}], confidence: med}
+  - {rank: 15, brand: true_religion, era: UNKNOWN, season: UNKNOWN, piece: "True Religion (incl. Supreme x True Religion)", archetype: denim, trend_prior: 0.6, direction: rising, evidence: [{text: "Hypebeast: fakemink co-sign on Supreme x True Religion collab lookbook", url: "https://hypebeast.com/2025/11/fakemink-supreme-true-religion-lookbook-2025-breakout-year-timeline", date: "2025-11"}], confidence: low, verify: true}
+  - {rank: 16, brand: yohji_yamamoto, era: UNKNOWN, season: UNKNOWN, piece: "Yohji Yamamoto (brand level)", archetype: UNKNOWN, trend_prior: 0.62, direction: rising, evidence: [{text: "Grailed 2026 report: Yohji Yamamoto +9 ranks", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: med}
+  - {rank: 17, brand: raf_simons, era: UNKNOWN, season: UNKNOWN, piece: "Raf Simons archive (2001-2005)", archetype: UNKNOWN, trend_prior: 0.62, direction: steady, evidence: [{text: "Inquirer: Raf 2001-2005 collections go for thousands (older general piece)", url: "https://lifestyle.inquirer.net/549568/archive-fashion-celine-raf-simons-margiela/", date: "UNKNOWN"}, {text: "Grailed Cyber 2026: Raf appears in coat promotions (no counts)", url: "https://www.grailed.com/collections/cyber-2026-menswear", date: "2026-11~"}], confidence: low, verify: true}
+  - {rank: 18, brand: margiela, era: margiela__martin, season: UNKNOWN, piece: "Maison Margiela archive (brand level)", archetype: UNKNOWN, trend_prior: 0.6, direction: steady, evidence: [{text: "Grailed Cyber 2026 menswear: Margiela 305 listings (supply, not demand)", url: "https://www.grailed.com/collections/cyber-2026-menswear", date: "2026-11~"}, {text: "Inquirer archive piece names Margiela; fakemink Margiela fit is unverified (taste profile only)", url: "https://lifestyle.inquirer.net/549568/archive-fashion-celine-raf-simons-margiela/", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 19, brand: erd, era: erd__early, season: UNKNOWN, piece: "Early ERD", archetype: UNKNOWN, trend_prior: 0.55, direction: rising, evidence: [{text: "NSS: ballhog draws on old ERD, Number (N)ine, Undercover, Hysteric Glamour", url: "https://www.nssmag.com/en/fashion/47540/the-ball-hog-aesthetic-is-gen-z-s-quiet-luxury", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 20, brand: jeremy_scott, era: UNKNOWN, season: UNKNOWN, piece: "Jeremy Scott (Adidas) sneakers, beat-up", archetype: sneakers, trend_prior: 0.55, direction: rising, evidence: [{text: "Dazed: beat-up Jeremy Scott trainers in ballhog outfit", url: "https://www.dazeddigital.com/fashion/article/71240/1/wtf-ballhog-fashion-most-unserious-aesthetic-archive-algorithm", date: "2026-10-27"}], confidence: low, verify: true}
+  - {rank: 21, brand: comme_des_garcons, era: UNKNOWN, season: UNKNOWN, piece: "CDG archive (brand level)", archetype: UNKNOWN, trend_prior: 0.58, direction: steady, evidence: [{text: "Search summary of Complex: fakemink wears archive CDG", url: "https://www.complex.com/style/a/mike-destefano/fakemink-raps-next-style-star", date: "UNKNOWN"}, {text: "Globe and Mail: Google Trends show rising interest in CDG, Balenciaga, Rick (older article)", url: "https://www.theglobeandmail.com/life/style-advisor/article-the-nostalgia-and-big-business-behind-fashions-archival-revival/", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 22, brand: dior_homme, era: dior_homme__hedi, season: dior_homme__ss04, piece: "SS04 Strip", archetype: UNKNOWN, trend_prior: 0.6, direction: steady, evidence: [{text: "No season-level 2026 evidence found; inherits from Hedi Dior era signal, discounted", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: low, verify: true}
+  - {rank: 23, brand: dior_homme, era: dior_homme__hedi, season: UNKNOWN, piece: "Hedi Dior denim / leather jackets", archetype: denim, trend_prior: 0.62, direction: rising, evidence: [{text: "Era-level Grailed signal only; piece-level demand not independently sourced", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: low, verify: true}
+  - {rank: 24, brand: saint_laurent, era: saint_laurent__hedi, season: UNKNOWN, piece: "L01 biker jacket", archetype: biker_jacket, trend_prior: 0.6, direction: rising, evidence: [{text: "Era-level Grailed signal only; piece-level not independently sourced", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: low, verify: true}
+  - {rank: 25, brand: saint_laurent, era: saint_laurent__hedi, season: UNKNOWN, piece: "Hedi-era denim, boots, varsity", archetype: denim, trend_prior: 0.5, direction: steady, evidence: [{text: "Era-level signal only; fakemink 2016-era SLP is user-provided and unverified", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: low, verify: true}
+  - {rank: 26, brand: number_nine, era: UNKNOWN, season: number_nine__aw05, piece: "AW05 The High Streets", archetype: UNKNOWN, trend_prior: 0.5, direction: steady, evidence: [{text: "No season-level 2026 evidence; Truss Archive editorial calls N(9) cult brand, Grailed has many 'number nine' browse pages", url: "https://www.trussarchive.com/editorials/number-nine-an-overview-of-the-cult-fashion-brand", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 27, brand: number_nine, era: UNKNOWN, season: number_nine__aw06, piece: "AW06 Noir", archetype: UNKNOWN, trend_prior: 0.5, direction: steady, evidence: [{text: "Grailed has a 'number nine noir' browse page (search-term existence only)", url: "https://www.grailed.com/browse/number-nine-noir", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 28, brand: number_nine, era: UNKNOWN, season: number_nine__aw09, piece: "AW09 A Closed Feeling", archetype: UNKNOWN, trend_prior: 0.45, direction: steady, evidence: [{text: "No recent season-level evidence; last N(9) show per Truss Archive was AW09", url: "https://www.trussarchive.com/editorials/number-nine-an-overview-of-the-cult-fashion-brand", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 29, brand: undercover, era: undercover__early, season: undercover__ss06, piece: "SS06 T 'Cosmos' bear", archetype: UNKNOWN, trend_prior: 0.5, direction: steady, evidence: [{text: "Grailed listing exists for S/S 2006 T Cosmos Bear (listing, not demand)", url: "https://www.grailed.com/listings/102714699-undercover-undercover-by-jun-takahashi-s-s-2006-t-cosmos-bear", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 30, brand: rick_owens, era: rick_owens__early, season: UNKNOWN, piece: "Early Rick / DRKSHDW leathers and knits", archetype: leather_jacket, trend_prior: 0.6, direction: steady, evidence: [{text: "Brand-level only; Opium/Carti orbit centres on Rick (era not specified)", url: "https://www.nssmag.com/en/lifestyle/35986/opium-style-carti-history", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 31, brand: celine, era: celine__hedi, season: UNKNOWN, piece: "Hedi Celine (brand/era level)", archetype: UNKNOWN, trend_prior: 0.45, direction: steady, evidence: [{text: "Hedi left Celine (Michael Rider succeeded); no 2026 resale-demand data found", url: "https://fuckingyoung.es/hedi-slimane-is-stepping-down-as-artistic-director-of-celine", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 32, brand: dior_homme, era: dior_homme__kva, season: UNKNOWN, piece: "KVA-era Dior Homme", archetype: UNKNOWN, trend_prior: 0.4, direction: steady, evidence: [{text: "No evidence found specific to KVA; Grailed Dior +2 is Hedi-attributed", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: low, verify: true}
+  - {rank: 33, brand: balmain, era: balmain__decarnin, season: UNKNOWN, piece: "Decarnin Balmain (biker jeans etc.)", archetype: denim, trend_prior: 0.4, direction: steady, evidence: [{text: "No Decarnin-era trend evidence found in 2026 searches", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 34, brand: beauty_beast, era: UNKNOWN, season: UNKNOWN, piece: "Beauty:Beast (brand level)", archetype: UNKNOWN, trend_prior: 0.4, direction: steady, evidence: [{text: "No recent evidence found; prior is a taste-profile base", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 35, brand: "20471120", era: UNKNOWN, season: UNKNOWN, piece: "20471120 (brand level)", archetype: UNKNOWN, trend_prior: 0.35, direction: steady, evidence: [{text: "No recent evidence found; prior is a taste-profile base", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 36, brand: chanel, era: chanel__vintage, season: UNKNOWN, piece: "Vintage Chanel jewelry / belts / bags", archetype: jewelry, trend_prior: 0.4, direction: steady, evidence: [{text: "No 2026 trend source found in lane; Fashionphile 2025 resale report covers Chanel-type bag demand generally", url: "https://www.fashionphile.com/blogs/academy/2025-resale-report", date: "2025"}], confidence: low, verify: true}
+  - {rank: 37, brand: helmut_lang, era: helmut_lang__helmut, season: UNKNOWN, piece: "Helmut Lang (Helmut era)", archetype: UNKNOWN, trend_prior: 0.45, direction: steady, evidence: [{text: "No 2026 evidence found; modest base prior", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 38, brand: ann_demeulemeester, era: UNKNOWN, season: UNKNOWN, piece: "Ann Demeulemeester (brand level)", archetype: UNKNOWN, trend_prior: 0.45, direction: steady, evidence: [{text: "Fakemink Ann D fit is user-provided only, unverified; Grailed lists tailoring", url: "https://www.grailed.com/designers/ann-demeulemeester/tailoring", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 39, brand: alexander_mcqueen, era: UNKNOWN, season: UNKNOWN, piece: "Lee McQueen era", archetype: UNKNOWN, trend_prior: 0.4, direction: steady, evidence: [{text: "No 2026 evidence found; fakemink McQueen is user-provided only", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 40, brand: soloist, era: UNKNOWN, season: UNKNOWN, piece: "Takahiro Miyashita The Soloist", archetype: UNKNOWN, trend_prior: 0.42, direction: steady, evidence: [{text: "Adjacent to Number (N)ine (same designer) so inherits a discounted share of the N(9) signal; no direct evidence", url: "https://www.trussarchive.com/editorials/number-nine-an-overview-of-the-cult-fashion-brand", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 41, brand: junya_watanabe, era: UNKNOWN, season: UNKNOWN, piece: "Junya Watanabe", archetype: UNKNOWN, trend_prior: 0.4, direction: steady, evidence: [{text: "No direct evidence; JP archive adjacency (Grailed JP rank gains)", url: "https://www.grailed.com/drycleanonly/2026-marketplace-report", date: "2026-01~"}], confidence: low, verify: true}
+  - {rank: 42, brand: versace, era: UNKNOWN, season: UNKNOWN, piece: "Versace (Gianni era)", archetype: UNKNOWN, trend_prior: 0.35, direction: steady, evidence: [{text: "Current Versace appears in fakemink Dazed cover (modern Versace, not Gianni-era)", url: "https://www.dazeddigital.com/music/gallery/36771/8/fakemink-the-spring-2026-issue", date: "2026-spring"}], confidence: low, verify: true}
+  - {rank: 43, brand: gucci, era: UNKNOWN, season: UNKNOWN, piece: "Gucci (Tom Ford era)", archetype: UNKNOWN, trend_prior: 0.35, direction: steady, evidence: [{text: "Scene proximity: fakemink walked Demna's first Gucci show, EsDeekid at Gucci AW26 afterparty (current Gucci, not Tom Ford era)", url: "https://www.dazeddigital.com/music/article/69779/1/summary_large_image", date: "2026-02-27"}], confidence: low, verify: true}
+  - {rank: 44, brand: givenchy, era: UNKNOWN, season: UNKNOWN, piece: "Givenchy (Tisci era)", archetype: UNKNOWN, trend_prior: 0.35, direction: steady, evidence: [{text: "No recent evidence; base prior", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 45, brand: vivienne_westwood, era: UNKNOWN, season: UNKNOWN, piece: "Vivienne Westwood", archetype: UNKNOWN, trend_prior: 0.35, direction: steady, evidence: [{text: "No recent evidence; base prior", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 46, brand: jean_paul_gaultier, era: UNKNOWN, season: UNKNOWN, piece: "Jean Paul Gaultier", archetype: UNKNOWN, trend_prior: 0.35, direction: steady, evidence: [{text: "No recent evidence; base prior", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 47, brand: bape, era: UNKNOWN, season: UNKNOWN, piece: "BAPE", archetype: UNKNOWN, trend_prior: 0.35, direction: steady, evidence: [{text: "Nigo/Human Made-Undercover news is adjacent; no direct BAPE resale evidence", url: "https://hypebeast.com/2026/6/nigo-human-made-to-acquire-undercover-jun-takahashi", date: "2026-06"}], confidence: low, verify: true}
+  - {rank: 48, brand: off_white, era: UNKNOWN, season: UNKNOWN, piece: "Early Off-White (Virgil)", archetype: UNKNOWN, trend_prior: 0.33, direction: steady, evidence: [{text: "No recent evidence; base prior", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 49, brand: yeezy, era: UNKNOWN, season: UNKNOWN, piece: "Yeezy / OG Yeezus merch", archetype: UNKNOWN, trend_prior: 0.4, direction: steady, evidence: [{text: "Search summary of Complex: fakemink owns OG Yeezus merch", url: "https://www.complex.com/style/a/mike-destefano/fakemink-raps-next-style-star", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 50, brand: issey_miyake, era: UNKNOWN, season: UNKNOWN, piece: "Issey Miyake", archetype: UNKNOWN, trend_prior: 0.3, direction: steady, evidence: [{text: "No recent evidence; base prior", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+  - {rank: 51, brand: carol_christian_poell, era: UNKNOWN, season: UNKNOWN, piece: "Carol Christian Poell", archetype: UNKNOWN, trend_prior: 0.3, direction: steady, evidence: [{text: "No recent evidence; base prior", url: "UNKNOWN", date: "UNKNOWN"}], confidence: low, verify: true}
+people:
+  - name: fakemink
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits:
+      - {brand: Supreme, piece: "Supreme x True Religion collab campaign (fronted)", season: "2025", source: "https://hypebeast.com/2025/11/fakemink-supreme-true-religion-lookbook-2025-breakout-year-timeline", date: "2025-11"}
+      - {brand: Versace, piece: "leather embroidered vest, cotton shirt, wool trousers; Onitsuka Tiger x Versace shoes (Dazed cover, styled by Zara Mirkin)", season: UNKNOWN, source: "https://www.dazeddigital.com/music/gallery/36771/8/fakemink-the-spring-2026-issue", date: "2026-spring"}
+      - {brand: The North Face, piece: "leopard Nuptse (2011) per Complex via search summary", season: "2011", source: "https://www.complex.com/style/a/mike-destefano/fakemink-raps-next-style-star", date: UNKNOWN}
+      - {brand: Louis Vuitton, piece: "Jaspers (per Complex via search summary)", season: UNKNOWN, source: "https://www.complex.com/style/a/mike-destefano/fakemink-raps-next-style-star", date: UNKNOWN}
+      - {brand: Comme des Garcons, piece: "archive CDG (piece unspecified, per Complex via search summary)", season: UNKNOWN, source: "https://www.complex.com/style/a/mike-destefano/fakemink-raps-next-style-star", date: UNKNOWN}
+      - {brand: Yeezy, piece: "OG Yeezus merch (per Complex via search summary)", season: UNKNOWN, source: "https://www.complex.com/style/a/mike-destefano/fakemink-raps-next-style-star", date: UNKNOWN}
+      - {brand: Gucci, piece: "walked Demna's first Gucci runway show, Milan (not a documented outfit piece)", season: aw26, source: "https://www.complex.com/style/a/mike-destefano/fakemink-raps-next-style-star", date: "2026-02"}
+    grailed_tag_page: "no dedicated page confirmed; grailed.com/browse/fake-mink returns generic search"
+    confidence: med
+    notes: "Complex/Hypebeast/Dazed pages could not be fetched (host blocked); details are from search summaries. Taste-profile seeds (2016 SLP, Number (N)ine, Ann D, Raf, Margiela, McQueen, Balmain, Shibuya box logo) were NOT corroborated by any source found."
+  - name: osamason
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits: []
+    grailed_tag_page: "https://www.grailed.com/designers/osamason/tops (designer page, merch listings)"
+    confidence: low
+    verify: true
+    notes: "No fit documentation found. Grailed page confirmed; it holds merch (e.g. a sold merch listing at $85)."
+  - name: bleood
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits: []
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Florida rapper; FADER tour review 2026-05-26 (https://www.thefader.com/2026/05/26/bleood-protagonist-tour-concert-review) covers the show, not clothing. No fit data."
+  - name: bradygoo
+    handles: {instagram: bradygoo, other: []}
+    role: influencer
+    documented_fits: []
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Ypulse credits Brady Goodwin (@bradygoo, 23) and the Ball Hog Discord collective with originating ballhog (https://www.ypulse.com/newsfeed/2026/10/13/introducing-the-latest-viral-fashion-aesthetic-ball-hog/). The Cut mentions 'archive Bradygoo fashion'. Possibly the same bradygoo in the taste profile; no individual fits recorded. The ballhog aesthetic itself is documented (see heat_list)."
+  - name: protect
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits: []
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Nothing found; ambiguous name. No guesses."
+  - name: 1oneam
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits: []
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Only Audiomack track listings found. No fit data."
+  - name: maxon
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits: []
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Search returned only Maxo Kream, which is likely a different artist. No identification, no fit data."
+  - name: pz
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits: []
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Not searched separately (name too ambiguous and budget); nothing found."
+  - name: Junki Ichikawa
+    handles: {instagram: junki_ichikawa, other: []}
+    role: stylist
+    documented_fits: []
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Handle is user-confirmed (taste profile). A web search found no coverage of him."
+  - name: Nettspend
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits: []
+    grailed_tag_page: "https://www.grailed.com/browse/nettspend-merch (merch search page)"
+    confidence: low
+    verify: true
+    notes: "Hommegirls piece 'How to Nettspend it' describes a preppy look (https://www.hommegirls.com/blogs/volume-15/how-to-nettspend-it); no archive brand documented. No link to Number (N)ine found."
+  - name: EsDeekid
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits: []
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Performed at Gucci AW26 afterparty 2026-02-27 (https://www.dazeddigital.com/music/article/69779/1/summary_large_image). Outfit brands not documented."
+  - name: Playboi Carti
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits:
+      - {brand: Mitchell & Ness, piece: "Atlanta Hawks swingman jersey rebuilt around Carti (collab)", season: UNKNOWN, source: "https://www.complex.com/style/a/mike-destefano/playboi-carti-outfits-ranked", date: UNKNOWN}
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+    notes: "Opium aesthetic is documented as Rick Owens-centred, narrow silhouettes (NSS https://www.nssmag.com/en/lifestyle/35986/opium-style-carti-history; SNKRDUNK 2024-12-17). Mitchell & Ness entry is a collab, not a street outfit."
+  - name: Ken Carson
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits:
+      - {brand: Rick Owens, piece: "most-named label in his lyrics (Complex tally), not a specific outfit", season: UNKNOWN, source: "https://www.complex.com/style/a/mike-destefano/ken-carson-favorite-clothing-brands-according-to-his-lyrics", date: UNKNOWN}
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true
+  - name: Destroy Lonely
+    handles: {instagram: UNKNOWN, other: []}
+    role: rapper
+    documented_fits:
+      - {brand: Rick Owens, piece: "self-described 'glunge' (designer plus grunge), Rick named as example, no specific piece", season: UNKNOWN, source: "https://www.grazia.my/?p=54150", date: UNKNOWN}
+    grailed_tag_page: UNKNOWN
+    confidence: low
+    verify: true

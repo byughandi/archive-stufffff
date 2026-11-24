@@ -1,0 +1,440 @@
+# R2 blocklist.yaml. All phrases lowercase, matched case-insensitively.
+# MATCHING NOTES for the engine (extra keys beyond SCHEMAS.md are optional and safe to ignore):
+#   - `match: word` = whole-word match (needed for short tokens like "rep", "ua", "aaa", "copy"); default is substring.
+#   - The bare word "style" is NOT rejected (it appears in legit titles: "style no.", "hair style", "styled by", Hedi
+#     "SLP style code", "Biker style jacket" etc.). Only the construction patterns below are rejected.
+#   - JP: "風" / "タイプ" / "系" mean "-style / type / -esque" and are conditional (see aliases_ja.yaml for signals).
+#   - Brand/era words inside negative_context lists in brands.yaml are the preferred way to handle collisions; this
+#     file holds cross-brand rules.
+reject_phrases:
+  - {phrase: "inspired", scope: title, match: word, reason: "'X-inspired' = not the brand. In description alone it can be legit (e.g. 'collection inspired by the Manic Street Preachers'), so title only."}
+  - {phrase: "inspired by", scope: any, reason: "Lookalike language; if brand name follows within 3 words, hard reject."}
+  - {phrase: "in the style of", scope: any, reason: "Explicit lookalike."}
+  - {phrase: "style of", scope: title, reason: "'Dior style of' etc."}
+  - {phrase: "-style", scope: title, reason: "Hyphenated suffix: 'Dior-style', 'Rick-style'. The bare word 'style' is allowed."}
+  - {phrase: "vibes", scope: title, match: word, reason: "'Rick Owens vibes' = unbranded lookalike."}
+  - {phrase: "vibe", scope: title, match: word, reason: "Same."}
+  - {phrase: "similar to", scope: any, reason: "Comparison to a brand = not the brand."}
+  - {phrase: "like rick", scope: any, reason: "Comparison language ('like rick owens', 'like raf')."}
+  - {phrase: "alternative to", scope: any, reason: "Dupe language."}
+  - {phrase: "dupe", scope: any, match: word, reason: "Dupe."}
+  - {phrase: "lookalike", scope: any, reason: "Lookalike."}
+  - {phrase: "look alike", scope: any, reason: "Lookalike."}
+  - {phrase: "knockoff", scope: any, reason: "Fake."}
+  - {phrase: "knock off", scope: any, reason: "Fake."}
+  - {phrase: "knock-off", scope: any, reason: "Fake."}
+  - {phrase: "rep", scope: title, match: word, reason: "'Rep' = replica (QualityReps usage). Whole word only."}
+  - {phrase: "reps", scope: any, match: word, reason: "Replicas."}
+  - {phrase: "1:1", scope: any, reason: "Fake-community quality claim."}
+  - {phrase: "1 to 1", scope: any, reason: "Same."}
+  - {phrase: "mirror quality", scope: any, reason: "Fake."}
+  - {phrase: "high quality copy", scope: any, reason: "Fake."}
+  - {phrase: "super copy", scope: any, reason: "Fake."}
+  - {phrase: "aaa quality", scope: any, reason: "Fake."}
+  - {phrase: "aaa+", scope: any, reason: "Fake."}
+  - {phrase: "ua", scope: title, match: word, reason: "'UA' = unauthorized authentic (reps). Whole word; collides with Under Armour 'UA' so only reject when a luxury brand is also detected."}
+  - {phrase: "not authentic", scope: any, reason: "Self-declared fake."}
+  - {phrase: "not original", scope: any, reason: "Self-declared fake."}
+  - {phrase: "unauthentic", scope: any, reason: "Self-declared fake."}
+  - {phrase: "unbranded", scope: any, reason: "No brand = not the brand."}
+  - {phrase: "no brand", scope: any, reason: "Same."}
+  - {phrase: "generic brand", scope: any, reason: "Same."}
+  - {phrase: "tribute to", scope: title, reason: "'Tribute to Number Nine' etc. (YSL 'Tribute' sandal is a different phrase: bare 'tribute' is conditional)."}
+  - {phrase: "remake", scope: any, reason: "Remade = not original."}
+  - {phrase: "recreation", scope: any, reason: "Same."}
+  - {phrase: "homage", scope: any, reason: "Lookalike."}
+  - {phrase: "fan made", scope: any, reason: "Fan-made."}
+  - {phrase: "fanmade", scope: any, reason: "Fan-made."}
+  - {phrase: "diy", scope: title, match: word, reason: "Homemade."}
+  - {phrase: "hand painted", scope: title, reason: "Usually custom, not authentic (CH/Undercover customs exist but are unverifiable)."}
+  - {phrase: "ブランド名なし", scope: any, reason: "JP: 'no brand name'."}
+  - {phrase: "ノーブランド", scope: any, reason: "JP: no-brand."}
+  - {phrase: "偽物", scope: any, reason: "JP: fake."}
+  - {phrase: "コピー品", scope: any, reason: "JP: copy item."}
+  # --- added by the scoring engineer from live Mercari JP titles (2026-11-24) ---
+  - {phrase: "様専用", scope: title, reason: "JP: listing reserved for a named buyer; not buyable."}
+  - {phrase: "専用出品", scope: title, reason: "JP: reserved listing."}
+  - {phrase: "専用ページ", scope: title, reason: "JP: reserved listing."}
+  - {phrase: "互換", scope: title, reason: "JP: 'compatible with X' (generic part / lookalike)."}
+  - {phrase: "等に適合", scope: title, reason: "JP: 'fits X etc.' (generic part)."}
+  - {phrase: "オマージュ", scope: any, reason: "JP: homage = lookalike."}
+  - {phrase: "コピー品", scope: title, reason: "JP: counterfeit."}
+  - {phrase: "海外製", scope: title, reason: "JP: 'overseas-made'; low-weight signal, included for fast reject only when brand is Japan-made-only."}
+conditional_phrases:
+  - {phrase: "custom", allow_when: ["craft custom", "custom order from the brand", "chrome hearts custom order", "ch custom order", "made to order by the brand", "customized by the brand", "special order", "ch special order"], reason: "'Custom' usually means altered/unofficial. Chrome Hearts genuine special orders exist; require explicit brand-order language."}
+  - {phrase: "bootleg", allow_when: ["vintage tee", "90s", "1990s", "2000s", "vintage bootleg", "rap tee", "band tee"], reason: "Vintage rap/band bootleg tees are legit collectibles; modern 'bootleg Supreme' is not."}
+  - {phrase: "no tag", allow_when: ["authenticated", "legit check", "legit checked", "receipt", "has care tag", "care tag present", "tag removed for comfort", "wear tag cut"], reason: "Missing brand tag blocks authentication; allow only with evidence."}
+  - {phrase: "no tags", allow_when: ["authenticated", "legit check", "receipt", "has care tag"], reason: "Same."}
+  - {phrase: "tag cut", allow_when: ["care tag present", "authenticated", "receipt"], reason: "Cut tags hide era/code."}
+  - {phrase: "tags removed", allow_when: ["care tag present", "authenticated", "receipt", "size tag present"], reason: "Same."}
+  - {phrase: "label removed", allow_when: ["care tag present", "authenticated", "receipt"], reason: "Same (Margiela's removable blank label is the exception: 'four stitches' + 'label removed' is plausible)."}
+  - {phrase: "label cut", allow_when: ["care tag present", "authenticated", "receipt"], reason: "Same."}
+  - {phrase: "tribute", allow_when: ["ysl tribute", "saint laurent tribute", "tribute sandal", "tribute heel", "yves saint laurent tribute"], reason: "Saint Laurent Tribute sandal is a real product."}
+  - {phrase: "replica", allow_when: ["maison margiela replica", "margiela replica", "replica sneaker margiela", "margiela replica gat", "replica by the fireplace"], reason: "Margiela 'Replica' is a real line (sneakers/fragrance)."}
+  - {phrase: "レプリカ", allow_when: ["マルジェラ", "メゾンマルジェラ"], reason: "Same, JP."}
+  - {phrase: "fake", allow_when: ["original fake", "fake fur", "fake pocket", "fake leather detail", "fake zip", "faux fur", "fake pockets", "no fake"], reason: "'Fake fur'/'fake pockets' are garment features, not counterfeit claims. Also reject 'no fake' as a reassurance, not a flag."}
+  - {phrase: "copy", allow_when: ["copy of receipt", "receipt copy", "invoice copy", "copy of invoice", "authenticity card copy", "copy of the receipt"], reason: "Documentation copies are fine; bare 'copy' as an item description is a fake flag."}
+  - {phrase: "reworked", allow_when: ["vetements", "margiela", "maison margiela", "junya watanabe", "cdg", "comme des garcons", "by the brand", "brand reworked"], reason: "Brand-made reworked pieces exist (Vetements, Margiela Artisanal, Junya); seller-reworked pieces do not."}
+  - {phrase: "handmade", allow_when: ["japan handmade", "hand made in japan", "hand-made in italy", "artisanal", "maison margiela artisanal"], reason: "Brand artisanal pieces exist; generic handmade = custom."}
+  - {phrase: "restored", allow_when: ["professionally restored", "cleaned and restored", "leather restored", "conditioned"], reason: "Re-dyed/repainted pieces are fine only if disclosed as cleaning/conditioning; flag otherwise."}
+  - {phrase: "re-sewn", allow_when: ["zipper re-sewn", "hem re-sewn", "button re-sewn", "seam re-sewn", "lining re-sewn"], reason: "Label re-sewn is a red flag; other repairs are mild."}
+  - {phrase: "refurbished", allow_when: ["leather refurbished", "professionally refurbished"], reason: "Mild."}
+  - {phrase: "baby", allow_when: ["dream baby dream", "baby classic", "baby clsc", "baby fat", "baby dagger", "baby tee", "baby blue", "baby pink", "baby milo", "bape baby milo", "baby cashmere", "baby alpaca", "baby doll", "babydoll"], reason: "Kids' items are out of scope; but 'baby tee', 'baby milo' (BAPE), 'baby blue' are valid."}
+  - {phrase: "kids", allow_when: ["stray kids", "kidult", "kids tee in men's", "mini hysteric adult"], reason: "Kids' sizes are not men's archive; exceptions rare."}
+  - {phrase: "toddler", allow_when: [], reason: "Out of scope."}
+  - {phrase: "costume", allow_when: ["costume national", "costume jewelry", "costume jewellery", "vintage costume jewelry chanel"], reason: "Chanel/YSL costume jewelry is a legitimate category; Halloween costume is not."}
+  - {phrase: "toy", allow_when: ["toy soldier", "toy boy"], reason: "Mostly out of scope; 'Toy Soldier' is a Moschino/Undercover-adjacent graphic name rarely."}
+  - {phrase: "poster", allow_when: ["poster print tee", "poster graphic"], reason: "Posters are category exclusions; 'poster print' on a garment is fine."}
+  - {phrase: "sample", allow_when: ["sample piece", "showroom sample", "runway sample", "sample size", "archive sample", "sample sale"], reason: "'Sample' on perfume = reject; on garments = showroom/runway sample = wanted."}
+  - {phrase: "vintage wash", allow_when: ["hysteric glamour", "dior homme", "balmain", "rick owens"], reason: "'Vintage wash' on fast-fashion items is generic; only count when a core brand is present."}
+# Labels that are not fast fashion but are not wanted here either, and whose sellers often name a wanted
+# brand as a comparison ("JOSEPH HOMME Coated Biker Dior homme"). Extend from "Wrong brand" feedback.
+other_brands:
+  - joseph homme
+  - ジョセフオム
+  - lad musician
+  - ラッドミュージシャン
+  - shellac
+  - シェラック
+  - edwin
+  - エドウィン
+  - 5351 pour les hommes
+  - nicole club for men
+  - comme ca ism
+  - コムサイズム
+mall_brands:
+  - uniqlo
+  - ユニクロ
+  - しまむら
+  - ジーユー
+  - gu
+  - ザラ
+  - エイチアンドエム
+  - wego
+  - h&m
+  - zara
+  - forever 21
+  - forever21
+  - shein
+  - romwe
+  - zaful
+  - hollister
+  - abercrombie
+  - american eagle
+  - aeropostale
+  - pacsun
+  - hot topic
+  - urban outfitters
+  - brandy melville
+  - fashion nova
+  - boohoo
+  - pretty little thing
+  - prettylittlething
+  - cotton on
+  - bershka
+  - pull&bear
+  - stradivarius
+  - primark
+  - old navy
+  - temu
+  - aliexpress
+  - walmart
+  - cupshe
+  - missguided
+  - nasty gal
+  - ardene
+  - joe fresh
+  - lulus
+  - asos design
+  - topman
+  - new look
+  - river island
+category_exclusions:
+  # spare parts sold on their own (second verifier, 2026-11-24)
+  - 替えボタン
+  - 予備ボタン
+  - スペアボタン
+  - ボタンのみ
+  - spare button
+  - replacement button
+  # JP equivalents (scoring engineer, 2026-11-24)
+  - 香水
+  - オードトワレ
+  - オードパルファム
+  - フレグランス
+  - コスメ
+  - ポスター
+  - ステッカー
+  - フィギュア
+  - ぬいぐるみ
+  - おもちゃ
+  - キッズ
+  - 子供服
+  - ショッパー
+  - 紙袋
+  - 空箱
+  - 箱のみ
+  - 保存袋のみ
+  - ノベルティ
+  - スマホケース
+  - iphoneケース
+  - マグカップ
+  - 雑誌
+  - gap press
+  - ファッションニュース
+  - メンズノンノ
+  - 装苑
+  - ルックブック
+  - 写真集
+  - カタログ
+  - 傘
+  - シューレース
+  - 替紐
+  - キーチェーン
+  - phone case
+  - iphone case
+  - samsung case
+  - airpods case
+  - poster
+  - art print
+  - wall art
+  - canvas print
+  - sticker
+  - decal
+  - magnet
+  - perfume
+  - cologne
+  - fragrance
+  - eau de parfum
+  - eau de toilette
+  - parfum
+  - body spray
+  - lipstick
+  - makeup
+  - cosmetics
+  - nail polish
+  - skincare
+  - candle
+  - hair extensions
+  - shampoo
+  - lotion
+  - dvd
+  - blu-ray
+  - cd
+  - vinyl record
+  - sheet music
+  - book
+  - magazine
+  - catalog
+  - mug
+  - tumbler
+  - keychain only
+  - dust bag only
+  - dustbag only
+  - box only
+  - empty box
+  - shopping bag only
+  - gift bag only
+  - tag only
+  - label only
+  - authenticity card only
+  - button only
+  - zipper pull only
+  - hanger only
+  - for parts
+  - sewing pattern
+  - fabric by the yard
+  - toy
+  - plush
+  - figurine
+  - funko
+  - lego
+  - diecast
+  - hot wheels
+  - costume
+  - halloween
+  - dog clothes
+  - pet clothing
+  - doll clothes
+  - kids
+  - toddler
+  - infant
+  - maternity
+  - bedding
+  - curtain
+  - rug
+  - wallpaper
+  - furniture
+  - car part
+  - wheel
+  - rim
+brand_collisions:
+  - {brand: undercover, phrases: ["undercover police", "undercover boss", "undercover cop", "undercover agent", "undercover brother", "undercover bra", "undercover mission", "undercover toy", "undercover spy", "go undercover", "deep undercover"], reason: "Common word / TV / costume"}
+  - {brand: rick_owens, phrases: ["rick ross", "rick and morty", "rick astley", "rick james", "rick flair", "ric flair", "rick springfield", "rick grimes", "rick roll", "terrell owens", "jesse owens", "owens corning", "rick bayless"], reason: "First name 'Rick' + surnames"}
+  - {brand: celine, phrases: ["celine dion", "celine dion tour", "celine dion merch", "celine sciamma", "celine name necklace", "personalized celine"], reason: "First name Celine / singer"}
+  - {brand: number_nine, phrases: ["number 9 jersey", "number nine jersey", "no. 9 jersey", "#9 jersey", "number 9 nfl", "number 9 combo", "number nine pizza", "revolution 9", "cloud nine", "number nine dress kids", "number 9 football shirt", "number 9 soccer"], reason: "Sports jerseys / food / Beatles"}
+  - {brand: beauty_beast, phrases: ["beauty and the beast", "beauty & the beast", "beauty and beast disney", "belle costume", "enchanted rose", "disney beauty", "beauty beast musical", "cogsworth", "lumiere", "mrs potts"], reason: "Disney"}
+  - {brand: raf_simons, phrases: ["royal air force", "raf pilot", "raf wings", "raf bomber", "raf jacket ww2", "raf officer", "raf rugby", "raf polo", "raf centenary", "rafael nadal"], reason: "RAF = Royal Air Force; Rafael"}
+  - {brand: julius, phrases: ["julius caesar", "julius ceasar", "julius paul frank", "paul frank julius", "julius monkey", "julius peppers", "julius randle", "julius erving", "julius baer", "julius meinl", "julius rosenwald"], reason: "Caesar / Paul Frank monkey / athletes / companies"}
+  - {brand: supreme, phrases: ["supreme court", "supreme leader", "pizza supreme", "taco supreme", "supremes diana ross", "supreme being", "supreme sauce", "nacho supreme"], reason: "Common word"}
+  - {brand: bape, phrases: ["bored ape", "ape costume", "gorilla costume", "planet of the apes", "ape suit", "apecoin", "ape nft"], reason: "Ape"}
+  - {brand: alexander_mcqueen, phrases: ["lightning mcqueen", "steve mcqueen", "cars movie mcqueen", "mcqueen pajamas", "mcqueen kids", "mcqueen hot wheels"], reason: "Disney Cars / actor"}
+  - {brand: gucci, phrases: ["gucci mane", "gucci gang", "lil pump gucci", "gucci mane tee"], reason: "Rapper"}
+  - {brand: off_white, phrases: ["off white paint", "off-white paint", "off white color", "off white dress", "off white wedding", "off white couch", "pyrex glass", "pyrex bowl", "pyrex dish", "pyrex measuring", "pyrex corning", "pyrex vintage kitchen"], reason: "Colour / Pyrex cookware"}
+  - {brand: carol_christian_poell, phrases: ["ccp china", "ccp soviet", "ccp ussr", "ccp propaganda", "communist party", "ccp card", "ccp hockey"], reason: "CCP acronym"}
+  - {brand: lgb, phrases: ["lgbt", "lgbtq", "lgbtq+", "lgbt pride", "pride flag", "rainbow flag"], reason: "LGBT acronym"}
+  - {brand: comme_des_garcons, phrases: ["cdg airport", "paris cdg", "cdg flight", "cdg terminal", "cdg souvenir"], reason: "Airport code"}
+  - {brand: kapital, phrases: ["capital one", "venture capital", "capital city", "capital gains", "washington capitals", "capital letters", "capital h"], reason: "Common word"}
+  - {brand: goa, phrases: ["goa india", "goa trip", "goa beach", "goa trance", "goa party", "goa wedding", "goa resort"], reason: "Place/music"}
+  - {brand: roen, phrases: ["roen first name", "roen game", "roen tech", "roen drive"], reason: "Name/other"}
+  - {brand: chrome_hearts, phrases: ["chrome browser", "google chrome", "chromebook", "chrome wheels", "chrome rims", "chrome bumper", "chrome plated", "purple hearts", "heart locket"], reason: "Chrome automotive/browser; hearts"}
+  - {brand: balmain, phrases: ["balmain hair", "balmain paris hair couture", "balmain hair extensions", "balmain clip in", "balmain hair clip"], reason: "Balmain Hair Couture is a hair product line"}
+  - {brand: dior_homme, phrases: ["dior sauvage", "dior homme intense", "dior homme sport", "dior homme cologne", "dior homme parfum", "miss dior", "dior addict", "baby dior"], reason: "Fragrance (Dior Homme is also a perfume line) / kids"}
+  - {brand: chanel, phrases: ["chanel no 5", "chanel no5", "bleu de chanel", "chanel rouge", "chanel mademoiselle", "chanel lipstick", "chanel nail", "chanel allure", "chanel chance"], reason: "Fragrance / cosmetics"}
+  - {brand: saint_laurent, phrases: ["ysl beauty", "ysl libre", "ysl black opium", "ysl touche eclat", "ysl rouge pur couture", "ysl lipstick", "ysl foundation", "ysl y edp"], reason: "YSL Beauty line is a different company"}
+  - {brand: yohji_yamamoto, phrases: ["yamamoto sushi", "yamamoto seeds", "yohji perfume"], reason: "Common surname/products"}
+  - {brand: mugler, phrases: ["mugler angel", "mugler alien", "mugler a*men", "angel muse", "mugler perfume"], reason: "Fragrance"}
+  - {brand: versace, phrases: ["versace home plate", "versace dinnerware", "rosenthal versace", "versace candle", "versace perfume", "versace eros", "versace dylan blue"], reason: "Home goods / fragrance"}
+  - {brand: jean_paul_gaultier, phrases: ["jpg image", ".jpg", "jpg file", "jpeg"], reason: "File format"}
+  - {brand: vivienne_westwood, phrases: ["westwood village", "ucla westwood", "westwood mall", "westwood nj", "westwood ma"], reason: "Place names"}
+  - {brand: givenchy, phrases: ["givenchy le rouge", "givenchy prisme", "givenchy gentleman", "givenchy ange ou demon"], reason: "Cosmetics / fragrance"}
+  - {brand: balenciaga, phrases: ["balenciaga rosabotanica", "balenciaga florabotanica", "balenciaga perfume", "balenciaga hotel", "balenciaga museum"], reason: "Fragrance / museum"}
+fake_red_flags:
+  - id: label_era_mismatch_slp_yves
+    description: "Piece claimed as Hedi-era Saint Laurent (2012-2016) but described with 'Yves Saint Laurent' label wording, or claimed pre-2012 but with 'Saint Laurent Paris'. Label wording changed June 2012 (documented for bag stamps and the SS15 jacket label)."
+    listing_signals: ["yves saint laurent label hedi", "ysl label slp l01", "saint laurent paris 2009", "saint laurent paris 2010", "label says yves and saint laurent paris"]
+    brands: [saint_laurent]
+    severity: 2
+    sources: ["https://retaildetail.eu/news/food/hedi-slimane-drops-yves-saint-laurent-brand-name", "https://www.palaisgalliera.paris.fr/en/node/2627"]
+  - id: label_era_mismatch_celine_accent
+    description: "Piece claimed as Hedi-era Celine (2018+) with accented 'CELINE' label wording, or claimed Phoebe-era with unaccented logo. Accent drop happened with Hedi (verify exact date)."
+    listing_signals: ["celine hedi céline label", "hedi era with accent", "phoebe era no accent"]
+    brands: [celine]
+    severity: 2
+    sources: ["https://hypebeast.com/2024/10/hedi-slime-exit-celine-michael-rider-appointed-creative-director"]
+  - id: label_era_mismatch_dior_homme
+    description: "Listing claims Hedi era (2000-2007) but shows 'Dior Men', Oblique monogram, 2018+ product names, or a tag code whose leading digit contradicts the claimed year (e.g. claims SS04 but code starts with 9 or 0). Leading digit repeats every decade, so only use as a flag when the seller also gives a season."
+    listing_signals: ["hedi slimane oblique", "dior men hedi", "dior homme ss04 code 9", "dior homme hedi 2019", "dior homme hedi bee embroidery"]
+    brands: [dior_homme]
+    severity: 2
+    sources: ["https://suigenerisconsignment.com/pages/dior-homme-reference-codes", "https://suigenerisconsignment.com/pages/designer-authentication-guide/dior"]
+  - id: label_era_mismatch_margiela
+    description: "Claimed Martin-era (pre-2009) piece with 'Maison Margiela' (no Martin) label wording or post-2014 Galliano-era product names (Glam Slam, 5AC). Wording-change date is unverified, so use as soft signal."
+    listing_signals: ["martin era maison margiela", "maison margiela 2005", "glam slam martin", "margiela 1999 maison margiela label"]
+    brands: [margiela]
+    severity: 1
+    sources: ["https://www.ssense.com/en-ee/editorial/fashion/maison-margiela-guide"]
+  - id: label_era_mismatch_number_nine
+    description: "Claimed Miyashita-era (1997-2009) Number (N)ine but label/text mentions 'by Takahiro Miyashita' relaunch wording, 'new arrivals', or 2025+ release names; or tee blank is a generic Gildan/Anvil/Fruit-of-the-Loom body."
+    listing_signals: ["number nine by takahiro miyashita aw05", "number nine new arrivals archive", "number nine gildan", "number nine anvil tag", "number nine hanes tag"]
+    brands: [number_nine]
+    severity: 3
+    sources: ["https://hypebeast.com/ph/2025/9/takahiro-miyashita-announces-numbernine-news-return", "https://www.fashionsnap.com/article/2026-03-12/numbernine-1st-release/"]
+  - id: made_in_country_mismatch
+    description: "Country of origin inconsistent with brand/era. Hedi Dior Homme denim is documented Italy and Japan; Number (N)ine/Undercover early-era pieces are Japan-made; Chanel RTW 90s is France. 'Made in China/Turkey/Vietnam/Bangladesh' on these is a strong flag."
+    listing_signals: ["made in china dior homme", "made in turkey saint laurent", "made in china number nine", "made in china chanel", "made in bangladesh rick owens", "made in vietnam undercover early"]
+    brands: [dior_homme, number_nine, chanel, undercover, saint_laurent, rick_owens, balmain, helmut_lang]
+    severity: 3
+    sources: ["https://philamuseum.org/collection/object/325668", "https://www.heddels.com/?p=5020"]
+  - id: pristine_label_on_worn_piece
+    description: "Heavily worn/faded/distressed garment with a crisp, unfaded woven label or care tag (or the opposite: new-looking garment, aged label). Needs image analysis; seller text rarely admits it."
+    listing_signals: ["label looks new", "tag is crisp", "replaced tag", "new tag sewn", "new label"]
+    brands: []
+    severity: 2
+    sources: ["https://suigenerisconsignment.com/pages/designer-authentication-guide/dior"]
+  - id: resewn_or_replaced_label
+    description: "Label re-sewn, replaced, or added after the fact; crooked or different thread colour stitching around the label. Margiela's four white stitches are factory-original and loosely stitched by design, so exclude them."
+    listing_signals: ["label re-sewn", "tag re-sewn", "new label sewn", "tag replaced", "label replaced", "label added"]
+    brands: []
+    severity: 3
+    sources: ["https://www.ssense.com/en-ee/editorial/fashion/maison-margiela-guide"]
+  - id: wrong_font_or_logo_spacing
+    description: "Label/print typography off from known examples (kerning, weight, letterforms, CC interlock proportions). Requires image-model comparison against exemplar labels; seller text will not say it."
+    listing_signals: ["font looks off", "text looks different", "logo seems different", "spacing looks odd"]
+    brands: [chanel, dior_homme, saint_laurent, chrome_hearts, number_nine, rick_owens, erd, supreme, bape]
+    severity: 2
+    sources: ["https://suigenerisconsignment.com/pages/designer-authentication-guide/dior"]
+  - id: stock_or_borrowed_photos
+    description: "Listing uses brand-site, retailer, or other sellers' photos; no photo of tags/labels/hardware; or watermarked images from another store."
+    listing_signals: ["stock photo", "stock photos", "photos from internet", "pictures from the internet", "image from website", "photo not mine", "similar item photo", "photos for reference only", "actual item may vary"]
+    brands: []
+    severity: 3
+    sources: ["https://www.1stdibs.com/blogs/the-study/how-to-spot-a-fake-ysl-bag"]
+  - id: no_tag_or_label_photos
+    description: "Seller shows no photo of care tag, label, hardware stamps or reference code; era and authenticity cannot be resolved."
+    listing_signals: ["no tag photo", "tags not shown", "tag not pictured", "ask for tag pics", "dm for tag photos", "tag available upon request"]
+    brands: []
+    severity: 2
+    sources: ["https://suigenerisconsignment.com/pages/dior-homme-reference-codes"]
+  - id: implausibly_low_price
+    description: "Asking price below brand+archetype price_floor_usd (brands.yaml). Compute at scoring time; severity scales with how far under the floor."
+    listing_signals: ["price below price_floor_usd"]
+    brands: []
+    severity: 2
+    sources: ["https://www.grailed.com/designers/chrome-hearts"]
+  - id: overseas_shipping_origin_and_authenticity_spam
+    description: "Ships from Guangzhou/Shenzhen/Hong Kong/Dongguan for a brand whose genuine pieces are rarely there, with boilerplate '100% authentic guaranteed', 'authenticity guaranteed', 'real photos' repeated across many listings. Soft signal; legit Hong Kong/Thailand archive dealers exist (e.g. Bangkok glam dealers)."
+    listing_signals: ["ships from china", "ships from guangzhou", "ships from shenzhen", "100% authentic guaranteed", "100% legit", "real photos taken by me", "trusted seller dm"]
+    brands: [chanel, chrome_hearts, rick_owens, saint_laurent, dior_homme, balenciaga, supreme, off_white, bape, erd]
+    severity: 1
+    sources: ["https://www.1stdibs.com/blogs/the-study/how-to-spot-a-fake-ysl-bag"]
+  - id: chanel_hardware_and_codes
+    description: "Chanel (vintage jewelry/belts/RTW): no collection/date code where one is expected on RTW labels, hardware without CHANEL/PARIS engraving, 'made in China', plated finish flaking on a 'gold' item, or an authenticity card shown as proof (cards are easily forged and absent on 90s costume jewelry). Treat all Chanel as high fake-prevalence; apply a heavy base penalty."
+    listing_signals: ["authenticity card included", "made in china chanel", "no date code", "no stamp", "unmarked cc", "plated chanel", "cc logo no engraving"]
+    brands: [chanel]
+    severity: 3
+    sources: ["https://etoile-luxuryvintage.com/blogs/guides-how-tos/guide-to-how-to-read-dior-codes", "https://www.instagram.com/glam_archive/"]
+  - id: chanel_high_fake_prevalence
+    description: "Base rate: Chanel fakes are rampant in vintage resale (per the user's own note). Default risk uplift for any Chanel listing without clear tag/hardware photos."
+    listing_signals: ["chanel"]
+    brands: [chanel]
+    severity: 2
+    sources: ["https://www.instagram.com/glam_archive/"]
+  - id: dior_homme_reference_code_absent_or_wrong
+    description: "Dior Homme apparel tags normally carry a reference code starting with a year digit (documented example '5EH1015678 E47 B6A8' = SS05). Missing code, or a code format that is only digits/length-off, is a flag. Do not apply the bag date-code or perfume batch-code systems to apparel."
+    listing_signals: ["no reference code", "tag has no code", "code not visible", "dior homme tag blurred"]
+    brands: [dior_homme]
+    severity: 2
+    sources: ["https://suigenerisconsignment.com/pages/dior-homme-reference-codes"]
+  - id: slp_l01_construction_and_origin
+    description: "Saint Laurent L01/biker listings with 'made in China/Turkey', missing style/season tag, 'SLP' printed rather than woven label, or sold as 'L01' with no model code. Low confidence heuristic from general knowledge, not source-verified."
+    listing_signals: ["l01 made in china", "slp style jacket", "no style tag", "l01 no tag", "saint laurent printed label"]
+    brands: [saint_laurent]
+    severity: 2
+    sources: ["https://www.1stdibs.com/blogs/the-study/how-to-spot-a-fake-ysl-bag"]
+    confidence: low
+  - id: chrome_hearts_silver_stamps_and_plating
+    description: "Chrome Hearts silver jewelry normally bears CH hallmarks/925 and ©year; unstamped, plated (flaking), or too-light pieces are a flag; leather/denim pieces with plain 'Chrome Hearts' printed tags. Low confidence heuristic."
+    listing_signals: ["no stamp", "no 925", "plated", "silver plated", "925 not stamped", "unmarked ch", "chrome hearts pendant brass"]
+    brands: [chrome_hearts]
+    severity: 3
+    sources: ["https://www.grailed.com/designers/chrome-hearts"]
+    confidence: low
+  - id: rick_owens_season_tag_and_origin
+    description: "Rick Owens: 'DRKSHDW' pieces with printed rather than woven brand labels, no season/item code, 'made in China/Bangladesh', or Geobasket listings using retailer stock photos. Low confidence; no verified code pattern exists in this taxonomy."
+    listing_signals: ["drkshdw printed label", "no season code", "made in china rick owens", "geobasket stock photo"]
+    brands: [rick_owens]
+    severity: 2
+    sources: ["https://sites.fitnyc.edu/depts/museum/Gothic/Owens.html"]
+    confidence: low
+  - id: erd_unfinished_distressing_and_price
+    description: "ERD pieces are hand-distressed one-offs; listings with machine-uniform distressing, blank Gildan/Hanes bodies, or prices far under floor are suspicious; 'ERD x' collabs claimed without proof. Low confidence heuristic."
+    listing_signals: ["erd gildan", "erd blank tee", "erd uniform distress", "erd collab no proof"]
+    brands: [erd]
+    severity: 2
+    sources: ["https://www.mrporter.com/en-au/journal/fashion/enfants-riches-deprimes-erd-25368192"]
+    confidence: low
+  - id: undercover_jp_tag_and_graphic_mismatch
+    description: "Undercover/Beauty:Beast/20471120/Hysteric archive pieces with Western print-on-demand bodies, 'made in china' on an early-era item, or season graphics that do not belong to the claimed season. Low confidence."
+    listing_signals: ["undercover gildan", "undercover made in china 2003", "beauty beast gildan", "hysteric glamour gildan"]
+    brands: [undercover, beauty_beast, "20471120", hysteric_glamour]
+    severity: 2
+    sources: ["https://www.grailed.com/drycleanonly/master-class-undercover"]
+    confidence: low
+  - id: qualityreps_pattern_note
+    description: "r/QualityReps-style vocabulary appears in titles: 'batch', 'GOAT quality', 'LJR', 'PK', 'OG batch', 'budget', 'W2C', 'QC photos', 'haul'. Used for AWARENESS ONLY: if present, hard-reject. This taxonomy did not consult that subreddit this session."
+    listing_signals: ["batch", "w2c", "qc photos", "pk batch", "ljr", "god batch", "gx batch", "haul", "budget version"]
+    brands: []
+    severity: 3
+    sources: []
+    confidence: low

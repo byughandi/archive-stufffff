@@ -1,0 +1,85 @@
+# config/japan_costs.yaml  (R4, verified 2026-11-24 unless noted)
+# Fee pages themselves were not fetchable (firewall); figures come from 2026 third-party reviews and the
+# ZenMarket official blog post as surfaced in search. Treat as med/low confidence; Orchestrator re-verify.
+proxies:
+  - id: buyee
+    fee_fixed_jpy: 500
+    fee_pct: 0
+    charged_on: "per item won/bought on Mercari and Yahoo Auctions (per store order for shops). Raised from 300 to 500 JPY on 2026-04-01 (third-party). Old '6% + 300' figures are obsolete."
+    notes: "Plans per order: Lite 0, Inspection 300, Insured Delivery 500, Standard 500 (inspection+insured). Protective packaging 1500 JPY per box. International shipping and payment fees are extra. Buyee guide itself lists a fixed 500 JPY per order."
+    sources: ["https://blog.onemall.jp/2026/03/17/buyee-is-raising-its-service-fee-to-%C2%A5500-on-april-1-heres-how-to-pay-%C2%A50-instead/", "https://blog.buyee.com/buyee-japan-proxy-shopping-guide-en/", "https://sugoifinds.com/blog/buyee-review/"]
+    date_verified: "2026-11-24"
+    confidence: med
+  - id: zenmarket
+    fee_fixed_jpy: 800
+    fee_pct: 0
+    charged_on: "per purchase on Mercari (Mercari Shops raised 500 to 800 JPY on 2026-04-01 per ZenMarket official post). Third-party reviews say 800 JPY also applies to Yahoo Auctions bids; recommended stores 300 JPY, other shops 500 JPY."
+    notes: "Deposit/payment fee from about 1% (third-party). Check zenmarket.jp fee page for exact Mercari-vs-Yahoo scope."
+    sources: ["https://zenmarket.jp/en/blog/post/16275/", "https://sugoifinds.com/blog/zenmarket-review/", "https://blog.onemall.jp/2026/07/16/is-zenmarket-legit-an-honest-2026-review-fees-promo-codes-a-cheaper-alternative/"]
+    date_verified: "2026-11-24"
+    confidence: med
+    verify: true
+  - id: white_rabbit_express
+    fee_fixed_jpy: UNKNOWN
+    fee_pct: UNKNOWN
+    charged_on: "Now branded Japan Rabbit; quote-based concierge pricing, no published percentage found. Taste-profile seed of '~$4 + 9.9%' is NOT verified."
+    notes: "Use only as a manual/concierge option; do not model automatically until a quote is obtained."
+    sources: ["https://sugoifinds.com/blog/best-japan-proxy-shopping-services/"]
+    date_verified: "2026-11-24"
+    confidence: low
+    verify: true
+  # FromJapan / Neokyo / Sendico: not researched (search budget). Omitted.
+
+shipping_usd_by_weight_class:
+  small: 20     # jewelry, belts, ~0.3 kg
+  light: 30     # tees, knits, ~1 kg
+  medium: 48    # denim, hoodies, ~2 kg
+  heavy: 85     # leather jackets, ~4 kg
+  shoes: 58     # boxed boots/sneakers, ~2.5-3 kg
+shipping_notes:
+  basis: "ONLY datapoint seen: 1 kg parcel via proxy calculator, Sept 2026: ECMS (10-20 days) 24.55 USD, DHL Express (3-7 days) 36.22 USD. Other classes are extrapolated and LOW confidence. Recalibrate from a real Buyee/ZenMarket quote."
+  cheapest_tracked_method: "Japan Post EMS / ECMS (via proxy or direct); DHL Express as fast fallback."
+  japan_post_status: "Japan Post suspended US-bound shipments in Aug 2025; sources say EMS, ePacket and sea mail resumed 2026-04-14 (other notices say May-July 2026). Shipments to the US are now prepaid DDP: duties collected at order time; for >100 USD a certified provider (reported: Zonos) is required and items go through designated post offices."
+  sources: ["https://blog.onemall.jp/2026/10/12/japan-post-shipping-to-us-resumed/", "https://blog.onemall.jp/2026/07/22/shipping-from-japan-to-usa-2026-the-complete-guide-cheapest-way-costs-carriers/", "https://ninoma.zendesk.com/hc/en-us/articles/59891417578393--Japan-Post-Shipping-to-the-U-S-Has-Resumed"]
+  confidence: low
+  verify: true
+domestic_shipping_jpy_default: 800   # memory: typical Mercari/Yahoo seller-to-proxy-warehouse 600-1000 JPY; low confidence
+duties:
+  us_de_minimis_usd: 0
+  notes: >
+    As of 2026-11-24 the US 800 USD de minimis exemption is suspended for ALL countries and ALL modes
+    (executive orders from 2025-08-29; CBP interim final rules published 2026-06-24 formalised it:
+    non-postal low-value shipments now go through entry type 11; postal shipments through a new postal
+    informal-entry process effective about 2026-07-24; statutory repeal takes effect 2027-07-01).
+    Every personal import from Japan therefore owes duty plus any fees; no free threshold.
+    Tariff layer: Supreme Court struck down IEEPA tariffs in Feb 2026 (collection stopped 2026-02-24);
+    a 10% Section 122 surcharge ran 2026-02-24 to 2026-07-24, then Section 301 'forced labor' tariffs
+    from 2026-07-24 replaced it. For Japan-origin goods the combined MFN + Section 301 rate is capped at
+    12.5% (no 301 add-on where MFN is already 12.5% or more; no stacking). Section 232 sector tariffs
+    (autos 15%, steel etc.) do not apply to apparel. Litigation against the 301 tariffs is expected.
+    Non-Japan-origin goods shipped from Japan (e.g. made in Italy, China, Thailand) are rated by COUNTRY
+    OF ORIGIN, not ship-from country; rate varies, assume 10-25% all-in and mark verify.
+    Interim postal flat-rate options (80/160/200 USD per item by origin tier, and a flat 10% ad valorem
+    interim method) were reported but their current status is unclear.
+  typical_rate_apparel_pct: 12.5   # Japan-origin planning figure (cap); non-Japan origin: use 15 (verify)
+  typical_rates_by_class_pct_japan_origin: {apparel_cotton_denim_knits: 12.5, leather_outerwear: 12.5, footwear: 12.5, jewelry_belts_accessories: 12.5}
+  typical_rate_non_japan_origin_pct: 15
+  planning_rule: "Landed cost = (price_jpy->usd + proxy fee + domestic jp shipping + intl shipping) with duty = rate * (item price + shipping to US as per CBP value basis, use item price only if prepaid DDP quote says so) + any carrier brokerage/disbursement fee (DHL/FedEx often 10-20 USD). Add 20-40% over sticker as sanity check per taste profile."
+  sources:
+    - "https://www.federalregister.gov/documents/2026/06/24/2026-12669/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry"
+    - "https://www.federalregister.gov/documents/2026/06/24/2026-12670/indefinite-suspension-of-the-de-minimis-exemption-for-merchandise-arriving-through-all-modes-other"
+    - "https://www.federalregister.gov/documents/2026/10/08/2026-20650/low-value-shipments"
+    - "https://www.nippon.com/en/news/yjj2026072400366/"
+    - "https://www.morganlewis.com/pubs/2026/07/us-administration-rebuilds-global-tariff-program-under-section-301"
+    - "https://www.bdo.com/insights/tax/cbp-suspends-de-minimis-exemption-and-introduces-new-postal-entry-requirements"
+    - "https://tariffdesk.com/tariffs/japan"
+  date_verified: "2026-11-24"
+  confidence: med
+  verify: true
+fx:
+  api: frankfurter
+  url: "https://api.frankfurter.dev/v1/latest?base=JPY&symbols=USD"
+  notes: "Free, no API key, ECB reference rates published on working days (about 16:00 CET), no hard documented quota; older host api.frankfurter.app. From memory, NOT checked this session (confidence low). Cache once per day; fallback hardcode 1 USD = 150 JPY only as a last resort."
+  sources: ["https://frankfurter.dev/"]
+  confidence: low
+  verify: true

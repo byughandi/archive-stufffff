@@ -1,0 +1,715 @@
+# R2 seasons.yaml. Season ids use aw (not fw); FW spellings are in aliases.
+# `name` is the collection title when a source gave one; UNKNOWN otherwise. A season is listed even when
+# its name is UNKNOWN if the codes/years matter for era resolution.
+# Flags: `dispute:` = sources disagree; `verify: true` = not confirmed by a URL seen this session.
+seasons:
+  # ===================== DIOR HOMME (Hedi) =====================
+  - id: dior_homme__aw01
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: AW01
+    year: 2001
+    name: "Solitaire"
+    aliases: ["aw01", "fw01", "a/w 2001", "autumn 2001", "fall 2001", "fw 2001", "solitaire", "hedi first collection"]
+    weight: 8
+    reason: "First Hedi Slimane Dior Homme collection (Wikipedia-derived table); the origin of the skinny tailoring silhouette."
+    grail_pieces:
+      - {name: "Tailoring / black suit", aliases: ["tuxedo", "slim suit", "tailored jacket"], archetype: blazer, weight: 8, reason: "Origin of the Hedi silhouette"}
+    sources: ["https://en.wikipedia.org/wiki/Dior_Homme", "https://www.Wikipedia.com/wiki/Dior_Homme"]
+    confidence: med
+  - id: dior_homme__ss03
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: SS03
+    year: 2003
+    name: "Follow Me"
+    aliases: ["ss03", "s/s 2003", "spring 2003", "ss 2003"]
+    weight: 8
+    reason: "First men's denim at Dior launched spring 2003 (denim history source). Early raw-denim cut; exact SS03 pieces UNKNOWN."
+    grail_pieces:
+      - {name: "First-generation Dior Homme denim", aliases: ["19cm", "raw denim", "indigo jeans"], archetype: denim, weight: 8, reason: "First Dior Homme denim season"}
+    sources: ["https://www.heddels.com/?p=5020"]
+    confidence: low
+    verify: true
+  - id: dior_homme__aw03
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: AW03
+    year: 2003
+    name: "Luster"
+    aliases: ["aw03", "fw03", "a/w 2003", "autumn 2003", "fall 2003", "luster", "lustre", "ラスター", "ルスター"]
+    weight: 9
+    reason: "Wikipedia-derived table dates 'Luster' (Berlin electroscene, 'Change Yourself' by Bosco) to AW03. DISPUTE: Grailed sellers label 'AW05 Luster waxed denim' and the TASTE_PROFILE implies Luster/clawmark denim; treat 'luster' as a keyword shared by AW03 and AW05 until a runway source settles it."
+    dispute: "Luster = AW03 (Wikipedia mirror) vs seller usage 'AW05 Luster' (Grailed listing 98844772)"
+    grail_pieces:
+      - {name: "Luster waxed/coated denim", aliases: ["luster denim", "waxed jeans", "coated jeans"], archetype: denim, weight: 9, reason: "Core Luster denim"}
+      - {name: "Clawmark denim", aliases: ["clawmark luster", "claw mark", "clawmark", "scratch denim", "爪痕", "クロウマーク"], archetype: denim, weight: 9, reason: "Clawmark Luster denim is the best-known piece; season attribution disputed"}
+    sources: ["https://www.Wikipedia.com/wiki/Dior_Homme", "https://www.grailed.com/listings/98844772-dior-dior-homme-aw05-luster-waxed-denim", "https://www.grailed.com/browse/dior-clawmark-luster-denim"]
+    confidence: low
+    verify: true
+  - id: dior_homme__ss04
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: SS04
+    year: 2004
+    name: "Strip"
+    aliases: ["ss04", "s/s 2004", "spring 2004", "ss 2004", "strip", "strip collection", "ストリップ"]
+    weight: 10
+    reason: "Confirmed official collection name 'Strip' (soundtrack Strip by DSL). Strip sneakers and denim are canonical; a Grailed/1stDibs SS04 'Strip collection' denim jacket listing exists."
+    grail_pieces:
+      - {name: "Strip denim jacket", aliases: ["strip denim jacket", "ss04 denim jacket"], archetype: denim, weight: 9, reason: "1stDibs/Grailed example"}
+      - {name: "Strip sneakers", aliases: ["strip sneaker", "dior homme strip"], archetype: sneakers, weight: 8, reason: "Taste profile seed; sneaker guide mentions SS04"}
+      - {name: "Strip leather jacket", aliases: ["ss04 leather jacket"], archetype: leather_jacket, weight: 9, reason: "Seed; leathers from Hedi Dior era hold value"}
+    sources: ["https://www.Wikipedia.com/wiki/Dior_Homme", "https://thefashionisto.com/campaign-archives-dior-homme-the-hedi-years-springsummer-2004-tell-carlson", "https://www.1stdibs.com/fashion/clothing/jackets/dior-homme-ss04-strip-collection-denim-jacket-men-jacket-size-54-slim-large/id-v_24452762", "https://trussarchive.com/guides/your-guide-to-dior-homme-sneakers"]
+    confidence: high
+  - id: dior_homme__aw04
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: AW04
+    year: 2004
+    name: "Victim of the Crime"
+    aliases: ["aw04", "fw04", "a/w 2004", "autumn 2004", "fall 2004", "victim of the crime"]
+    weight: 9
+    reason: "Unofficial name 'Victim of the Crime' (Phoenix). Peak Hedi."
+    grail_pieces:
+      - {name: "Leather jacket / biker", aliases: ["hedi leather jacket", "dior leather biker"], archetype: leather_jacket, weight: 9, reason: "Hedi-era leathers"}
+    sources: ["https://www.Wikipedia.com/wiki/Dior_Homme"]
+    confidence: med
+  - id: dior_homme__ss05
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: SS05
+    year: 2005
+    name: "(Untitled) / Beck"
+    aliases: ["ss05", "s/s 2005", "spring 2005", "ss 2005", "beck", "glitter jeans"]
+    weight: 8
+    reason: "Unnamed; unofficial 'Beck' (Dior Theme by Beck). Reference-code example '5EH...' decodes to SS05 blue glitter jeans."
+    grail_pieces:
+      - {name: "Glitter jeans", aliases: ["blue glitter jeans", "ss05 glitter"], archetype: denim, weight: 8, reason: "Documented SS05 code example"}
+      - {name: "Utility jacket", aliases: ["ss05 utility jacket", "hedi utility jacket"], archetype: coat, weight: 7, reason: "Resale listing 'S/S 2005 Hedi Slimane utility jacket'"}
+    sources: ["https://suigenerisconsignment.com/pages/dior-homme-reference-codes", "https://us.resee.com/en/product/s-s-2005-hedi-slimane-utility-jacket-77181-270723-001"]
+    confidence: med
+  - id: dior_homme__aw05
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: AW05
+    year: 2005
+    name: "In the Morning / Everybody Just Looks the Same"
+    aliases: ["aw05", "fw05", "a/w 2005", "autumn 2005", "fall 2005", "in the morning", "waxed denim aw05", "clawmark aw05"]
+    weight: 9
+    reason: "Mirrors disagree on the name (unofficial 'In the Morning' by Razorlight). Sellers commonly list waxed/'Luster' denim as AW05 (see aw03 dispute)."
+    dispute: "Season name differs between Wikipedia mirrors; 'luster' attribution disputed with AW03"
+    grail_pieces:
+      - {name: "Waxed denim", aliases: ["aw05 waxed jeans", "luster waxed denim"], archetype: denim, weight: 9, reason: "Listed by sellers as AW05"}
+    sources: ["https://www.Wikipedia.com/wiki/Dior_Homme", "https://www.grailed.com/listings/98844772-dior-dior-homme-aw05-luster-waxed-denim"]
+    confidence: low
+    verify: true
+  - id: dior_homme__ss06
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: SS06
+    year: 2006
+    name: "The World Was a Mess, But His Hair Was Perfect"
+    aliases: ["ss06", "s/s 2006", "spring 2006", "ss 2006", "the world was a mess"]
+    weight: 9
+    reason: "Official title (The Rakes). Late-peak Hedi tailoring and denim."
+    grail_pieces:
+      - {name: "Slim denim", aliases: ["ss06 jeans", "19cm"], archetype: denim, weight: 8, reason: "Late Hedi denim"}
+    sources: ["https://www.Wikipedia.com/wiki/Dior_Homme"]
+    confidence: med
+  - id: dior_homme__aw06
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: AW06
+    year: 2006
+    name: "These Grey Days"
+    aliases: ["aw06", "fw06", "a/w 2006", "autumn 2006", "fall 2006", "these grey days"]
+    weight: 8
+    reason: "Unofficial title 'These Grey Days' (Eight Legs). Tailoring/knit heavy."
+    grail_pieces:
+      - {name: "Tailored jacket", aliases: ["06aw tailored jacket", "hedi blazer"], archetype: blazer, weight: 8, reason: "Yahoo JP/Mercari listings '06AW Dior homme テーラードジャケット Hedi期'"}
+    sources: ["https://www.Wikipedia.com/wiki/Dior_Homme", "https://jp.mercari.com/s/391732"]
+    confidence: med
+  - id: dior_homme__ss07
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: SS07
+    year: 2007
+    name: "We Look Good Together"
+    aliases: ["ss07", "s/s 2007", "spring 2007", "ss 2007", "we look good together"]
+    weight: 9
+    reason: "Official title (Littl'ans). Grailed has multiple 'SS07 Hedi Slimane' denim listings (super slender black, indigo, size 27)."
+    grail_pieces:
+      - {name: "Super slender black denim", aliases: ["ss07 super slender", "ss07 black denim"], archetype: denim, weight: 9, reason: "Grailed listing 104354751"}
+    sources: ["https://www.Wikipedia.com/wiki/Dior_Homme", "https://www.grailed.com/listings/104354751-dior-dior-homme-ss07-hedi-slimane-super-slender-black-denim", "https://www.grailed.com/listings/102513127-dior-dior-homme-ss07-hedi-slimane-indigo-denim-jeans-size-27"]
+    confidence: med
+  - id: dior_homme__aw07
+    brand: dior_homme
+    era: dior_homme__hedi
+    code: AW07
+    year: 2007
+    name: "Navigate"
+    aliases: ["aw07", "fw07", "a/w 2007", "2007aw", "07aw", "autumn 2007", "fall 2007"]
+    weight: 8
+    reason: "Last Hedi-era season by tenure; JP listings label '2007年AW エディ期'. Name UNKNOWN. Boundary season: AW07/SS08 listings may be KVA-designed — check text."
+    grail_pieces:
+      - {name: "Wool/mohair long vest", aliases: ["gilet", "long vest"], archetype: knit, weight: 6, reason: "Yahoo JP 2007AW エディ期 ジレ"}
+      - {name: "Zip jacket", aliases: ["07aw zip jacket"], archetype: leather_jacket, weight: 7, reason: "Mercari '07AW Dior HOMME エディ期 ジップジャケット'"}
+    sources: ["https://jp.mercari.com/s/391732", "https://auctions.yahoo.co.jp/jp/auction/f1237113770"]
+    confidence: low
+    verify: true
+  - id: dior_homme__ss08
+    brand: dior_homme
+    era: dior_homme__kva
+    code: SS08
+    year: 2008
+    name: UNKNOWN
+    aliases: ["ss08", "s/s 2008", "spring 2008", "08ss", "2008ss"]
+    weight: 6
+    reason: "First full KVA season; silhouette still slim. 'Good KVA' pocket per TASTE_PROFILE; which seasons are respected is NOT source-verified — low confidence."
+    grail_pieces: []
+    sources: ["https://en.wikipedia.org/wiki/Dior_Homme"]
+    confidence: low
+    verify: true
+  - id: dior_homme__aw09
+    brand: dior_homme
+    era: dior_homme__kva
+    code: AW09
+    year: 2009
+    name: UNKNOWN
+    aliases: ["aw09", "fw09", "a/w 2009", "09aw", "2009aw", "クリス期 09aw"]
+    weight: 5
+    reason: "Example KVA straight-denim listing '09AW クリス期' on Yahoo JP. Respect level UNVERIFIED."
+    grail_pieces:
+      - {name: "KVA straight denim", aliases: ["クリス期 デニム", "kva straight jeans"], archetype: denim, weight: 5, reason: "Yahoo JP listing"}
+    sources: ["https://auctions.yahoo.co.jp/jp/auction/v1236799178"]
+    confidence: low
+    verify: true
+  # ===================== SAINT LAURENT (Hedi) =====================
+  - id: saint_laurent__ss13
+    brand: saint_laurent
+    era: saint_laurent__hedi
+    code: SS13
+    year: 2013
+    name: UNKNOWN
+    aliases: ["ss13", "s/s 2013", "spring 2013", "ss 2013", "slp ss13"]
+    weight: 8
+    reason: "First full Hedi men's cycle under 'Saint Laurent' (name change June 2012). First-version L01 biker per TASTE_PROFILE seed (unverified here)."
+    grail_pieces:
+      - {name: "L01 classic motorcycle jacket (first version)", aliases: ["l01", "classic l01", "slp l01 biker"], archetype: biker_jacket, weight: 10, reason: "Seed: first-version 2012/13"}
+    sources: ["https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent"]
+    confidence: low
+    verify: true
+  - id: saint_laurent__aw13
+    brand: saint_laurent
+    era: saint_laurent__hedi
+    code: AW13
+    year: 2013
+    name: UNKNOWN
+    aliases: ["aw13", "fw13", "a/w 2013", "fall 2013", "slp aw13", "slp fw13"]
+    weight: 8
+    reason: "Peak Hedi SLP ready-to-wear; leather varsity/teddy and distressed denim in rotation (piece-season mapping UNVERIFIED)."
+    grail_pieces:
+      - {name: "Leather-sleeve teddy / varsity", aliases: ["teddy jacket", "varsity jacket", "baseball jacket"], archetype: varsity_jacket, weight: 8, reason: "Seed"}
+    sources: ["https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent"]
+    confidence: low
+    verify: true
+  - id: saint_laurent__ss14
+    brand: saint_laurent
+    era: saint_laurent__hedi
+    code: SS14
+    year: 2014
+    name: UNKNOWN
+    aliases: ["ss14", "s/s 2014", "spring 2014", "slp ss14"]
+    weight: 7
+    reason: "Hedi cycle season; specific grails UNKNOWN."
+    grail_pieces: []
+    sources: ["https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent"]
+    confidence: low
+    verify: true
+  - id: saint_laurent__aw14
+    brand: saint_laurent
+    era: saint_laurent__hedi
+    code: AW14
+    year: 2014
+    name: UNKNOWN
+    aliases: ["aw14", "fw14", "a/w 2014", "fall 2014", "slp aw14", "slp fw14"]
+    weight: 8
+    reason: "Hedi cycle season (rock/grunge era). Specific grails UNKNOWN."
+    grail_pieces:
+      - {name: "Distressed denim / palm patch denim", aliases: ["palm patch jeans", "d02 distressed"], archetype: denim, weight: 7, reason: "Seed '2015 palm-patch denim' — season attribution UNVERIFIED"}
+    sources: ["https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent"]
+    confidence: low
+    verify: true
+  - id: saint_laurent__ss15
+    brand: saint_laurent
+    era: saint_laurent__hedi
+    code: SS15
+    year: 2015
+    name: "Psych Rock"
+    aliases: ["ss15", "s/s 2015", "spring 2015", "slp ss15"]
+    weight: 7
+    reason: "Documented: SS15 men's jacket carries woven satin label 'SAINT LAURENT / PARIS' (museum record)."
+    grail_pieces: []
+    sources: ["https://www.palaisgalliera.paris.fr/en/node/2627"]
+    confidence: med
+  - id: saint_laurent__aw15
+    brand: saint_laurent
+    era: saint_laurent__hedi
+    code: AW15
+    year: 2015
+    name: UNKNOWN
+    aliases: ["aw15", "fw15", "a/w 2015", "fall 2015", "slp aw15", "slp fw15"]
+    weight: 8
+    reason: "Documented: monochrome black palette in leather, mesh, fur and sequins; fitted coats with skintight black pants/leather trousers (Hypebeast/Wallpaper)."
+    grail_pieces:
+      - {name: "Black leather coat/biker", aliases: ["aw15 leather", "slp leather jacket aw15"], archetype: leather_jacket, weight: 8, reason: "Leather focus"}
+    sources: ["https://hypebeast.com/2015/1/saint-laurent-2015-fall-winter-collection", "https://wallpaper.com/fashion/fashionweeks/menswear-aw-2015/paris/saint-laurent-aw-2015"]
+    confidence: med
+  - id: saint_laurent__ss16
+    brand: saint_laurent
+    era: saint_laurent__hedi
+    code: SS16
+    year: 2016
+    name: "Surf Sound"
+    aliases: ["ss16", "s/s 2016", "spring 2016", "slp ss16"]
+    weight: 7
+    reason: "Hedi cycle season; specific grails UNKNOWN."
+    grail_pieces: []
+    sources: ["https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent"]
+    confidence: low
+    verify: true
+  - id: saint_laurent__aw16
+    brand: saint_laurent
+    era: saint_laurent__hedi
+    code: AW16
+    year: 2016
+    name: "Palladium"
+    aliases: ["aw16", "fw16", "a/w 2016", "fall 2016", "slp aw16", "slp fw16", "last hedi collection", "hedi final collection"]
+    weight: 9
+    reason: "Described as Hedi's final SLP collection; leather varsity and leather biker permanent staples; ankle boots; skinny black denim; velvet/rhinestone per seed."
+    grail_pieces:
+      - {name: "Velvet/rhinestone evening pieces", aliases: ["rhinestone", "velvet blazer"], archetype: blazer, weight: 7, reason: "Seed (UNVERIFIED)"}
+      - {name: "Leather varsity", aliases: ["leather varsity jacket", "slp varsity"], archetype: varsity_jacket, weight: 8, reason: "Staple per Fashionisto/Barneys"}
+    sources: ["https://thefashionisto.com/saint-laurent-menswear-2016-fall-winter-lookbook-barneys/", "https://www.businessoffashion.com/reviews/fashion-week/saint-laurents-modernist-showman/"]
+    confidence: med
+  # ===================== CELINE (Hedi) =====================
+  - id: celine__ss19
+    brand: celine
+    era: celine__hedi
+    code: SS19
+    year: 2019
+    name: UNKNOWN
+    aliases: ["ss19", "s/s 2019", "spring 2019", "celine ss19", "celine first collection hedi"]
+    weight: 7
+    reason: "First Hedi Celine collection (Hedi joined Jan 2018; first show Sept 2018). Standout seasons for Celine Homme are UNKNOWN — not verifiable this session."
+    grail_pieces:
+      - {name: "Celine Homme slim denim / leather jacket", aliases: ["celine homme jeans", "celine leather jacket"], archetype: leather_jacket, weight: 7, reason: "TASTE_PROFILE seed"}
+    sources: ["https://hypebeast.com/2024/10/hedi-slime-exit-celine-michael-rider-appointed-creative-director"]
+    confidence: low
+    verify: true
+  # ===================== BALMAIN (Decarnin) =====================
+  - id: balmain__ss09
+    brand: balmain
+    era: balmain__decarnin
+    code: SS09
+    year: 2009
+    name: UNKNOWN
+    aliases: ["ss09", "s/s 2009", "spring 2009", "balmain ss09", "balmain 2009"]
+    weight: 8
+    reason: "Peak Decarnin hype: washed skinnies, shoulder pads, destroyed tees (seed; season attribution UNVERIFIED)."
+    grail_pieces:
+      - {name: "Washed skinny jeans", aliases: ["balmain skinny jeans", "balmain washed jeans"], archetype: denim, weight: 8, reason: "Seed"}
+      - {name: "Shoulder-pad military jacket", aliases: ["embellished military jacket", "balmain military"], archetype: coat, weight: 8, reason: "Seed"}
+      - {name: "Destroyed tee", aliases: ["balmain destroyed tee", "balmain ripped tee"], archetype: graphic_tee, weight: 6, reason: "Seed"}
+    sources: ["https://en.wikipedia.org/wiki/Christophe_Decarnin", "https://www.complex.com/style/a/mike-destefano/a-look-back-at-olivier-rousteings-biggest-moments-at-balmain"]
+    confidence: low
+    verify: true
+  - id: balmain__aw09
+    brand: balmain
+    era: balmain__decarnin
+    code: AW09
+    year: 2009
+    name: UNKNOWN
+    aliases: ["aw09", "fw09", "a/w 2009", "balmain aw09", "balmain fall 2009"]
+    weight: 7
+    reason: "Decarnin womenswear peak; piece mapping UNVERIFIED."
+    grail_pieces: []
+    sources: ["https://en.wikipedia.org/wiki/Christophe_Decarnin"]
+    confidence: low
+    verify: true
+  - id: balmain__aw10
+    brand: balmain
+    era: balmain__decarnin
+    code: AW10
+    year: 2010
+    name: UNKNOWN
+    aliases: ["aw10", "fw10", "a/w 2010", "fall 2010", "balmain aw10", "balmain fall 2010", "balmain homme aw10"]
+    weight: 8
+    reason: "Menswear (Balmain Homme) debut season: holey jeans slipped over leather biker warm-ups (Interview Fall 2010). SEED CORRECTION: the name 'Coin' for AW10 bikers was NOT found in any source; do not use 'coin' as a season name."
+    grail_pieces:
+      - {name: "Biker jeans", aliases: ["balmain biker jeans", "ribbed knee jeans", "balmain biker denim"], archetype: denim, weight: 9, reason: "Biker denim is the signature piece"}
+    sources: ["https://www.interviewmagazine.com/fashion/balmain-men-paris-fall-2010-paris", "https://www.complex.com/style/a/mike-destefano/a-look-back-at-olivier-rousteings-biggest-moments-at-balmain"]
+    confidence: med
+  # ===================== RICK OWENS =====================
+  - id: rick_owens__aw08
+    brand: rick_owens
+    era: rick_owens__early
+    code: AW08
+    year: 2008
+    name: "Stag"
+    aliases: ["aw08", "fw08", "a/w 2008", "fall 2008", "stag"]
+    weight: 6
+    reason: "FIT museum record: Fall 2008 'Stag' (shown in England). Only verified old-Rick season name found."
+    grail_pieces: []
+    sources: ["https://sites.fitnyc.edu/depts/museum/Gothic/Owens.html"]
+    confidence: med
+  - id: rick_owens__aw09
+    brand: rick_owens
+    era: rick_owens__early
+    code: AW09
+    year: 2009
+    name: UNKNOWN
+    aliases: ["aw09", "fw09", "a/w 2009", "fall 2009", "drkshdw fw09", "drkshdw aw09"]
+    weight: 6
+    reason: "DRKSHDW FW09 collection confirmed to exist (Hypebeast); outerwear previews for mainline FW09 also exist. Piece-level grails UNKNOWN."
+    grail_pieces: []
+    sources: ["https://hypebeast.com/2009/10/rick-owens-drkshdw-2009-fallwinter-collection", "https://hypebeast.com/2009/6/rick-owens-2009-fallwinter-outerwear-preview"]
+    confidence: low
+    verify: true
+  - id: rick_owens__ss16
+    brand: rick_owens
+    era: rick_owens__mid
+    code: SS16
+    year: 2016
+    name: "Cyclops"
+    aliases: ["ss16", "s/s 2016", "spring 2016", "cyclops"]
+    weight: 5
+    reason: "Cyclops = SS16 (Dazed). Mid-era; not old-Rick."
+    grail_pieces: []
+    sources: ["https://www.dazeddigital.com/fashion/article/38420/1/ten-of-rick-owens-most-memorable-shows"]
+    confidence: med
+  - id: rick_owens__aw21
+    brand: rick_owens
+    era: rick_owens__recent
+    code: AW21
+    year: 2021
+    name: "Gethsemane"
+    aliases: ["aw21", "fw21", "a/w 2021", "gethsemane"]
+    weight: 4
+    reason: "SEED CORRECTION: 'Gethsemane' is Men's AW21 (leather bodysuit; BoF captions), a RECENT collection, not an old-Rick grail. Season attribution from captions; med confidence."
+    grail_pieces: []
+    sources: ["https://www.businessoffashion.com/reviews/fashion-week/at-rick-owens-modesty-in-monumentalism", "https://theshelteronline.com/inspiration/presenting-rick-owens-drkshdw"]
+    confidence: low
+    verify: true
+  - id: rick_owens__aw22
+    brand: rick_owens
+    era: rick_owens__recent
+    code: AW22
+    year: 2022
+    name: "Strobe"
+    aliases: ["aw22", "fw22", "a/w 2022", "fall 2022", "strobe"]
+    weight: 5
+    reason: "SEED CORRECTION: 'Strobe' is FW22 (Hypebeast, menswear at Palais de Tokyo), a recent cult season, not a pre-2012 grail. Dust-coloured sequins were in this show; 'Dust' itself is a colour, not a season."
+    grail_pieces:
+      - {name: "Strobe sequin/leather pieces", aliases: ["strobe leather", "strobe sequin"], archetype: leather_jacket, weight: 5, reason: "Recent cult"}
+    sources: ["https://hypebeast.com/2022/1/rick-owens-fall-2022-menswear-strobe-runway-show-collection-paris-fashion-week", "https://www.russh.com/rick-owens-fall-2022-show/"]
+    confidence: high
+  # ===================== UNDERCOVER =====================
+  - id: undercover__ss03
+    brand: undercover
+    era: undercover__early
+    code: SS03
+    year: 2003
+    name: "Scab"
+    aliases: ["ss03", "s/s 2003", "spring 2003", "scab", "undercover scab", "light and magic", "スキャブ", "瘡蓋"]
+    weight: 10
+    reason: "CONFIRMED: SS03 'Scab' (Paris debut shown Oct 2002; gothic drama, fluorescent chiffon burqas); widely called Takahashi's defining collection."
+    grail_pieces:
+      - {name: "Scab knit / sweater", aliases: ["scab sweater", "scab cardigan"], archetype: knit, weight: 9, reason: "Scab knitwear is collector-grade"}
+      - {name: "Scab jacket", aliases: ["scab bomber", "scab leather"], archetype: leather_jacket, weight: 9, reason: "Runway key pieces"}
+    sources: ["https://www.lepetitarchive.com/collections-undercover-ss03-scab-history/", "https://www.archivepdf.net/undercover-ss2003-scab-light-and-magic-id-magazine", "https://www.1stdibs.com/buy/undercover-scab/"]
+    confidence: high
+  - id: undercover__aw04
+    brand: undercover
+    era: undercover__early
+    code: AW04
+    year: 2004
+    name: "But Beautiful"
+    aliases: ["aw04", "fw04", "a/w 2004", "fall 2004", "but beautiful", "but beautiful i"]
+    weight: 9
+    reason: "Named alongside SS06 'T' and SS03 'Scab' as an exceptional Undercover collection (Highsnobiety/Hypebeast snippet)."
+    grail_pieces: []
+    sources: ["https://highsnobiety.com/p/jun-takahashi-history", "https://hypebeast.com/2015/6/undercovers-greatest-hits"]
+    confidence: med
+  - id: undercover__aw05
+    brand: undercover
+    era: undercover__early
+    code: AW05
+    year: 2005
+    name: "Arts & Crafts"
+    aliases: ["aw05", "fw05", "a/w 2005", "fall 2005", "arts and crafts", "arts & crafts", "arts crafts"]
+    weight: 9
+    reason: "TASTE_PROFILE seed 'FW05 Arts & Crafts' — NOT confirmed by any URL seen; kept as seed. A Dec-2005 Japan Times piece discusses 'Zamiang' (Takahashi's alias) around this period."
+    grail_pieces: []
+    sources: ["https://www.japantimes.co.jp/life/2005/12/20/style/undercovers-zamiang-billionaire-boys-club-vs-the-ice-cream-store-youth-dew"]
+    confidence: low
+    verify: true
+  - id: undercover__ss06
+    brand: undercover
+    era: undercover__early
+    code: SS06
+    year: 2006
+    name: "T"
+    aliases: ["ss06", "s/s 2006", "spring 2006", "t collection", "cosmos bear", "undercover cosmos"]
+    weight: 9
+    reason: "CONFIRMED collection name 'T' (SS06) in Highsnobiety snippet. SEED NOTE: 'Last Scream of Zamiang' paired with SS06 in the seed could not be verified and may be a different season/product — not stored as a season."
+    grail_pieces:
+      - {name: "Cosmos bear tee/knit", aliases: ["cosmos bear", "t bear"], archetype: graphic_tee, weight: 8, reason: "Seed; bear graphics tied to this era (UNVERIFIED mapping)"}
+    sources: ["https://highsnobiety.com/p/jun-takahashi-history", "https://hypebeast.com/2015/6/undercovers-greatest-hits"]
+    confidence: med
+  # ===================== NUMBER (N)INE =====================
+  - id: number_nine__ss03
+    brand: number_nine
+    era: number_nine__miyashita
+    code: SS03
+    year: 2003
+    name: "Touch Me I'm Sick"
+    aliases: ["ss03", "03ss", "s/s 2003", "spring 2003", "touch me im sick", "touch me i'm sick", "tmis"]
+    weight: 10
+    reason: "Cult collection (Grailed has a dedicated browse page). DISPUTE: one blog says AW03, an archive PDF says SS2003 ('TOUCHMEIMSICK - A NEW MORNING'). Leather jackets noted as very high-value (price claim not verified, not stored)."
+    dispute: "AW03 vs SS03"
+    grail_pieces:
+      - {name: "Touch Me I'm Sick leather jacket", aliases: ["tmis leather", "tmis jacket"], archetype: leather_jacket, weight: 10, reason: "Top-tier N9 grail"}
+      - {name: "Touch Me I'm Sick tee/hoodie", aliases: ["tmis tee"], archetype: graphic_tee, weight: 9, reason: "Collector graphics"}
+    sources: ["https://www.grailed.com/browse/number-n-ine-touch-me-im-sick", "https://hypebeast.com/it/2026/4/number-nine-by-takahiro-miyashita-new-arrivals-3-collection-release-info", "https://archivepdf.net/post/the-musical-composition-of-clothing-nirvana-and-number-n-ine"]
+    confidence: low
+    verify: true
+  - id: number_nine__aw04
+    brand: number_nine
+    era: number_nine__miyashita
+    code: AW04
+    year: 2004
+    name: "Give Peace a Chance"
+    aliases: ["aw04", "fw04", "a/w 2004", "give peace a chance", "anti war tee", "anti-war tee", "give peace a chance tee", "ギブ期", "ギブピース"]
+    weight: 8
+    reason: "SEED CORRECTION: TASTE_PROFILE says SS04; Truss Archive says Autumn/Winter 2004 for 'Give Peace a Chance' (Anti-War tee: white typography, sliced distressing)."
+    grail_pieces:
+      - {name: "Anti-War tee", aliases: ["give peace a chance tee", "anti war tee"], archetype: graphic_tee, weight: 8, reason: "Truss Archive"}
+    sources: ["https://trussarchive.com/editorials/the-most-iconic-number-nine-tees-where-to-find-them"]
+    confidence: med
+  - id: number_nine__aw05
+    brand: number_nine
+    era: number_nine__miyashita
+    code: AW05
+    year: 2005
+    name: "The High Streets"
+    aliases: ["aw05", "fw05", "a/w 2005", "fall 2005", "the high streets", "high streets", "high street", "ハイストリート"]
+    weight: 10
+    reason: "CONFIRMED AW2005: London punk/rock tribute (flannels, cardigans, silver jewelry); Grailed calls it Miyashita's magnum opus."
+    grail_pieces:
+      - {name: "High Streets knit / cardigan", aliases: ["high streets cardigan", "skull cashmere", "cashmere skull"], archetype: knit, weight: 9, reason: "Skull cashmere is the icon"}
+      - {name: "High Streets jacket / flannel", aliases: ["high streets flannel", "high streets jacket"], archetype: shirt, weight: 8, reason: "Per archive description"}
+    sources: ["https://nssmag.com/en/fashion/31966/number-n-ine-takahiro-miyashita", "https://hypebeast.com/2005/9/number-nine-aw-catalog", "https://www.grailed.com/designers/number-n-ine/accessories-miscellaneous"]
+    confidence: med
+  - id: number_nine__aw06
+    brand: number_nine
+    era: number_nine__miyashita
+    code: AW06
+    year: 2006
+    name: "Noir"
+    aliases: ["aw06", "fw06", "a/w 2006", "a/w 06-07", "fall 2006", "noir", "number nine noir", "ノワール", "ノアール"]
+    weight: 9
+    reason: "CONFIRMED AW06-07 mostly-black season (Hypebeast 'A/W 06-07'); an archive PDF calls it the all-black 'Noir' season with Celtic influence."
+    grail_pieces:
+      - {name: "Noir leather/knit", aliases: ["noir leather jacket", "noir knit"], archetype: leather_jacket, weight: 8, reason: "Black-on-black pieces"}
+    sources: ["https://hypebeast.com/2006/3/number-nine-aw-06-07", "https://archivepdf.net/post/the-musical-composition-of-clothing-nirvana-and-number-n-ine"]
+    confidence: med
+  - id: number_nine__ss08
+    brand: number_nine
+    era: number_nine__miyashita
+    code: SS08
+    year: 2008
+    name: "Birds"
+    aliases: ["ss08", "s/s 2008", "summer 2008", "spring 2008", "birds"]
+    weight: 7
+    reason: "Hypebeast: 'Number (N)ine 2008 Summer Birds Collection'."
+    grail_pieces: []
+    sources: ["https://hypebeast.com/2008/1/number-nine-2008-summer-birds-collection"]
+    confidence: med
+  - id: number_nine__aw08
+    brand: number_nine
+    era: number_nine__miyashita
+    code: AW08
+    year: 2008
+    name: "My Own Private Portland"
+    aliases: ["aw08", "fw08", "f/w 08", "fall 2008", "my own private portland", "private portland", "portland"]
+    weight: 9
+    reason: "CONFIRMED F/W 08 (Grailed editorial); Fall/Winter 2008 and 2009 are among the most beloved."
+    grail_pieces:
+      - {name: "Portland outerwear / knit", aliases: ["portland jacket", "portland cardigan"], archetype: coat, weight: 8, reason: "Beloved season (pieces UNVERIFIED)"}
+    sources: ["https://www.grailed.com/designers/number-n-ine/accessories-miscellaneous", "https://www.thefashionisto.com/number-nine-fall-winter-2008/"]
+    confidence: med
+  - id: number_nine__aw09
+    brand: number_nine
+    era: number_nine__miyashita
+    code: AW09
+    year: 2009
+    name: "A Closed Feeling"
+    aliases: ["aw09", "fw09", "a/w 2009", "fall 2009", "a closed feeling", "last songs", "closed feeling", "final collection", "クローズドフィーリング"]
+    weight: 10
+    reason: "Last Miyashita collection (Fall 2009). DISPUTE: Hypebeast files the Fall/Winter 2009 collection as 'Last Songs'; Grailed uses 'A Closed Feeling' — treat as aliases of one season."
+    dispute: "'A Closed Feeling' vs 'Last Songs' naming"
+    grail_pieces: []
+    sources: ["https://hypebeast.com/2009/7/number-nine-2009-fall-winter-last-songs-collection", "https://hypebeast.com/2009/02/number-nine-to-shut-down/", "https://www.grailed.com/designers/number-n-ine/accessories-miscellaneous"]
+    confidence: med
+  # ===================== RAF SIMONS =====================
+  - id: raf_simons__aw01
+    brand: raf_simons
+    era: raf_simons__early
+    code: AW01
+    year: 2001
+    name: "Riot Riot Riot"
+    aliases: ["aw01", "fw01", "a/w 2001", "fall 2001", "riot riot riot", "riot", "riot parka", "riot bomber", "ライオット"]
+    weight: 10
+    reason: "CONFIRMED AW01 (Dazed/Highsnobiety). Richey Edwards reference; anticipated post-9/11 unrest."
+    grail_pieces:
+      - {name: "Riot bomber / parka", aliases: ["riot riot riot bomber", "riot parka", "riot jacket"], archetype: coat, weight: 10, reason: "Signature outerwear"}
+    sources: ["https://www.dazeddigital.com/fashion/article/29467/1/tracing-raf-simons-love-for-teenage-riot-and-rock-and-roll", "https://www.1stdibs.com/buy/raf-simons-riot-riot-riot"]
+    confidence: high
+  - id: raf_simons__ss02
+    brand: raf_simons
+    era: raf_simons__early
+    code: SS02
+    year: 2002
+    name: "Woe Onto Those Who Spit on Youth"
+    aliases: ["ss02", "s/s 2002", "spring 2002", "woe onto those who spit on youth", "woe unto those who spit on youth", "woe onto those"]
+    weight: 8
+    reason: "Listed as SS02 in coverage (verify exact title wording)."
+    grail_pieces: []
+    sources: ["https://www.dazeddigital.com/fashion/article/29467/1/tracing-raf-simons-love-for-teenage-riot-and-rock-and-roll"]
+    confidence: low
+    verify: true
+  - id: raf_simons__aw02
+    brand: raf_simons
+    era: raf_simons__early
+    code: AW02
+    year: 2002
+    name: "Virginia Creeper"
+    aliases: ["aw02", "fw02", "a/w 2002", "fall 2002", "virginia creeper", "ヴァージニアクリーパー", "バージニアクリーパー"]
+    weight: 10
+    reason: "CONFIRMED AW02: dark, introspective follow-up to Riot."
+    grail_pieces:
+      - {name: "Virginia Creeper knit / outerwear", aliases: ["virginia creeper sweater", "virginia creeper jacket"], archetype: knit, weight: 9, reason: "Collector pieces (mapping UNVERIFIED)"}
+    sources: ["https://www.dazeddigital.com/fashion/article/29467/1/tracing-raf-simons-love-for-teenage-riot-and-rock-and-roll", "https://www.highsnobiety.com/p/raf-simons-most-iconic-pieces"]
+    confidence: med
+  - id: raf_simons__ss03
+    brand: raf_simons
+    era: raf_simons__early
+    code: SS03
+    year: 2003
+    name: "Consumed"
+    aliases: ["ss03", "s/s 2003", "spring 2003", "consumed"]
+    weight: 9
+    reason: "CONFIRMED SS03; culmination of the two-year treatise begun with AW01."
+    grail_pieces: []
+    sources: ["https://www.dazeddigital.com/fashion/article/29467/1/tracing-raf-simons-love-for-teenage-riot-and-rock-and-roll"]
+    confidence: med
+  - id: raf_simons__aw03
+    brand: raf_simons
+    era: raf_simons__early
+    code: AW03
+    year: 2003
+    name: "Closer"
+    aliases: ["aw03", "fw03", "a/w 2003", "fall 2003", "closer", "peter saville", "new order", "power corruption and lies", "joy division"]
+    weight: 10
+    reason: "CONFIRMED AW03: Peter Saville/Factory Records artwork (New Order Power, Corruption and Lies)."
+    grail_pieces:
+      - {name: "Closer Peter Saville graphic pieces", aliases: ["new order sweater", "pcl sweater", "closer knit"], archetype: knit, weight: 9, reason: "Saville artwork pieces"}
+    sources: ["https://www.dazeddigital.com/fashion/article/29467/1/tracing-raf-simons-love-for-teenage-riot-and-rock-and-roll", "https://www.highsnobiety.com/p/raf-simons-most-iconic-pieces"]
+    confidence: med
+  # ===================== BEAUTY:BEAST =====================
+  - id: beauty_beast__aw98
+    brand: beauty_beast
+    era: beauty_beast__original
+    code: AW98
+    year: 1998
+    name: UNKNOWN
+    aliases: ["aw98", "fw98", "1998aw", "98aw", "aw98-99", "aw 98 99", "cospa vs beauty:beast", "cospa beauty beast"]
+    weight: 8
+    reason: "AW1998 'COSPA vs beauty:beast' collaboration (Japanese profile). Giant safety pin cited as signature from AW98-99 (another source). SEED NOTE: no Undercover/20471120 collab was found."
+    grail_pieces:
+      - {name: "Giant safety pin piece", aliases: ["giant safety pin", "big safety pin", "safety pin jacket", "safety pin knit"], archetype: knit, weight: 9, reason: "Signature piece; exact garment type UNVERIFIED"}
+    sources: ["https://www.fashionsnap.com/article/yamashita-takao/", "https://www.archivepdf.net/articles/takao-yamashita-entering-the-belly-of-the-beauty-beast"]
+    confidence: low
+    verify: true
+
+  # ---- Added at synthesis by the Orchestrator. Names are from background knowledge, flagged verify. ----
+  - {id: rick_owens__aw02, brand: rick_owens, era: rick_owens__early, code: AW02, year: 2002, name: Sparrows, aliases: [aw02, fw02, 02aw, 02fw, fall 2002], ambiguous_aliases: [sparrows], weight: 8, reason: Early mainline, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw03, brand: rick_owens, era: rick_owens__early, code: AW03, year: 2003, name: Trucker, aliases: [aw03, fw03, 03aw, 03fw, fall 2003], ambiguous_aliases: [trucker], weight: 8, reason: Early mainline, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw04, brand: rick_owens, era: rick_owens__early, code: AW04, year: 2004, name: Queen, aliases: [aw04, fw04, 04aw, 04fw, fall 2004], ambiguous_aliases: [queen], weight: 8, reason: Early mainline, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw05, brand: rick_owens, era: rick_owens__early, code: AW05, year: 2005, name: Moog, aliases: [aw05, fw05, 05aw, 05fw, fall 2005, moog], ambiguous_aliases: [], weight: 9, reason: The "Moog era" the buyer named; early knits and leathers, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss06, brand: rick_owens, era: rick_owens__early, code: SS06, year: 2006, name: Tungsten, aliases: [ss06, 06ss, spring 2006, tungsten], ambiguous_aliases: [], weight: 8, reason: Early mainline, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw06, brand: rick_owens, era: rick_owens__early, code: AW06, year: 2006, name: Dustulator, aliases: [aw06, fw06, 06aw, 06fw, fall 2006, dustulator], ambiguous_aliases: [], weight: 9, reason: Source of the Dustulator Dunk; likely what "Dust" refers to, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss07, brand: rick_owens, era: rick_owens__early, code: SS07, year: 2007, name: Wishbone, aliases: [ss07, 07ss, spring 2007, wishbone], ambiguous_aliases: [], weight: 8, reason: Early mainline, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw07, brand: rick_owens, era: rick_owens__early, code: AW07, year: 2007, name: Exploder, aliases: [aw07, fw07, 07aw, 07fw, fall 2007, exploder], ambiguous_aliases: [], weight: 8, reason: Early mainline, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss08, brand: rick_owens, era: rick_owens__early, code: SS08, year: 2008, name: Creatch, aliases: [ss08, 08ss, spring 2008, creatch], ambiguous_aliases: [], weight: 8, reason: Early mainline; Creatch cargos, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss09, brand: rick_owens, era: rick_owens__early, code: SS09, year: 2009, name: Strutter, aliases: [ss09, 09ss, spring 2009, strutter], ambiguous_aliases: [], weight: 8, reason: First dedicated menswear show season, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss10, brand: rick_owens, era: rick_owens__early, code: SS10, year: 2010, name: Release, aliases: [ss10, 10ss, spring 2010], ambiguous_aliases: [release], weight: 7, reason: Early menswear, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw10, brand: rick_owens, era: rick_owens__early, code: AW10, year: 2010, name: Gleam, aliases: [aw10, fw10, 10aw, 10fw, fall 2010], ambiguous_aliases: [gleam], weight: 7, reason: Early menswear, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss11, brand: rick_owens, era: rick_owens__early, code: SS11, year: 2011, name: Anthem, aliases: [ss11, 11ss, spring 2011], ambiguous_aliases: [anthem], weight: 7, reason: Early menswear, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw11, brand: rick_owens, era: rick_owens__early, code: AW11, year: 2011, name: Limo, aliases: [aw11, fw11, 11aw, 11fw, fall 2011], ambiguous_aliases: [limo], weight: 7, reason: Early menswear, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss12, brand: rick_owens, era: rick_owens__mid, code: SS12, year: 2012, name: Naska, aliases: [ss12, 12ss, spring 2012, naska], ambiguous_aliases: [], weight: 6, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw12, brand: rick_owens, era: rick_owens__mid, code: AW12, year: 2012, name: Mountain, aliases: [aw12, fw12, 12aw, 12fw, fall 2012], ambiguous_aliases: [mountain], weight: 6, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss13, brand: rick_owens, era: rick_owens__mid, code: SS13, year: 2013, name: Island, aliases: [ss13, 13ss, spring 2013], ambiguous_aliases: [island], weight: 6, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw13, brand: rick_owens, era: rick_owens__mid, code: AW13, year: 2013, name: Plinth, aliases: [aw13, fw13, 13aw, 13fw, fall 2013, plinth], ambiguous_aliases: [], weight: 6, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss14, brand: rick_owens, era: rick_owens__mid, code: SS14, year: 2014, name: Vicious, aliases: [ss14, 14ss, spring 2014], ambiguous_aliases: [vicious], weight: 6, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw14, brand: rick_owens, era: rick_owens__mid, code: AW14, year: 2014, name: Moody, aliases: [aw14, fw14, 14aw, 14fw, fall 2014], ambiguous_aliases: [moody], weight: 6, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss15, brand: rick_owens, era: rick_owens__mid, code: SS15, year: 2015, name: Faun, aliases: [ss15, 15ss, spring 2015, faun], ambiguous_aliases: [], weight: 6, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw15, brand: rick_owens, era: rick_owens__mid, code: AW15, year: 2015, name: Sphinx, aliases: [aw15, fw15, 15aw, 15fw, fall 2015, sphinx], ambiguous_aliases: [], weight: 6, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw16, brand: rick_owens, era: rick_owens__mid, code: AW16, year: 2016, name: Mastodon, aliases: [aw16, fw16, 16aw, 16fw, fall 2016, mastodon], ambiguous_aliases: [], weight: 5, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss17, brand: rick_owens, era: rick_owens__mid, code: SS17, year: 2017, name: Walrus, aliases: [ss17, 17ss, spring 2017, walrus], ambiguous_aliases: [], weight: 5, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw17, brand: rick_owens, era: rick_owens__mid, code: AW17, year: 2017, name: Glitter, aliases: [aw17, fw17, 17aw, 17fw, fall 2017], ambiguous_aliases: [glitter], weight: 5, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss18, brand: rick_owens, era: rick_owens__mid, code: SS18, year: 2018, name: Dirt, aliases: [ss18, 18ss, spring 2018], ambiguous_aliases: [dirt], weight: 5, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw18, brand: rick_owens, era: rick_owens__mid, code: AW18, year: 2018, name: Sisyphus, aliases: [aw18, fw18, 18aw, 18fw, fall 2018, sisyphus], ambiguous_aliases: [], weight: 5, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss19, brand: rick_owens, era: rick_owens__mid, code: SS19, year: 2019, name: Babel, aliases: [ss19, 19ss, spring 2019, babel], ambiguous_aliases: [], weight: 5, reason: Mid era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw19, brand: rick_owens, era: rick_owens__mid, code: AW19, year: 2019, name: Larry, aliases: [aw19, fw19, 19aw, 19fw, fall 2019], ambiguous_aliases: [larry], weight: 5, reason: Larry LeGaspi season, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss20, brand: rick_owens, era: rick_owens__recent, code: SS20, year: 2020, name: Tecuatl, aliases: [ss20, 20ss, spring 2020, tecuatl], ambiguous_aliases: [], weight: 4, reason: Recent, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw20, brand: rick_owens, era: rick_owens__recent, code: AW20, year: 2020, name: Performa, aliases: [aw20, fw20, 20aw, 20fw, fall 2020, performa], ambiguous_aliases: [], weight: 4, reason: Recent, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss21, brand: rick_owens, era: rick_owens__recent, code: SS21, year: 2021, name: Phlegethon, aliases: [ss21, 21ss, spring 2021, phlegethon], ambiguous_aliases: [], weight: 4, reason: Recent, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss22, brand: rick_owens, era: rick_owens__recent, code: SS22, year: 2022, name: Fogachine, aliases: [ss22, 22ss, spring 2022, fogachine], ambiguous_aliases: [], weight: 4, reason: Recent, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__ss23, brand: rick_owens, era: rick_owens__recent, code: SS23, year: 2023, name: Edfu, aliases: [ss23, 23ss, spring 2023, edfu], ambiguous_aliases: [], weight: 4, reason: Recent, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: rick_owens__aw23, brand: rick_owens, era: rick_owens__recent, code: AW23, year: 2023, name: Luxor, aliases: [aw23, fw23, 23aw, 23fw, fall 2023, luxor], ambiguous_aliases: [], weight: 4, reason: Recent, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: number_nine__aw02, brand: number_nine, era: number_nine__miyashita, code: AW02, year: 2002, name: Nowhere Man, aliases: [aw02, fw02, 02aw, 02fw, fall 2002, nowhere man], ambiguous_aliases: [], weight: 8, reason: Early Miyashita, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: number_nine__ss05, brand: number_nine, era: number_nine__miyashita, code: SS05, year: 2005, name: Night Crawler, aliases: [ss05, 05ss, spring 2005, night crawler], ambiguous_aliases: [], weight: 8, reason: Miyashita era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: number_nine__ss06, brand: number_nine, era: number_nine__miyashita, code: SS06, year: 2006, name: Welcome to the Shadow, aliases: [ss06, 06ss, spring 2006, welcome to the shadow], ambiguous_aliases: [], weight: 8, reason: Miyashita era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: number_nine__ss07, brand: number_nine, era: number_nine__miyashita, code: SS07, year: 2007, name: About a Boy, aliases: [ss07, 07ss, spring 2007, about a boy], ambiguous_aliases: [], weight: 8, reason: Miyashita era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: number_nine__aw07, brand: number_nine, era: number_nine__miyashita, code: AW07, year: 2007, name: Love God Murder, aliases: [aw07, fw07, 07aw, 07fw, fall 2007, love god murder], ambiguous_aliases: [], weight: 8, reason: Miyashita era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: number_nine__ss09, brand: number_nine, era: number_nine__miyashita, code: SS09, year: 2009, name: Lonesome Heroes, aliases: [ss09, 09ss, spring 2009, lonesome heroes], ambiguous_aliases: [], weight: 8, reason: Penultimate Miyashita season, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__aw00, brand: undercover, era: undercover__early, code: AW00, year: 2000, name: Melting Pot, aliases: [aw00, fw00, 00aw, 00fw, fall 2000, melting pot], ambiguous_aliases: [], weight: 8, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__ss01, brand: undercover, era: undercover__early, code: SS01, year: 2001, name: Chaotic Discord, aliases: [ss01, 01ss, spring 2001, chaotic discord], ambiguous_aliases: [], weight: 8, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__aw01, brand: undercover, era: undercover__early, code: AW01, year: 2001, name: D.A.V.F., aliases: [aw01, fw01, 01aw, 01fw, fall 2001, d.a.v.f.], ambiguous_aliases: [], weight: 8, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__ss02, brand: undercover, era: undercover__early, code: SS02, year: 2002, name: The Illusion of Haze, aliases: [ss02, 02ss, spring 2002, the illusion of haze], ambiguous_aliases: [], weight: 8, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__aw02, brand: undercover, era: undercover__early, code: AW02, year: 2002, name: Witch's Cell Division, aliases: [aw02, fw02, 02aw, 02fw, fall 2002, witch's cell division], ambiguous_aliases: [], weight: 9, reason: Early Takahashi; hybrid/transforming pieces, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__aw03, brand: undercover, era: undercover__early, code: AW03, year: 2003, name: Paper Doll, aliases: [aw03, fw03, 03aw, 03fw, fall 2003, paper doll], ambiguous_aliases: [], weight: 8, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__ss04, brand: undercover, era: undercover__early, code: SS04, year: 2004, name: Languid, aliases: [ss04, 04ss, spring 2004, languid], ambiguous_aliases: [], weight: 8, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__ss05, brand: undercover, era: undercover__early, code: SS05, year: 2005, name: But Beautiful II, aliases: [ss05, 05ss, spring 2005, but beautiful ii], ambiguous_aliases: [], weight: 8, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__aw06, brand: undercover, era: undercover__early, code: AW06, year: 2006, name: Guruguru, aliases: [aw06, fw06, 06aw, 06fw, fall 2006, guruguru], ambiguous_aliases: [], weight: 8, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__ss07, brand: undercover, era: undercover__early, code: SS07, year: 2007, name: Purple, aliases: [ss07, 07ss, spring 2007], ambiguous_aliases: [purple], weight: 7, reason: Early Takahashi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__ss09, brand: undercover, era: undercover__early, code: SS09, year: 2009, name: Neoboy, aliases: [ss09, 09ss, spring 2009, neoboy], ambiguous_aliases: [], weight: 7, reason: Late early era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__aw09, brand: undercover, era: undercover__early, code: AW09, year: 2009, name: Earmuff Maniac, aliases: [aw09, fw09, 09aw, 09fw, fall 2009, earmuff maniac], ambiguous_aliases: [], weight: 7, reason: Late early era, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: undercover__ss10, brand: undercover, era: undercover__early, code: SS10, year: 2010, name: Less But Better, aliases: [ss10, 10ss, spring 2010, less but better], ambiguous_aliases: [], weight: 7, reason: Dieter Rams season, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__ss98, brand: raf_simons, era: raf_simons__early, code: SS98, year: 1998, name: Black Palms, aliases: [ss98, 98ss, spring 1998, black palms], ambiguous_aliases: [], weight: 9, reason: Early Raf, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__aw98, brand: raf_simons, era: raf_simons__early, code: AW98, year: 1998, name: Radioactivity, aliases: [aw98, fw98, 98aw, 98fw, fall 1998, radioactivity], ambiguous_aliases: [], weight: 9, reason: Kraftwerk season, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__aw99, brand: raf_simons, era: raf_simons__early, code: AW99, year: 1999, name: Disorder Incubation Isolation, aliases: [aw99, fw99, 99aw, 99fw, fall 1999, disorder incubation isolation], ambiguous_aliases: [], weight: 9, reason: Early Raf, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__ss00, brand: raf_simons, era: raf_simons__early, code: SS00, year: 2000, name: Summa Cum Laude, aliases: [ss00, 00ss, spring 2000, summa cum laude], ambiguous_aliases: [], weight: 9, reason: Early Raf, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__ss04, brand: raf_simons, era: raf_simons__early, code: SS04, year: 2004, name: May the Circle Be Unbroken, aliases: [ss04, 04ss, spring 2004, may the circle be unbroken], ambiguous_aliases: [], weight: 8, reason: Early Raf, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__aw04, brand: raf_simons, era: raf_simons__early, code: AW04, year: 2004, name: Waves, aliases: [aw04, fw04, 04aw, 04fw, fall 2004], ambiguous_aliases: [waves], weight: 8, reason: Early Raf, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__ss05, brand: raf_simons, era: raf_simons__early, code: SS05, year: 2005, name: History of My World, aliases: [ss05, 05ss, spring 2005, history of my world], ambiguous_aliases: [], weight: 8, reason: Early Raf, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__aw14, brand: raf_simons, era: raf_simons__late, code: AW14, year: 2014, name: Sterling Ruby, aliases: [aw14, fw14, 14aw, 14fw, fall 2014, sterling ruby], ambiguous_aliases: [], weight: 8, reason: Raf Simons/Sterling Ruby collaboration collection, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__aw16, brand: raf_simons, era: raf_simons__late, code: AW16, year: 2016, name: Nightmares and Dreams, aliases: [aw16, fw16, 16aw, 16fw, fall 2016, nightmares and dreams], ambiguous_aliases: [], weight: 6, reason: Oversized varsity knits, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: raf_simons__ss17, brand: raf_simons, era: raf_simons__late, code: SS17, year: 2017, name: Mapplethorpe, aliases: [ss17, 17ss, spring 2017, mapplethorpe], ambiguous_aliases: [], weight: 6, reason: Robert Mapplethorpe prints, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: dior_homme__aw02, brand: dior_homme, era: dior_homme__hedi, code: AW02, year: 2002, name: Reflect, aliases: [aw02, fw02, 02aw, 02fw, fall 2002], ambiguous_aliases: [reflect], weight: 8, reason: Early Hedi, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: helmut_lang__aw99, brand: helmut_lang, era: helmut_lang__helmut, code: AW99, year: 1999, name: UNKNOWN, aliases: [aw99, fw99, 99aw, 99fw, fall 1999], ambiguous_aliases: [], weight: 10, reason: Astro biker / moto season, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: helmut_lang__aw03, brand: helmut_lang, era: helmut_lang__helmut, code: AW03, year: 2003, name: UNKNOWN, aliases: [aw03, fw03, 03aw, 03fw, fall 2003], ambiguous_aliases: [], weight: 9, reason: Bondage strap pieces, grail_pieces: [], sources: [orchestrator background knowledge; not web-verified in the research session], confidence: low, verify: true}
+  - {id: number_nine__ss04, brand: number_nine, era: number_nine__miyashita, code: SS04, year: 2004, name: "Dream Baby Dream", aliases: [ss04, 04ss, spring 2004, dream baby dream], ambiguous_aliases: [], weight: 8, reason: "Miyashita era; name as used by an archive seller's listing", grail_pieces: [], sources: ["https://driewgarments.com/products/number-nine-ss04-dream-baby-dream-wool-spider-knit-long-sleeves-1"], confidence: med, verify: true}

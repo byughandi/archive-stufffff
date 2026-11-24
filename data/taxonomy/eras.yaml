@@ -1,0 +1,936 @@
+# R2 eras.yaml. years: [start, end]; end null = ongoing. Boundaries are by SHOW/COLLECTION year, not retail year.
+# weight is the era multiplier for the buyer in TASTE_PROFILE (low = recognised but unwanted).
+# season_code_regex: UNKNOWN unless documented with real examples. A wrong regex is worse than none.
+eras:
+  # ===== DIOR =====
+  - id: dior_homme__hedi
+    brand: dior_homme
+    designer: Hedi Slimane
+    years: [2000, 2007]
+    weight: 10
+    aliases: ["hedi", "hedi slimane", "hedi era", "slimane", "hedi dior", "hedi years", "hedi slimane dior homme", "slimane era", "hedi homme"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Tag reference codes lead with ONE year digit. Only documented example: '5EH1015678 E47 B6A8' decoded by a Dior Homme reseller as SS05 (5=2005, glitter jeans). The letter(s) after the digit probably encode season but only one example was seen, so no regex. The digit repeats each decade (5 could also be 2015 = KVA/Kim Jones), so never date from the digit alone: combine with label wording, cut names and seller season text (e.g. 'ss04', 'aw05')."
+      label: ["woven 'Dior Homme' label with plain 'Dior Homme' wording (Christian Dior Monsieur labels are the pre-2000 line)", "season code printed on white care/reference tag"]
+      made_in: ["italy", "japan"]
+      model_names: ["19cm", "21cm", "strip", "luster", "clawmark", "waxed denim", "coated denim", "super slim", "skinny", "tuxedo", "jodhpur"]
+      keywords: ["hedi", "slimane", "ss03", "aw03", "ss04", "aw04", "ss05", "aw05", "ss06", "aw06", "ss07", "aw07", "skinny jeans 27", "tapered", "bondage", "tuxedo", "エディ期", "エディスリマン"]
+    anti_cues: ["kva", "kris van assche", "van assche", "kim jones", "dior men", "bee", "bee embroidery", "2019", "2020", "2021", "2022", "oblique", "dior homme 2018", "ss18", "aw18", "ss19", "aw19", "クリス期", "キムジョーンズ"]
+    sources: ["https://en.wikipedia.org/wiki/Dior_Homme", "https://suigenerisconsignment.com/pages/dior-homme-reference-codes", "https://philamuseum.org/collection/object/325668", "https://www.heddels.com/?p=5020"]
+    confidence: high
+  - id: dior_homme__kva
+    brand: dior_homme
+    designer: Kris Van Assche
+    years: [2007, 2018]
+    weight: 5
+    aliases: ["kva", "kris van assche", "van assche", "kva era", "kris van assche dior", "dior homme kva", "kris era", "good kva", "early kva"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Same leading-digit reference-code system as Hedi era (e.g. a Yahoo JP listing '09AW クリス期 ... 9H31J1080585' shows a leading 9 for 2009). Not enough examples to write a regex. Early KVA (SS08-AW10) kept slim Hedi-like silhouettes and is the 'good KVA' pocket; later KVA (2013+) looser, graphic, bee/'Dior Homme' monogram prints."
+      label: ["'Dior Homme' label continues through 2018"]
+      made_in: ["italy", "japan"]
+      model_names: ["kva denim", "straight denim", "bee"]
+      keywords: ["kva", "kris van assche", "クリス期", "ss08", "aw08", "ss09", "aw09", "ss10", "aw10"]
+    anti_cues: ["hedi", "エディ期", "kim jones", "dior men", "ss19", "aw19"]
+    sources: ["https://en.wikipedia.org/wiki/Dior_Homme", "https://auctions.yahoo.co.jp/jp/auction/v1236799178"]
+    confidence: med
+  - id: dior_men__kim_jones
+    brand: dior_homme
+    designer: Kim Jones
+    years: [2018, null]
+    weight: 2
+    aliases: ["kim jones", "kim jones dior", "dior men", "dior mens", "dior men kim jones", "dior oblique", "dior by kim jones", "dior x sacai", "dior x kaws", "dior kaws", "kaws bee", "kaws", "dior x travis", "dior x jordan", "dior b23", "dior b22", "dior b27", "dior saddle men"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Brand wording switched from 'Dior Homme' to 'Dior Men' around the 2018-19 transition (verify). Dates 2019+ listings: 'ss19', 'dior men', Oblique monogram, CD logo, B22/B23/B27 sneakers."
+      label: ["'Dior' / 'Dior Men' (verify exact label text)"]
+      made_in: ["italy"]
+      model_names: ["b22", "b23", "b27", "oblique", "saddle", "atelier"]
+      keywords: ["dior men", "kim jones", "oblique", "2019", "2020", "2021", "2022", "2023"]
+    anti_cues: ["hedi", "dior homme hedi", "エディ期"]
+    sources: ["https://en.wikipedia.org/wiki/Dior_Homme"]
+    confidence: low
+    verify: true
+  # ===== SAINT LAURENT =====
+  - id: saint_laurent__tom_ford
+    brand: saint_laurent
+    designer: Tom Ford
+    years: [2000, 2004]
+    weight: 4
+    aliases: ["tom ford ysl", "ysl tom ford", "yves saint laurent tom ford", "ysl rive gauche tom ford", "tom ford era ysl"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["'Yves Saint Laurent' / 'Yves Saint Laurent Rive Gauche' label (pre-2012 wording)"]
+      made_in: ["italy", "france"]
+      model_names: []
+      keywords: ["rive gauche", "yves saint laurent", "ysl"]
+    anti_cues: ["saint laurent paris", "slp", "hedi"]
+    sources: ["https://www.wallpaper.com/fashion/saint-laurent-by-hedi-slimane-wins-wallpapers-best-rebranding-award", "https://www.fashionnetwork.com/news/yves-saint-laurent-to-have-official-couture-label,554789.html"]
+    confidence: low
+    verify: true
+  - id: saint_laurent__pilati
+    brand: saint_laurent
+    designer: Stefano Pilati
+    years: [2004, 2012]
+    weight: 4
+    aliases: ["pilati", "stefano pilati", "pilati ysl", "ysl pilati", "yves saint laurent pilati"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["'Yves Saint Laurent' label wording (pre-June-2012; bag guides say stamps read 'Yves Saint Laurent' before 2012 and 'Saint Laurent Paris' from 2012)"]
+      made_in: ["italy"]
+      model_names: ["tribute", "muse", "downtown", "cabas chyc"]
+      keywords: ["yves saint laurent", "ysl", "pilati", "2008", "2009", "2010", "2011"]
+    anti_cues: ["saint laurent paris", "slp", "hedi", "l01", "wyatt", "2013", "2014", "2015", "2016"]
+    sources: ["https://retaildetail.eu/news/food/hedi-slimane-drops-yves-saint-laurent-brand-name", "https://realstyle.therealreal.com/authentic-ysl-bag-cassandre-saint-laurent-paris/"]
+    confidence: med
+  - id: saint_laurent__hedi
+    brand: saint_laurent
+    designer: Hedi Slimane
+    years: [2012, 2016]
+    weight: 10
+    aliases: ["hedi", "hedi slimane", "slimane", "hedi era", "hedi slp", "slp hedi", "hedi saint laurent", "saint laurent hedi", "hedi era saint laurent", "slp 2013", "slp 2014", "slp 2015", "slp 2016", "saint laurent paris hedi", "hedi ysl", "slimane saint laurent", "slp paris"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "No documented tag-code pattern found. Dating relies on label wording + model codes (L01 etc.) + seller season text (ss13..aw16). Hedi's tenure: appointed May 2012, 'Yves' dropped from RTW name June 2012, last collection AW16 (shown Jan 2016-Feb 2016 cycle; departure April 2016)."
+      label: ["woven satin label 'SAINT LAURENT / PARIS' (documented on a SS15 men's jacket, black on ivory)", "NOT 'Yves Saint Laurent' (pre-2012) and NOT 'Saint Laurent Paris' in Vaccarello-era sans-serif if stylistically different (verify)"]
+      made_in: ["italy"]
+      model_names: ["l01", "l17", "l02", "d01", "d02", "d03", "d04", "d05", "wyatt", "jodhpur", "dylan", "chelsea", "classic motorcycle jacket", "teddy", "varsity", "black knight", "palm patch", "baby cat", "ワイアット", "テディ"]
+      keywords: ["slp", "hedi", "saint laurent paris", "skinny jeans", "low rise skinny", "distressed biker", "ss13", "aw13", "ss14", "aw14", "ss15", "aw15", "ss16", "aw16", "エディ期"]
+    anti_cues: ["yves saint laurent", "ysl rive gauche", "vaccarello", "anthony vaccarello", "pilati", "ss17", "aw17", "ss18", "aw18", "ss19", "2020", "2021", "2022", "2023", "2024"]
+    sources: ["https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent", "https://www.wallpaper.com/fashion/saint-laurent-by-hedi-slimane-wins-wallpapers-best-rebranding-award", "https://thefashionisto.com/saint-laurent-menswear-2016-fall-winter-lookbook-barneys/", "https://www.palaisgalliera.paris.fr/en/node/2627"]
+    confidence: high
+  - id: saint_laurent__vaccarello
+    brand: saint_laurent
+    designer: Anthony Vaccarello
+    years: [2016, null]
+    weight: 3
+    aliases: ["vaccarello", "anthony vaccarello", "saint laurent vaccarello", "slp vaccarello", "ysl vaccarello", "saint laurent 2020", "saint laurent 2021", "saint laurent 2022", "saint laurent 2023", "saint laurent 2024"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["'SAINT LAURENT / PARIS' continues; label alone cannot split Hedi from Vaccarello"]
+      made_in: ["italy"]
+      model_names: ["loulou", "niki", "sunset", "le 5 a 7", "kate"]
+      keywords: ["vaccarello", "ss17", "aw17", "ss18", "aw18", "2019", "2020", "2021", "2022", "2023", "2024"]
+    anti_cues: ["hedi", "l01", "wyatt", "2012", "2013", "2014", "2015"]
+    sources: ["https://www.dazeddigital.com/fashion/article/30608/1/the-moments-that-defined-hedi-slimanes-saint-laurent"]
+    confidence: med
+  # ===== CELINE =====
+  - id: celine__phoebe
+    brand: celine
+    designer: Phoebe Philo
+    years: [2008, 2017]
+    weight: 3
+    aliases: ["phoebe philo", "phoebe", "philo", "old celine", "celine philo", "celine phoebe", "phoebe era", "céline phoebe", "celine paris phoebe"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["'CÉLINE / PARIS' with accent (accent dropped by Hedi in 2018; verify exact month)"]
+      made_in: ["italy", "france"]
+      model_names: ["luggage", "trio", "classic box", "trapeze", "phantom", "belt bag"]
+      keywords: ["céline", "celine paris", "phoebe", "philo", "luggage tote"]
+    anti_cues: ["hedi", "slimane", "celine homme", "2019", "2020", "2021", "2022"]
+    sources: ["https://www.dazeddigital.com/fashion/article/64793/1/celine-who-is-michael-rider-celine-new-creative-director-hedi-slimane-exit"]
+    confidence: med
+    verify: true
+  - id: celine__hedi
+    brand: celine
+    designer: Hedi Slimane
+    years: [2018, 2024]
+    weight: 9
+    aliases: ["hedi", "hedi slimane", "slimane", "hedi era", "hedi celine", "celine hedi", "celine homme", "celine by hedi slimane", "hedi era celine", "celine slimane", "celine 2019", "celine 2020", "celine 2021", "celine 2022", "celine 2023", "hedi years celine"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "No documented tag code. Hedi joined Jan 2018 (first collection SS19, shown Sept 2018); exit announced 2 Oct 2024, Michael Rider effective early 2025. Use label wording and cuts."
+      label: ["'CELINE / PARIS' without accent (logo changed under Hedi 2018; verify)", "Celine Homme line"]
+      made_in: ["italy"]
+      model_names: ["celine homme", "triomphe", "teen triomphe", "le 16", "slim denim", "rock tour jacket", "biker jacket", "classic leather jacket", "chelsea boots", "skinny jeans"]
+      keywords: ["celine homme", "hedi", "triomphe", "ss19", "aw19", "ss20", "aw20", "ss21", "aw21", "ss22", "aw22", "ss23", "aw23", "ss24", "aw24"]
+    anti_cues: ["phoebe", "philo", "céline", "michael rider", "rider", "ss25", "aw25", "2025", "2026", "old celine", "luggage"]
+    sources: ["https://hypebeast.com/2024/10/hedi-slime-exit-celine-michael-rider-appointed-creative-director", "https://wallpaper.com/fashion-beauty/breaking-news-hedi-slimane-to-exit-celine"]
+    confidence: high
+  - id: celine__rider
+    brand: celine
+    designer: Michael Rider
+    years: [2025, null]
+    weight: 2
+    aliases: ["michael rider", "rider celine", "celine rider", "celine 2025", "celine 2026"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Rider appointed Oct 2024, effective early 2025."
+      label: ["'CELINE / PARIS'"]
+      made_in: ["italy"]
+      model_names: []
+      keywords: ["rider", "ss25", "aw25", "ss26", "2025", "2026"]
+    anti_cues: ["hedi", "phoebe"]
+    sources: ["https://fashionunited.in/news/people/celine-names-michael-rider-as-new-artistic-director/2024100246938"]
+    confidence: high
+  # ===== BALMAIN =====
+  - id: balmain__decarnin
+    brand: balmain
+    designer: Christophe Decarnin
+    years: [2005, 2011]
+    weight: 9
+    aliases: ["decarnin", "christophe decarnin", "decarnin era", "balmain decarnin", "decarnin balmain", "balmain 2009", "balmain 2010", "old balmain", "balmain destroyed era"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Decarnin became creative director ~2005 (verify month), departure announced April 2011 after he missed the AW11 show. Menswear (Balmain Homme) debuted with Fall 2010 (Interview magazine). Early-2010s biker denim started here (Complex: Rousteing did not invent Balmain biker denim)."
+      label: ["'BALMAIN PARIS' / 'Balmain' woven label (exact fonts UNKNOWN)"]
+      made_in: ["france", "italy"]
+      model_names: ["biker jeans", "biker denim", "destroyed jeans", "washed skinny", "shoulder pad blazer", "military jacket", "ripped tee", "studded biker jacket"]
+      keywords: ["decarnin", "ss09", "aw09", "ss10", "aw10", "ss11", "balmain homme", "distressed", "shoulder pads"]
+    anti_cues: ["rousteing", "olivier rousteing", "pierre balmain", "balmain hair", "balmain x", "ss12", "aw12", "ss13", "aw13", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "lion buttons gold"]
+    sources: ["https://en.wikipedia.org/wiki/Christophe_Decarnin", "https://www.interviewmagazine.com/fashion/balmain-men-paris-fall-2010-paris", "https://www.thedailybeast.com/christophe-decarnin-leaves-balmain-and-ends-fashions-most-expensive-house", "https://www.complex.com/style/a/mike-destefano/a-look-back-at-olivier-rousteings-biggest-moments-at-balmain"]
+    confidence: med
+  - id: balmain__rousteing
+    brand: balmain
+    designer: Olivier Rousteing
+    years: [2011, 2025]
+    weight: 3
+    aliases: ["rousteing", "olivier rousteing", "balmain rousteing", "balmain army", "balmain gold buttons", "balmain hype", "new balmain"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Rousteing named April 2011; stepped down Nov 2025 (fashionsnap headline 2025-11-06, verify)."
+      label: ["'BALMAIN PARIS'"]
+      made_in: ["france", "italy"]
+      model_names: ["balmain army", "gold button blazer", "pb labs", "balmain biker jeans (rousteing)", "b-buzz"]
+      keywords: ["rousteing", "ss12", "aw12", "ss13", "aw13", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]
+    anti_cues: ["decarnin", "ss09", "aw09", "ss10", "aw10", "ss11", "aw11"]
+    sources: ["https://hypebeast.com/2011/4/balmain-welcomes-new-designer-olivier-rousteing", "https://www.fashionsnap.com/article/2025-11-06/balmain-olivier-rousteing/"]
+    confidence: med
+  # ===== RICK OWENS =====
+  - id: rick_owens__early
+    brand: rick_owens
+    designer: Rick Owens
+    years: [1994, 2011]
+    weight: 9
+    aliases: ["early rick", "old rick", "old rick owens", "early rick owens", "rick owens 2000s", "rick owens 2006", "rick owens 2007", "rick owens 2008", "rick owens 2009", "rick owens 2010", "rick owens drkshdw early", "early drkshdw", "old drkshdw", "dark shadow rick owens"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "A 'RU/RP + season + year' item-code pattern was suggested in the brief but NOT verified in this session. Do not parse. Known fixed points: FW08 collection 'Stag' (FIT museum record); DRKSHDW FW09 existed (Hypebeast); 'Dustulator' is a recurring piece name FW06-FW11 (blog), 'dust' is a colour (warm grey) not a season."
+      label: ["older labels read 'RICK OWENS' with 'MADE IN ITALY'; DRKSHDW labels read 'DRKSHDW BY RICK OWENS' (exact eras UNKNOWN)"]
+      made_in: ["italy", "japan (some DRKSHDW denim?)", "usa (early)"]
+      model_names: ["stooges", "ramones", "geobasket", "dunks", "dustulator", "bauhaus", "intarsia", "lupetto", "sphinx", "creatch"]
+      keywords: ["dustulator", "moog", "exploder", "creatch", "strutter", "crust", "stag", "hun", "lilies", "dark shadow"]
+    anti_cues: ["cyclops", "strobe", "gethsemane", "ss21", "aw21", "ss22", "aw22", "ss23", "aw23", "ss24", "aw24", "ss25", "aw25", "tecuatl", "kembra", "rick owens x converse", "turbodrk"]
+    sources: ["https://sites.fitnyc.edu/depts/museum/Gothic/Owens.html", "https://hypebeast.com/2009/10/rick-owens-drkshdw-2009-fallwinter-collection", "https://theshelteronline.com/inspiration/presenting-rick-owens-drkshdw"]
+    confidence: low
+    verify: true
+  - id: rick_owens__mid
+    brand: rick_owens
+    designer: Rick Owens
+    years: [2012, 2019]
+    weight: 6
+    aliases: ["rick owens 2013", "rick owens 2014", "rick owens 2015", "rick owens 2016", "rick owens 2017", "rick owens 2018", "rick owens cyclops", "rick owens sisyphus", "mid rick", "ss16 rick"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Fixed point: SS16 'Cyclops' (Dazed)."
+      label: ["'RICK OWENS' / 'DRKSHDW' labels"]
+      made_in: ["italy"]
+      model_names: ["geobasket", "ramones", "stooges", "intarsia", "creatch"]
+      keywords: ["cyclops", "ss16", "aw16", "ss17", "aw17", "ss18", "aw18"]
+    anti_cues: ["strobe", "gethsemane", "ss22", "aw22", "ss23", "aw23", "ss24", "aw24"]
+    sources: ["https://www.dazeddigital.com/fashion/article/38420/1/ten-of-rick-owens-most-memorable-shows"]
+    confidence: low
+    verify: true
+  - id: rick_owens__recent
+    brand: rick_owens
+    designer: Rick Owens
+    years: [2020, null]
+    weight: 4   # scoring engineer: was 5; taste profile wants old Rick, recent is "C at best"
+    aliases: ["rick owens strobe", "rick owens gethsemane", "rick owens turbodrk", "rick owens new", "rick owens 2021", "rick owens 2022", "rick owens 2023", "rick owens 2024", "rick owens 2025", "rick owens kembra", "rick owens x converse turbodrk"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Seed 'Gethsemane' = AW21 menswear (BoF captions) and 'Strobe' = FW22 (Hypebeast) -> both are RECENT, not old-Rick."
+      label: ["'RICK OWENS'"]
+      made_in: ["italy"]
+      model_names: ["strobe", "gethsemane", "kembra", "tractor"]
+      keywords: ["strobe", "gethsemane", "ss21", "aw21", "ss22", "aw22", "ss23", "aw23", "ss24", "aw24", "ss25", "aw25", "ss26"]
+    anti_cues: ["stag", "dustulator", "2006", "2007", "2008", "2009", "2010"]
+    sources: ["https://hypebeast.com/2022/1/rick-owens-fall-2022-menswear-strobe-runway-show-collection-paris-fashion-week", "https://www.businessoffashion.com/reviews/fashion-week/at-rick-owens-modesty-in-monumentalism"]
+    confidence: med
+  # ===== UNDERCOVER =====
+  - id: undercover__early
+    brand: undercover
+    designer: Jun Takahashi
+    years: [1993, 2010]
+    weight: 10
+    aliases: ["old undercover", "early undercover", "undercover 90s", "undercover 2000s", "undercover archive", "undercover jun era", "undercoverism archive", "vintage undercover", "undercover 2003", "undercover 2004", "undercover 2005", "undercover 2006", "undercover 2007", "undercover 2008", "undercover 2009"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "No documented Undercover tag code. Dating: seller season text (ss03 'scab', aw04 'but beautiful', aw05, ss06 't'), 'undercoverism' label, 'made in japan', and tag fonts (UNKNOWN)."
+      label: ["'UNDERCOVER' / 'UNDERCOVERISM' woven label", "'We Make Noise Not Clothes' print = 90s Nigo/Jun era tees (verify)"]
+      made_in: ["japan"]
+      model_names: ["scab", "but beautiful", "arts and crafts", "cosmos bear", "85", "wmnc", "undercoverism"]
+      keywords: ["jun takahashi", "scab", "but beautiful", "arts & crafts", "zamiang", "wmnc", "undercoverism", "made in japan", "ss03", "aw04", "aw05", "ss06"]
+    anti_cues: ["undercover x", "gyakusou", "uc ", "ss15", "aw15", "ss20", "aw20", "ss21", "aw21", "ss22", "aw22", "ss23", "aw23", "ss24", "aw24", "ss25", "aw25", "nike", "uniqlo", "uniqlo uu"]
+    sources: ["https://www.grailed.com/drycleanonly/master-class-undercover", "https://www.lepetitarchive.com/collections-undercover-ss03-scab-history/", "https://highsnobiety.com/p/jun-takahashi-history", "https://www.mrporter.com/en-au/journal/fashion/everything-you-need-to-know-about-undercover-829784"]
+    confidence: med
+  - id: undercover__mid
+    brand: undercover
+    designer: Jun Takahashi
+    years: [2011, 2019]
+    weight: 5
+    aliases: ["undercover 2012", "undercover 2013", "undercover 2014", "undercover 2015", "undercover 2016", "undercover 2017", "undercover 2018", "undercover 2019", "undercover mid"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["'UNDERCOVER' woven label"]
+      made_in: ["japan"]
+      model_names: ["gyakusou", "uc"]
+      keywords: ["ss15", "aw15", "ss16", "aw16", "ss17", "aw17", "ss18", "aw18", "ss19", "aw19"]
+    anti_cues: ["scab", "ss03", "aw04", "aw05", "ss06", "undercoverism"]
+    sources: ["https://highsnobiety.com/p/jun-takahashi-history"]
+    confidence: low
+    verify: true
+  - id: undercover__recent
+    brand: undercover
+    designer: Jun Takahashi
+    years: [2020, null]
+    weight: 4
+    aliases: ["undercover new", "undercover 2020", "undercover 2021", "undercover 2022", "undercover 2023", "undercover 2024", "undercover 2025", "undercover x nike", "undercover x uniqlo", "undercover uu"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["'UNDERCOVER'"]
+      made_in: ["japan", "china"]
+      model_names: ["uu", "undercover x nike", "gyakusou"]
+      keywords: ["ss20", "aw20", "ss21", "aw21", "ss22", "aw22", "ss23", "aw23", "ss24", "aw24", "ss25", "aw25"]
+    anti_cues: ["scab", "ss03", "aw04", "aw05", "ss06"]
+    sources: ["https://highsnobiety.com/p/jun-takahashi-history"]
+    confidence: low
+    verify: true
+  # ===== BEAUTY:BEAST / 20471120 =====
+  - id: beauty_beast__original
+    brand: beauty_beast
+    designer: Takao Yamashita
+    years: [1991, 2000]
+    weight: 10
+    aliases: ["old beauty beast", "beauty beast 90s", "beauty beast original", "beauty beast archive", "beauty:beast 90s", "beauty beast 1998", "beauty beast 1999"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Launched 1990/91 (sources differ; Osaka); Paris collection 1994, Tokyo 1995; AW1998 'COSPA vs beauty:beast' collab; domestic activity paused 2000; revived 2020 (fashion-press)."
+      label: ["'beauty:beast' woven label with colon (exact label design UNKNOWN)"]
+      made_in: ["japan"]
+      model_names: ["giant safety pin", "dark knight", "rabbit backpack", "bunny", "blue haired fairy"]
+      keywords: ["safety pin", "dark knight", "bunny", "rabbit", "aw98", "1998", "1999", "made in japan"]
+    anti_cues: ["2020", "2021", "2022", "2023", "2024", "revival", "reissue", "beauty and the beast", "disney"]
+    sources: ["https://www.fashionsnap.com/article/yamashita-takao/", "https://www.archivepdf.net/articles/takao-yamashita-entering-the-belly-of-the-beauty-beast", "https://sabukaru.online/articles/beautybeast-a-fairytale-spoken-in-attire"]
+    confidence: med
+  - id: beauty_beast__revival
+    brand: beauty_beast
+    designer: Takao Yamashita
+    years: [2020, null]
+    weight: 3
+    aliases: ["beauty beast 2020", "beauty beast new", "beauty beast revival", "beauty beast reissue"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Relaunched 2020 per fashion-press profile."
+      label: ["UNKNOWN"]
+      made_in: ["japan"]
+      model_names: []
+      keywords: ["2020", "2021", "2022", "2023", "2024", "reissue"]
+    anti_cues: ["aw98", "1998", "90s"]
+    sources: ["https://www.fashion-press.net/brands/82", "https://www.wwdjapan.com/?p=1481162"]
+    confidence: low
+    verify: true
+  - id: 20471120__original
+    brand: "20471120"
+    designer: UNKNOWN
+    years: [1995, 2005]
+    weight: 8
+    aliases: ["old 20471120", "20471120 90s", "20471120 2000s", "20471120 archive", "20471120 vintage"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Founding year and designer UNKNOWN (not verified)."
+      label: ["UNKNOWN"]
+      made_in: ["japan"]
+      model_names: []
+      keywords: ["20471120", "made in japan"]
+    anti_cues: ["2015", "2020", "2021"]
+    sources: ["https://www.lepetitarchive.com/brands-the-japanese-cult-brand-beauty-beast/"]
+    confidence: low
+    verify: true
+  # ===== CHANEL =====
+  - id: chanel__vintage
+    brand: chanel
+    designer: Karl Lagerfeld (early/mid tenure)
+    years: [1980, 2009]   # scoring engineer: was 1990; 1980s Lagerfeld CC belts/jewelry are core glam_archive stock
+    weight: 8
+    aliases: ["vintage chanel", "chanel vintage", "chanel 90s", "chanel 2000s", "chanel y2k", "chanel 95p", "chanel 96a", "chanel 97a", "chanel 98p", "chanel 99a", "chanel 00p", "chanel 01a", "chanel 02p", "chanel 03a", "chanel 04p", "chanel 05a", "chanel 06p"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Chanel RTW labels carry collection codes like '96A' (year+season letter: P=spring, A=autumn) — widely used in resale titles ('95P','98A') but not source-verified here; use as a seller-text keyword only, no regex. Bag serial/date codes are a different system: DO NOT parse."
+      label: ["'CHANEL' woven/printed label with CC", "'Made in France' common for 90s RTW", "Boutique label vs plain label (UNKNOWN)"]
+      made_in: ["france", "italy"]
+      model_names: ["cc belt", "chain belt", "tweed jacket", "boucle jacket", "camellia brooch", "pearl necklace", "cc turn lock", "chanel sport"]
+      keywords: ["cc logo", "logo jewelry", "tweed", "chain belt", "gripoix", "made in france", "vintage", "ヴィンテージ", "ビンテージ"]
+    anti_cues: ["2020", "2021", "2022", "2023", "2024", "viard", "blazy", "cruise 2020", "coco neige"]
+    sources: ["https://www.instagram.com/glam_archive/"]
+    confidence: low
+    verify: true
+  - id: chanel__karl_late
+    brand: chanel
+    designer: Karl Lagerfeld (late)
+    years: [2010, 2019]
+    weight: 5
+    aliases: ["chanel 2010s", "chanel 2015", "chanel 2016", "chanel 2017", "chanel 2018", "chanel karl", "chanel lagerfeld"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["CHANEL"]
+      made_in: ["france", "italy"]
+      model_names: []
+      keywords: ["lagerfeld", "2015", "2016", "2017", "2018"]
+    anti_cues: ["95p", "96a", "90s"]
+    sources: ["https://www.instagram.com/glam_archive/"]
+    confidence: low
+    verify: true
+  # ===== ERD =====
+  - id: erd__early
+    brand: erd
+    designer: Henri Alexander Levy
+    years: [2012, 2018]
+    weight: 8
+    aliases: ["good old erd", "old erd", "early erd", "erd 2013", "erd 2014", "erd 2015", "erd 2016", "erd 2017", "erd original", "erd la"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Founded 2012 (Paris/LA) by Henri Alexander Levy. Early output mostly small-run, hand-distressed. No season-name list verified."
+      label: ["woven ERD label (design differences by year UNKNOWN)"]
+      made_in: ["usa", "italy", "portugal (verify)"]
+      model_names: ["mercer", "safety pin", "flannel", "stripe tee", "ripped jeans", "mohair"]
+      keywords: ["safety pin", "los angeles", "levy", "limited", "1 of 1", "distressed"]
+    anti_cues: ["2019", "2020", "2021", "2022", "2023", "2024", "ss20", "aw20", "sample sale new", "erd x"]
+    sources: ["https://www.mrporter.com/en-au/journal/fashion/enfants-riches-deprimes-erd-25368192", "https://www.complex.com/style/2016/03/enfants-riches-deprimes-profile", "https://www.grailed.com/designers/enfants-riches-deprimes"]
+    confidence: low
+    verify: true
+  - id: erd__late
+    brand: erd
+    designer: Henri Alexander Levy
+    years: [2019, null]
+    weight: 4
+    aliases: ["new erd", "recent erd", "erd 2020", "erd 2021", "erd 2022", "erd 2023", "erd 2024"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["UNKNOWN"]
+      made_in: ["usa", "italy", "portugal (verify)"]
+      model_names: []
+      keywords: ["2020", "2021", "2022", "2023", "2024"]
+    anti_cues: ["2013", "2014", "2015", "2016"]
+    sources: ["https://www.mrporter.com/en-au/journal/fashion/enfants-riches-deprimes-erd-25368192"]
+    confidence: low
+    verify: true
+  # ===== NUMBER (N)INE =====
+  - id: number_nine__miyashita
+    brand: number_nine
+    designer: Takahiro Miyashita
+    years: [1997, 2009]
+    weight: 10
+    aliases: ["miyashita era", "old number nine", "original number nine", "number nine archive", "number nine 2000s", "number nine miyashita", "takahiro miyashita number nine", "ナンバーナイン宮下期"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Founded 1997; label ended with AW09 ('A Closed Feeling' / hypebeast 'Last Songs', shut-down reported Feb 2009). No documented tag code found (UNKNOWN). Dating = seller season text ('aw05', 'the high streets') + tag design. Number (N)ine tags show the (N) mark and 'MADE IN JAPAN'; exact tag generations UNKNOWN."
+      label: ["'NUMBER (N)INE' woven label with parenthesised N", "'MADE IN JAPAN' care label"]
+      made_in: ["japan"]
+      model_names: ["skull cashmere", "tribal camo", "kurt cobain", "touch me i'm sick", "the high streets", "noir", "heroin", "give peace a chance anti-war tee", "birds", "my own private portland", "a closed feeling"]
+      keywords: ["(n)ine", "n(n)", "number (n)ine", "miyashita", "ss03", "aw03", "aw04", "aw05", "aw06", "ss06", "ss08", "aw08", "aw09", "ナンバーナイン"]
+    anti_cues: ["number nine by takahiro miyashita", "new arrivals", "2025", "2026", "relaunch", "back i missed you", "rimbaud", "the soloist", "soloist"]
+    sources: ["https://hypebeast.com/2009/02/number-nine-to-shut-down/", "https://hypebeast.com/2009/7/number-nine-2009-fall-winter-last-songs-collection", "https://hypebeast.com/2006/3/number-nine-aw-06-07", "https://trussarchive.com/editorials/the-most-iconic-number-nine-tees-where-to-find-them"]
+    confidence: high
+  - id: number_nine__post_miyashita
+    brand: number_nine
+    designer: UNKNOWN (company-run after Miyashita)
+    years: [2010, 2024]
+    weight: 3
+    aliases: ["number nine 2010s", "number nine post miyashita", "number nine new", "number nine company", "number (n)ine 2015", "number (n)ine 2018"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Hypebeast 2025 notes the original name was sold to a parent company which kept running a separate Number (N)ine label. Dates and designer UNKNOWN — verify before use."
+      label: ["UNKNOWN"]
+      made_in: ["japan", "china"]
+      model_names: []
+      keywords: ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"]
+    anti_cues: ["miyashita", "aw05", "aw06", "aw08", "aw09"]
+    sources: ["https://hypebeast.com/ph/2025/9/takahiro-miyashita-announces-numbernine-news-return"]
+    confidence: low
+    verify: true
+  - id: number_nine__relaunch
+    brand: number_nine
+    designer: Takahiro Miyashita
+    years: [2025, null]
+    weight: 3   # scoring engineer: was 5; the brief lists the relaunch among unwanted eras (C at best)
+    aliases: ["number nine by takahiro miyashita", "number (n)ine by takahiro miyashita", "number nine relaunch", "number nine new arrivals", "number nine 2026", "back i missed you", "number nine rimbaud"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Miyashita relaunched 'Number (N)ine by Takahiro Miyashita' in 2025; first drop = graphic tees with Arthur Rimbaud quotes; 'New Arrivals #3' April 2026. Current retail, not archive."
+      label: ["'NUMBER (N)INE BY TAKAHIRO MIYASHITA' (verify)"]
+      made_in: ["japan"]
+      model_names: ["new arrivals", "rimbaud tee"]
+      keywords: ["by takahiro miyashita", "new arrivals", "2025", "2026", "rimbaud", "tom verlaine"]
+    anti_cues: ["aw05", "aw06", "aw08", "aw09", "ss03"]
+    sources: ["https://hypebeast.com/ph/2025/9/takahiro-miyashita-announces-numbernine-news-return", "https://www.fashionsnap.com/article/2026-03-12/numbernine-1st-release/", "https://hypebeast.com/it/2026/4/number-nine-by-takahiro-miyashita-new-arrivals-3-collection-release-info"]
+    confidence: med
+  # ===== RAF SIMONS =====
+  - id: raf_simons__early
+    brand: raf_simons
+    designer: Raf Simons
+    years: [1995, 2005]
+    weight: 10
+    aliases: ["early raf", "old raf", "archive raf", "raf simons archive", "raf simons 90s", "raf simons 2000s", "raf simons 2001", "raf simons 2002", "raf simons 2003", "raf simons 2004", "raf simons riot", "raf simons virginia creeper", "raf simons closer", "raf simons consumed", "ラフシモンズ アーカイブ"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Fixed points: AW01 'Riot Riot Riot', SS02 'Woe Onto Those Who Spit on Youth', AW02 'Virginia Creeper', SS03 'Consumed', AW03 'Closer' (Dazed/Highsnobiety). Tag codes UNKNOWN. Seller text typically 'aw01' / 'fw01' / 'aw 2001'."
+      label: ["'RAF SIMONS' woven label (white-on-black / earlier designs; exact eras UNKNOWN)", "'made in italy' / 'made in belgium' / 'made in japan' (hoodies)"]
+      made_in: ["italy", "belgium", "japan"]
+      model_names: ["riot parka", "bomber", "peter saville", "new order", "joy division", "virginia creeper", "closer"]
+      keywords: ["aw01", "ss02", "aw02", "ss03", "aw03", "ss04", "aw04", "ss05", "fw01", "fw02", "fw03"]
+    anti_cues: ["r by raf simons", "calvin klein", "adidas", "fred perry", "sterling ruby", "ss15", "aw15", "ss16", "aw16", "ss17", "aw17", "ss18", "aw18", "ss19", "aw19", "ss20", "aw20", "ozweego", "ss21", "aw21", "ss22", "aw22", "ss23", "aw23", "ss24", "aw24", "2025", "2026"]
+    sources: ["https://www.dazeddigital.com/fashion/article/29467/1/tracing-raf-simons-love-for-teenage-riot-and-rock-and-roll", "https://www.highsnobiety.com/p/raf-simons-most-iconic-pieces", "https://magazine.032c.com/magazine/raf-simons-retrospective-1995-2015"]
+    confidence: med
+  - id: raf_simons__mid
+    brand: raf_simons
+    designer: Raf Simons
+    years: [2006, 2012]
+    weight: 7
+    aliases: ["raf simons 2006", "raf simons 2007", "raf simons 2008", "raf simons 2009", "raf simons 2010", "raf simons 2011", "raf simons 2012", "raf simons jil sander era"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Simons ran Jil Sander 2005-2012 in parallel; own label continued."
+      label: ["'RAF SIMONS'"]
+      made_in: ["italy", "belgium"]
+      model_names: []
+      keywords: ["ss06", "aw06", "ss07", "aw07", "ss08", "aw08", "ss09", "aw09", "ss10", "aw10", "ss11", "aw11", "ss12", "aw12"]
+    anti_cues: ["riot riot riot", "virginia creeper", "closer", "aw01", "aw02", "aw03"]
+    sources: ["https://magazine.032c.com/magazine/raf-simons-retrospective-1995-2015"]
+    confidence: low
+    verify: true
+  - id: raf_simons__late
+    brand: raf_simons
+    designer: Raf Simons
+    years: [2013, null]
+    weight: 4   # scoring engineer: was 5; collab / late Raf is low value for this buyer (eras.yaml note)
+    aliases: ["raf simons 2013", "raf simons 2014", "raf simons 2015", "raf simons 2016", "raf simons 2017", "raf simons 2018", "raf simons 2019", "raf simons 2020", "raf simons 2021", "raf simons 2022", "raf simons 2023", "raf simons 2024", "raf simons sterling ruby", "raf simons calvin klein", "raf simons adidas", "raf simons ozweego", "raf simons fred perry"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Includes Sterling Ruby (2014+) pieces, adidas Ozweego/Detroit Runner, Fred Perry and R-line. Collab lines are mostly low value for this buyer."
+      label: ["'RAF SIMONS'", "'R BY RAF SIMONS'"]
+      made_in: ["italy", "romania", "china"]
+      model_names: ["ozweego", "detroit runner", "cylon", "antei", "sterling ruby"]
+      keywords: ["sterling ruby", "ozweego", "adidas", "fred perry", "ss15", "aw15", "ss16", "aw16", "ss17", "aw17", "ss18", "aw18", "ss19", "aw19", "ss20", "aw20"]
+    anti_cues: ["aw01", "aw02", "aw03", "riot", "virginia creeper", "closer"]
+    sources: ["https://www.highsnobiety.com/p/raf-simons-most-iconic-pieces"]
+    confidence: low
+    verify: true
+  # ===== HELMUT LANG =====
+  - id: helmut_lang__helmut
+    brand: helmut_lang
+    designer: Helmut Lang
+    years: [1986, 2005]
+    weight: 10
+    aliases: ["helmut era", "old helmut lang", "vintage helmut lang", "helmut lang archive", "helmut lang 90s", "helmut lang 1998", "helmut lang 1999", "helmut lang 2000", "helmut lang 2001", "helmut lang 2002", "helmut lang 2003", "helmut lang 2004", "original helmut lang", "ヘルムートラング アーカイブ", "ヘルムートラング 本人期"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Lang started the label 1986; Prada took 51% in 1999, full ownership 2004; Lang left Jan 2005; sold 2006 to Link Theory Holdings (Tokyo); relaunched 2007 with new designers; Link Theory acquired by Fast Retailing 2009. Archive donated to MAK Vienna 2011 (covers 1986-2005)."
+      label: ["'HELMUT LANG' label; design/typography per decade UNKNOWN", "'made in italy' / 'made in austria' common for Helmut-era"]
+      made_in: ["italy", "austria", "usa", "japan"]
+      model_names: ["bondage strap", "astro biker", "painter jeans", "flight jacket", "bulletproof vest", "raw denim", "stirrup"]
+      keywords: ["helmut lang", "painter", "bondage", "astro", "flight", "made in austria", "made in italy", "90s"]
+    anti_cues: ["link theory", "fast retailing", "2006", "2007", "2008", "2009", "2010", "2015", "2020", "2021", "2022", "2023", "2024", "helmut lang renaissance", "dover street market helmut", "uniqlo"]
+    sources: ["https://en.wikipedia.org/wiki/Helmut_Lang_(fashion_brand)", "https://www.ssense.com/en-sg/editorial/fashion/helmut-lang-guide", "https://www.mak.at/jart/prj3/mak-resp/data/uploads/CVHelmutLangEN_2025_2025-10-21_1010553.pdf"]
+    confidence: high
+  - id: helmut_lang__post
+    brand: helmut_lang
+    designer: Link Theory / Fast Retailing designers
+    years: [2006, null]
+    weight: 2
+    aliases: ["new helmut lang", "helmut lang 2010s", "helmut lang current", "helmut lang link theory", "helmut lang 2012", "helmut lang 2018"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Post-Lang brand; looks and quality differ from founder era."
+      label: ["UNKNOWN"]
+      made_in: ["china", "portugal", "italy"]
+      model_names: []
+      keywords: ["2010s", "2020", "2021", "2022", "2023", "2024"]
+    anti_cues: ["90s", "helmut era", "austria", "bondage", "astro"]
+    sources: ["https://en.wikipedia.org/wiki/Helmut_Lang_(fashion_brand)"]
+    confidence: med
+  # ===== MARGIELA =====
+  - id: margiela__martin
+    brand: margiela
+    designer: Martin Margiela
+    years: [1988, 2009]
+    weight: 10
+    aliases: ["martin margiela", "mmm", "maison martin margiela", "martin era", "old margiela", "vintage margiela", "margiela archive", "margiela 90s", "margiela 2000s", "margiela 2005", "margiela 2006", "margiela 2007", "margiela 2008", "margiela 2009", "マルタンマルジェラ", "マルジェラ 初期", "メゾンマルタンマルジェラ"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Founded 1988; Martin left 2009; Renzo Rosso/Only the Brave bought majority 2002. Label wording 'Maison Martin Margiela' (with 'Paris') is the Martin-era wording; the numbered white-label system (0-23) and four white stitches exist, but the dates when 'Martin' was dropped in favour of 'Maison Margiela' are NOT verified here. Four white stitches rationale: SSENSE guide (loosely stitched blank label)."
+      label: ["white label with four white stitches on back (blank or numbered)", "'MAISON MARTIN MARGIELA PARIS' with numbers 0-23 circled (which line)", "'made in italy'"]
+      made_in: ["italy", "france"]
+      model_names: ["tabi", "replica", "line 10", "line 14", "line 0", "artisanal", "4 stitch", "pantyhose", "wig top"]
+      keywords: ["maison martin margiela", "mmm", "four stitches", "numbers", "tabi", "artisanal", "line 10", "line 14", "ss99", "aw03"]
+    anti_cues: ["maison margiela" , "galliano", "john galliano", "mm6 current", "glam slam", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "ss16", "aw16", "ss17", "aw17"]
+    sources: ["https://www.ssense.com/en-ee/editorial/fashion/maison-margiela-guide"]
+    confidence: med
+    verify: true
+  - id: margiela__renzo
+    brand: margiela
+    designer: In-house team (Renzo Rosso)
+    years: [2009, 2014]
+    weight: 5
+    aliases: ["margiela 2010", "margiela 2011", "margiela 2012", "margiela 2013", "margiela renzo", "post martin margiela", "margiela in house"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Between Martin's exit (2009) and Galliano's appointment (2014)."
+      label: ["'Maison Martin Margiela' still used by some products (verify)"]
+      made_in: ["italy"]
+      model_names: ["tabi", "replica"]
+      keywords: ["2010", "2011", "2012", "2013"]
+    anti_cues: ["galliano", "line 0", "ss99"]
+    sources: ["https://www.ssense.com/en-ee/editorial/fashion/maison-margiela-guide"]
+    confidence: low
+    verify: true
+  - id: margiela__galliano
+    brand: margiela
+    designer: John Galliano
+    years: [2014, 2024]
+    weight: 3
+    aliases: ["galliano margiela", "john galliano margiela", "maison margiela", "maison margiela galliano", "margiela artisanal galliano", "margiela 2015", "margiela 2018", "margiela 2020", "margiela 2022"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Galliano named creative director 2014; departure Dec 2024 (verify)."
+      label: ["'MAISON MARGIELA' (no Martin) — wording change dates UNVERIFIED"]
+      made_in: ["italy"]
+      model_names: ["gat", "german army trainer", "tabi", "glam slam", "5ac"]
+      keywords: ["galliano", "maison margiela", "glam slam", "gat"]
+    anti_cues: ["martin", "maison martin margiela", "1990s", "line 0"]
+    sources: ["https://www.ssense.com/en-ee/editorial/fashion/maison-margiela-guide"]
+    confidence: low
+    verify: true
+  # ===== OTHER EU / JP =====
+  - id: gucci__tom_ford
+    brand: gucci
+    designer: Tom Ford
+    years: [1994, 2004]
+    weight: 8
+    aliases: ["tom ford", "by tom ford", "tomford", "tom ford gucci", "gucci tom ford", "gucci 90s", "gucci 2000", "gucci 2001", "gucci 2002", "gucci 2003", "gucci 2004", "tom ford era gucci"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Ford creative director 1994-2004 (basic fact; no URL seen in session -> low)."
+      label: ["'GUCCI' with 'Made in Italy'; Tom-Ford-era labels vs Frida-era UNKNOWN"]
+      made_in: ["italy"]
+      model_names: ["horsebit loafer", "velvet suit", "leather jacket", "bamboo"]
+      keywords: ["tom ford", "90s", "y2k", "velvet", "g logo belt"]
+    anti_cues: ["michele", "alessandro michele", "giannini", "demna", "ss16", "aw16", "2017", "2018", "2019", "2020"]
+    sources: ["https://www.grailed.com/designers/gucci"]
+    confidence: low
+    verify: true
+  - id: gucci__giannini
+    brand: gucci
+    designer: Frida Giannini
+    years: [2005, 2014]
+    weight: 3
+    aliases: ["frida giannini gucci", "gucci giannini", "gucci 2008", "gucci 2010", "gucci 2012"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["GUCCI"]
+      made_in: ["italy"]
+      model_names: []
+      keywords: ["giannini"]
+    anti_cues: ["tom ford", "michele"]
+    sources: ["https://www.grailed.com/designers/gucci"]
+    confidence: low
+    verify: true
+  - id: gucci__michele
+    brand: gucci
+    designer: Alessandro Michele
+    years: [2015, 2022]
+    weight: 3
+    aliases: ["alessandro michele gucci", "gucci michele", "gucci 2018", "gucci 2019", "gucci 2020", "gucci 2021", "gucci bee", "gucci tiger", "gucci snake"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["GUCCI"]
+      made_in: ["italy"]
+      model_names: ["ace", "dionysus", "marmont", "jackie"]
+      keywords: ["michele", "dionysus", "marmont"]
+    anti_cues: ["tom ford", "90s"]
+    sources: ["https://www.grailed.com/designers/gucci"]
+    confidence: low
+    verify: true
+  - id: mcqueen__lee
+    brand: alexander_mcqueen
+    designer: Lee Alexander McQueen
+    years: [1992, 2010]
+    weight: 9
+    aliases: ["lee mcqueen", "lee era", "lee alexander mcqueen", "old mcqueen", "vintage mcqueen", "mcqueen archive", "mcqueen 2000s", "mcqueen 2005", "mcqueen 2006", "mcqueen 2007", "mcqueen 2008", "mcqueen 2009", "アレキサンダーマックイーン リー期"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "McQueen died Feb 2010 (basic fact, low confidence without URL). Skull scarf is a 2003+ commercial product, not archive-rare."
+      label: ["'ALEXANDER McQUEEN' label; 'McQ' is diffusion"]
+      made_in: ["italy"]
+      model_names: ["bumster", "skull scarf", "armadillo", "oversized sneaker (later)"]
+      keywords: ["lee mcqueen", "bumster", "ss99", "aw09"]
+    anti_cues: ["sarah burton", "burton", "mcgirr", "oversized sneaker", "2012", "2014", "2016", "2018", "2020", "2022", "2024"]
+    sources: ["https://www.grailed.com/designers/alexander-mcqueen"]
+    confidence: low
+    verify: true
+  - id: mcqueen__burton
+    brand: alexander_mcqueen
+    designer: Sarah Burton
+    years: [2010, 2023]
+    weight: 3
+    aliases: ["sarah burton mcqueen", "burton mcqueen", "mcqueen 2015", "mcqueen 2018", "mcqueen oversized sneaker"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["ALEXANDER McQUEEN"]
+      made_in: ["italy"]
+      model_names: ["oversized sneaker", "skull ring"]
+      keywords: ["sarah burton", "oversized sneaker"]
+    anti_cues: ["lee", "bumster"]
+    sources: ["https://www.grailed.com/designers/alexander-mcqueen"]
+    confidence: low
+    verify: true
+  - id: givenchy__tisci
+    brand: givenchy
+    designer: Riccardo Tisci
+    years: [2005, 2017]
+    weight: 7
+    aliases: ["tisci", "riccardo tisci", "tisci givenchy", "givenchy tisci", "givenchy rottweiler", "givenchy 17", "givenchy cuban fit", "givenchy 2011", "givenchy 2012", "givenchy 2013", "givenchy 2014", "givenchy 2015", "リカルドティッシ ジバンシィ"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Tisci tenure 2005-2017 (basic fact, low without URL). Signature graphics: Rottweiler, Bambi, shark, stars, 17, Madonna."
+      label: ["'GIVENCHY / PARIS'"]
+      made_in: ["italy", "portugal"]
+      model_names: ["rottweiler", "bambi", "shark", "stars", "17", "cuban fit", "tyson sneaker", "star tee"]
+      keywords: ["tisci", "rottweiler", "bambi", "shark", "cuban fit", "columbian fit", "stars"]
+    anti_cues: ["clare waight keller", "waight keller", "matthew williams", "2019", "2020", "2021", "2022", "2023", "2024", "4g logo", "4g"]
+    sources: ["https://www.grailed.com/designers/givenchy"]
+    confidence: low
+    verify: true
+  - id: balenciaga__ghesquiere
+    brand: balenciaga
+    designer: Nicolas Ghesquière
+    years: [1997, 2012]
+    weight: 8
+    aliases: ["ghesquiere", "nicolas ghesquiere", "ghesquiere balenciaga", "balenciaga ghesquiere", "balenciaga 2000s", "balenciaga 2003", "balenciaga 2004", "balenciaga 2005", "balenciaga 2006", "balenciaga 2007", "balenciaga 2008", "balenciaga 2009", "balenciaga 2010", "balenciaga 2011", "balenciaga motorcycle", "balenciaga city", "balenciaga lariat", "バレンシアガ ゲスキエール"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Ghesquière 1997-2012 (basic fact, low without URL)."
+      label: ["'BALENCIAGA / PARIS'"]
+      made_in: ["italy", "france"]
+      model_names: ["motorcycle bag", "city", "first", "lariat", "work", "arena leather", "moto jacket"]
+      keywords: ["ghesquiere", "motorcycle", "city bag", "moto jacket", "2003", "2005"]
+    anti_cues: ["demna", "demna gvasalia", "alexander wang", "triple s", "speed trainer", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]
+    sources: ["https://www.grailed.com/designers/balenciaga"]
+    confidence: low
+    verify: true
+  - id: balenciaga__demna
+    brand: balenciaga
+    designer: Demna Gvasalia
+    years: [2015, 2025]
+    weight: 5
+    aliases: ["demna", "demna gvasalia", "demna balenciaga", "balenciaga demna", "balenciaga 2016", "balenciaga 2017", "balenciaga 2018", "balenciaga 2019", "balenciaga triple s", "balenciaga speed", "balenciaga track", "early demna balenciaga"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Demna from Oct 2015; early Demna (2016-2018) is the wanted pocket; end year and exit UNVERIFIED (2025?)."
+      label: ["'BALENCIAGA / PARIS' new typeface (2017+) (verify)"]
+      made_in: ["italy", "portugal", "china", "vietnam"]
+      model_names: ["triple s", "speed trainer", "track", "arena", "bazar", "oversized hoodie"]
+      keywords: ["demna", "triple s", "speed", "bazar", "ss17", "aw17", "ss18", "aw18"]
+    anti_cues: ["ghesquiere", "motorcycle bag", "lariat", "2003", "2005"]
+    sources: ["https://www.grailed.com/designers/balenciaga"]
+    confidence: low
+    verify: true
+  - id: vetements__demna
+    brand: vetements
+    designer: Demna Gvasalia
+    years: [2014, 2019]
+    weight: 6
+    aliases: ["demna vetements", "vetements demna", "vetements 2016", "vetements 2017", "vetements 2018", "vetements original", "early vetements"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Demna left Vetements 2019 (basic fact; low without URL)."
+      label: ["'VETEMENTS' label"]
+      made_in: ["italy", "portugal", "romania"]
+      model_names: ["dhl tee", "titanic hoodie", "metal hoodie", "polizei tee", "levi's reworked jeans", "champion hoodie"]
+      keywords: ["demna", "dhl", "titanic", "polizei", "reworked", "ss16", "aw16", "ss17", "aw17"]
+    anti_cues: ["guram", "guram gvasalia", "2020", "2021", "2022", "2023"]
+    sources: ["https://www.grailed.com/designers/vetements"]
+    confidence: low
+    verify: true
+  - id: versace__gianni
+    brand: versace
+    designer: Gianni Versace
+    years: [1978, 1997]
+    weight: 8
+    aliases: ["gianni versace", "gianni era", "gianni versace 90s", "versace 90s", "versace vintage", "gianni versace couture", "gianni versace atelier", "versace medusa 90s", "ジャンニヴェルサーチ"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Gianni killed July 1997; Donatella took over (basic fact, low without URL)."
+      label: ["'GIANNI VERSACE' or 'VERSACE ATELIER'/'VERSACE COUTURE' labels (not 'VERSACE' alone) (verify)"]
+      made_in: ["italy"]
+      model_names: ["baroque silk shirt", "medusa belt", "bondage dress", "safety pin dress"]
+      keywords: ["gianni versace", "90s", "made in italy", "silk shirt"]
+    anti_cues: ["donatella", "versace collection", "2010", "2015", "2020", "2021", "2022", "2023", "2024"]
+    sources: ["https://www.grailed.com/designers/versace"]
+    confidence: low
+    verify: true
+  - id: dolce_gabbana__y2k
+    brand: dolce_gabbana
+    designer: Domenico Dolce / Stefano Gabbana
+    years: [1998, 2008]
+    weight: 6
+    aliases: ["d&g y2k", "dolce gabbana y2k", "dolce gabbana 2000s", "d&g 2000s", "d&g jeans 2000s", "dolce gabbana 2001", "dolce gabbana 2002", "dolce gabbana 2003", "dolce gabbana 2004", "dolce gabbana 2005"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "D&G diffusion line ran until 2011 (basic; verify)."
+      label: ["'D&G' or 'DOLCE & GABBANA' label with 'made in italy'"]
+      made_in: ["italy"]
+      model_names: ["d&g jeans", "d&g belt", "d&g leather jacket"]
+      keywords: ["d&g", "y2k", "2000s", "made in italy"]
+    anti_cues: ["2015", "2018", "2020", "2021", "2022", "2023", "2024", "dg millennials"]
+    sources: ["https://www.grailed.com/designers/dolce-gabbana"]
+    confidence: low
+    verify: true
+  - id: cavalli__y2k
+    brand: roberto_cavalli
+    designer: Roberto Cavalli
+    years: [2000, 2009]
+    weight: 5
+    aliases: ["cavalli y2k", "roberto cavalli y2k", "roberto cavalli 2000s", "cavalli 2000s", "just cavalli y2k", "cavalli 2002", "cavalli 2004", "cavalli 2006", "cavalli 2008"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["'roberto cavalli' / 'just cavalli' labels with 'made in italy'"]
+      made_in: ["italy"]
+      model_names: ["snake print", "leopard", "python", "airbrushed jeans"]
+      keywords: ["y2k", "2000s", "snake", "leopard"]
+    anti_cues: ["peter dundas", "2016", "2018", "2020", "2022", "paolo", "fausto puglisi"]
+    sources: ["https://www.grailed.com/designers/roberto-cavalli"]
+    confidence: low
+    verify: true
+  - id: mugler__thierry
+    brand: mugler
+    designer: Thierry Mugler
+    years: [1973, 2002]
+    weight: 7
+    aliases: ["thierry mugler", "mugler vintage", "thierry mugler vintage", "mugler 90s", "mugler archive", "ティエリーミュグレー ヴィンテージ", "ミュグレー ヴィンテージ"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Mugler left the fashion house c.2002 (verify); brand revived 2017 by Casey Cadwallader."
+      label: ["'THIERRY MUGLER / PARIS' or 'MUGLER' (older) labels, 'made in france'"]
+      made_in: ["france"]
+      model_names: ["power shoulder blazer", "corset", "leather"]
+      keywords: ["thierry mugler", "90s", "made in france", "vintage"]
+    anti_cues: ["casey cadwallader", "mugler 2018", "mugler 2019", "mugler 2020", "mugler 2021", "mugler h&m", "mugler hunter schafer", "mugler 2022", "mugler 2023"]
+    sources: ["https://www.grailed.com/designers/mugler"]
+    confidence: low
+    verify: true
+  - id: supreme__pre_vf
+    brand: supreme
+    designer: James Jebbia
+    years: [1994, 2020]
+    weight: 6
+    aliases: ["old supreme", "og supreme", "supreme 90s", "supreme 2000s", "supreme 2010s", "supreme pre vf", "supreme shibuya", "supreme shibuya box logo"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "VF acquired Supreme Dec 2020 (basic fact; low without URL). Season tags like 'FW18' sit on neck tags/lookbooks; format not verified."
+      label: ["woven 'Supreme' tags; Shibuya (Japan) shop opened 2011? (verify)"]
+      made_in: ["usa", "canada", "japan"]
+      model_names: ["box logo", "shibuya box logo", "bogo", "camp cap"]
+      keywords: ["box logo", "bogo", "shibuya", "fw12", "ss13"]
+    anti_cues: ["vf", "essilor", "2021", "2022", "2023", "2024"]
+    sources: ["https://www.grailed.com/designers/supreme"]
+    confidence: low
+    verify: true
+  - id: supreme__vf
+    brand: supreme
+    designer: VF Corporation / EssilorLuxottica
+    years: [2021, null]
+    weight: 4
+    aliases: ["supreme 2021", "supreme 2022", "supreme 2023", "supreme 2024", "supreme 2025", "new supreme"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: UNKNOWN
+      label: ["Supreme"]
+      made_in: ["usa", "china", "portugal"]
+      model_names: []
+      keywords: ["2021", "2022", "2023", "2024", "2025"]
+    anti_cues: ["2012", "2013", "2014"]
+    sources: ["https://www.grailed.com/designers/supreme"]
+    confidence: low
+    verify: true
+  - id: off_white__virgil
+    brand: off_white
+    designer: Virgil Abloh
+    years: [2013, 2021]
+    weight: 7
+    aliases: ["virgil abloh", "virgil era", "early off white", "off white virgil", "off white 2013", "off white 2014", "off white 2015", "off white 2016", "off white 2017", "off white 2018", "off white 2019", "off white 2020", "off white 2021", "pyrex vision", "off white diagonals", "off white c/o virgil abloh"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Off-White launched 2013 after Pyrex Vision (2012-13). Virgil died Nov 2021 (basic fact; low). Early (2013-2016) pieces carry 'OFF-WHITE c/o VIRGIL ABLOH' with diagonals/quotes."
+      label: ["'OFF-WHITE c/o VIRGIL ABLOH' (early), 'OFF-WHITE' with arrow logo (later)"]
+      made_in: ["italy", "portugal"]
+      model_names: ["diagonals", "arrows", "caravaggio", "industrial belt", "pyrex 23"]
+      keywords: ["virgil", "c/o virgil abloh", "diag", "pyrex vision"]
+    anti_cues: ["post virgil", "ib kamara", "2022", "2023", "2024"]
+    sources: ["https://www.grailed.com/designers/off-white"]
+    confidence: low
+    verify: true
+  - id: bape__nigo
+    brand: bape
+    designer: Nigo
+    years: [1993, 2011]
+    weight: 7
+    aliases: ["nigo era", "old bape", "og bape", "bape 90s", "bape 2000s", "bape 2005", "bape 2006", "bape 2007", "bape 2008", "bape 2009", "bape 2010", "nigo bape", "ベイプ ニゴー期", "アベイシングエイプ 初期"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Nigo sold BAPE to I.T Group 2011 (basic fact; low)."
+      label: ["'A BATHING APE' woven label, 'Made in Japan'"]
+      made_in: ["japan"]
+      model_names: ["shark hoodie", "1st camo", "college tee", "bapesta", "milo"]
+      keywords: ["nigo", "made in japan", "1st camo", "shark"]
+    anti_cues: ["i.t", "2012", "2015", "2020", "2021", "2022", "2023", "2024", "made in china", "bape x"]
+    sources: ["https://www.grailed.com/designers/bape"]
+    confidence: low
+    verify: true
+  - id: hysteric_glamour__classic
+    brand: hysteric_glamour
+    designer: Nobuhiko Kitamura
+    years: [1984, 2009]
+    weight: 8
+    aliases: ["old hysteric glamour", "vintage hysteric glamour", "hysteric glamour 90s", "hysteric glamour 2000s", "hysteric glamour y2k", "ヒステリックグラマー ヴィンテージ", "ヒステリックグラマー 90s", "ヒステリックグラマー 初期"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Designer/founding year per memory (low). Dating from tag design: UNKNOWN."
+      label: ["'HYSTERIC GLAMOUR' woven label, 'made in japan'"]
+      made_in: ["japan"]
+      model_names: ["girl tee", "skull", "nude girl", "sex print", "guitar girl"]
+      keywords: ["made in japan", "90s", "y2k", "girl"]
+    anti_cues: ["made in china", "2015", "2020", "2021", "2022", "2023", "2024", "collab"]
+    sources: ["https://www.grailed.com/designers/hysteric-glamour"]
+    confidence: low
+    verify: true
+  - id: ann_demeulemeester__ann
+    brand: ann_demeulemeester
+    designer: Ann Demeulemeester
+    years: [1985, 2013]
+    weight: 9
+    aliases: ["ann era", "ann demeulemeester founder", "ann demeulemeester archive", "ann demeulemeester 2000s", "ann demeulemeester 2008", "ann demeulemeester 2009", "ann demeulemeester 2010", "ann demeulemeester 2011", "ann demeulemeester 2012", "アンドゥムルメステール アン期"]
+    cues:
+      season_code_regex: UNKNOWN
+      season_code_notes: "Ann left her label 2013; successors Sébastien Meunier then others (basic facts; low)."
+      label: ["'ANN DEMEULEMEESTER' label, 'made in italy'"]
+      made_in: ["italy", "belgium"]
+      model_names: ["tall boots", "waistcoat", "feather", "leather jacket"]
+      keywords: ["made in italy", "2000s", "2010s early"]
+    anti_cues: ["meunier", "sebastien meunier", "stefano gallici", "2014", "2015", "2016", "2018", "2020", "2022", "2024"]
+    sources: ["https://www.grailed.com/designers/ann-demeulemeester"]
+    confidence: low
+    verify: true

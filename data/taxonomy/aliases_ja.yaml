@@ -1,0 +1,258 @@
+# R2 aliases_ja.yaml. Katakana/kanji spellings from background knowledge plus snippets seen this session.
+# Verified-in-session (seen in live Yahoo/Mercari/fashionsnap result text): ディオールオム, エディ期, クリス期, バルマン,
+# ビューティービースト, メゾンマルタンマルジェラ? (NOT seen), others are from memory: see ja_verification.
+brands:
+  dior_homme: ["ディオールオム", "ディオール オム", "ディオール・オム", "DIOR HOMME", "ディオール"]
+  saint_laurent: ["サンローラン", "サンローランパリ", "サンローラン パリ", "イヴサンローラン", "イヴ・サンローラン", "SAINT LAURENT PARIS"]
+  celine: ["セリーヌ", "セリーヌ オム", "CELINE", "CÉLINE"]
+  balmain: ["バルマン", "バルマン オム", "BALMAIN"]
+  rick_owens: ["ジオバスケット", "リックオウエンス", "リック・オウエンス", "リックオーエンス", "リック オウエンス", "ダークシャドウ", "DRKSHDW", "ダークシャドー"]
+  undercover: ["アンダーカバー", "アンダーカバリズム", "UNDERCOVER", "UNDERCOVERISM", "高橋盾"]
+  beauty_beast: ["ビューティービースト", "ビューティビースト", "ビューティー:ビースト", "ビューティ&ビースト", "beauty:beast", "山下隆生"]
+  "20471120": ["20471120", "トゥエンティー フォーティーセブン イレブン トゥエンティー", "ニーゼロヨンナナイチイチニーゼロ"]
+  chanel: ["シャネル", "CHANEL", "ココマーク", "シャネル ヴィンテージ"]
+  erd: ["エンファンリッシュデプリメ", "エンファン リッシュ デプリメ", "エンファンリッシュデプリメ ERD", "ERD"]
+  number_nine: ["ナンバーナイン", "ナンバー ナイン", "NUMBER (N)INE", "NUMBER(N)INE", "ナンバーナイン 宮下貴裕", "ナンバーナイン ソロイスト"]
+  soloist: ["ソロイスト", "ザ・ソロイスト", "ザソロイスト", "TAKAHIROMIYASHITATheSoloist.", "宮下貴裕"]
+  hysteric_glamour: ["ヒステリックグラマー", "ヒステリック グラマー", "ヒス", "HYSTERIC GLAMOUR", "ヒステリックミニ"]
+  14th_addiction: ["14thアディクション", "フォーティーンスアディクション", "14th Addiction"]
+  lgb: ["エルジービー", "ルグランブルー", "ル グラン ブルー", "L.G.B.", "LGB"]
+  ifsixwasnine: ["イフシックスワズナイン", "イフ シックス ワズ ナイン", "if six was nine"]
+  kmrii: ["ケムリ", "キムリ", "kmrii", "KMRii"]
+  tornado_mart: ["トルネードマート", "TORNADO MART"]
+  goa: ["ゴア", "GOA", "ゴアジャパン"]
+  share_spirit: ["シェアスピリット", "SHARE SPIRIT"]
+  semantic_design: ["セマンティックデザイン", "SEMANTIC DESIGN"]
+  buffalo_bobs: ["バッファローボブズ", "バッファローボブス", "BUFFALO BOBS"]
+  civarize: ["シヴァーライズ", "シバライズ", "CIVARIZE"]
+  roen: ["ロエン", "Roen", "ROEN"]
+  yohji_yamamoto: ["ヨウジヤマモト", "ヨウジ ヤマモト", "ヨージヤマモト", "Y's", "ワイズ", "ヨウジヤマモト プールオム", "ディスコード"]
+  comme_des_garcons: ["コムデギャルソン", "コム デ ギャルソン", "ギャルソン", "コムデギャルソンオムプリュス", "CDG", "オムプリュス"]
+  junya_watanabe: ["ジュンヤワタナベ", "ジュンヤ ワタナベ", "ジュンヤワタナベマン", "JUNYA WATANABE MAN"]
+  issey_miyake: ["イッセイミヤケ", "イッセイ ミヤケ", "オムプリッセ", "プリーツプリーズ", "HOMME PLISSE"]
+  kapital: ["キャピタル", "KAPITAL", "キャピタル キムラ"]
+  raf_simons: ["ラフシモンズ", "ラフ・シモンズ", "ラフ シモンズ", "RAF SIMONS"]
+  helmut_lang: ["ヘルムートラング", "ヘルムート ラング", "HELMUT LANG"]
+  margiela: ["マルジェラ", "マルタンマルジェラ", "メゾンマルタンマルジェラ", "メゾンマルジェラ", "MM6", "エムエムシックス"]
+  ann_demeulemeester: ["アンドゥムルメステール", "アン ドゥムルメステール", "アンドゥムルメステール"]
+  carol_christian_poell: ["カロルクリスチャンポエル", "カロル クリスチャン ポエル", "CCP", "キャロルクリスチャンポエル"]
+  julius: ["ジュリアス", "JULIUS", "ユリウス"]
+  boris_bidjan_saberi: ["ボリスビジャンサベリ", "ボリス ビジャン サベリ", "BBS", "ボリスビジャン"]
+  jean_paul_gaultier: ["ジャンポールゴルチエ", "ジャン ポール ゴルチエ", "ゴルチエ", "ジャンポールゴルティエ"]
+  vivienne_westwood: ["ヴィヴィアンウエストウッド", "ヴィヴィアン ウエストウッド", "ヴィヴィアン", "ヴィヴィアンウエストウッドマン", "オーブ"]
+  alexander_mcqueen: ["アレキサンダーマックイーン", "アレキサンダー マックイーン", "マックイーン", "アレキサンダーマクイーン"]
+  gucci: ["グッチ", "GUCCI", "トムフォード グッチ"]
+  versace: ["ヴェルサーチ", "ヴェルサーチェ", "ベルサーチ", "ジャンニヴェルサーチ"]
+  dolce_gabbana: ["ドルチェ&ガッバーナ", "ドルチェアンドガッバーナ", "ドルガバ", "D&G", "ディーアンドジー"]
+  roberto_cavalli: ["ロベルトカヴァリ", "ロベルト カヴァリ", "ロベルトカバリ", "ジャストカヴァリ"]
+  givenchy: ["ジバンシィ", "ジバンシー", "ジバンシイ"]
+  balenciaga: ["バレンシアガ", "BALENCIAGA"]
+  vetements: ["ヴェトモン", "ヴェトモン", "ベトモン", "VETEMENTS"]
+  mugler: ["ミュグレー", "ティエリーミュグレー", "ティエリー ミュグレー", "ムグレー"]
+  chrome_hearts: ["クロムハーツ", "クロム ハーツ", "CHROME HEARTS"]
+  true_religion: ["トゥルーレリジョン", "トゥルー レリジョン", "True Religion"]
+  supreme: ["シュプリーム", "SUPREME", "ボックスロゴ", "渋谷店"]
+  off_white: ["オフホワイト", "OFF-WHITE", "ヴァージルアブロー"]
+  bape: ["ア ベイシング エイプ", "ア・ベイシング・エイプ", "アベイシングエイプ", "ベイプ", "BAPE", "エイプ"]
+  jeremy_scott: ["ジェレミースコット", "ジェレミー スコット", "モスキーノ", "MOSCHINO", "アディダス ジェレミースコット"]
+  yeezy: ["イージー", "イージーブースト", "YEEZY", "カニエウェスト", "カニエ"]
+eras:
+  dior_homme__hedi: ["エディ", "エディ期", "エディスリマン", "エディ・スリマン", "エディ時代", "エディ期 ディオールオム"]
+  dior_homme__kva: ["クリス期", "クリスヴァンアッシュ", "クリス・ヴァン・アッシュ", "クリス・ヴァン・アッシェ"]
+  dior_men__kim_jones: ["キムジョーンズ", "キム・ジョーンズ", "キムジョーンズ期", "ディオールオム 2019以降"]
+  saint_laurent__tom_ford: ["トムフォード期 サンローラン", "イヴサンローラン リヴゴーシュ トムフォード"]
+  saint_laurent__pilati: ["ステファノピラーティ", "ピラーティ期", "イヴサンローラン ピラーティ"]
+  saint_laurent__hedi: ["エディ", "エディ期", "エディスリマン", "エディ期 サンローラン", "エディスリマン サンローランパリ", "SLP エディ期", "サンローランパリ エディ"]
+  saint_laurent__vaccarello: ["ヴァカレロ", "アンソニーヴァカレロ", "ヴァッカレロ期"]
+  celine__phoebe: ["フィービー期", "フィービーファイロ", "旧セリーヌ", "フィービー セリーヌ"]
+  celine__hedi: ["エディ", "エディ期", "エディスリマン", "エディ期 セリーヌ", "エディスリマン セリーヌ", "セリーヌ オム エディ"]
+  celine__rider: ["マイケルライダー", "マイケル・ライダー"]
+  balmain__decarnin: ["デカルナン期", "クリストフ・デカルナン", "クリストフデカルナン", "デカルナン"]
+  balmain__rousteing: ["ルスタン期", "オリヴィエ・ルスタン", "オリヴィエルスタン"]
+  rick_owens__early: ["オルマ期", "初期リックオウエンス", "旧リック", "古いリックオウエンス", "ダークシャドウ 初期", "00年代 リックオウエンス"]
+  rick_owens__mid: ["リックオウエンス 2010年代"]
+  rick_owens__recent: ["リックオウエンス 近年"]
+  undercover__early: ["初期アンダーカバー", "アンダーカバー 初期", "アンダーカバリズム", "00年代 アンダーカバー", "アーカイブ アンダーカバー", "旧アンダーカバー"]
+  undercover__mid: ["アンダーカバー 2010年代"]
+  beauty_beast__original: ["ビューティービースト 90年代", "ビューティービースト 初期", "ビューティービースト 90s", "ビューティービースト 旧"]
+  beauty_beast__revival: ["ビューティービースト 復刻", "ビューティービースト 2020"]
+  chanel__vintage: ["オールドシャネル", "シャネル ヴィンテージ", "シャネル 90年代", "シャネル 00年代", "シャネル 旧", "シャネル ビンテージ"]
+  erd__early: ["初期エンファンリッシュデプリメ", "エンファンリッシュデプリメ 初期"]
+  number_nine__miyashita: ["本人期", "ジョージ期", "カート期", "ギブ期", "宮下期", "宮下貴裕 ナンバーナイン", "ナンバーナイン 初期", "ナンバーナイン アーカイブ", "ナンバーナイン 旧", "ナンバーナイン 2000年代"]
+  number_nine__relaunch: ["ナンバーナイン バイ タカヒロミヤシタ", "ナンバーナイン 復活", "ナンバーナイン 2025"]
+  raf_simons__early: ["初期ラフシモンズ", "ラフシモンズ アーカイブ", "ラフシモンズ 00年代", "ラフシモンズ 旧", "ラフシモンズ 初期"]
+  helmut_lang__helmut: ["本人期", "プラダ期", "本人期 ヘルムートラング", "ヘルムートラング 本人期", "ヘルムートラング 初期", "ヘルムートラング アーカイブ", "ヘルムートラング 90年代", "ヘルムートラング 旧"]
+  margiela__martin: ["本人期", "マルタン期", "マルタンマルジェラ期", "メゾンマルタンマルジェラ", "マルジェラ 初期", "マルジェラ 旧", "タグ4つ", "4ステッチ", "白タグ"]
+  margiela__galliano: ["ガリアーノ期", "ジョンガリアーノ マルジェラ"]
+  gucci__tom_ford: ["トムフォード期", "トムフォード グッチ", "グッチ トムフォード期"]
+  mcqueen__lee: ["本人期", "リー期", "リーマックイーン", "アレキサンダーマックイーン リー期", "マックイーン 旧"]
+  mcqueen__burton: ["サラバートン期", "サラ・バートン"]
+  givenchy__tisci: ["リカルド期", "ティッシ期", "リカルドティッシ", "リカルド・ティッシ", "ジバンシィ ティッシ"]
+  balenciaga__ghesquiere: ["ゲスキエール期", "ニコラゲスキエール", "ニコラ・ゲスキエール", "バレンシアガ ゲスキエール"]
+  balenciaga__demna: ["デムナ期", "デムナ", "デムナ・ヴァザリア"]
+  vetements__demna: ["デムナ期 ヴェトモン", "ヴェトモン 初期"]
+  versace__gianni: ["ジャンニ期", "ジャンニヴェルサーチ"]
+  helmut_lang__post: ["ヘルムートラング 現行"]
+  bape__nigo: ["ニゴー期", "NIGO期", "初期ベイプ", "初期エイプ", "ベイプ 00年代"]
+  hysteric_glamour__classic: ["ヒステリックグラマー 90年代", "ヒステリックグラマー 初期", "ヒステリックグラマー ヴィンテージ", "ヒステリックグラマー 00年代"]
+  ann_demeulemeester__ann: ["本人期", "アン期", "アン ドゥムルメステール 本人期"]
+  mugler__thierry: ["ミュグレー ヴィンテージ", "ティエリーミュグレー ヴィンテージ", "ミュグレー 90年代"]
+# Added by the scoring engineer (2026-11-24): JA brand strings that collide with ordinary words or with a
+# wider brand family. They count only with supporting context (era alias, season code, model name, brand field).
+ambiguous_brands:
+  dior_homme: ["ディオール"]
+  hysteric_glamour: ["ヒス"]
+  goa: ["ゴア"]
+  kmrii: ["ケムリ", "キムリ"]
+  vivienne_westwood: ["ヴィヴィアン", "オーブ"]
+  yohji_yamamoto: ["ワイズ", "Y's"]
+  yeezy: ["イージー", "カニエ"]
+  bape: ["エイプ"]
+  supreme: ["ボックスロゴ", "渋谷店"]
+  jeremy_scott: ["モスキーノ", "MOSCHINO"]
+  julius: ["ユリウス"]
+  carol_christian_poell: ["CCP"]
+  boris_bidjan_saberi: ["BBS"]
+  margiela: ["MM6", "エムエムシックス", "ここのえ"]
+archetypes:
+  leather_jacket: ["レザージャケット", "革ジャン", "ラムレザー", "ライダース", "革ジャケット", "レザーブルゾン"]
+  biker_jacket: ["ライダース", "ダブルライダース", "シングルライダース", "ライダースジャケット", "バイカージャケット", "モーターサイクルジャケット"]
+  varsity_jacket: ["スタジャン", "バーシティジャケット", "ベースボールジャケット", "スタジアムジャンパー", "テディ"]
+  blazer: ["テーラードジャケット", "ブレザー", "スーツ", "ジャケット", "タキシード", "ジレ"]
+  coat: ["コート", "ロングコート", "ステンカラーコート", "トレンチコート", "ミリタリージャケット", "ボンバージャケット", "MA-1", "パーカー", "モッズコート"]
+  denim: ["デニム", "ジーンズ", "Gパン", "デニムパンツ", "スキニーデニム", "ワックスデニム", "コーティングデニム", "バイカーデニム", "ペインターパンツ", "Gジャン", "デニムジャケット"]
+  pants: ["パンツ", "スラックス", "カーゴパンツ", "ボンテージパンツ", "レザーパンツ", "スウェットパンツ", "ショーツ"]
+  hoodie: ["パーカー", "フーディー", "フーディ", "スウェット", "スウェットパーカー", "ジップパーカー", "トレーナー"]
+  knit: ["ニット", "セーター", "カーディガン", "モヘア", "カシミヤ", "カシミア", "ニットカーディガン", "タートルネック"]
+  shirt: ["シャツ", "ネルシャツ", "長袖シャツ", "ボタンシャツ", "ドレスシャツ", "ウエスタンシャツ"]
+  graphic_tee: ["Tシャツ", "プリントT", "ロンT", "グラフィックT", "バンT", "半袖Tシャツ", "カットソー"]
+  boots: ["足袋ブーツ", "タビブーツ", "ブーツ", "エンジニアブーツ", "ジョッパーブーツ", "チェルシーブーツ", "サイドゴアブーツ", "ハーネスブーツ", "ワークブーツ"]
+  sneakers: ["ジオバスケット", "スニーカー", "シューズ", "ハイカット", "ローカット", "ダンク"]
+  jewelry: ["シルバー", "シルバーアクセ", "指輪", "リング", "ネックレス", "ペンダント", "ブレスレット", "ピアス", "イヤリング", "ブローチ", "SV925"]
+  bag: ["ポーチ", "サコッシュ", "バッグ", "リュック", "バックパック", "トートバッグ", "ショルダーバッグ", "ボディバッグ", "ウエストバッグ"]
+  belt: ["ベルト", "チェーンベルト", "レザーベルト", "ベルトバッグ"]
+  accessory: ["小物", "マフラー", "ストール", "手袋", "グローブ", "キャップ", "帽子", "ニット帽", "サングラス", "ネクタイ", "財布", "ウォレット"]
+terms:
+  - {ja: "古着", romaji: "furugi", meaning: "used / secondhand clothing", signal: neutral}
+  - {ja: "ヴィンテージ", romaji: "vintage", meaning: "vintage", signal: positive}
+  - {ja: "ビンテージ", romaji: "binteji", meaning: "vintage (alt spelling)", signal: positive}
+  - {ja: "アーカイブ", romaji: "aakaibu", meaning: "archive (collectible past-season piece)", signal: positive}
+  - {ja: "当時物", romaji: "toujimono", meaning: "period-original item", signal: positive}
+  - {ja: "希少", romaji: "kisho", meaning: "rare", signal: positive}
+  - {ja: "レア", romaji: "rea", meaning: "rare", signal: positive}
+  - {ja: "激レア", romaji: "gekirea", meaning: "very rare (also seller hype)", signal: positive}
+  - {ja: "入手困難", romaji: "nyushu konnan", meaning: "hard to obtain", signal: positive}
+  - {ja: "初期", romaji: "shoki", meaning: "early period", signal: positive}
+  - {ja: "本人期", romaji: "honninki", meaning: "founder-designer era (e.g. Helmut Lang himself)", signal: positive}
+  - {ja: "美品", romaji: "bihin", meaning: "excellent condition", signal: positive}
+  - {ja: "極美品", romaji: "gokubihin", meaning: "mint / near-new condition", signal: positive}
+  - {ja: "新品", romaji: "shinpin", meaning: "brand new", signal: positive}
+  - {ja: "未使用", romaji: "mishiyou", meaning: "unused", signal: positive}
+  - {ja: "タグ付き", romaji: "tagutsuki", meaning: "tags attached", signal: positive}
+  - {ja: "目立った傷や汚れなし", romaji: "medatta kizu ya yogore nashi", meaning: "no notable damage or stains", signal: positive}
+  - {ja: "本物", romaji: "honmono", meaning: "genuine", signal: positive}
+  - {ja: "正規品", romaji: "seikihin", meaning: "official/genuine item", signal: positive}
+  - {ja: "国内正規品", romaji: "kokunai seikihin", meaning: "genuine item sold by the Japan official distributor", signal: positive}
+  - {ja: "正規取扱店", romaji: "seiki toriatsukaiten", meaning: "authorised retailer purchase", signal: positive}
+  - {ja: "鑑定済み", romaji: "kantei zumi", meaning: "authentication-checked", signal: positive}
+  - {ja: "日本製", romaji: "nihonsei", meaning: "made in Japan", signal: positive}
+  - {ja: "イタリア製", romaji: "itaria sei", meaning: "made in Italy", signal: neutral}
+  - {ja: "フランス製", romaji: "furansu sei", meaning: "made in France", signal: neutral}
+  - {ja: "着用感あり", romaji: "chakuyokan ari", meaning: "signs of wear", signal: neutral}
+  - {ja: "使用感あり", romaji: "shiyokan ari", meaning: "signs of use", signal: neutral}
+  - {ja: "ダメージ加工", romaji: "dameiji kako", meaning: "intentional distressing (design) — not necessarily a flaw", signal: neutral}
+  - {ja: "ダメージ", romaji: "dameiji", meaning: "damage OR distressing; check context", signal: neutral}
+  - {ja: "色褪せ", romaji: "iroase", meaning: "colour fading", signal: negative}
+  - {ja: "ほつれ", romaji: "hotsure", meaning: "fraying / loose threads", signal: negative}
+  - {ja: "シミ", romaji: "shimi", meaning: "stain", signal: negative}
+  - {ja: "汚れ", romaji: "yogore", meaning: "dirt / soiling", signal: negative}
+  - {ja: "穴", romaji: "ana", meaning: "hole", signal: negative}
+  - {ja: "ジャンク", romaji: "janku", meaning: "junk: as-is / for parts, may be broken", signal: negative}
+  - {ja: "訳あり", romaji: "wakeari", meaning: "has a flaw (explained)", signal: negative}
+  - {ja: "難あり", romaji: "nanari", meaning: "has a problem/defect", signal: negative}
+  - {ja: "タグなし", romaji: "tagu nashi", meaning: "tag missing: authentication/era problem", signal: negative}
+  - {ja: "タグ無し", romaji: "tagu nashi", meaning: "tag missing (alt kanji)", signal: negative}
+  - {ja: "ノークレームノーリターン", romaji: "NCNR", meaning: "no claims, no returns (common on Yahoo Auctions)", signal: neutral}
+  - {ja: "返品不可", romaji: "henpin fuka", meaning: "no returns", signal: neutral}
+  - {ja: "即決", romaji: "sokketsu", meaning: "buy-it-now price (Yahoo Auctions)", signal: neutral}
+  - {ja: "送料無料", romaji: "souryou muryou", meaning: "free shipping (domestic)", signal: neutral}
+  - {ja: "並行輸入", romaji: "heiko yunyu", meaning: "parallel import (not via official distributor)", signal: neutral}
+  - {ja: "風", romaji: "fuu", meaning: "-style / -esque: NOT the brand ('ディオール風')", signal: negative}
+  - {ja: "タイプ", romaji: "taipu", meaning: "'type' as in lookalike ('ナンバーナイン タイプ'); also a model-type word in some brand names", signal: negative}
+  - {ja: "系", romaji: "kei", meaning: "-type / -scene ('モード系', 'ロック系'); negative if attached to a brand name", signal: neutral}
+  - {ja: "ノーブランド", romaji: "nobrand", meaning: "unbranded", signal: negative}
+  - {ja: "偽物", romaji: "nisemono", meaning: "fake", signal: negative}
+  - {ja: "コピー品", romaji: "kopii hin", meaning: "counterfeit/copy", signal: negative}
+  - {ja: "レプリカ", romaji: "repurika", meaning: "replica (Margiela Replica line is real)", signal: negative}
+  - {ja: "オマージュ", romaji: "omaaju", meaning: "homage (lookalike)", signal: negative}
+  - {ja: "リメイク", romaji: "rimeiku", meaning: "remade/reworked by seller (unless brand-made)", signal: negative}
+  - {ja: "ハンドメイド", romaji: "handomeido", meaning: "handmade (custom, not brand)", signal: negative}
+  - {ja: "セレクトショップ購入", romaji: "serekuto shoppu konyu", meaning: "bought at a select shop (good provenance)", signal: positive}
+  - {ja: "保存袋", romaji: "hozonbukuro", meaning: "dust bag included", signal: neutral}
+  - {ja: "付属品", romaji: "fuzokuhin", meaning: "accessories/included items", signal: neutral}
+  - {ja: "着丈", romaji: "kitake", meaning: "garment length", signal: neutral}
+  - {ja: "身幅", romaji: "mihaba", meaning: "chest width", signal: neutral}
+  - {ja: "肩幅", romaji: "katahaba", meaning: "shoulder width", signal: neutral}
+  - {ja: "ウエスト", romaji: "uesuto", meaning: "waist", signal: neutral}
+  - {ja: "股下", romaji: "matashita", meaning: "inseam", signal: neutral}
+  - {ja: "裾幅", romaji: "susohaba", meaning: "hem/leg opening width (use to check Dior Homme 19cm/21cm)", signal: neutral}
+  - {ja: "メンズ", romaji: "menzu", meaning: "men's", signal: neutral}
+search_queries:
+  - {brand: dior_homme, era: dior_homme__hedi, query: "ディオールオム エディ期"}
+  - {brand: dior_homme, era: dior_homme__hedi, query: "ディオールオム エディスリマン デニム"}
+  - {brand: dior_homme, era: dior_homme__hedi, query: "ディオールオム ストリップ 04SS"}
+  - {brand: dior_homme, era: dior_homme__hedi, query: "ディオールオム ルスター デニム"}
+  - {brand: dior_homme, era: dior_homme__hedi, query: "ディオールオム 19cm デニム 日本製"}
+  - {brand: dior_homme, era: dior_homme__hedi, query: "ディオールオム エディ期 レザージャケット"}
+  - {brand: dior_homme, era: dior_homme__kva, query: "ディオールオム クリス期 デニム"}
+  - {brand: saint_laurent, era: saint_laurent__hedi, query: "サンローランパリ エディ期"}
+  - {brand: saint_laurent, era: saint_laurent__hedi, query: "サンローランパリ L01 ライダース"}
+  - {brand: saint_laurent, era: saint_laurent__hedi, query: "サンローランパリ スタジャン レザー"}
+  - {brand: saint_laurent, era: saint_laurent__hedi, query: "サンローランパリ ワイアット ブーツ"}
+  - {brand: celine, era: celine__hedi, query: "セリーヌ オム エディ期 レザージャケット"}
+  - {brand: balmain, era: balmain__decarnin, query: "バルマン デカルナン バイカーデニム"}
+  - {brand: balmain, era: balmain__decarnin, query: "バルマン ミリタリージャケット ショルダーパッド"}
+  - {brand: rick_owens, era: rick_owens__early, query: "リックオウエンス 初期 レザージャケット"}
+  - {brand: rick_owens, era: rick_owens__early, query: "リックオウエンス ジオバスケット"}
+  - {brand: rick_owens, era: rick_owens__early, query: "ダークシャドウ リックオウエンス 初期"}
+  - {brand: undercover, era: undercover__early, query: "アンダーカバー 初期 ジュンタカハシ"}
+  - {brand: undercover, era: undercover__early, query: "アンダーカバー スキャブ 03SS"}
+  - {brand: undercover, era: undercover__early, query: "アンダーカバリズム アーカイブ"}
+  - {brand: undercover, era: undercover__early, query: "アンダーカバー ウィーメイクノイズ Tシャツ"}
+  - {brand: undercover, era: undercover__early, query: "アンダーカバー but beautiful 04AW"}
+  - {brand: beauty_beast, era: beauty_beast__original, query: "ビューティービースト 90s"}
+  - {brand: beauty_beast, era: beauty_beast__original, query: "ビューティービースト 安全ピン"}
+  - {brand: beauty_beast, era: beauty_beast__original, query: "ビューティービースト ラビット リュック"}
+  - {brand: "20471120", era: 20471120__original, query: "20471120 アーカイブ"}
+  - {brand: number_nine, era: number_nine__miyashita, query: "ナンバーナイン 宮下貴裕"}
+  - {brand: number_nine, era: number_nine__miyashita, query: "ナンバーナイン ハイストリーツ 05AW"}
+  - {brand: number_nine, era: number_nine__miyashita, query: "ナンバーナイン ノワール 06AW"}
+  - {brand: number_nine, era: number_nine__miyashita, query: "ナンバーナイン スカル カシミヤ"}
+  - {brand: number_nine, era: number_nine__miyashita, query: "ナンバーナイン タッチミーアイムシック"}
+  - {brand: number_nine, era: number_nine__miyashita, query: "ナンバーナイン トライバルカモ パーカー"}
+  - {brand: number_nine, era: number_nine__miyashita, query: "ナンバーナイン 09AW ア クローズド フィーリング"}
+  - {brand: erd, era: erd__early, query: "エンファンリッシュデプリメ 初期"}
+  - {brand: raf_simons, era: raf_simons__early, query: "ラフシモンズ 初期 アーカイブ"}
+  - {brand: raf_simons, era: raf_simons__early, query: "ラフシモンズ ライオット 01AW"}
+  - {brand: raf_simons, era: raf_simons__early, query: "ラフシモンズ ヴァージニアクリーパー"}
+  - {brand: helmut_lang, era: helmut_lang__helmut, query: "ヘルムートラング 本人期"}
+  - {brand: helmut_lang, era: helmut_lang__helmut, query: "ヘルムートラング ボンテージ アーカイブ"}
+  - {brand: margiela, era: margiela__martin, query: "メゾンマルタンマルジェラ 初期 タグ4つ"}
+  - {brand: margiela, era: margiela__martin, query: "マルタンマルジェラ 足袋ブーツ"}
+  - {brand: alexander_mcqueen, era: mcqueen__lee, query: "アレキサンダーマックイーン リー期"}
+  - {brand: gucci, era: gucci__tom_ford, query: "グッチ トムフォード期 レザー"}
+  - {brand: givenchy, era: givenchy__tisci, query: "ジバンシィ ティッシ ロットワイラー"}
+  - {brand: hysteric_glamour, era: hysteric_glamour__classic, query: "ヒステリックグラマー 90s ヴィンテージ"}
+  - {brand: lgb, era: UNKNOWN, query: "L.G.B. ルグランブルー シルバー"}
+  - {brand: ifsixwasnine, era: UNKNOWN, query: "イフシックスワズナイン レザー"}
+  - {brand: julius, era: UNKNOWN, query: "ジュリアス ガスマスクカーゴ"}
+  - {brand: carol_christian_poell, era: UNKNOWN, query: "カロルクリスチャンポエル ブーツ"}
+  - {brand: chrome_hearts, era: UNKNOWN, query: "クロムハーツ ダガー 925"}
+  - {brand: chanel, era: chanel__vintage, query: "シャネル ヴィンテージ ココマーク ベルト"}
+  - {brand: bape, era: bape__nigo, query: "ア ベイシング エイプ 初期 シャーク"}
+  - {brand: supreme, era: supreme__pre_vf, query: "シュプリーム ボックスロゴ 渋谷"}
+ja_verification:
+  seen_in_live_results_this_session: ["ディオールオム", "エディ期", "クリス期", "バルマン", "ビューティービースト", "ビューティ&ビースト", "ブランド/ストリップ English names via Yahoo/Mercari JP titles"]
+  from_memory_unverified: ["ナンバーナイン", "アンダーカバー", "リックオウエンス", "サンローラン", "セリーヌ", "エンファンリッシュデプリメ", "クロムハーツ", "ヒステリックグラマー", "all other brands", "romanisation of Kmrii (ケムリ/キムリ unsure)", "Civarize (シヴァーライズ/シバライズ unsure)", "20471120 reading"]
+  note: "A production system should confirm each brand string with one Mercari JP / Yahoo Auctions keyword search (result counts) before relying on it."
+sources: ["https://auctions.yahoo.co.jp/brand/1209/", "https://jp.mercari.com/s/391732", "https://auctions.yahoo.co.jp/jp/auction/v1236799178", "https://www.fashionsnap.com/article/yamashita-takao/", "https://www.fashionsnap.com/article/2025-11-06/balmain-olivier-rousteing/"]

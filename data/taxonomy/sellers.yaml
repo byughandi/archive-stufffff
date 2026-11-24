@@ -1,0 +1,988 @@
+# R1 output. Generated 2026-11-24. Handles verified only where a source URL shows them; see research/R1_instagram.md
+accounts:
+- handle: boringblind
+  platform: instagram
+  type: seller
+  sub_scene: general_archive
+  brands_focus:
+  - raf_simons
+  - dior_homme
+  region: US
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: <5k
+  signal_weight: 0.8
+  sources:
+  - https://imginn.com/boringblind/
+  - research/TASTE_PROFILE.md
+  confidence: high
+- handle: crybynoonarchive
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.8
+  sources:
+  - research/TASTE_PROFILE.md
+  confidence: med
+  verify: true
+- handle: archivethreads
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.8
+  sources:
+  - research/TASTE_PROFILE.md
+  confidence: med
+  verify: true
+- handle: youthwastedpoorly
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.8
+  sources:
+  - research/TASTE_PROFILE.md
+  confidence: med
+  verify: true
+- handle: nevernined
+  platform: instagram
+  type: seller
+  sub_scene: jp_archive
+  brands_focus:
+  - number_nine
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.8
+  sources:
+  - research/TASTE_PROFILE.md
+  confidence: med
+  verify: true
+- handle: myprettiarchive
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.8
+  sources:
+  - research/TASTE_PROFILE.md
+  confidence: med
+  verify: true
+- handle: glam_archive
+  platform: instagram
+  type: seller
+  sub_scene: chanel_glam
+  brands_focus:
+  - chanel
+  - margiela
+  - celine
+  - balmain
+  - chrome_hearts
+  - rick_owens
+  - saint_laurent
+  region: TH
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.95
+  sources:
+  - https://www.dazeddigital.com/fashion/article/70733/1/glam-archive-rare-fashion-dealer-bangkok-best-dressed-2010s-fashion
+  - research/TASTE_PROFILE.md
+  confidence: high
+- handle: junki_ichikawa
+  platform: instagram
+  type: stylist
+  sub_scene: jp_archive
+  brands_focus: []
+  region: JP
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.9
+  sources:
+  - research/TASTE_PROFILE.md
+  confidence: med
+  verify: true
+- handle: realabayan
+  platform: instagram
+  type: collector
+  sub_scene: jp_archive
+  brands_focus:
+  - number_nine
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.9
+  sources:
+  - https://www.archivepdf.net/articles/uncovering-number-nine-interview-with-al-abayan
+  - research/TASTE_PROFILE.md
+  confidence: med
+  verify: true
+- handle: alabayan
+  platform: instagram
+  type: collector
+  sub_scene: jp_archive
+  brands_focus:
+  - number_nine
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.5
+  sources:
+  - https://www.archivepdf.net/articles/uncovering-number-nine-interview-with-al-abayan
+  - research/TASTE_PROFILE.md
+  confidence: low
+  verify: true
+- handle: verifyd.archive
+  platform: instagram
+  type: seller
+  sub_scene: jp_archive
+  brands_focus:
+  - number_nine
+  - chrome_hearts
+  - rick_owens
+  - vetements
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.7
+  sources:
+  - https://imginn.com/verifyd.archive/
+  confidence: high
+- handle: trynaflip
+  platform: instagram
+  type: seller
+  sub_scene: jp_archive
+  brands_focus:
+  - number_nine
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.55
+  sources:
+  - https://imginn.com/trynaflip/
+  confidence: med
+- handle: archivalcloset
+  platform: instagram
+  type: seller
+  sub_scene: general_archive
+  brands_focus:
+  - number_nine
+  region: US
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.65
+  sources:
+  - https://imginn.com/archivalcloset/
+  confidence: high
+- handle: hitpoint.arch
+  platform: instagram
+  type: seller
+  sub_scene: jp_archive
+  brands_focus:
+  - number_nine
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.65
+  sources:
+  - https://imginn.com/hitpoint.arch/
+  confidence: med
+- handle: hikikomourning
+  platform: instagram
+  type: seller
+  sub_scene: hedi
+  brands_focus:
+  - dior_homme
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.75
+  sources:
+  - https://imginn.com/hikikomourning/
+  confidence: high
+- handle: shopveldt
+  platform: instagram
+  type: seller
+  sub_scene: hedi
+  brands_focus:
+  - chrome_hearts
+  - saint_laurent
+  - rick_owens
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.6
+  sources:
+  - https://imginn.com/shopveldt/
+  confidence: med
+- handle: swgscool
+  platform: instagram
+  type: seller
+  sub_scene: hedi
+  brands_focus:
+  - dior_homme
+  - chrome_hearts
+  - rick_owens
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.7
+  sources:
+  - https://imginn.com/swgscool/
+  confidence: med
+- handle: archivepluh
+  platform: instagram
+  type: seller
+  sub_scene: rick_avant
+  brands_focus:
+  - rick_owens
+  - saint_laurent
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.65
+  sources:
+  - https://imginn.com/archivepluh/
+  confidence: med
+- handle: trashedpalace
+  platform: instagram
+  type: seller
+  sub_scene: y2k_designer
+  brands_focus:
+  - balmain
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.55
+  sources:
+  - https://imginn.com/trashedpalace/
+  confidence: med
+- handle: blindhomage
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://imginn.com/blindhomage/
+  confidence: low
+  verify: true
+- handle: 5th.archive
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://imginn.com/5th.archive/
+  confidence: low
+  verify: true
+- handle: homersarchive
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://imginn.com/homersarchive/
+  confidence: low
+  verify: true
+- handle: imfeening
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://imginn.com/imfeening/
+  confidence: low
+  verify: true
+- handle: computersarchive
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://imginn.com/computersarchive/
+  confidence: low
+  verify: true
+- handle: 6ixarchive.it
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://imginn.com/6ixarchive.it/
+  confidence: low
+  verify: true
+- handle: das.archivee
+  platform: instagram
+  type: seller
+  sub_scene: UNKNOWN
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://imginn.com/das.archivee/
+  confidence: low
+  verify: true
+- handle: kindal_aoyama
+  platform: instagram
+  type: store
+  sub_scene: jp_archive
+  brands_focus:
+  - number_nine
+  - undercover
+  region: JP
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.5
+  sources:
+  - https://www.klook.com/en-AU/blog/streetwear-guide-tokyo
+  confidence: med
+  verify: true
+- handle: kindal_nakameguro
+  platform: instagram
+  type: store
+  sub_scene: jp_archive
+  brands_focus:
+  - number_nine
+  - undercover
+  region: JP
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.45
+  sources:
+  - https://www.thezoereport.com/fashion/best-vintages-stores-tokyo
+  confidence: low
+  verify: true
+- handle: bazzstore
+  platform: instagram
+  type: store
+  sub_scene: jp_archive
+  brands_focus:
+  - undercover
+  region: JP
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.45
+  sources:
+  - https://www.klook.com/en-AU/blog/streetwear-guide-tokyo
+  confidence: med
+  verify: true
+- handle: archivepdf
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.8
+  sources:
+  - https://imginn.com/archivepdf/
+  confidence: high
+- handle: chanel_archive
+  platform: instagram
+  type: curator
+  sub_scene: chanel_glam
+  brands_focus:
+  - chanel
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.5
+  sources:
+  - https://imginn.com/chanel_archive/
+  confidence: med
+- handle: chanel_archives
+  platform: instagram
+  type: curator
+  sub_scene: chanel_glam
+  brands_focus:
+  - chanel
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.5
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  - https://www.dazeddigital.com/fashion/article/30504/1/the-fashion-archive-instagrams-to-hit-follow-on
+  confidence: med
+- handle: oneofakind.archive
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus:
+  - chanel
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.4
+  sources:
+  - https://www.dazeddigital.com/fashion/article/37817/1/the-instagram-documenting-60-years-of-fashion-gregory-chester-oneofakind-archive?amp=1
+  confidence: med
+- handle: hedislimanehomme
+  platform: instagram
+  type: curator
+  sub_scene: hedi
+  brands_focus:
+  - dior_homme
+  - saint_laurent
+  - celine
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.6
+  sources:
+  - https://hypebeast.com/jp/2024/12/hedi-slimane-homme-instagram-account-launch-info
+  confidence: med
+- handle: margiela.archive
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus:
+  - margiela
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.45
+  sources:
+  - https://www.russh.com/best-vintage-fashion-instagram-accounts/
+  confidence: med
+- handle: margielatab1
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus:
+  - margiela
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.4
+  sources:
+  - https://www.dazeddigital.com/fashion/article/35736/1/the-instagram-documenting-the-margiela-tabi-boots-28-year-reign-margielatab1
+  confidence: high
+- handle: helmutlanggallery
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus:
+  - helmut_lang
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.4
+  sources:
+  - https://www.russh.com/best-vintage-fashion-instagram-accounts/
+  confidence: med
+- handle: oldhelmutlang
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus:
+  - helmut_lang
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.4
+  sources:
+  - https://www.russh.com/best-vintage-fashion-instagram-accounts/
+  confidence: med
+- handle: cdgarchive
+  platform: instagram
+  type: curator
+  sub_scene: jp_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.4
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  - https://www.russh.com/best-vintage-fashion-instagram-accounts/
+  confidence: med
+- handle: mcqueen_vault
+  platform: instagram
+  type: curator
+  sub_scene: y2k_designer
+  brands_focus:
+  - alexander_mcqueen
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.4
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  - https://www.dazeddigital.com/fashion/article/30504/1/the-fashion-archive-instagrams-to-hit-follow-on
+  confidence: med
+- handle: thewestwoodarchives
+  platform: instagram
+  type: curator
+  sub_scene: y2k_designer
+  brands_focus:
+  - vivienne_westwood
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.35
+  sources:
+  - https://www.russh.com/best-vintage-fashion-instagram-accounts/
+  confidence: med
+- handle: gallianoarchive
+  platform: instagram
+  type: curator
+  sub_scene: y2k_designer
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://amp.scmp.com/lifestyle/fashion-beauty/article/3257451/who-are-newest-and-hottest-fashion-influencers-retired-chinese-doctor-and-data-scientist-are-among
+  confidence: low
+  verify: true
+- handle: prada.archive
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  - https://www.dazeddigital.com/fashion/article/30504/1/the-fashion-archive-instagrams-to-hit-follow-on
+  confidence: med
+- handle: oldprada
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.25
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  confidence: low
+  verify: true
+- handle: oldceline
+  platform: instagram
+  type: curator
+  sub_scene: hedi
+  brands_focus:
+  - celine
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.4
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  confidence: med
+- handle: balenciaga_files
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus:
+  - balenciaga
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  confidence: low
+  verify: true
+- handle: datewithversace
+  platform: instagram
+  type: curator
+  sub_scene: y2k_designer
+  brands_focus:
+  - versace
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  confidence: low
+  verify: true
+- handle: diorinthe2000s
+  platform: instagram
+  type: curator
+  sub_scene: hedi
+  brands_focus:
+  - dior_homme
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.35
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  confidence: low
+  verify: true
+- handle: tomfordforgucci
+  platform: instagram
+  type: curator
+  sub_scene: y2k_designer
+  brands_focus:
+  - gucci
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://zmj.unibo.it/article/download/20921/19194/88327
+  confidence: low
+  verify: true
+- handle: runwayfiles_
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.25
+  sources:
+  - https://www.russh.com/best-vintage-fashion-instagram-accounts/
+  confidence: low
+  verify: true
+- handle: archivings.stacks
+  platform: instagram
+  type: curator
+  sub_scene: jp_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.35
+  sources:
+  - https://www.trussarchive.com/editorials/fasunaa-spotlight
+  confidence: low
+  verify: true
+- handle: fruits_magazine_archive
+  platform: instagram
+  type: curator
+  sub_scene: jp_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.3
+  sources:
+  - https://www.dazeddigital.com/fashion/article/47353/1/fruits-magazine-archive-instagram-account-shoichi-aoki-harajuku-tokyo-fashion
+  confidence: med
+- handle: tagsandthreads
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.25
+  sources:
+  - https://www.thefader.com/2016/01/22/fashion-archive-instagram-accounts-vintage
+  confidence: low
+  verify: true
+- handle: diet_prada
+  platform: instagram
+  type: curator
+  sub_scene: general_archive
+  brands_focus: []
+  region: UNKNOWN
+  has_webshop: false
+  webshop_url: UNKNOWN
+  webshop_platform: UNKNOWN
+  grailed_username: UNKNOWN
+  follower_band: UNKNOWN
+  signal_weight: 0.2
+  sources:
+  - https://www.nssgclub.com/en/fashion/23611/10-instagram-profiles-archive-fashion
+  confidence: low
+  verify: true
+hashtags:
+- tag: archivefashion
+  note: Core scene tag; user-provided seed; usage not independently verified in this run (IG tag pages not fetchable)
+  sources:
+  - research/TASTE_PROFILE.md
+- tag: ballhog
+  note: User-provided seed; JP archive/onii-kei scene; usage not independently verified in this run (IG tag pages not fetchable)
+  sources:
+  - research/TASTE_PROFILE.md
+- tag: diorhomme
+  note: Seed; usage not independently verified in this run (IG tag pages not fetchable)
+  sources:
+  - research/TASTE_PROFILE.md
+- tag: hedislimane
+  note: Seed; usage not independently verified in this run (IG tag pages not fetchable)
+  sources:
+  - research/TASTE_PROFILE.md
+- tag: numbernine
+  note: Seed; usage not independently verified in this run (IG tag pages not fetchable)
+  sources:
+  - research/TASTE_PROFILE.md
+weekly_scrape_list:
+- glam_archive
+- junki_ichikawa
+- realabayan
+- boringblind
+- crybynoonarchive
+- archivethreads
+- youthwastedpoorly
+- nevernined
+- myprettiarchive
+- archivepdf
+- hikikomourning
+- verifyd.archive
+- swgscool
+- archivalcloset
+- hitpoint.arch
+- archivepluh
+- shopveldt
+- hedislimanehomme
+- trynaflip
+- trashedpalace
+- alabayan
+- kindal_aoyama
+- chanel_archive
+- chanel_archives
+- kindal_nakameguro
+- bazzstore
+- margiela.archive
+- oneofakind.archive
+- margielatab1
+- helmutlanggallery
+- oldhelmutlang
+- cdgarchive
+- mcqueen_vault
+- oldceline
+- thewestwoodarchives
+- diorinthe2000s
+- archivings.stacks
+- blindhomage
+- 5th.archive
+- homersarchive
+- imfeening
+- computersarchive
+webshops:
+- name: DRIEW Garments
+  url: https://driewgarments.com/
+  stock: archive
+  platform: shopify
+  products_json: unknown
+  brands_focus:
+  - dior_homme
+  - number_nine
+  - undercover
+  - raf_simons
+  owner_handle: UNKNOWN
+  sources:
+  - https://driewgarments.com/collections/dior-homme?page=3
+  - https://driewgarments.com/pages/visitdriewgarments
+- name: MARAIS (AU) Rick Owens Archive
+  url: https://marais.com.au/collections/rick-owens-archive
+  stock: current_retail   # scoring engineer: listings are current-season retail despite the collection name
+  platform: shopify
+  products_json: unknown
+  brands_focus:
+  - rick_owens
+  owner_handle: UNKNOWN
+  sources:
+  - https://marais.com.au/collections/rick-owens-archive

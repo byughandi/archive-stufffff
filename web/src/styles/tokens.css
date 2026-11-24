@@ -1,0 +1,101 @@
+/* Grail Radar design tokens — Direction A, "Selvedge".
+   White garment-label ground, true black ink, one accent: the red thread of a selvedge edge.
+   Red means exactly one thing: this price is under fair value. Nothing else is red. */
+
+:root {
+  color-scheme: light dark;
+
+  /* Color */
+  --paper: #ffffff;        /* ground */
+  --ink: #000000;          /* type, rules, tier glyphs */
+  --thread: #6b6b6b;       /* secondary text (5.3:1 on paper) */
+  --rule: #d9d9d9;         /* hairlines between cells */
+  --label: #ededed;        /* quiet surfaces, photo placeholders */
+  --selvedge: #d8232a;     /* the accent: under fair value */
+  --selvedge-ink: #ffffff; /* type on the accent */
+
+  /* Type. Archivo carries both axes; the width axis does the editorial work. */
+  --font: "Archivo Variable", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic",
+    "Noto Sans JP", system-ui, sans-serif;
+  --w-condensed: 62%;      /* display figures, tabs, stamps */
+  --w-narrow: 80%;         /* dense labels */
+  --w-normal: 100%;        /* reading text */
+
+  --t-micro: 0.6875rem;    /* 11  flags, vertical marker */
+  --t-small: 0.75rem;      /* 12  titles, comps, meta */
+  --t-meta: 0.8125rem;     /* 13  era line */
+  --t-body: 0.9375rem;     /* 15  base */
+  --t-lead: 1.125rem;      /* 18  brand name */
+  --t-head: 1.5rem;        /* 24  section heads */
+  --t-figure: 3rem;        /* 48  the discount on a card */
+  --t-poster: 4.5rem;      /* 72  the discount in the drawer */
+
+  --lh-tight: 0.9;
+  --lh-snug: 1.2;
+  --lh-read: 1.45;
+
+  /* Space: 4 px base */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-12: 3rem;
+  --gutter: var(--s-3);
+  --tap: 2.75rem;          /* 44 px minimum touch target */
+
+  /* Shape. Sewn and printed things are square. Only stamped things are round. */
+  --r-none: 0;
+  --r-stamp: 5px;
+  --r-round: 999px;
+  --rule-w: 1px;
+  --selvedge-w: 4px;
+
+  /* Motion. Only in answer to a tap, plus one stamp press when a card first appears. */
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --t-fast: 120ms;
+  --t-press: 240ms;
+  --t-sheet: 280ms;
+
+  /* Layout */
+  --photo-ratio: 4 / 5;
+  --page-max: 88rem;
+  --sheet-max: 30rem;      /* drawer width on desktop */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #000000;
+    --ink: #ffffff;
+    --thread: #a3a3a3;
+    --rule: #2e2e2e;
+    --label: #161616;
+    --selvedge: #ff4a4f;
+    --selvedge-ink: #000000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 0ms;
+    --t-press: 0ms;
+    --t-sheet: 0ms;
+  }
+}
+
+/* Shared type roles */
+.figure {
+  font-stretch: var(--w-condensed);
+  font-weight: 900;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.condensed {
+  font-stretch: var(--w-condensed);
+  font-weight: 700;
+}
+.quiet {
+  color: var(--thread);
+}

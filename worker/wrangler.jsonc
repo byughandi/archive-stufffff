@@ -1,0 +1,22 @@
+{
+  // One Worker serves the static site (./public, built from ../web) and the JSON API (/api/*).
+  "name": "grail-radar",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "observability": { "enabled": true },
+  "vars": {
+    // Cloudflare Access. Both must be set in production or the API refuses every request.
+    //   ACCESS_TEAM_DOMAIN: "<your-team>.cloudflareaccess.com"
+    //   ACCESS_AUD: the Application Audience (AUD) tag of the Access application
+    "ACCESS_TEAM_DOMAIN": "",
+    "ACCESS_AUD": ""
+  }
+  // Secrets (set with `wrangler secret put`, never committed):
+  //   TURSO_DATABASE_URL, TURSO_AUTH_TOKEN
+}
