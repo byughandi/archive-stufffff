@@ -31,11 +31,13 @@ from scrapers.common.queries import Query, mark_run
 SOURCE = "mercari_us"
 SITE = "https://www.mercari.com"
 SEARCH = SITE + "/search/?keyword={q}&sortBy=2&status=on_sale"   # sortBy=2 = newest (unverified)
-APIFY_QUERIES = 2
-APIFY_MAX_ITEMS = 25
-APIFY_MIN_INTERVAL = 6 * 3600
-SOLD_MIN_INTERVAL = 24 * 3600
-SOLD_MAX_ITEMS = 40
+# Each actor run costs $0.04 per search plus $0.00275 per listing, so the $0.50 monthly budget buys about
+# seven small runs: one search of 12 listings every four days.
+APIFY_QUERIES = 1
+APIFY_MAX_ITEMS = int(os.environ.get("APIFY_MERCARI_US_ITEMS", 12))
+APIFY_MIN_INTERVAL = 96 * 3600
+SOLD_MIN_INTERVAL = 14 * 24 * 3600
+SOLD_MAX_ITEMS = 10
 
 
 def _num(v: Any) -> float | None:
@@ -75,27 +77,31 @@ def _money(v: Any) -> float | None:
 
 
 def listing_from_item(it: dict, fx, query_id: str | None = None, sold: bool = False) -> Listing | None:
-    sid = it.get("id") or it.get("itemId")
+    # Actor items (getascraper/mercari-us-scraper) use listing_id / title / condition_id / category_path /
+    # media.image_urls / seller_id / listing_status; the site's own JSON uses id / name / photos / seller{}.
+    sid = it.get("listing_id") or it.get("id") or it.get("itemId")
     price = _money(it.get("price"))
     if not sid or price is None:
         return None
     sid = str(sid)
-    status = str(it.get("status") or "").lower()
+    status = str(it.get("listing_status") or it.get("status") or "").lower()
     is_sold = sold or status in ("sold_out", "sold", "trading")
-    photos = it.get("photos") or it.get("images") or ([it["thumbnail"]] if it.get("thumbnail") else [])
+    photos = ((it.get("media") or {}).get("image_urls") or it.get("photos") or it.get("images")
+              or ([it["thumbnail"]] if it.get("thumbnail") else []))
     photos = [p.get("imageUrl") or p.get("url") if isinstance(p, dict) else p for p in photos]
     photos = [p for p in photos if p]
-    seller = it.get("seller") or {}
+    seller = it.get("seller") or ({"id": it["seller_id"], "reviewCount": it.get("seller_review_count")} if it.get("seller_id") else {})
     brand = it.get("brand")
     brand = brand.get("name") if isinstance(brand, dict) else brand
     size = it.get("size")
     size = size.get("name") if isinstance(size, dict) else size
-    cond = it.get("itemCondition") or it.get("condition")
+    cond = it.get("condition_id") or it.get("itemCondition") or it.get("condition")
     cond = cond.get("name") if isinstance(cond, dict) else cond
     return Listing(
-        source=SOURCE, source_id=sid, url=it.get("url") or f"{SITE}/us/item/{sid}/", title=it.get("name") or "",
+        source=SOURCE, source_id=sid, url=it.get("url") or f"{SITE}/us/item/{sid}/", title=it.get("title") or it.get("name") or "",
         price=price, currency="USD", price_usd=price, region="US", lang="en", description=it.get("description"),
         brand_raw=brand, size_raw=size, condition_raw=cond,
+        category_raw=" > ".join(it["category_path"]) if isinstance(it.get("category_path"), list) else None,
         seller=Seller(SOURCE, str(seller.get("id") or seller.get("name")), username=seller.get("name"),
                       rating=_num(seller.get("rating") or seller.get("averageRating")),
                       review_count=seller.get("reviewCount") or seller.get("numRatings")) if seller else None,
@@ -138,11 +144,14 @@ def apify_scrape(ctx: Ctx, queries: list[Query], client: PoliteClient | None = N
         raise apify.SpendGuard("apify fallback throttled (min interval between paid runs)")
     actor = apify.actor_for("MERCARI_US")
     qs = queries[:APIFY_QUERIES]
-    items = apify.run_actor(ctx.db, actor, apify.mercari_us_input(actor, [q.text for q in qs], APIFY_MAX_ITEMS),
-                            max_items=APIFY_MAX_ITEMS * len(qs), source="mercari_us", client=client)
+    ls: list[Listing] = []
+    for q in qs:
+        items = apify.run_actor(ctx.db, actor, apify.mercari_us_input(actor, q.text, APIFY_MAX_ITEMS),
+                                max_items=APIFY_MAX_ITEMS, source="mercari_us", client=client,
+                                fixed_usd=apify.MERCARI_US_SEARCH_FEE)
+        ctx.rawlog("apify:" + actor.id, 200, items)
+        ls += [l for l in (listing_from_item(i, ctx.fx, q.query_id) for i in items) if l]
     mark(ctx.db, "apify:mercari_us")
-    ctx.rawlog("apify:" + actor.id, 200, items)
-    ls = [l for l in (listing_from_item(i, ctx.fx, qs[0].query_id) for i in items) if l]
     res = RunResult(SOURCE, "scrape", rung="apify", queries=len(qs), seen=len(ls))
     if not ctx.dry_run:
         stats = upsert_listings(ctx.db, ls)
@@ -181,8 +190,9 @@ def comps(ctx: Ctx, queries: list[Query], apify_client: PoliteClient | None = No
         return res
     actor = apify.actor_for("MERCARI_US_SOLD")
     qs = queries[:1]
-    items = apify.run_actor(ctx.db, actor, apify.mercari_us_input(actor, [q.text for q in qs], SOLD_MAX_ITEMS, sold=True),
-                            max_items=SOLD_MAX_ITEMS, source="mercari_us", client=apify_client)
+    items = apify.run_actor(ctx.db, actor, apify.mercari_us_input(actor, qs[0].text, SOLD_MAX_ITEMS, sold=True),
+                            max_items=SOLD_MAX_ITEMS, source="mercari_us", client=apify_client,
+                            fixed_usd=apify.MERCARI_US_SEARCH_FEE) if qs else []
     mark(ctx.db, "apify:mercari_us_sold")
     ctx.rawlog("apify:" + actor.id, 200, items)
     sold = [l for l in (listing_from_item(i, ctx.fx, sold=True) for i in items) if l]

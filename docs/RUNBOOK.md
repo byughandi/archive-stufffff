@@ -150,3 +150,19 @@ To try the neural backend: set `GR_EMBED: fastembed` in the `tests` workflow's e
 the eval gate, and compare `precision_at_50`, `junk_rejection` and `era_ok` with
 `data/eval/baseline.json`. Switch the scrape workflows over only if it is at least as good;
 the similarity thresholds were tuned on the TF-IDF backend.
+
+## Schedulers
+
+The pipeline does not care what runs it. Two are set up:
+
+- **Claude Code scheduled task (in use).** Every 3 hours a fresh cloud session in the project's
+  environment runs `bash scripts/run_cycle.sh`: scrape, score, alert, plus sold prices, a full rescore
+  and pruning once a day and Instagram trends once a week. The database token and the Apify token are
+  saved on that environment as network secrets, so the job itself only ever holds placeholders. The
+  phone-alert topic lives in the database (`kv.ntfy_topic`). A normal cycle takes about 5 minutes; the
+  daily one about 8. Each run uses a little of the Claude subscription.
+- **GitHub Actions (dormant).** The workflows in `.github/workflows` do the same on GitHub's runners for
+  free, but need six repository secrets (see `docs/SETUP.md`). Until those exist they skip themselves.
+  Do not enable both: add the GitHub secrets only if you switch the scheduled task off.
+
+To run a cycle by hand: `TURSO_DATABASE_URL=... TURSO_AUTH_TOKEN=... APIFY_TOKEN=... bash scripts/run_cycle.sh`.

@@ -29,14 +29,16 @@ from scrapers.common.http import Blocked, FetchError, PoliteClient
 
 API = "https://api.apify.com/v2"
 DEFAULT_PRICE_PER_1K = 3.0       # conservative when sources.yaml says UNKNOWN
+MERCARI_US_SEARCH_FEE = 0.04     # the Mercari US actor charges this once per search, on top of per-listing
 VENDOR = "apify"
 
 # Fallback actors when sources.yaml has no usable entry (ids from research, unverified).
 DEFAULT_ACTORS = {
     "GRAILED": ("piotrv1001/grailed-listings-scraper", 3.0),   # verified with real runs, see config/sources.yaml
-    "MERCARI_US": ("getascraper/mercari-us-scraper", 2.05),
-    "MERCARI_US_SOLD": ("devilscrapes/mercari-sold-listings", 2.51),
-    "INSTAGRAM": ("apify/instagram-scraper", 2.3),
+    # Verified with a real run on 2026-11-24: $0.00275 per listing plus $0.04 per search (MERCARI_US_SEARCH_FEE).
+    "MERCARI_US": ("getascraper/mercari-us-scraper", 2.75),
+    "MERCARI_US_SOLD": ("getascraper/mercari-us-scraper", 2.75),
+    "INSTAGRAM": ("apify/instagram-scraper", 2.7),   # $0.0027 per result on the free tier (checked 2026-11-24)
 }
 # Per-purpose monthly caps (USD) so the fallbacks cannot eat the Instagram budget.
 # Grailed sold prices are the pricing backbone, so it gets the largest share. The three add up to the
@@ -127,25 +129,28 @@ def grailed_input(actor: Actor, query: str, max_items: int, sold: bool = False) 
             "maxItems": int(max_items), "proxyConfiguration": {"useApifyProxy": True}}
 
 
-def mercari_us_input(actor: Actor, queries: list[str], max_items: int, sold: bool = False) -> dict:
-    # CONFIRM AGAINST INPUT SCHEMA (unverified): typical shape {"keywords": [...], "maxItems": N,
-    # "sort": "newest", "status": "on_sale"|"sold"}.
-    return {"keywords": queries, "maxItems": max_items, "sort": "newest", "status": "sold" if sold else "on_sale"}
+def mercari_us_input(actor: Actor, keyword: str, max_items: int, sold: bool = False) -> dict:
+    """Input for getascraper/mercari-us-scraper (schema verified with a real run). One keyword per run;
+    Mercari US only answers US residential IPs, which the actor's proxy group provides."""
+    return {"keyword": keyword, "sort": "listed_time", "status": ["sold_out"] if sold else ["on_sale"],
+            "computeSoldStats": False, "limit": int(max_items),
+            "proxyConfiguration": {"useApifyProxy": True, "apifyProxyGroups": ["RESIDENTIAL"], "apifyProxyCountry": "US"}}
 
 
 def instagram_input(actor: Actor, handles: list[str], posts_per_account: int) -> dict:
-    # CONFIRM AGAINST INPUT SCHEMA: apify/instagram-scraper documents directUrls + resultsType
-    # "posts" + resultsLimit; verify before first use.
+    """Input for apify/instagram-scraper (schema checked 2026-11-24): profile URLs, posts only, a per-URL
+    limit, and nothing older than two weeks so a quiet account costs nothing."""
     return {"directUrls": [f"https://www.instagram.com/{h}/" for h in handles], "resultsType": "posts",
-            "resultsLimit": posts_per_account, "addParentData": False}
+            "resultsLimit": posts_per_account, "onlyPostsNewerThan": "14 days", "addParentData": False}
 
 
 # ---------------------------------------------------------------------------------------------------
 def run_actor(db: Database, actor: Actor, run_input: dict, *, max_items: int, source: str,
-              client: PoliteClient | None = None, timeout_s: int = 240) -> list[dict]:
-    """Start an actor synchronously and return its dataset items. Raises SpendGuard / ApifyUnavailable."""
+              client: PoliteClient | None = None, timeout_s: int = 240, fixed_usd: float = 0.0) -> list[dict]:
+    """Start an actor synchronously and return its dataset items. Raises SpendGuard / ApifyUnavailable.
+    `fixed_usd` is a per-run fee some actors charge on top of the per-item price."""
     tok = token()
-    est = max_items / 1000.0 * actor.price_per_1k
+    est = max_items / 1000.0 * actor.price_per_1k + fixed_usd
     check_budget(db, est, source)
     http = client or PoliteClient(timeout=timeout_s + 60, min_delay=0.0, max_delay=0.1, max_retries=1)
     url = f"{API}/acts/{actor.id.replace('/', '~')}/run-sync-get-dataset-items"
@@ -157,7 +162,7 @@ def run_actor(db: Database, actor: Actor, run_input: dict, *, max_items: int, so
     items = resp.json()
     if not isinstance(items, list):
         raise FetchError(f"apify: unexpected response for {actor.id}: {str(items)[:200]}")
-    cost = len(items) / 1000.0 * actor.price_per_1k
+    cost = len(items) / 1000.0 * actor.price_per_1k + fixed_usd
     db.execute("INSERT INTO spend_ledger (at, vendor, kind, units, usd, note) VALUES (?,?,?,?,?,?)",
                (now(), VENDOR, actor.id, float(len(items)), cost, f"source:{source}"))
     return items

@@ -1,0 +1,30 @@
+== python -m scrapers.run slow
+{"source": "mercari_jp", "mode": "slow", "seconds": 63.0, "rung": "library", "queries": 10, "requests": 24, "seen": 678, "inserted": 200, "updated": 5, "status": "ok"}
+{"source": "yahoo_jp", "mode": "slow", "seconds": 32.6, "rung": "direct", "queries": 6, "requests": 16, "seen": 342, "inserted": 231, "status": "ok"}
+{"source": "shop:driewgarments", "mode": "slow", "seconds": 13.8, "rung": "direct", "queries": 1, "requests": 6, "seen": 228, "updated": 5, "status": "ok"}
+{"source": "shop:marais", "mode": "slow", "seconds": 13.8, "rung": "direct", "queries": 1, "requests": 13, "seen": 66, "note": "collection rick-owens-archive empty or gone; crawling store filtered to brands_focus", "status": "empty"}
+== python -m scrapers.run fast
+{"source": "grailed", "mode": "fast", "seconds": 4.6, "rung": "apify", "queries": 1, "seen": 5, "inserted": 5, "status": "ok"}
+== python -m scrapers.run recheck
+{"source": "mercari_jp", "mode": "recheck", "seconds": 106.1, "rung": "library", "requests": 40, "seen": 40, "updated": 1, "status": "ok"}
+{"source": "yahoo_jp", "mode": "recheck", "seconds": 79.4, "rung": "direct", "requests": 40, "seen": 40, "updated": 14, "status": "ok"}
+{"source": "webshops", "mode": "recheck", "seconds": 82.6, "rung": "direct", "requests": 40, "seen": 40, "status": "empty"}
+{"source": "grailed", "mode": "recheck", "seconds": 0.2, "note": "nothing to re-check", "status": "skipped"}
+== python -m scrapers.run comps
+{"source": "grailed", "mode": "comps", "seconds": 0.8, "rung": "apify", "note": "sold actor throttled (min interval)", "status": "skipped"}
+{"source": "mercari_jp", "mode": "comps", "seconds": 14.5, "rung": "library", "queries": 6, "requests": 6, "seen": 407, "status": "empty"}
+{"source": "yahoo_jp", "mode": "comps", "seconds": 7.4, "rung": "direct", "queries": 4, "requests": 4, "seen": 167, "comps": 104, "status": "ok"}
+{"source": "mercari_us", "mode": "comps", "seconds": 73.5, "rung": "apify", "queries": 1, "seen": 9, "comps": 9, "status": "ok"}
+== python -m pipeline.run comps
+{"command": "comps", "classified": 113, "kept": 111, "junk": 2, "seconds": 0.94, "seconds_total": 1.72}
+== python -m pipeline.run rescore
+{"command": "rescore", "scored": 4101, "written": 1113, "duplicates": 41, "diversity": {"groups": 510, "moved": 1382}, "tiers": {"S": 129, "A": 994, "B": 1365, "C": 947, "X": 666}, "labels": {"fair": 592, "overpriced": 1939, "good": 624, "steal": 51, "great": 47, "unknown": 159, "suspicious": 23}, "seconds": 27.44, "stages_3_7_seconds": 9.07, "per_sec": 149.4, "embed_backend": "tfidf-char+concepts", "ranker": "formula-v1", "taxonomy": {"synced": false, "version": "46c2231fa1f2bf9f"}, "dry_run": false, "seconds_total": 28.22}
+== python -m pipeline.run prune
+{"command": "prune", "rejected_deleted": 0, "ended_deleted": 0, "sold_copied_to_comps": 0, "dry_run": false, "note": "raw_json_days: no raw JSON table in the schema; nothing to prune", "seconds_total": 0.68}
+== python -m scrapers.run trends
+{"source": "instagram", "mode": "trends", "seconds": 87.8, "rung": "apify", "queries": 2, "seen": 59, "inserted": 59, "note": "budget fits 26 of 42 accounts at 4 posts each", "status": "ok"}
+== python -m pipeline.run trends
+{"command": "trends", "posts": 59, "entities": 59, "ig_rows": 129, "prior_rows": 45, "seconds": 1.1, "dry_run": false, "seconds_total": 1.87}
+== python -m pipeline.run alerts
+{"command": "alerts", "candidates": 3435, "sent": 8, "delivered_via": "ntfy", "global_rule_id": 1, "seconds": 5.38, "seconds_total": 6.14}
+{"cycle": "done", "at": 1795501521, "failed_steps": "", "listings_active": 3435, "new_last_3h": 4102, "comps": 3635, "steals": 51, "apify_month_usd": 0.457, "sources": {"mercari_jp": "empty", "yahoo_jp": "ok", "shop:driewgarments": "empty", "shop:marais": "empty", "grailed": "ok", "mercari_us": "ok", "instagram": "ok"}}

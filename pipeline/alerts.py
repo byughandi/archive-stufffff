@@ -103,7 +103,9 @@ def run_alerts(db: Database, dry_run: bool = False, since: int | None = None) ->
     cfg = settings().get("alerts", {})
     cap = int(cfg.get("max_per_run", 8))
     server = cfg.get("ntfy_server", "https://ntfy.sh")
-    topic = os.environ.get("NTFY_TOPIC")
+    # The topic is a shared secret between this job and the phone. It can come from the environment (CI
+    # secret) or from the private database (`kv.ntfy_topic`), so a scheduler with no secret store still alerts.
+    topic = os.environ.get("NTFY_TOPIC") or db.kv_get("ntfy_topic")
     gid = ensure_global_rule(db)
     last = since if since is not None else int(db.kv_get("alerts_last_run") or (now() - 6 * 3600))
     rules = db.query("SELECT id, name, rule, is_global FROM saved_searches WHERE enabled = 1")

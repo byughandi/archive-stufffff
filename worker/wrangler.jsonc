@@ -14,8 +14,8 @@
     // Cloudflare Access. Both must be set in production or the API refuses every request.
     //   ACCESS_TEAM_DOMAIN: "<your-team>.cloudflareaccess.com"
     //   ACCESS_AUD: the Application Audience (AUD) tag of the Access application
-    "ACCESS_TEAM_DOMAIN": "",
-    "ACCESS_AUD": ""
+    "ACCESS_TEAM_DOMAIN": "purple-cherry-0836.cloudflareaccess.com",
+    "ACCESS_AUD": "7377e554e0a28f7ffbedf02000679f056c11882670e222f34fb1f7e07cdd11b3"
   }
   // Secrets (set with `wrangler secret put`, never committed):
   //   TURSO_DATABASE_URL, TURSO_AUTH_TOKEN

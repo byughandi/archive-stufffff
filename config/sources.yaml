@@ -52,7 +52,8 @@ sources:
       - {name: "kevinxo328/mercari-scraper (pushed 2026-10-29, 5 stars; US vs JP unknown)", url: "https://github.com/kevinxo328/mercari-scraper"}
     apify_actors:
       - {id: "devilscrapes/mercari-sold-listings", price_per_1k_usd: 2.51}
-      - {id: "getascraper/mercari-us-scraper", price_per_1k_usd: 2.05}
+      # Verified 2026-11-24 with a real run (5 live listings): $0.00275 per listing + $0.04 per search.
+      - {id: "getascraper/mercari-us-scraper", price_per_1k_usd: 2.75}
       - {id: "h4sh/mercari-scraper", price_per_1k_usd: 2.0}
       - {id: "automation-lab/mercari-us-listings-scraper", price_per_1k_usd: UNKNOWN}
     recommendation: apify

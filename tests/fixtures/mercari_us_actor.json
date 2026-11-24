@@ -1,0 +1,106 @@
+[
+ {
+  "type": "listing",
+  "id": 0,
+  "url": "https://www.mercari.com/us/item/m57442450270/",
+  "listing_id": "m57442450270",
+  "title": "Dior Homme SS06 Jeans",
+  "price": 1000,
+  "original_price": 1000,
+  "currency": "USD",
+  "listing_status": "on_sale",
+  "condition_id": "good",
+  "brand": "Dior",
+  "category_path": [
+   "Men",
+   "Jeans",
+   "Classic, straight leg"
+  ],
+  "media": {
+   "image_urls": [
+    "https://u-mercari-images.mercdn.net/photos/m57442450270_1.jpg?1795445315"
+   ]
+  },
+  "seller_id": "169290682",
+  "seller_review_count": 0,
+  "sales_count": 0
+ },
+ {
+  "type": "listing",
+  "id": 0,
+  "url": "https://www.mercari.com/us/item/m59390067613/",
+  "listing_id": "m59390067613",
+  "title": "dior homme by hedi slimane aw07 black sweater",
+  "price": 250,
+  "original_price": 250,
+  "currency": "USD",
+  "listing_status": "on_sale",
+  "condition_id": "like_new",
+  "brand": "Dior",
+  "category_path": [
+   "Men",
+   "Sweaters",
+   "Crewneck"
+  ],
+  "media": {
+   "image_urls": [
+    "https://u-mercari-images.mercdn.net/photos/m59390067613_1.jpg?1793642360"
+   ]
+  },
+  "seller_id": "101597443",
+  "seller_review_count": 0,
+  "sales_count": 0
+ },
+ {
+  "type": "listing",
+  "id": 0,
+  "url": "https://www.mercari.com/us/item/m55261590255/",
+  "listing_id": "m55261590255",
+  "title": "Men's Navy Blue Cargo Pants with Men's Navy Blue Cargo Pants with Buckle Details",
+  "price": 270.75,
+  "original_price": 300,
+  "currency": "USD",
+  "listing_status": "on_sale",
+  "condition_id": "like_new",
+  "brand": "Dior",
+  "category_path": [
+   "Men",
+   "Pants",
+   "Cargo"
+  ],
+  "media": {
+   "image_urls": [
+    "https://u-mercari-images.mercdn.net/photos/m55261590255_1.jpg?1790208944"
+   ]
+  },
+  "seller_id": "565029096",
+  "seller_review_count": 0,
+  "sales_count": 0
+ },
+ {
+  "type": "listing",
+  "id": 0,
+  "url": "https://www.mercari.com/us/item/m81000514205/",
+  "listing_id": "m81000514205",
+  "title": "Dior Homme Silver Aviator Sunglasses - Hedi Slimane Era",
+  "price": 395,
+  "original_price": 395,
+  "currency": "USD",
+  "listing_status": "on_sale",
+  "condition_id": "new",
+  "brand": "Dior",
+  "category_path": [
+   "Men",
+   "Men's accessories",
+   "Sunglasses"
+  ],
+  "media": {
+   "image_urls": [
+    "https://u-mercari-images.mercdn.net/photos/m81000514205_1.jpg?1786132189"
+   ]
+  },
+  "seller_id": "769643207",
+  "seller_review_count": 0,
+  "sales_count": 0
+ }
+]
