@@ -54,12 +54,9 @@ Repository → Settings → Secrets and variables → Actions.
 | `APIFY_TOKEN` | your Apify token |
 | `GRAILED_ALGOLIA_APP_ID`, `GRAILED_ALGOLIA_KEY` | optional; see RUNBOOK "Grailed" |
 
-| Variable | Value |
-|---|---|
-| `SITE_URL` | `https://grail-radar.<your-subdomain>.workers.dev` |
-| `ACCESS_TEAM_DOMAIN` | `<team>.cloudflareaccess.com` |
-| `ACCESS_AUD` | the AUD tag from step 3 |
-| `ALLOWED_EMAIL` | your email (a second check inside the Worker) |
+No repository variables are needed. The site address is the default in the workflows, and the
+Cloudflare Access team domain and audience tag live in `worker/wrangler.jsonc` (they are
+identifiers, not secrets).
 
 ## 7. First runs, in this order (Actions tab → pick the workflow → Run workflow)
 1. **Deploy**: creates the tables, builds the site, deploys the Worker.

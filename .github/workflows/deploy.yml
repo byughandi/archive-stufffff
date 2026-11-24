@@ -65,8 +65,6 @@ jobs:
           rm -f "$RUNNER_TEMP/secrets.json"
       - name: Deploy Worker and site
         working-directory: worker
-        run: >
-          npx wrangler deploy
-          --var ACCESS_TEAM_DOMAIN:${{ vars.ACCESS_TEAM_DOMAIN }}
-          --var ACCESS_AUD:${{ vars.ACCESS_AUD }}
-          --var ALLOWED_EMAIL:${{ vars.ALLOWED_EMAIL }}
+        # The Access team domain and audience tag are identifiers, not secrets: they live in
+        # worker/wrangler.jsonc so a deploy can never blank them.
+        run: npx wrangler deploy

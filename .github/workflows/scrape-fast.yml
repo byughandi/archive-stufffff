@@ -39,7 +39,7 @@ jobs:
       APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
       GRAILED_ALGOLIA_APP_ID: ${{ secrets.GRAILED_ALGOLIA_APP_ID }}
       GRAILED_ALGOLIA_KEY: ${{ secrets.GRAILED_ALGOLIA_KEY }}
-      SITE_URL: ${{ vars.SITE_URL }}
+      SITE_URL: ${{ vars.SITE_URL || 'https://grail-radar.grail-radar-worker.workers.dev' }}
       GR_MODEL_DIR: models
       MAX_LLM_ITEMS_PER_DAY: "0"
     steps:
