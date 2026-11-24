@@ -10,7 +10,27 @@ concurrency:
   group: deploy
   cancel-in-progress: false
 jobs:
+  configured:
+    # Until the database (and, for deploys, Cloudflare) secrets exist, do nothing quietly instead of
+    # scraping marketplaces into a throwaway database or failing every run.
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      ready: ${{ steps.check.outputs.ready }}
+    steps:
+      - id: check
+        env:
+          NEEDED: ${{ secrets.TURSO_DATABASE_URL && secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -n "$NEEDED" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Required secrets are not set yet, so this run is skipped. See docs/SETUP.md."
+          fi
   deploy:
+    needs: configured
+    if: needs.configured.outputs.ready == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 12
     env:
