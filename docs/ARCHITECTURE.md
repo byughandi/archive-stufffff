@@ -107,11 +107,11 @@ pipeline reads comps per run through an in-memory index loaded once (≤ ~100k r
 **Worker (100k requests/day, 10 ms CPU).** One user. No scoring in the Worker; the only CPU is
 JSON serialization of ≤ 60 rows and one JWT signature check (cached key).
 
-**Apify ($5/month).** The weekly Instagram pull is the only planned spend. It is sized to its
-own $3.50/month cap: with 42 accounts at the configured $2.30 per 1,000 results it takes 8
-posts per account (about $3.40/month). The actor price is an unverified default; check it on
-the first run. Mercari US and Grailed fall back to Apify only if their direct
-rungs fail, and only inside what the ledger says is left.
+**Apify ($5/month, hard stop at $4.50).** Three budgets that add up to the stop:
+Grailed $2.75 (sold comps about $2.20, live fallback about $0.55, through
+`piotrv1001/grailed-listings-scraper` at $0.003 per listing), Instagram trends $1.25 (the job
+shrinks posts per account, then the account list, to fit), Mercari US $0.50. Every run is
+logged to `spend_ledger` and refused when it would pass its budget.
 
 **CI time.** Dependencies and the embedding model are restored from `actions/cache`. Image
 embeddings and perceptual hashes run only on rows that already passed the text stages, capped

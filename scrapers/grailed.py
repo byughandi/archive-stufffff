@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from datetime import datetime
 from dataclasses import dataclass, field
 from urllib.parse import quote, urlsplit
 
@@ -33,9 +34,14 @@ KV_KEY = "grailed_algolia"
 MAX_PAGES = 3
 DEEP_PAGES = 10
 HITS = 48
-APIFY_QUERIES = 2
-APIFY_MAX_ITEMS = 25
-APIFY_MIN_INTERVAL = 12 * 3600
+# Apify fallback sizing. The actor costs $0.003 per listing, so volumes are small on purpose: roughly
+# $0.55 a month of live listings and $2.20 a month of sold comps inside the $2.75 Grailed budget.
+APIFY_QUERIES = int(os.environ.get("APIFY_GRAILED_QUERIES", 1))
+APIFY_MAX_ITEMS = int(os.environ.get("APIFY_GRAILED_ITEMS", 6))
+APIFY_MIN_INTERVAL = 24 * 3600
+APIFY_COMP_QUERIES = int(os.environ.get("APIFY_GRAILED_COMP_QUERIES", 2))
+APIFY_COMP_ITEMS = int(os.environ.get("APIFY_GRAILED_COMP_ITEMS", 12))
+APIFY_COMP_MIN_INTERVAL = 22 * 3600
 
 # LAST-RESORT DEFAULTS ONLY: reported (not verified) by Apify actor READMEs. Discovery wins.
 DEFAULT_INDICES = {"live": "Listing_production", "by_date": "Listing_by_date_production",
@@ -425,43 +431,125 @@ def comp_from_hit(hit: dict, fx) -> SoldComp | None:
 
 # ---- Apify fallback (rung 3) -----------------------------------------------------------------------
 
+def _iso(v) -> int | None:
+    if not v:
+        return None
+    try:
+        return int(datetime.fromisoformat(str(v).replace("Z", "+00:00")).timestamp())
+    except ValueError:
+        return None
+
+
+def _actor_seller(item: dict) -> Seller | None:
+    sl = item.get("seller") or {}
+    if sl.get("id") is None:
+        return None
+    return Seller(SOURCE, str(sl["id"]), username=sl.get("username"),
+                  rating=float(sl["ratingAverage"]) if sl.get("ratingAverage") is not None else None,
+                  review_count=int(sl.get("ratingCount") or 0),
+                  sales_count=int(sl["totalBoughtAndSold"]) if sl.get("totalBoughtAndSold") is not None else None)
+
+
 def _apify_listing(item: dict, fx, query_id: str | None) -> Listing | None:
-    """Actor datasets differ; reuse the tolerant hit mapper with a few extra aliases."""
-    h = dict(item)
-    if "id" not in h and "listingId" in h:
-        h["id"] = h["listingId"]
-    if "title" not in h and "name" in h:
-        h["title"] = h["name"]
-    if "designers" not in h and "designer" in h:
-        h["designers"] = [h["designer"]] if isinstance(h["designer"], str) else h["designer"]
-    if "cover_photo" not in h:
-        h["cover_photo"] = _g(h, "image", "imageUrl", "photo", "thumbnail")
-    if "created_at" not in h and "createdAt" in h:
-        h["created_at"] = h["createdAt"]
-    l = listing_from_hit(h, fx, query_id)
-    if l and isinstance(item.get("url"), str) and "grailed.com" in item["url"]:
-        l.url = item["url"]
+    """One dataset item of piotrv1001/grailed-listings-scraper -> Listing. Field names verified against real
+    output: id, url, title, designer ("Dior × Hedi Slimane"), categoryPath, size, condition, price (USD),
+    priceDrops (price history, newest last), sold, soldPrice, soldAt, createdAt, coverPhoto,
+    shipping.us.amount, seller{id, username, ratingAverage, ratingCount, totalBoughtAndSold}."""
+    if item.get("id") is None or not item.get("title") or item.get("price") in (None, 0):
+        return None
+    price = float(item["price"])
+    ship = ((item.get("shipping") or {}).get("us") or {})
+    sold = bool(item.get("sold"))
+    l = Listing(
+        source=SOURCE, source_id=str(item["id"]), url=item.get("url") or f"{SITE}/listings/{item['id']}",
+        title=str(item["title"]), price=price, currency="USD", price_usd=price, region="US", lang="en",
+        brand_raw=item.get("designer"), category_raw=item.get("categoryPath") or item.get("category"),
+        size_raw=item.get("size"), condition_raw=item.get("condition"),
+        shipping_usd=float(ship["amount"]) if ship.get("enabled") and ship.get("amount") is not None else None,
+        seller=_actor_seller(item), image_url=item.get("coverPhoto"),
+        image_urls=[item["coverPhoto"]] if item.get("coverPhoto") else [],
+        status="sold" if sold else "active", listed_at=_iso(item.get("createdAt")),
+        sold_at=_iso(item.get("soldAt")) if sold else None,
+        sold_price_usd=float(item["soldPrice"]) if sold and item.get("soldPrice") else None, query_id=query_id)
     return l
 
 
+def _apify_comp(item: dict) -> SoldComp | None:
+    """A sold dataset item -> SoldComp. `soldPrice` is the final price; `price` is the last asking price."""
+    at = _iso(item.get("soldAt"))
+    price = item.get("soldPrice") or (item.get("price") if item.get("sold") else None)
+    if item.get("id") is None or not price or at is None:
+        return None
+    return SoldComp(SOURCE, str(item["id"]), str(item.get("title") or ""), float(price), at,
+                    url=item.get("url") or f"{SITE}/listings/{item['id']}", image_url=item.get("coverPhoto"),
+                    brand_raw=item.get("designer"), size_raw=item.get("size"), condition_raw=item.get("condition"))
+
+
 def run_apify(ctx: Ctx, queries: list[Query], client: PoliteClient | None = None) -> RunResult:
+    """Live listings through the actor: one small run per query (the actor takes one search query per run)."""
     res = RunResult(SOURCE, "scrape", rung="apify")
     if not interval_due(ctx.db, "apify:grailed", int(os.environ.get("APIFY_GRAILED_INTERVAL_S", APIFY_MIN_INTERVAL))):
         raise apify.SpendGuard("apify fallback throttled (min interval between paid runs)")
     actor = apify.actor_for("GRAILED")
-    qs = queries[:APIFY_QUERIES]
-    items = apify.run_actor(ctx.db, actor, apify.grailed_input(actor, [q.text for q in qs], APIFY_MAX_ITEMS),
-                            max_items=APIFY_MAX_ITEMS * len(qs), source="grailed", client=client)
+    ls: list[Listing] = []
+    used: list[Query] = []
+    for q in queries[:APIFY_QUERIES]:
+        items = apify.run_actor(ctx.db, actor, apify.grailed_input(actor, q.text, APIFY_MAX_ITEMS),
+                                max_items=APIFY_MAX_ITEMS, source="grailed", client=client)
+        ctx.rawlog("apify:" + actor.id, 200, items)
+        ls += [l for l in (_apify_listing(i, ctx.fx, q.query_id) for i in items) if l]
+        used.append(q)
     mark(ctx.db, "apify:grailed")
-    ctx.rawlog("apify:" + actor.id, 200, items)
-    ls = [l for l in (_apify_listing(i, ctx.fx, qs[0].query_id if qs else None) for i in items) if l]
-    res.queries, res.seen = len(qs), len(ls)
+    res.queries, res.seen = len(used), len(ls)
     if not ctx.dry_run:
         stats = upsert_listings(ctx.db, ls)
         res.inserted, res.updated = stats.inserted, stats.price_changed + stats.status_changed
-        for q in qs:
+        for q in used:
             mark_run(ctx.db, SOURCE, q)
     return res
+
+
+def comps_apify(ctx: Ctx, queries: list[Query], client: PoliteClient | None = None) -> RunResult:
+    """Sold listings through the actor (`soldOnly`): the pricing backbone when the direct sold index is
+    unreachable. Throttled to about one batch a day and bounded by the Grailed Apify budget."""
+    res = RunResult(SOURCE, "comps", rung="apify")
+    if not interval_due(ctx.db, "apify:grailed_sold", int(os.environ.get("APIFY_GRAILED_COMP_INTERVAL_S", APIFY_COMP_MIN_INTERVAL))):
+        res.note = "sold actor throttled (min interval)"
+        return res
+    actor = apify.actor_for("GRAILED")
+    for q in queries[:APIFY_COMP_QUERIES]:
+        items = apify.run_actor(ctx.db, actor, apify.grailed_input(actor, q.text, APIFY_COMP_ITEMS, sold=True),
+                                max_items=APIFY_COMP_ITEMS, source="grailed", client=client)
+        ctx.rawlog("apify:" + actor.id + ":sold", 200, items)
+        comps = [c for c in (_apify_comp(i) for i in items) if c]
+        res.queries += 1
+        res.seen += len(comps)
+        if ctx.dry_run:
+            res.skipped_dry += len(comps)
+            continue
+        res.comps += upsert_comps(ctx.db, comps)
+        mark_run(ctx.db, f"{SOURCE}:comps", q, hits=len(comps))
+    mark(ctx.db, "apify:grailed_sold")
+    return res
+
+
+def comps(ctx: Ctx, queries: list[Query], client: PoliteClient | None = None, apify_client: PoliteClient | None = None) -> RunResult:
+    """Sold comps ladder: the direct sold index first; if Grailed blocks it (or it cannot be found), the actor."""
+    last: Exception | None = None
+    if not on_cooldown(ctx.db, SOURCE, "direct"):
+        try:
+            return Grailed(ctx, client).comps(queries)
+        except Blocked as e:
+            block(ctx.db, SOURCE, "direct")
+            last = e
+        except (CredsError, FetchError) as e:
+            last = e
+    else:
+        last = Parked("grailed direct rung parked for 6 h after a block")
+    try:
+        return comps_apify(ctx, queries, apify_client)
+    except (apify.ApifyUnavailable, apify.SpendGuard) as e:
+        raise last if isinstance(last, Blocked) else (last or e) from e
 
 
 def run(ctx: Ctx, queries: list[Query], client: PoliteClient | None = None, apify_client: PoliteClient | None = None) -> RunResult:

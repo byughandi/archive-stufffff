@@ -21,6 +21,9 @@ sources:
       - {name: "wavehs/grailed-scraper (pushed 2026-11-02, 1 star, README has no mechanics, treat as unvetted)", url: "https://github.com/wavehs/grailed-scraper"}
       - {name: "BlackFalconData-org/grailed-com-scraper (Apify actor source, pushed 2026-10-19)", url: "https://github.com/BlackFalconData-org/grailed-com-scraper"}
     apify_actors:
+      # Verified 2026-11-24 with two real runs (15 live, 15 sold): input schema and output fields as used in
+      # scrapers/grailed.py. Pay per event: $0.003 per listing returned (+$0.012 with scrapeDetails, unused).
+      - {id: "piotrv1001/grailed-listings-scraper", price_per_1k_usd: 3.0}
       - {id: "123webdata/grailed-scraper", price_per_1k_usd: 0.9}
       - {id: "aurenic/grailed-scraper", price_per_1k_usd: 1.2}
       - {id: "bovi/grailed-listings", price_per_1k_usd: 1.5}

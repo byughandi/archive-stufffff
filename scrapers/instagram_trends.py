@@ -71,7 +71,14 @@ def run(ctx: Ctx, tax: Taxonomy | None = None, client: PoliteClient | None = Non
     res = RunResult(SOURCE, "trends", rung="apify")
     actor = apify.actor_for("INSTAGRAM")
     posts: dict[str, dict] = {}
-    per_account = posts_per_account(len(handles), actor.price_per_1k, apify.source_cap("instagram"))
+    cap = apify.source_cap("instagram")
+    per_account = posts_per_account(len(handles), actor.price_per_1k, cap)
+    # If even the minimum per account does not fit the month's budget, keep the top of the list (it is ordered
+    # by signal weight) rather than have the fourth weekly run refused.
+    fit = int(cap / RUNS_PER_MONTH / actor.price_per_1k * 1000.0 // per_account) if actor.price_per_1k > 0 else len(handles)
+    if fit < len(handles):
+        res.note = f"budget fits {fit} of {len(handles)} accounts at {per_account} posts each"
+        handles = handles[:max(fit, 1)]
     for i in range(0, len(handles), BATCH):
         batch = handles[i:i + BATCH]
         items = apify.run_actor(ctx.db, actor, apify.instagram_input(actor, batch, per_account),

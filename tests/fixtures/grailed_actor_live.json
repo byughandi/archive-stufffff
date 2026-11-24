@@ -1,0 +1,269 @@
+[
+ {
+  "id": 113309086,
+  "url": "https://www.grailed.com/listings/113309086",
+  "title": "Dior Homme Hedi Slimane Jacket",
+  "designer": "Dior × Hedi Slimane",
+  "designers": [
+   {
+    "id": 35,
+    "name": "Dior"
+   },
+   {
+    "id": 5531,
+    "name": "Hedi Slimane"
+   }
+  ],
+  "department": "menswear",
+  "category": "outerwear",
+  "categoryPath": "outerwear.denim_jackets",
+  "size": "m",
+  "condition": "Gently Used",
+  "color": "black",
+  "price": 700,
+  "priceDrops": [],
+  "sold": false,
+  "soldPrice": null,
+  "soldAt": null,
+  "location": "Europe",
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/4c6d43ac641b489b86f958bcc0d35a1b",
+  "shipping": {
+   "us": {
+    "amount": 20,
+    "enabled": true
+   }
+  },
+  "seller": {
+   "id": 8406264,
+   "username": "newlegion7649",
+   "ratingAverage": 5,
+   "ratingCount": 4,
+   "totalBoughtAndSold": 10,
+   "trustedSeller": false
+  },
+  "createdAt": "2026-11-24T03:50:27.000Z"
+ },
+ {
+  "id": 111069124,
+  "url": "https://www.grailed.com/listings/111069124",
+  "title": "SS06 Dior Homme Hedi Slimane Cargo Pocket Zip Bomber Jacket",
+  "designer": "Dior × Hedi Slimane",
+  "department": "menswear",
+  "category": "outerwear",
+  "categoryPath": "outerwear.light_jackets",
+  "size": "s",
+  "condition": "Gently Used",
+  "color": "black",
+  "price": 1575,
+  "priceDrops": [
+   1750,
+   1575
+  ],
+  "sold": false,
+  "soldPrice": null,
+  "soldAt": null,
+  "location": "United States",
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/fb2ff911f9bf4f79b8342f42b8cf8a54",
+  "shipping": {
+   "us": {
+    "amount": 18.99,
+    "enabled": true
+   }
+  },
+  "seller": {
+   "id": 102328,
+   "username": "Sneer",
+   "ratingAverage": 4.944577352472089,
+   "ratingCount": 2508,
+   "totalBoughtAndSold": 6237,
+   "trustedSeller": true
+  },
+  "createdAt": "2026-11-02T23:21:29.000Z"
+ },
+ {
+  "id": 112309605,
+  "url": "https://www.grailed.com/listings/112309605",
+  "title": "AW06 Dior Homme Hedi Slimane Chain Link Buckle Leather Belt",
+  "designer": "Dior × Hedi Slimane",
+  "categoryPath": "accessories.belts",
+  "size": "one size",
+  "condition": "Gently Used",
+  "price": 1350,
+  "priceDrops": [
+   1500,
+   1350
+  ],
+  "sold": false,
+  "soldPrice": null,
+  "soldAt": null,
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/71c07a17a9fd467baf519306eb08af26",
+  "shipping": {
+   "us": {
+    "amount": 12.99,
+    "enabled": true
+   }
+  },
+  "seller": {
+   "id": 102328,
+   "username": "Sneer",
+   "ratingAverage": 4.944555245313123,
+   "ratingCount": 2507,
+   "totalBoughtAndSold": 6235,
+   "trustedSeller": true
+  },
+  "createdAt": "2026-11-14T19:52:14.000Z"
+ },
+ {
+  "id": 106429491,
+  "url": "https://www.grailed.com/listings/106429491",
+  "title": "SS07 Dior Homme Hedi Slimane Sky Faded Jake Denim Jeans",
+  "designer": "Dior × Hedi Slimane",
+  "categoryPath": "bottoms.denim",
+  "size": "29",
+  "condition": "Gently Used",
+  "price": 2025,
+  "priceDrops": [
+   2250,
+   2025
+  ],
+  "sold": false,
+  "soldPrice": null,
+  "soldAt": null,
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/cd851274fd22409898556b1b67b1b321",
+  "shipping": {
+   "us": {
+    "amount": 18.99,
+    "enabled": true
+   }
+  },
+  "seller": {
+   "id": 102328,
+   "username": "Sneer",
+   "ratingAverage": 4.944577352472089,
+   "ratingCount": 2508,
+   "totalBoughtAndSold": 6237,
+   "trustedSeller": true
+  },
+  "createdAt": "2026-09-19T20:33:46.000Z"
+ },
+ {
+  "id": 113147103,
+  "url": "https://www.grailed.com/listings/113147103",
+  "title": "04 Dior Homme Hedi Slimane Clawmark Denim",
+  "designer": "Dior × Hedi Slimane",
+  "categoryPath": "bottoms.denim",
+  "size": "29",
+  "condition": "Gently Used",
+  "price": 2100,
+  "priceDrops": [],
+  "sold": false,
+  "soldPrice": null,
+  "soldAt": null,
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/cb6da432df994d5caa54d2ab0b01546e",
+  "shipping": {
+   "us": {
+    "amount": 18.99,
+    "enabled": true
+   }
+  },
+  "seller": {
+   "id": 12499839,
+   "username": "blameblame",
+   "ratingAverage": null,
+   "ratingCount": 0,
+   "totalBoughtAndSold": 1,
+   "trustedSeller": false
+  },
+  "createdAt": "2026-11-23T14:18:58.000Z"
+ },
+ {
+  "id": 112441430,
+  "url": "https://www.grailed.com/listings/112441430",
+  "title": "Dior Homme Hedi Slimane Bee Polo Men 48 Blue Iconic Archive",
+  "designer": "Dior × Hedi Slimane",
+  "categoryPath": "tops.polos",
+  "size": "m",
+  "condition": "Gently Used",
+  "price": 120,
+  "priceDrops": [],
+  "sold": false,
+  "soldPrice": null,
+  "soldAt": null,
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/16e07271142f4e5fa7e744d3d054e2ea",
+  "shipping": {
+   "us": {
+    "amount": 20,
+    "enabled": true
+   }
+  },
+  "seller": {
+   "id": 18566341,
+   "username": "VN_AROY",
+   "ratingAverage": null,
+   "ratingCount": 0,
+   "totalBoughtAndSold": 15,
+   "trustedSeller": false
+  },
+  "createdAt": "2026-11-16T12:58:16.000Z"
+ },
+ {
+  "id": 111639850,
+  "url": "https://www.grailed.com/listings/111639850",
+  "title": "AW05 Dior Homme Hedi Slimane Jeans Whiskered faded washed",
+  "designer": "Dior × Hedi Slimane",
+  "categoryPath": "bottoms.denim",
+  "size": "29",
+  "condition": "Used",
+  "price": 499,
+  "priceDrops": [],
+  "sold": false,
+  "soldPrice": null,
+  "soldAt": null,
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/38d3812f00cb45bb99c164226b95e707",
+  "shipping": {
+   "us": {
+    "amount": 14.99,
+    "enabled": true
+   }
+  },
+  "seller": {
+   "id": 5885458,
+   "username": "HighEndVices",
+   "ratingAverage": 4.88125,
+   "ratingCount": 160,
+   "totalBoughtAndSold": 493,
+   "trustedSeller": true
+  },
+  "createdAt": "2026-11-07T20:22:33.000Z"
+ },
+ {
+  "id": 112540431,
+  "url": "https://www.grailed.com/listings/112540431",
+  "title": "Dior Homme Hedi Slimane AW07 Navigate",
+  "designer": "Dior × Hedi Slimane",
+  "categoryPath": "outerwear.heavy_coats",
+  "size": "l",
+  "condition": "Gently Used",
+  "price": 1390,
+  "priceDrops": [],
+  "sold": false,
+  "soldPrice": null,
+  "soldAt": null,
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/acb58839e702497aad2399dd7aa924ee",
+  "shipping": {
+   "us": {
+    "amount": 60,
+    "enabled": true
+   }
+  },
+  "seller": {
+   "id": 19524353,
+   "username": "dadus7893",
+   "ratingAverage": null,
+   "ratingCount": 0,
+   "totalBoughtAndSold": 0,
+   "trustedSeller": false
+  },
+  "createdAt": "2026-11-17T10:41:33.000Z"
+ }
+]

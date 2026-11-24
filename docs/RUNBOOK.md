@@ -54,8 +54,29 @@ Tested from the build machine on 2026-11-24 (one sandbox IP, behind an HTTPS all
 ### Mercari US (`direct` one attempt, fallback `apify`)
 Mock-tested only. Rung 1 makes one honest GET of the public search page per run. A 403 or a challenge page raises `Blocked` (parked for 6 h); a 200 page is parsed through `__NEXT_DATA__` (tolerant walker for `{id, name, price}` objects) and an unrecognised page is a plain error, not a block. Rung 3 runs an Apify actor on at most 2 narrow saved searches, 25 items each, at most once every 6 h, inside the per-source monthly cap. The sold actor runs at most once a day (1 query, 40 items) and also flips known active listings to `sold`.
 
+### Grailed through Apify: `piotrv1001/grailed-listings-scraper` (verified with real runs)
+The fallback rung for Grailed, for both live listings and sold comps. Verified on 2026-11-24 with two
+real runs (15 live "dior homme hedi slimane", 15 sold "saint laurent paris l01", about 4 seconds each).
+- **Input** (`apify.grailed_input`): `searchQuery` (one per run), `soldOnly`, `department`, `scrapeDetails:
+  false`, `maxItems`, `proxyConfiguration`. `startUrls`, `minPrice` and `maxPrice` exist and are unused.
+- **Output fields read** (`grailed._apify_listing`, `_apify_comp`): `id`, `url`, `title`, `designer`
+  ("Dior × Hedi Slimane"), `categoryPath`, `size`, `condition`, `price`, `sold`, `soldPrice`, `soldAt`,
+  `createdAt`, `coverPhoto`, `shipping.us.amount`, `seller.{id, username, ratingAverage, ratingCount,
+  totalBoughtAndSold}`. Results come back in Grailed's default order, not newest first.
+- **Price:** $0.003 per listing returned ($3 per 1,000). `scrapeDetails` would add $0.012 per listing
+  and stays off.
+- **Volumes inside the $2.75 monthly Grailed budget:** sold comps, 2 searches x 12 listings about once a
+  day (about $2.20 a month); live listings, 1 search x 6 listings once a day (about $0.55 a month), used
+  only while the direct route is blocked. Tune with `APIFY_GRAILED_COMP_QUERIES`,
+  `APIFY_GRAILED_COMP_ITEMS`, `APIFY_GRAILED_QUERIES`, `APIFY_GRAILED_ITEMS` and
+  `APIFY_BUDGET_GRAILED_USD` (set them as workflow env).
+- **What that means:** the free $5 credit buys roughly 900 Grailed listings a month. That is enough to
+  keep sold prices fresh across the taxonomy over a few weeks, not enough to watch Grailed's live
+  listings. Live Grailed coverage needs either the direct route to work from GitHub's runners or a paid
+  Apify plan.
+
 ### Apify (budget guard)
-`scrapers/apify.py`. Before a run: this month's `spend_ledger` total (vendor `apify`) plus the run's worst-case estimate must stay at or under 90% of the $5 credit ($4.50), and under a per-source monthly cap (`grailed` $0.75, `mercari_us` $1.00, `instagram` $3.50; override with `APIFY_BUDGET_<SOURCE>_USD`). After a run the estimated cost (items x per-1k price) is written to `spend_ledger` with `note = source:<name>`. Actor ids and per-1k prices come from `config/sources.yaml`, overridable with `APIFY_ACTOR_<KEY>` / `APIFY_PRICE_<KEY>`. **All actor input mappings (`grailed_input`, `mercari_us_input`, `instagram_input`) are unverified: confirm against each actor's input schema before first use**, and check `maxItems` / `maxTotalChargeUsd` are honoured.
+`scrapers/apify.py`. Before a run: this month's `spend_ledger` total (vendor `apify`) plus the run's worst-case estimate must stay at or under 90% of the $5 credit ($4.50), and under a per-source monthly cap (`grailed` $2.75, `mercari_us` $0.50, `instagram` $1.25; override with `APIFY_BUDGET_<SOURCE>_USD`). After a run the estimated cost (items x per-1k price) is written to `spend_ledger` with `note = source:<name>`. Actor ids and per-1k prices come from `config/sources.yaml`, overridable with `APIFY_ACTOR_<KEY>` / `APIFY_PRICE_<KEY>`. **The Grailed mapping is verified (see above). `mercari_us_input` and `instagram_input` are still unverified: confirm against each actor's input schema before first use**, and check `maxItems` / `maxTotalChargeUsd` are honoured.
 
 ### Instagram trends (`apify`)
 Weekly. `weekly_scrape_list` from `sellers.yaml`, 12 posts per account, 25 accounts per actor run, written to `ig_posts` (handle, time, caption, hashtags, likes, comments, hotlinked `image_url`; no images stored). Output field names (`ownerUsername`, `displayUrl`, `likesCount`...) are from memory: check one real dataset item on the first run.

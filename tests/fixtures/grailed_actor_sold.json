@@ -1,0 +1,107 @@
+[
+ {
+  "id": 98355605,
+  "url": "https://www.grailed.com/listings/98355605",
+  "title": "Saint Laurent Paris L01 Biker Jacket",
+  "designer": "Saint Laurent Paris",
+  "size": "m",
+  "condition": "Gently Used",
+  "price": 1399,
+  "sold": true,
+  "soldPrice": 1250,
+  "soldAt": "2026-08-21T03:35:26.456Z",
+  "createdAt": "2026-06-09T18:24:29.000Z",
+  "categoryPath": "outerwear.leather_jackets",
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/97eef83dd3e24c5fa9a57cf04986b5e5",
+  "seller": {
+   "id": 15895848,
+   "username": "CemeteryHouse",
+   "ratingAverage": 5,
+   "ratingCount": 20
+  }
+ },
+ {
+  "id": 97753575,
+  "url": "https://www.grailed.com/listings/97753575",
+  "title": "Saint Laurent Paris L01 Leather Jacket FW17",
+  "designer": "Saint Laurent Paris",
+  "size": "s",
+  "condition": "Gently Used",
+  "price": 1081,
+  "sold": true,
+  "soldPrice": 900,
+  "soldAt": "2026-07-27T11:47:49.679Z",
+  "createdAt": "2026-05-31T18:22:31.000Z",
+  "categoryPath": "outerwear.leather_jackets",
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/a42753558a484010928e99d22db22a60",
+  "seller": {
+   "id": 14900209,
+   "username": "Fitslikerunway",
+   "ratingAverage": 5,
+   "ratingCount": 13
+  }
+ },
+ {
+  "id": 95927822,
+  "url": "https://www.grailed.com/listings/95927822",
+  "title": "Saint Laurent Paris L01 Studded Biker Leather Jacket",
+  "designer": "Saint Laurent Paris",
+  "size": "m",
+  "condition": "Gently Used",
+  "price": 1900,
+  "sold": true,
+  "soldPrice": 1750,
+  "soldAt": "2026-05-22T18:13:35.969Z",
+  "createdAt": "2026-04-26T16:22:27.000Z",
+  "categoryPath": "outerwear.leather_jackets",
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/e898792b345a4b01a84565d3dc291a45",
+  "seller": {
+   "id": 10306803,
+   "username": "tarnishedarchive",
+   "ratingAverage": 5,
+   "ratingCount": 11
+  }
+ },
+ {
+  "id": 95293056,
+  "url": "https://www.grailed.com/listings/95293056",
+  "title": "2016 Saint Laurent Paris L01 palladium collection size 48",
+  "designer": "Saint Laurent Paris",
+  "size": "m",
+  "condition": "Used",
+  "price": 1293,
+  "sold": true,
+  "soldPrice": 999,
+  "soldAt": "2026-04-17T01:15:55.543Z",
+  "createdAt": "2026-04-13T01:01:32.000Z",
+  "categoryPath": "outerwear.leather_jackets",
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/temp/e410f9fdab8a4da0986518ea37de4bc1",
+  "seller": {
+   "id": 6692075,
+   "username": "dryanbish6055",
+   "ratingAverage": 5,
+   "ratingCount": 18
+  }
+ },
+ {
+  "id": 52142200,
+  "url": "https://www.grailed.com/listings/52142200",
+  "title": "Saint Laurent Paris L01 FW/14 (Hedi Era) *FINAL PRICE*",
+  "designer": "Saint Laurent Paris",
+  "size": "l",
+  "condition": "Gently Used",
+  "price": 1650,
+  "sold": true,
+  "soldPrice": 1550,
+  "soldAt": "2023-11-06T02:14:10.430Z",
+  "createdAt": "2023-11-04T21:55:11.000Z",
+  "categoryPath": "outerwear.leather_jackets",
+  "coverPhoto": "https://media-assets.grailed.com/prd/listing/29281207/90716f8c3c79442e8e2ae31495f62fc2",
+  "seller": {
+   "id": 1365325,
+   "username": "michaelphamlive",
+   "ratingAverage": 5,
+   "ratingCount": 20
+  }
+ }
+]

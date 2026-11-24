@@ -54,10 +54,12 @@ def test_previous_month_does_not_count(db, monkeypatch):
 
 def test_per_source_cap(db, monkeypatch):
     monkeypatch.setenv("APIFY_TOKEN", "t")
-    ledger(db, 0.74)
+    ledger(db, 2.74)
     with pytest.raises(apify.SpendGuard):
-        apify.check_budget(db, 0.05, "grailed")  # cap 0.75
+        apify.check_budget(db, 0.05, "grailed")  # cap 2.75
     apify.check_budget(db, 0.05, "mercari_us")   # other sources unaffected
+    # the three per-source caps together never exceed the overall stop (90% of the free credit)
+    assert sum(apify.DEFAULT_CAPS.values()) <= apify.credit_limit() + 1e-9
 
 
 def test_missing_token(db, monkeypatch):
@@ -68,7 +70,7 @@ def test_missing_token(db, monkeypatch):
 
 def test_actor_config_from_sources_yaml_and_env(monkeypatch):
     a = apify.actor_for("GRAILED")
-    assert a.id == "123webdata/grailed-scraper" and a.price_per_1k == 0.9
+    assert a.id == "piotrv1001/grailed-listings-scraper" and a.price_per_1k == 3.0
     monkeypatch.setenv("APIFY_ACTOR_GRAILED", "me/other")
     monkeypatch.setenv("APIFY_PRICE_GRAILED", "2.5")
     a = apify.actor_for("GRAILED")

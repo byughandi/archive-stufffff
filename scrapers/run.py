@@ -94,7 +94,7 @@ def run_fast_or_slow(ctx: Ctx, source: str, mode: str,
 def run_comps(ctx: Ctx, source: str) -> list[tuple[str, RunResult | Exception]]:
     q = lambda: _queries(ctx, source, "comps")  # noqa: E731
     if source == "grailed":
-        return [("grailed", _call(lambda: grailed.Grailed(ctx).comps(q())))]
+        return [("grailed", _call(lambda: grailed.comps(ctx, q())))]
     if source == "mercari_jp":
         return [("mercari_jp", _call(lambda: mercari_jp.run_comps(ctx, q())))]
     if source == "yahoo_jp":

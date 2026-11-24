@@ -31,8 +31,10 @@ _HALF = {"ss": "ss", "s/s": "ss", "s-s": "ss", "aw": "aw", "fw": "aw", "a/w": "a
          "春夏": "ss", "秋冬": "aw", "spring": "ss", "summer": "ss", "fall": "aw", "autumn": "aw",
          "winter": "aw", "spring/summer": "ss", "fall/winter": "aw", "autumn/winter": "aw"}
 _HW = r"(ss|aw|fw|s/s|a/w|f/w)"
-_CODE_A = re.compile(rf"(?<![a-z0-9]){_HW}\s?'?(\d{{4}}|\d{{2}})(?:\s?-\s?(?:\d{{2,4}}))?(?![0-9])")
-_CODE_B = re.compile(rf"(?<![0-9.])(\d{{4}}|\d{{2}})(?:\s?-\s?(\d{{2,4}}))?\s?{_HW[:-1]}|春夏|秋冬)")
+# "fw14", "fw 14", "fw/14", "fw'14", "f/w 2014"
+_CODE_A = re.compile(rf"(?<![a-z0-9]){_HW}\s?[/.]?\s?'?(\d{{4}}|\d{{2}})(?:\s?-\s?(?:\d{{2,4}}))?(?![0-9])")
+# "14fw", "2014 aw", "07秋冬". The digits must not be the tail of a model name ("L01 FW/14" is not "01 FW").
+_CODE_B = re.compile(rf"(?<![a-z0-9.])(\d{{4}}|\d{{2}})(?:\s?-\s?(\d{{2,4}}))?\s?{_HW[:-1]}|春夏|秋冬)")
 _CODE_C = re.compile(r"(?<![a-z])(spring/summer|fall/winter|autumn/winter|spring|summer|fall|autumn|winter)\s?'?(\d{4}|\d{2})(?![0-9])")
 _YEAR_JA = re.compile(r"(?<![0-9])(\d{4}|\d{2})\s?年(?!代)")
 _YEAR = re.compile(r"(?<![0-9a-z.,/¥$#])(19[89]\d|20[0-2]\d)(?![0-9]|\s?(?:円|yen|cm|mm|g\b|点))")

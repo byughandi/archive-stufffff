@@ -33,13 +33,15 @@ VENDOR = "apify"
 
 # Fallback actors when sources.yaml has no usable entry (ids from research, unverified).
 DEFAULT_ACTORS = {
-    "GRAILED": ("123webdata/grailed-scraper", 0.9),
+    "GRAILED": ("piotrv1001/grailed-listings-scraper", 3.0),   # verified with real runs, see config/sources.yaml
     "MERCARI_US": ("getascraper/mercari-us-scraper", 2.05),
     "MERCARI_US_SOLD": ("devilscrapes/mercari-sold-listings", 2.51),
     "INSTAGRAM": ("apify/instagram-scraper", 2.3),
 }
 # Per-purpose monthly caps (USD) so the fallbacks cannot eat the Instagram budget.
-DEFAULT_CAPS = {"grailed": 0.75, "mercari_us": 1.0, "instagram": 3.5}
+# Grailed sold prices are the pricing backbone, so it gets the largest share. The three add up to the
+# $4.50 stop (90% of the free $5). Override with APIFY_BUDGET_<SOURCE>_USD.
+DEFAULT_CAPS = {"grailed": 2.75, "mercari_us": 0.5, "instagram": 1.25}
 
 
 class SpendGuard(Exception):
@@ -118,10 +120,11 @@ def token() -> str:
 
 
 # ---- INPUT MAPPINGS: confirm against the actor's input schema before first use --------------------
-def grailed_input(actor: Actor, queries: list[str], max_items: int) -> dict:
-    # CONFIRM AGAINST INPUT SCHEMA (unverified): search-term style grailed actors usually take
-    # {"searchQueries"|"search"|"queries": [...], "maxItems": N, "sortBy": "newest"}.
-    return {"searchQueries": queries, "maxItems": max_items, "sortBy": "newest"}
+def grailed_input(actor: Actor, query: str, max_items: int, sold: bool = False) -> dict:
+    """Input for piotrv1001/grailed-listings-scraper (schema verified 2026-11-24). One search query per run.
+    `scrapeDetails` stays off: it quadruples the per-listing price and the pipeline does not need it."""
+    return {"searchQuery": query, "soldOnly": bool(sold), "department": "all", "scrapeDetails": False,
+            "maxItems": int(max_items), "proxyConfiguration": {"useApifyProxy": True}}
 
 
 def mercari_us_input(actor: Actor, queries: list[str], max_items: int, sold: bool = False) -> dict:
