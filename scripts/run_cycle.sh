@@ -62,7 +62,7 @@ if [ -n "${APIFY_TOKEN:-}" ] && due trends 160; then
   mark trends
 fi
 
-step python -m pipeline.run alerts
+# Phone alerts are off (the owner does not use ntfy). To turn them on: step python -m pipeline.run alerts
 
 python - "$FAILED" <<'PY'
 import json, sys
